@@ -76,6 +76,7 @@
     <Compile Include="Mediator\ModelManager.cs" />
     <Compile Include="Mediator\RDBModel.cs" />
     <Compile Include="Mediator\Storage.cs" />
+    <Compile Include="Model\EProjectItemList.cs" />
     <Compile Include="Model\EProjectItem.cs" />
     <Compile Include="Model\EOpportunity.cs" />
     <Compile Include="Model\EProjImpact.cs" />

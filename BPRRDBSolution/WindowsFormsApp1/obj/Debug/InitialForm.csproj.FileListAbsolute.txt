@@ -45,3 +45,12 @@ C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\Fas
 C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.InitialForm.resources
 C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\InitialForm.csproj.GenerateResource.Cache
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\InitialForm.csprojAssemblyReference.cache
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ExecRolog.resources
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.executionForm.resources
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.InitialForm.resources
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\InitialForm.csproj.GenerateResource.cache
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\InitialForm.csproj.CoreCompileInputs.cache
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
