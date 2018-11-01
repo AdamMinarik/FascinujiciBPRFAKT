@@ -34,3 +34,14 @@ F:\GitKraken\EH\TestRDB\BPRRDBSolution\WindowsFormsApp1\obj\Debug\InitialForm.cs
 F:\GitKraken\EH\TestRDB\BPRRDBSolution\WindowsFormsApp1\obj\Debug\InitialForm.csproj.CoreCompileInputs.cache
 F:\GitKraken\EH\TestRDB\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 F:\GitKraken\EH\TestRDB\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\InitialForm.csprojResolveAssemblyReference.cache
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.ExecRolog.resources
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.executionForm.resources
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.InitialForm.resources
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\InitialForm.csproj.GenerateResource.Cache

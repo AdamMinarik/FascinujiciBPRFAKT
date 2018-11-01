@@ -72,6 +72,19 @@
     <Compile Include="InitialForm.Designer.cs">
       <DependentUpon>InitialForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Mediator\IStorage.cs" />
+    <Compile Include="Mediator\ModelManager.cs" />
+    <Compile Include="Mediator\RDBModel.cs" />
+    <Compile Include="Mediator\Storage.cs" />
+    <Compile Include="Model\EProjectItem.cs" />
+    <Compile Include="Model\EOpportunity.cs" />
+    <Compile Include="Model\EProjImpact.cs" />
+    <Compile Include="Model\EEntRisk.cs" />
+    <Compile Include="Model\EUncertainty.cs" />
+    <Compile Include="Model\ERisk.cs" />
+    <Compile Include="Model\ExecutionProject.cs" />
+    <Compile Include="Model\ExecutionUser.cs" />
+    <Compile Include="Model\Project.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ExecRolog.resx">
