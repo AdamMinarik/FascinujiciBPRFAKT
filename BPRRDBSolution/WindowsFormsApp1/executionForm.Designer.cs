@@ -161,14 +161,36 @@ namespace WindowsFormsApp1
             this.entryCurrUpdateBtn = new System.Windows.Forms.Button();
             this.entryCurData = new System.Windows.Forms.DataGridView();
             this.diCatTab = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.DIcatInsertBtn = new System.Windows.Forms.Button();
+            this.DIcatText = new System.Windows.Forms.TextBox();
+            this.DICatInsertLbl = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.DIcatUpdateBtn = new System.Windows.Forms.Button();
+            this.DIcatData = new System.Windows.Forms.DataGridView();
             this.nccTab = new System.Windows.Forms.TabPage();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.nccInsertBtn = new System.Windows.Forms.Button();
+            this.nccText = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.nccUpdateBtn = new System.Windows.Forms.Button();
+            this.nccData = new System.Windows.Forms.DataGridView();
             this.projectOwnershipTab = new System.Windows.Forms.TabPage();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.projOwnerUpdateBtn = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.projOwnerData = new System.Windows.Forms.DataGridView();
             this.orgUnitTab = new System.Windows.Forms.TabPage();
             this.wtgTypeTab = new System.Windows.Forms.TabPage();
             this.ownerTab = new System.Windows.Forms.TabPage();
             this.usersTab = new System.Windows.Forms.TabPage();
             this.transfSalesProjTab = new System.Windows.Forms.TabPage();
             this.rkCurrencyNameBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.projNameCombo = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.projOwnerCombo = new System.Windows.Forms.ComboBox();
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -202,6 +224,18 @@ namespace WindowsFormsApp1
             this.panel1.SuspendLayout();
             this.entryCurList.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.entryCurData)).BeginInit();
+            this.diCatTab.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DIcatData)).BeginInit();
+            this.nccTab.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nccData)).BeginInit();
+            this.projectOwnershipTab.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.projOwnerData)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -1706,6 +1740,8 @@ namespace WindowsFormsApp1
             // 
             // diCatTab
             // 
+            this.diCatTab.Controls.Add(this.panel3);
+            this.diCatTab.Controls.Add(this.panel2);
             this.diCatTab.Location = new System.Drawing.Point(4, 22);
             this.diCatTab.Name = "diCatTab";
             this.diCatTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1714,8 +1750,77 @@ namespace WindowsFormsApp1
             this.diCatTab.Text = "DI Category";
             this.diCatTab.UseVisualStyleBackColor = true;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.DIcatInsertBtn);
+            this.panel3.Controls.Add(this.DIcatText);
+            this.panel3.Controls.Add(this.DICatInsertLbl);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(465, 3);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(490, 693);
+            this.panel3.TabIndex = 1;
+            // 
+            // DIcatInsertBtn
+            // 
+            this.DIcatInsertBtn.Location = new System.Drawing.Point(144, 262);
+            this.DIcatInsertBtn.Name = "DIcatInsertBtn";
+            this.DIcatInsertBtn.Size = new System.Drawing.Size(180, 25);
+            this.DIcatInsertBtn.TabIndex = 5;
+            this.DIcatInsertBtn.Text = "INSERT";
+            this.DIcatInsertBtn.UseVisualStyleBackColor = true;
+            this.DIcatInsertBtn.Click += new System.EventHandler(this.DIcatInsertBtn_Click);
+            // 
+            // DIcatText
+            // 
+            this.DIcatText.Location = new System.Drawing.Point(115, 222);
+            this.DIcatText.Name = "DIcatText";
+            this.DIcatText.Size = new System.Drawing.Size(250, 20);
+            this.DIcatText.TabIndex = 4;
+            this.DIcatText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // DICatInsertLbl
+            // 
+            this.DICatInsertLbl.AutoSize = true;
+            this.DICatInsertLbl.Location = new System.Drawing.Point(113, 206);
+            this.DICatInsertLbl.Name = "DICatInsertLbl";
+            this.DICatInsertLbl.Size = new System.Drawing.Size(74, 13);
+            this.DICatInsertLbl.TabIndex = 3;
+            this.DICatInsertLbl.Text = "DI Category";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.DIcatUpdateBtn);
+            this.panel2.Controls.Add(this.DIcatData);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(463, 693);
+            this.panel2.TabIndex = 0;
+            // 
+            // DIcatUpdateBtn
+            // 
+            this.DIcatUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.DIcatUpdateBtn.Location = new System.Drawing.Point(142, 605);
+            this.DIcatUpdateBtn.Name = "DIcatUpdateBtn";
+            this.DIcatUpdateBtn.Size = new System.Drawing.Size(180, 25);
+            this.DIcatUpdateBtn.TabIndex = 2;
+            this.DIcatUpdateBtn.Text = "UPDATE";
+            this.DIcatUpdateBtn.UseVisualStyleBackColor = true;
+            this.DIcatUpdateBtn.Click += new System.EventHandler(this.DIcatUpdateBtn_Click);
+            // 
+            // DIcatData
+            // 
+            this.DIcatData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DIcatData.Location = new System.Drawing.Point(11, 14);
+            this.DIcatData.Name = "DIcatData";
+            this.DIcatData.Size = new System.Drawing.Size(440, 549);
+            this.DIcatData.TabIndex = 0;
+            // 
             // nccTab
             // 
+            this.nccTab.Controls.Add(this.panel4);
+            this.nccTab.Controls.Add(this.panel5);
             this.nccTab.Location = new System.Drawing.Point(4, 22);
             this.nccTab.Name = "nccTab";
             this.nccTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1724,8 +1829,76 @@ namespace WindowsFormsApp1
             this.nccTab.Text = "NCC";
             this.nccTab.UseVisualStyleBackColor = true;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.nccInsertBtn);
+            this.panel4.Controls.Add(this.nccText);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(465, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(490, 693);
+            this.panel4.TabIndex = 3;
+            // 
+            // nccInsertBtn
+            // 
+            this.nccInsertBtn.Location = new System.Drawing.Point(144, 262);
+            this.nccInsertBtn.Name = "nccInsertBtn";
+            this.nccInsertBtn.Size = new System.Drawing.Size(180, 25);
+            this.nccInsertBtn.TabIndex = 5;
+            this.nccInsertBtn.Text = "INSERT";
+            this.nccInsertBtn.UseVisualStyleBackColor = true;
+            this.nccInsertBtn.Click += new System.EventHandler(this.nccInsertBtn_Click);
+            // 
+            // nccText
+            // 
+            this.nccText.Location = new System.Drawing.Point(115, 222);
+            this.nccText.Name = "nccText";
+            this.nccText.Size = new System.Drawing.Size(250, 20);
+            this.nccText.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(113, 206);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 13);
+            this.label3.TabIndex = 3;
+            this.label3.Text = "NCC Name";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.nccUpdateBtn);
+            this.panel5.Controls.Add(this.nccData);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(463, 693);
+            this.panel5.TabIndex = 2;
+            // 
+            // nccUpdateBtn
+            // 
+            this.nccUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.nccUpdateBtn.Location = new System.Drawing.Point(142, 605);
+            this.nccUpdateBtn.Name = "nccUpdateBtn";
+            this.nccUpdateBtn.Size = new System.Drawing.Size(180, 25);
+            this.nccUpdateBtn.TabIndex = 2;
+            this.nccUpdateBtn.Text = "UPDATE";
+            this.nccUpdateBtn.UseVisualStyleBackColor = true;
+            this.nccUpdateBtn.Click += new System.EventHandler(this.nccUpdateBtn_Click);
+            // 
+            // nccData
+            // 
+            this.nccData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.nccData.Location = new System.Drawing.Point(11, 14);
+            this.nccData.Name = "nccData";
+            this.nccData.Size = new System.Drawing.Size(440, 549);
+            this.nccData.TabIndex = 0;
+            // 
             // projectOwnershipTab
             // 
+            this.projectOwnershipTab.Controls.Add(this.panel6);
+            this.projectOwnershipTab.Controls.Add(this.panel7);
             this.projectOwnershipTab.Location = new System.Drawing.Point(4, 22);
             this.projectOwnershipTab.Name = "projectOwnershipTab";
             this.projectOwnershipTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1733,6 +1906,56 @@ namespace WindowsFormsApp1
             this.projectOwnershipTab.TabIndex = 6;
             this.projectOwnershipTab.Text = "Project Ownership";
             this.projectOwnershipTab.UseVisualStyleBackColor = true;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.projOwnerCombo);
+            this.panel6.Controls.Add(this.label5);
+            this.panel6.Controls.Add(this.projNameCombo);
+            this.panel6.Controls.Add(this.projOwnerUpdateBtn);
+            this.panel6.Controls.Add(this.label4);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(465, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(490, 693);
+            this.panel6.TabIndex = 5;
+            // 
+            // projOwnerUpdateBtn
+            // 
+            this.projOwnerUpdateBtn.Location = new System.Drawing.Point(152, 320);
+            this.projOwnerUpdateBtn.Name = "projOwnerUpdateBtn";
+            this.projOwnerUpdateBtn.Size = new System.Drawing.Size(180, 25);
+            this.projOwnerUpdateBtn.TabIndex = 5;
+            this.projOwnerUpdateBtn.Text = "UPDATE";
+            this.projOwnerUpdateBtn.UseVisualStyleBackColor = true;
+            this.projOwnerUpdateBtn.Click += new System.EventHandler(this.projOwnerUpdateBtn_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(100, 217);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(145, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Select Project to update";
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.projOwnerData);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(463, 693);
+            this.panel7.TabIndex = 4;
+            // 
+            // projOwnerData
+            // 
+            this.projOwnerData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.projOwnerData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.projOwnerData.Location = new System.Drawing.Point(0, 0);
+            this.projOwnerData.Name = "projOwnerData";
+            this.projOwnerData.Size = new System.Drawing.Size(463, 693);
+            this.projOwnerData.TabIndex = 0;
             // 
             // orgUnitTab
             // 
@@ -1789,6 +2012,31 @@ namespace WindowsFormsApp1
             this.rkCurrencyNameBindingSource1.DataMember = "rk_CurrencyName";
             this.rkCurrencyNameBindingSource1.DataSource = this.dataSet1;
             // 
+            // projNameCombo
+            // 
+            this.projNameCombo.FormattingEnabled = true;
+            this.projNameCombo.Location = new System.Drawing.Point(103, 234);
+            this.projNameCombo.Name = "projNameCombo";
+            this.projNameCombo.Size = new System.Drawing.Size(283, 21);
+            this.projNameCombo.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(100, 268);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(156, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Select New Project Owner";
+            // 
+            // projOwnerCombo
+            // 
+            this.projOwnerCombo.FormattingEnabled = true;
+            this.projOwnerCombo.Location = new System.Drawing.Point(103, 284);
+            this.projOwnerCombo.Name = "projOwnerCombo";
+            this.projOwnerCombo.Size = new System.Drawing.Size(283, 21);
+            this.projOwnerCombo.TabIndex = 8;
+            // 
             // executionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
@@ -1839,6 +2087,21 @@ namespace WindowsFormsApp1
             this.panel1.PerformLayout();
             this.entryCurList.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.entryCurData)).EndInit();
+            this.diCatTab.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.DIcatData)).EndInit();
+            this.nccTab.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nccData)).EndInit();
+            this.projectOwnershipTab.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.projOwnerData)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -1984,5 +2247,27 @@ namespace WindowsFormsApp1
         private TextBox countryEntryTextBox;
         private Label label2;
         private Label label1;
+        private Panel panel3;
+        private Panel panel2;
+        private TextBox DIcatText;
+        private Label DICatInsertLbl;
+        private Button DIcatUpdateBtn;
+        private DataGridView DIcatData;
+        private Button DIcatInsertBtn;
+        private Panel panel4;
+        private Button nccInsertBtn;
+        private TextBox nccText;
+        private Label label3;
+        private Panel panel5;
+        private Button nccUpdateBtn;
+        private DataGridView nccData;
+        private Panel panel7;
+        private DataGridView projOwnerData;
+        private Panel panel6;
+        private Button projOwnerUpdateBtn;
+        private Label label4;
+        private ComboBox projOwnerCombo;
+        private Label label5;
+        private ComboBox projNameCombo;
     }
 }

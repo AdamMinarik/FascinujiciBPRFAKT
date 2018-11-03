@@ -54,3 +54,6 @@ F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\Win
 F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\InitialForm.csproj.CoreCompileInputs.cache
 F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb

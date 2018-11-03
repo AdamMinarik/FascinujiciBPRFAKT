@@ -36,9 +36,20 @@ namespace WindowsFormsApp1
         private String ruCurrency;
         private String ruRate;
         private SqlConnectionStringBuilder connectionString;
+        
+        // Data Adapters
+        private SqlDataAdapter daEntryCurr;
+        private SqlDataAdapter daDIcat;
+        private SqlDataAdapter daNCC;
+        private SqlDataAdapter daProjOwner;
 
-        SqlDataAdapter daEntryCurr;
-        DataTable dsEntryCurr;
+        // Data Tables
+        private DataTable dsEntryCurr;
+        private DataTable dsDIcat;
+        private DataTable dsNCC;
+        private DataTable dsProjOwner;
+
+
 
 
         public object ProjectsData { get; private set; }
@@ -222,16 +233,72 @@ namespace WindowsFormsApp1
 
         private void diCatButton_Click(object sender, EventArgs e)
         {
+            SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
+            connection.Open();
+            string SQL = "SELECT * FROM rk_DIcat";
+
+            daDIcat = new SqlDataAdapter(SQL, connection);
+            dsDIcat = new DataTable();
+            daDIcat.Fill(dsDIcat);
+            DIcatData.DataSource = dsDIcat;
+            connection.Close();
+
             tabController.SelectedIndex = 4;
         }
 
         private void nccButton_Click(object sender, EventArgs e)
         {
+            SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
+            connection.Open();
+            string SQL = "SELECT * FROM rk_NCC WHERE status = 1";
+
+            daNCC = new SqlDataAdapter(SQL, connection);
+            dsNCC = new DataTable();
+            daNCC.Fill(dsNCC);
+            nccData.DataSource = dsNCC;
+            connection.Close();
+
             tabController.SelectedIndex = 5;
         }
 
         private void projectOwnerButton_Click(object sender, EventArgs e)
         {
+            SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
+            connection.Open();
+            string SQL = "SELECT pname,rk_users.FirstName + ' ' + rk_users.LastName as FullName FROM rk_Project LEFT JOIN rk_users ON rk_Users.ID = rk_Project.IDuser order by Pname";
+
+            daProjOwner = new SqlDataAdapter(SQL, connection);
+            dsProjOwner = new DataTable();
+            daProjOwner.Fill(dsProjOwner);
+            projOwnerData.DataSource = dsProjOwner;
+            connection.Close();
+
+
+            connection.Open();
+
+            SQL = "SELECT ID,pname FROM rk_Project order by Pname";
+            daProjOwner = new SqlDataAdapter(SQL, connection);
+            dsProjOwner = new DataTable();
+            daProjOwner.Fill(dsProjOwner);
+            connection.Close();
+   
+            this.projNameCombo.DisplayMember = "pname";
+            this.projNameCombo.ValueMember = "id";
+            this.projNameCombo.DataSource = dsProjOwner;
+
+
+
+            SQL = "SELECT ID,FirstName + ' ' + LastName as FullName FROM rk_Users order by LastName";
+            daProjOwner = new SqlDataAdapter(SQL, connection);
+            dsProjOwner = new DataTable();
+            daProjOwner.Fill(dsProjOwner);
+            connection.Close();
+
+            this.projOwnerCombo.DisplayMember = "FullName";
+            this.projOwnerCombo.ValueMember = "id";
+            this.projOwnerCombo.DataSource = dsProjOwner;
+
+
             tabController.SelectedIndex = 6;
         }
 
@@ -493,9 +560,170 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(ex.Message);
             }
+        }
 
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
+        }
 
+        private void DIcatUpdateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable changes = ((DataTable)DIcatData.DataSource).GetChanges();
+                if (changes != null)
+                {
+                    daDIcat = new SqlDataAdapter("SELECT * FROM rk_DIcat", connectionString.ConnectionString);
+                    SqlCommandBuilder mcb = new SqlCommandBuilder(daDIcat);
+                    daDIcat.UpdateCommand = mcb.GetUpdateCommand();
+                    daDIcat.Update(changes);
+                    ((DataTable)DIcatData.DataSource).AcceptChanges();
+                    MessageBox.Show("List Updated");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void DIcatInsertBtn_Click(object sender, EventArgs e)
+        {
+            bool continueBool = true;
+
+            try
+            {
+              
+                if (this.DIcatText.Text.Length == 0)
+                {
+                    MessageBox.Show("Please fill name field", "Data saved", MessageBoxButtons.OK);
+                    continueBool = false;
+                }
+
+                if (continueBool == true)
+                {
+                    string query = "INSERT INTO rk_DIcat(ID,DIname) VALUES ((SELECT MAX(ID) FROM rk_DIcat) + 1,'" + this.DIcatText.Text + "')";
+
+                    using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        Console.WriteLine(query);
+                        command.ExecuteNonQuery();
+                        string SQL = "SELECT * FROM rk_DIcat";
+                        daDIcat = new SqlDataAdapter(SQL, connection);
+                        dsDIcat = new DataTable();
+                        daDIcat.Fill(dsDIcat);
+                        DIcatData.DataSource = dsDIcat;
+                        connection.Close();
+                    }
+                    this.DIcatText.Text = "";
+                    MessageBox.Show("DI category Saved", "Data saved", MessageBoxButtons.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void nccUpdateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable changes = ((DataTable)nccData.DataSource).GetChanges();
+                if (changes != null)
+                {
+                    daNCC = new SqlDataAdapter("SELECT * FROM rk_NCC WHERE status = 1; ", connectionString.ConnectionString);
+                    SqlCommandBuilder mcb = new SqlCommandBuilder(daNCC);
+                    daNCC.UpdateCommand = mcb.GetUpdateCommand();
+                    daNCC.Update(changes);
+                    ((DataTable)nccData.DataSource).AcceptChanges();
+                    MessageBox.Show("List Updated");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void nccInsertBtn_Click(object sender, EventArgs e)
+        {
+            bool continueBool = true;
+
+            try
+            {
+
+                if (this.nccText.Text.Length == 0)
+                {
+                    MessageBox.Show("Please fill name field", "Data saved", MessageBoxButtons.OK);
+                    continueBool = false;
+                }
+
+                if (continueBool == true)
+                {
+                    string query = "INSERT INTO rk_NCC(status,name) VALUES (1,'" + this.nccText.Text + "')";
+
+                    using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        Console.WriteLine(query);
+                        command.ExecuteNonQuery();
+                        string SQL = "SELECT * FROM rk_NCC WHERE status = 1";
+                        daNCC = new SqlDataAdapter(SQL, connection);
+                        dsNCC = new DataTable();
+                        daNCC.Fill(dsNCC);
+                        nccData.DataSource = dsNCC;
+                        connection.Close();
+                    }
+                    this.nccText.Text = "";
+                    MessageBox.Show("NCC Saved", "Data saved", MessageBoxButtons.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void projOwnerUpdateBtn_Click(object sender, EventArgs e)
+        {
+            bool continueBool = true;
+
+            try
+            {
+
+                if (continueBool == true)
+                {
+                    string query = "UPDATE rk_Project SET IDuser =" + projOwnerCombo.SelectedValue + "WHERE ID = " + projNameCombo.SelectedValue;
+                    
+                    using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        Console.WriteLine(query);
+                        command.ExecuteNonQuery();
+                        string SQL = "SELECT pname,rk_users.FirstName + ' ' + rk_users.LastName as FullName FROM rk_Project LEFT JOIN rk_users ON rk_Users.ID = rk_Project.IDuser order by Pname";
+
+                        daProjOwner = new SqlDataAdapter(SQL, connection);
+                        dsProjOwner = new DataTable();
+                        daProjOwner.Fill(dsProjOwner);
+                        projOwnerData.DataSource = dsProjOwner;
+                        connection.Close();
+                    }
+                    this.DIcatText.Text = "";
+                    MessageBox.Show("Project Owner Updated", "Data saved", MessageBoxButtons.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
