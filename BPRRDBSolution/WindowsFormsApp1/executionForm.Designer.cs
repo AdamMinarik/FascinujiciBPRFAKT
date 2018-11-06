@@ -178,19 +178,62 @@ namespace WindowsFormsApp1
             this.nccData = new System.Windows.Forms.DataGridView();
             this.projectOwnershipTab = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.projOwnerCombo = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.projNameCombo = new System.Windows.Forms.ComboBox();
             this.projOwnerUpdateBtn = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.projOwnerData = new System.Windows.Forms.DataGridView();
             this.orgUnitTab = new System.Windows.Forms.TabPage();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.origUnitInsertBtn = new System.Windows.Forms.Button();
+            this.orgUnitTxt = new System.Windows.Forms.TextBox();
+            this.orgUnitLbl = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.orgUnitUpdateBtn = new System.Windows.Forms.Button();
+            this.orgUnitData = new System.Windows.Forms.DataGridView();
             this.wtgTypeTab = new System.Windows.Forms.TabPage();
             this.ownerTab = new System.Windows.Forms.TabPage();
             this.usersTab = new System.Windows.Forms.TabPage();
             this.transfSalesProjTab = new System.Windows.Forms.TabPage();
             this.rkCurrencyNameBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.projNameCombo = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.projOwnerCombo = new System.Windows.Forms.ComboBox();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.wtgInsertBtn = new System.Windows.Forms.Button();
+            this.wtgTxt = new System.Windows.Forms.TextBox();
+            this.wtgLbl = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.wtgUpdateBtn = new System.Windows.Forms.Button();
+            this.wtgData = new System.Windows.Forms.DataGridView();
+            this.ownerNameLbl = new System.Windows.Forms.Panel();
+            this.ownerInsertBtn = new System.Windows.Forms.Button();
+            this.ownerCodeTxt = new System.Windows.Forms.TextBox();
+            this.ownerNameTxt = new System.Windows.Forms.TextBox();
+            this.ownerCodeLbl = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.ownerUpdateBtn = new System.Windows.Forms.Button();
+            this.ownerData = new System.Windows.Forms.DataGridView();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.userInsertBtn = new System.Windows.Forms.Button();
+            this.userFirstNameTxt = new System.Windows.Forms.TextBox();
+            this.userNameTxt = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.userUpdateBtn = new System.Windows.Forms.Button();
+            this.userData = new System.Windows.Forms.DataGridView();
+            this.userMidNameTxt = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.userLastNameTxt = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.userGIDTxt = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.userEmailTxt = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.userPermCombo = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -236,7 +279,24 @@ namespace WindowsFormsApp1
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.projOwnerData)).BeginInit();
+            this.orgUnitTab.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orgUnitData)).BeginInit();
+            this.wtgTypeTab.SuspendLayout();
+            this.ownerTab.SuspendLayout();
+            this.usersTab.SuspendLayout();
+            this.transfSalesProjTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource1)).BeginInit();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.wtgData)).BeginInit();
+            this.ownerNameLbl.SuspendLayout();
+            this.panel13.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ownerData)).BeginInit();
+            this.panel12.SuspendLayout();
+            this.panel14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userData)).BeginInit();
             this.SuspendLayout();
             // 
             // locationPanel
@@ -1920,6 +1980,31 @@ namespace WindowsFormsApp1
             this.panel6.Size = new System.Drawing.Size(490, 693);
             this.panel6.TabIndex = 5;
             // 
+            // projOwnerCombo
+            // 
+            this.projOwnerCombo.FormattingEnabled = true;
+            this.projOwnerCombo.Location = new System.Drawing.Point(103, 284);
+            this.projOwnerCombo.Name = "projOwnerCombo";
+            this.projOwnerCombo.Size = new System.Drawing.Size(283, 21);
+            this.projOwnerCombo.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(100, 268);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(156, 13);
+            this.label5.TabIndex = 7;
+            this.label5.Text = "Select New Project Owner";
+            // 
+            // projNameCombo
+            // 
+            this.projNameCombo.FormattingEnabled = true;
+            this.projNameCombo.Location = new System.Drawing.Point(103, 234);
+            this.projNameCombo.Name = "projNameCombo";
+            this.projNameCombo.Size = new System.Drawing.Size(283, 21);
+            this.projNameCombo.TabIndex = 6;
+            // 
             // projOwnerUpdateBtn
             // 
             this.projOwnerUpdateBtn.Location = new System.Drawing.Point(152, 320);
@@ -1959,6 +2044,8 @@ namespace WindowsFormsApp1
             // 
             // orgUnitTab
             // 
+            this.orgUnitTab.Controls.Add(this.panel8);
+            this.orgUnitTab.Controls.Add(this.panel9);
             this.orgUnitTab.Location = new System.Drawing.Point(4, 22);
             this.orgUnitTab.Name = "orgUnitTab";
             this.orgUnitTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1967,8 +2054,76 @@ namespace WindowsFormsApp1
             this.orgUnitTab.Text = "OriginatingUnit";
             this.orgUnitTab.UseVisualStyleBackColor = true;
             // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.origUnitInsertBtn);
+            this.panel8.Controls.Add(this.orgUnitTxt);
+            this.panel8.Controls.Add(this.orgUnitLbl);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel8.Location = new System.Drawing.Point(465, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(490, 693);
+            this.panel8.TabIndex = 5;
+            // 
+            // origUnitInsertBtn
+            // 
+            this.origUnitInsertBtn.Location = new System.Drawing.Point(144, 262);
+            this.origUnitInsertBtn.Name = "origUnitInsertBtn";
+            this.origUnitInsertBtn.Size = new System.Drawing.Size(180, 25);
+            this.origUnitInsertBtn.TabIndex = 5;
+            this.origUnitInsertBtn.Text = "INSERT";
+            this.origUnitInsertBtn.UseVisualStyleBackColor = true;
+            this.origUnitInsertBtn.Click += new System.EventHandler(this.origUnitInsertBtn_Click);
+            // 
+            // orgUnitTxt
+            // 
+            this.orgUnitTxt.Location = new System.Drawing.Point(115, 222);
+            this.orgUnitTxt.Name = "orgUnitTxt";
+            this.orgUnitTxt.Size = new System.Drawing.Size(250, 20);
+            this.orgUnitTxt.TabIndex = 4;
+            // 
+            // orgUnitLbl
+            // 
+            this.orgUnitLbl.AutoSize = true;
+            this.orgUnitLbl.Location = new System.Drawing.Point(113, 206);
+            this.orgUnitLbl.Name = "orgUnitLbl";
+            this.orgUnitLbl.Size = new System.Drawing.Size(131, 13);
+            this.orgUnitLbl.TabIndex = 3;
+            this.orgUnitLbl.Text = "Originating Unit Name";
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.orgUnitUpdateBtn);
+            this.panel9.Controls.Add(this.orgUnitData);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel9.Location = new System.Drawing.Point(3, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(463, 693);
+            this.panel9.TabIndex = 4;
+            // 
+            // orgUnitUpdateBtn
+            // 
+            this.orgUnitUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.orgUnitUpdateBtn.Location = new System.Drawing.Point(142, 605);
+            this.orgUnitUpdateBtn.Name = "orgUnitUpdateBtn";
+            this.orgUnitUpdateBtn.Size = new System.Drawing.Size(180, 25);
+            this.orgUnitUpdateBtn.TabIndex = 2;
+            this.orgUnitUpdateBtn.Text = "UPDATE";
+            this.orgUnitUpdateBtn.UseVisualStyleBackColor = true;
+            this.orgUnitUpdateBtn.Click += new System.EventHandler(this.orgUnitUpdateBtn_Click);
+            // 
+            // orgUnitData
+            // 
+            this.orgUnitData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orgUnitData.Location = new System.Drawing.Point(11, 14);
+            this.orgUnitData.Name = "orgUnitData";
+            this.orgUnitData.Size = new System.Drawing.Size(440, 549);
+            this.orgUnitData.TabIndex = 0;
+            // 
             // wtgTypeTab
             // 
+            this.wtgTypeTab.Controls.Add(this.panel10);
+            this.wtgTypeTab.Controls.Add(this.panel11);
             this.wtgTypeTab.Location = new System.Drawing.Point(4, 22);
             this.wtgTypeTab.Name = "wtgTypeTab";
             this.wtgTypeTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1979,6 +2134,8 @@ namespace WindowsFormsApp1
             // 
             // ownerTab
             // 
+            this.ownerTab.Controls.Add(this.ownerNameLbl);
+            this.ownerTab.Controls.Add(this.panel13);
             this.ownerTab.Location = new System.Drawing.Point(4, 22);
             this.ownerTab.Name = "ownerTab";
             this.ownerTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1989,6 +2146,8 @@ namespace WindowsFormsApp1
             // 
             // usersTab
             // 
+            this.usersTab.Controls.Add(this.panel12);
+            this.usersTab.Controls.Add(this.panel14);
             this.usersTab.Location = new System.Drawing.Point(4, 22);
             this.usersTab.Name = "usersTab";
             this.usersTab.Padding = new System.Windows.Forms.Padding(3);
@@ -1999,6 +2158,7 @@ namespace WindowsFormsApp1
             // 
             // transfSalesProjTab
             // 
+            this.transfSalesProjTab.Controls.Add(this.label14);
             this.transfSalesProjTab.Location = new System.Drawing.Point(4, 22);
             this.transfSalesProjTab.Name = "transfSalesProjTab";
             this.transfSalesProjTab.Padding = new System.Windows.Forms.Padding(3);
@@ -2012,30 +2172,347 @@ namespace WindowsFormsApp1
             this.rkCurrencyNameBindingSource1.DataMember = "rk_CurrencyName";
             this.rkCurrencyNameBindingSource1.DataSource = this.dataSet1;
             // 
-            // projNameCombo
+            // panel10
             // 
-            this.projNameCombo.FormattingEnabled = true;
-            this.projNameCombo.Location = new System.Drawing.Point(103, 234);
-            this.projNameCombo.Name = "projNameCombo";
-            this.projNameCombo.Size = new System.Drawing.Size(283, 21);
-            this.projNameCombo.TabIndex = 6;
+            this.panel10.Controls.Add(this.wtgInsertBtn);
+            this.panel10.Controls.Add(this.wtgTxt);
+            this.panel10.Controls.Add(this.wtgLbl);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(465, 3);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(490, 693);
+            this.panel10.TabIndex = 7;
             // 
-            // label5
+            // wtgInsertBtn
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(100, 268);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(156, 13);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Select New Project Owner";
+            this.wtgInsertBtn.Location = new System.Drawing.Point(144, 262);
+            this.wtgInsertBtn.Name = "wtgInsertBtn";
+            this.wtgInsertBtn.Size = new System.Drawing.Size(180, 25);
+            this.wtgInsertBtn.TabIndex = 5;
+            this.wtgInsertBtn.Text = "INSERT";
+            this.wtgInsertBtn.UseVisualStyleBackColor = true;
+            this.wtgInsertBtn.Click += new System.EventHandler(this.wtgInsertBtn_Click);
             // 
-            // projOwnerCombo
+            // wtgTxt
             // 
-            this.projOwnerCombo.FormattingEnabled = true;
-            this.projOwnerCombo.Location = new System.Drawing.Point(103, 284);
-            this.projOwnerCombo.Name = "projOwnerCombo";
-            this.projOwnerCombo.Size = new System.Drawing.Size(283, 21);
-            this.projOwnerCombo.TabIndex = 8;
+            this.wtgTxt.Location = new System.Drawing.Point(115, 222);
+            this.wtgTxt.Name = "wtgTxt";
+            this.wtgTxt.Size = new System.Drawing.Size(250, 20);
+            this.wtgTxt.TabIndex = 4;
+            // 
+            // wtgLbl
+            // 
+            this.wtgLbl.AutoSize = true;
+            this.wtgLbl.Location = new System.Drawing.Point(113, 206);
+            this.wtgLbl.Name = "wtgLbl";
+            this.wtgLbl.Size = new System.Drawing.Size(72, 13);
+            this.wtgLbl.TabIndex = 3;
+            this.wtgLbl.Text = "WTG Name";
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.wtgUpdateBtn);
+            this.panel11.Controls.Add(this.wtgData);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(463, 693);
+            this.panel11.TabIndex = 6;
+            // 
+            // wtgUpdateBtn
+            // 
+            this.wtgUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.wtgUpdateBtn.Location = new System.Drawing.Point(142, 605);
+            this.wtgUpdateBtn.Name = "wtgUpdateBtn";
+            this.wtgUpdateBtn.Size = new System.Drawing.Size(180, 25);
+            this.wtgUpdateBtn.TabIndex = 2;
+            this.wtgUpdateBtn.Text = "UPDATE";
+            this.wtgUpdateBtn.UseVisualStyleBackColor = true;
+            this.wtgUpdateBtn.Click += new System.EventHandler(this.wtgUpdateBtn_Click);
+            // 
+            // wtgData
+            // 
+            this.wtgData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.wtgData.Location = new System.Drawing.Point(11, 14);
+            this.wtgData.Name = "wtgData";
+            this.wtgData.Size = new System.Drawing.Size(440, 549);
+            this.wtgData.TabIndex = 0;
+            // 
+            // ownerNameLbl
+            // 
+            this.ownerNameLbl.Controls.Add(this.ownerInsertBtn);
+            this.ownerNameLbl.Controls.Add(this.ownerCodeTxt);
+            this.ownerNameLbl.Controls.Add(this.ownerNameTxt);
+            this.ownerNameLbl.Controls.Add(this.ownerCodeLbl);
+            this.ownerNameLbl.Controls.Add(this.label7);
+            this.ownerNameLbl.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ownerNameLbl.Location = new System.Drawing.Point(488, 3);
+            this.ownerNameLbl.Name = "ownerNameLbl";
+            this.ownerNameLbl.Size = new System.Drawing.Size(467, 693);
+            this.ownerNameLbl.TabIndex = 3;
+            // 
+            // ownerInsertBtn
+            // 
+            this.ownerInsertBtn.Location = new System.Drawing.Point(145, 322);
+            this.ownerInsertBtn.Name = "ownerInsertBtn";
+            this.ownerInsertBtn.Size = new System.Drawing.Size(180, 25);
+            this.ownerInsertBtn.TabIndex = 4;
+            this.ownerInsertBtn.Text = "INSERT";
+            this.ownerInsertBtn.UseVisualStyleBackColor = true;
+            this.ownerInsertBtn.Click += new System.EventHandler(this.ownerInsertBtn_Click);
+            // 
+            // ownerCodeTxt
+            // 
+            this.ownerCodeTxt.Location = new System.Drawing.Point(110, 270);
+            this.ownerCodeTxt.Name = "ownerCodeTxt";
+            this.ownerCodeTxt.Size = new System.Drawing.Size(250, 20);
+            this.ownerCodeTxt.TabIndex = 3;
+            // 
+            // ownerNameTxt
+            // 
+            this.ownerNameTxt.Location = new System.Drawing.Point(109, 227);
+            this.ownerNameTxt.Name = "ownerNameTxt";
+            this.ownerNameTxt.Size = new System.Drawing.Size(250, 20);
+            this.ownerNameTxt.TabIndex = 2;
+            // 
+            // ownerCodeLbl
+            // 
+            this.ownerCodeLbl.AutoSize = true;
+            this.ownerCodeLbl.Location = new System.Drawing.Point(107, 252);
+            this.ownerCodeLbl.Name = "ownerCodeLbl";
+            this.ownerCodeLbl.Size = new System.Drawing.Size(76, 13);
+            this.ownerCodeLbl.TabIndex = 1;
+            this.ownerCodeLbl.Text = "Owner Code";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(107, 211);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(79, 13);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Owner Name";
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.ownerUpdateBtn);
+            this.panel13.Controls.Add(this.ownerData);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel13.Location = new System.Drawing.Point(3, 3);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(952, 693);
+            this.panel13.TabIndex = 2;
+            // 
+            // ownerUpdateBtn
+            // 
+            this.ownerUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ownerUpdateBtn.Location = new System.Drawing.Point(151, 645);
+            this.ownerUpdateBtn.Name = "ownerUpdateBtn";
+            this.ownerUpdateBtn.Size = new System.Drawing.Size(180, 25);
+            this.ownerUpdateBtn.TabIndex = 1;
+            this.ownerUpdateBtn.Text = "UPDATE";
+            this.ownerUpdateBtn.UseVisualStyleBackColor = true;
+            this.ownerUpdateBtn.Click += new System.EventHandler(this.ownerUpdateBtn_Click);
+            // 
+            // ownerData
+            // 
+            this.ownerData.AllowUserToAddRows = false;
+            this.ownerData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ownerData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ownerData.Location = new System.Drawing.Point(3, 3);
+            this.ownerData.Name = "ownerData";
+            this.ownerData.Size = new System.Drawing.Size(476, 613);
+            this.ownerData.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.userPermCombo);
+            this.panel12.Controls.Add(this.label13);
+            this.panel12.Controls.Add(this.userEmailTxt);
+            this.panel12.Controls.Add(this.label12);
+            this.panel12.Controls.Add(this.userGIDTxt);
+            this.panel12.Controls.Add(this.label11);
+            this.panel12.Controls.Add(this.userLastNameTxt);
+            this.panel12.Controls.Add(this.label10);
+            this.panel12.Controls.Add(this.userMidNameTxt);
+            this.panel12.Controls.Add(this.label9);
+            this.panel12.Controls.Add(this.userInsertBtn);
+            this.panel12.Controls.Add(this.userFirstNameTxt);
+            this.panel12.Controls.Add(this.userNameTxt);
+            this.panel12.Controls.Add(this.label6);
+            this.panel12.Controls.Add(this.label8);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel12.Location = new System.Drawing.Point(488, 3);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(467, 693);
+            this.panel12.TabIndex = 5;
+            // 
+            // userInsertBtn
+            // 
+            this.userInsertBtn.Location = new System.Drawing.Point(138, 424);
+            this.userInsertBtn.Name = "userInsertBtn";
+            this.userInsertBtn.Size = new System.Drawing.Size(180, 25);
+            this.userInsertBtn.TabIndex = 4;
+            this.userInsertBtn.Text = "INSERT";
+            this.userInsertBtn.UseVisualStyleBackColor = true;
+            this.userInsertBtn.Click += new System.EventHandler(this.userInsertBtn_Click);
+            // 
+            // userFirstNameTxt
+            // 
+            this.userFirstNameTxt.Location = new System.Drawing.Point(55, 136);
+            this.userFirstNameTxt.Name = "userFirstNameTxt";
+            this.userFirstNameTxt.Size = new System.Drawing.Size(354, 20);
+            this.userFirstNameTxt.TabIndex = 3;
+            // 
+            // userNameTxt
+            // 
+            this.userNameTxt.Location = new System.Drawing.Point(55, 94);
+            this.userNameTxt.Name = "userNameTxt";
+            this.userNameTxt.Size = new System.Drawing.Size(354, 20);
+            this.userNameTxt.TabIndex = 2;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(52, 118);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "First Name";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(53, 78);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(69, 13);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "User Name";
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.userUpdateBtn);
+            this.panel14.Controls.Add(this.userData);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel14.Location = new System.Drawing.Point(3, 3);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(952, 693);
+            this.panel14.TabIndex = 4;
+            // 
+            // userUpdateBtn
+            // 
+            this.userUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.userUpdateBtn.Location = new System.Drawing.Point(151, 645);
+            this.userUpdateBtn.Name = "userUpdateBtn";
+            this.userUpdateBtn.Size = new System.Drawing.Size(180, 25);
+            this.userUpdateBtn.TabIndex = 1;
+            this.userUpdateBtn.Text = "UPDATE";
+            this.userUpdateBtn.UseVisualStyleBackColor = true;
+            this.userUpdateBtn.Click += new System.EventHandler(this.userUpdateBtn_Click);
+            // 
+            // userData
+            // 
+            this.userData.AllowUserToAddRows = false;
+            this.userData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.userData.Location = new System.Drawing.Point(3, 3);
+            this.userData.Name = "userData";
+            this.userData.Size = new System.Drawing.Size(476, 613);
+            this.userData.TabIndex = 0;
+            // 
+            // userMidNameTxt
+            // 
+            this.userMidNameTxt.Location = new System.Drawing.Point(56, 177);
+            this.userMidNameTxt.Name = "userMidNameTxt";
+            this.userMidNameTxt.Size = new System.Drawing.Size(354, 20);
+            this.userMidNameTxt.TabIndex = 6;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(53, 159);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Middle Name";
+            // 
+            // userLastNameTxt
+            // 
+            this.userLastNameTxt.Location = new System.Drawing.Point(56, 218);
+            this.userLastNameTxt.Name = "userLastNameTxt";
+            this.userLastNameTxt.Size = new System.Drawing.Size(354, 20);
+            this.userLastNameTxt.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(53, 200);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 13);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Last Name";
+            // 
+            // userGIDTxt
+            // 
+            this.userGIDTxt.Location = new System.Drawing.Point(56, 263);
+            this.userGIDTxt.Name = "userGIDTxt";
+            this.userGIDTxt.Size = new System.Drawing.Size(354, 20);
+            this.userGIDTxt.TabIndex = 10;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(53, 245);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 13);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "GID";
+            // 
+            // userEmailTxt
+            // 
+            this.userEmailTxt.Location = new System.Drawing.Point(56, 308);
+            this.userEmailTxt.Name = "userEmailTxt";
+            this.userEmailTxt.Size = new System.Drawing.Size(354, 20);
+            this.userEmailTxt.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(53, 290);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(37, 13);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Email";
+            // 
+            // userPermCombo
+            // 
+            this.userPermCombo.FormattingEnabled = true;
+            this.userPermCombo.Location = new System.Drawing.Point(56, 351);
+            this.userPermCombo.Name = "userPermCombo";
+            this.userPermCombo.Size = new System.Drawing.Size(354, 21);
+            this.userPermCombo.TabIndex = 14;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(53, 334);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(114, 13);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Type of Permission";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(375, 307);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(217, 13);
+            this.label14.TabIndex = 1;
+            this.label14.Text = "TO BE IMPLEMENTED WITH SALES";
             // 
             // executionForm
             // 
@@ -2102,7 +2579,29 @@ namespace WindowsFormsApp1
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.projOwnerData)).EndInit();
+            this.orgUnitTab.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.orgUnitData)).EndInit();
+            this.wtgTypeTab.ResumeLayout(false);
+            this.ownerTab.ResumeLayout(false);
+            this.usersTab.ResumeLayout(false);
+            this.transfSalesProjTab.ResumeLayout(false);
+            this.transfSalesProjTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource1)).EndInit();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.wtgData)).EndInit();
+            this.ownerNameLbl.ResumeLayout(false);
+            this.ownerNameLbl.PerformLayout();
+            this.panel13.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ownerData)).EndInit();
+            this.panel12.ResumeLayout(false);
+            this.panel12.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2269,5 +2768,48 @@ namespace WindowsFormsApp1
         private ComboBox projOwnerCombo;
         private Label label5;
         private ComboBox projNameCombo;
+        private Panel panel8;
+        private Button origUnitInsertBtn;
+        private TextBox orgUnitTxt;
+        private Label orgUnitLbl;
+        private Panel panel9;
+        private Button orgUnitUpdateBtn;
+        private DataGridView orgUnitData;
+        private Panel panel10;
+        private Button wtgInsertBtn;
+        private TextBox wtgTxt;
+        private Label wtgLbl;
+        private Panel panel11;
+        private Button wtgUpdateBtn;
+        private DataGridView wtgData;
+        private Panel ownerNameLbl;
+        private Button ownerInsertBtn;
+        private TextBox ownerCodeTxt;
+        private TextBox ownerNameTxt;
+        private Label ownerCodeLbl;
+        private Label label7;
+        private Panel panel13;
+        private Button ownerUpdateBtn;
+        private DataGridView ownerData;
+        private Panel panel12;
+        private Button userInsertBtn;
+        private TextBox userFirstNameTxt;
+        private TextBox userNameTxt;
+        private Label label6;
+        private Label label8;
+        private Panel panel14;
+        private Button userUpdateBtn;
+        private DataGridView userData;
+        private TextBox userEmailTxt;
+        private Label label12;
+        private TextBox userGIDTxt;
+        private Label label11;
+        private TextBox userLastNameTxt;
+        private Label label10;
+        private TextBox userMidNameTxt;
+        private Label label9;
+        private ComboBox userPermCombo;
+        private Label label13;
+        private Label label14;
     }
 }

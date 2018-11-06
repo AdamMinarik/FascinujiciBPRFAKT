@@ -42,14 +42,20 @@ namespace WindowsFormsApp1
         private SqlDataAdapter daDIcat;
         private SqlDataAdapter daNCC;
         private SqlDataAdapter daProjOwner;
+        private SqlDataAdapter daOrgUnit;
+        private SqlDataAdapter daWTG;
+        private SqlDataAdapter daOwner;
+        private SqlDataAdapter daUser;
 
         // Data Tables
         private DataTable dsEntryCurr;
         private DataTable dsDIcat;
         private DataTable dsNCC;
         private DataTable dsProjOwner;
-
-
+        private DataTable dsOrgUnit;
+        private DataTable dsWTG;
+        private DataTable dsOwner;
+        private DataTable dsUser;
 
 
         public object ProjectsData { get; private set; }
@@ -304,21 +310,69 @@ namespace WindowsFormsApp1
 
         private void orgUnitButton_Click(object sender, EventArgs e)
         {
+            SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
+            connection.Open();
+            string SQL = "SELECT * FROM OriginatingList WHERE status = 1 ORDER BY Name";
+
+            daOrgUnit = new SqlDataAdapter(SQL, connection);
+            dsOrgUnit = new DataTable();
+            daOrgUnit.Fill(dsOrgUnit);
+            orgUnitData.DataSource = dsOrgUnit;
+            connection.Close();
             tabController.SelectedIndex = 7;
         }
 
         private void wtgTypeButton_Click(object sender, EventArgs e)
         {
+            SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
+            connection.Open();
+            string SQL = "SELECT * FROM WTGtype WHERE IDstatus = 1";
+
+            daWTG = new SqlDataAdapter(SQL, connection);
+            dsWTG = new DataTable();
+            daWTG.Fill(dsWTG);
+            wtgData.DataSource = dsWTG;
+            connection.Close();
             tabController.SelectedIndex = 8;
         }
-
+        
         private void ownerButton_Click(object sender, EventArgs e)
         {
+            SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
+            connection.Open();
+            string SQL = "SELECT* FROM listofOwners WHERE status = 1 ORDER BY name; ";
+
+            daOwner = new SqlDataAdapter(SQL, connection);
+            dsOwner = new DataTable();
+            daOwner.Fill(dsOwner);
+            ownerData.DataSource = dsOwner;
+            connection.Close();
             tabController.SelectedIndex = 9;
         }
 
+        
         private void usersButton_Click(object sender, EventArgs e)
         {
+            SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
+            connection.Open();
+            string SQL = "SELECT* FROM rk_users ORDER BY Lastname, FirstName;";
+            daUser = new SqlDataAdapter(SQL, connection);
+            dsUser = new DataTable();
+            daUser.Fill(dsUser);
+            userData.DataSource = dsUser;
+
+
+            SQL = "SELECT * FROM rk_Rolelist_view;";
+            daUser = new SqlDataAdapter(SQL, connection);
+            dsUser = new DataTable();
+            daUser.Fill(dsUser);
+
+            connection.Close();
+
+            this.userPermCombo.DisplayMember = "roleName";
+            this.userPermCombo.ValueMember = "ID";
+            this.userPermCombo.DataSource = dsUser;
+
             tabController.SelectedIndex = 10;
         }
 
@@ -526,12 +580,12 @@ namespace WindowsFormsApp1
             {
                 if (this.codeEntryTextBox.Text.Length > 3)
                 {
-                    MessageBox.Show("Entry Currency Code cannot have more then 3 characters", "Data saved", MessageBoxButtons.OK);
+                    MessageBox.Show("Entry Currency Code cannot have more then 3 characters", "Data Not saved", MessageBoxButtons.OK);
                     continueBool = false;
                 }
                 if (this.codeEntryTextBox.Text.Length == 0 || this.countryEntryTextBox.Text.Length == 0)
                 {
-                    MessageBox.Show("Please fill Country and Code Fields", "Data saved", MessageBoxButtons.OK);
+                    MessageBox.Show("Please fill Country and Code Fields", "Data Not saved", MessageBoxButtons.OK);
                     continueBool = false;
                 }
 
@@ -598,7 +652,7 @@ namespace WindowsFormsApp1
               
                 if (this.DIcatText.Text.Length == 0)
                 {
-                    MessageBox.Show("Please fill name field", "Data saved", MessageBoxButtons.OK);
+                    MessageBox.Show("Please fill name field", "Data Not saved", MessageBoxButtons.OK);
                     continueBool = false;
                 }
 
@@ -660,7 +714,7 @@ namespace WindowsFormsApp1
 
                 if (this.nccText.Text.Length == 0)
                 {
-                    MessageBox.Show("Please fill name field", "Data saved", MessageBoxButtons.OK);
+                    MessageBox.Show("Please fill name field", "Data Not saved", MessageBoxButtons.OK);
                     continueBool = false;
                 }
 
@@ -718,6 +772,260 @@ namespace WindowsFormsApp1
                     }
                     this.DIcatText.Text = "";
                     MessageBox.Show("Project Owner Updated", "Data saved", MessageBoxButtons.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void origUnitInsertBtn_Click(object sender, EventArgs e)
+        {
+            bool continueBool = true;
+
+            try
+            {
+
+                if (this.orgUnitTxt.Text.Length == 0)
+                {
+                    MessageBox.Show("Please fill name field", "Data Not saved", MessageBoxButtons.OK);
+                    continueBool = false;
+                }
+
+                if (continueBool == true)
+                {
+                    string query = "INSERT INTO OriginatingList(status,name) VALUES (1,'" + this.orgUnitTxt.Text + "')";
+
+                    using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        Console.WriteLine(query);
+                        command.ExecuteNonQuery();
+                        string SQL = "SELECT * FROM OriginatingList WHERE status = 1 order by Name";
+                        daOrgUnit = new SqlDataAdapter(SQL, connection);
+                        dsOrgUnit = new DataTable();
+                        daOrgUnit.Fill(dsOrgUnit);
+                        orgUnitData.DataSource = dsOrgUnit;
+                        connection.Close();
+                    }
+                    this.orgUnitTxt.Text = "";
+                    MessageBox.Show("Originating Unit Saved", "Data saved", MessageBoxButtons.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void orgUnitUpdateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable changes = ((DataTable)orgUnitData.DataSource).GetChanges();
+                if (changes != null)
+                {
+                    daOrgUnit = new SqlDataAdapter("SELECT * FROM OriginatingList WHERE status = 1 order by Name; ", connectionString.ConnectionString);
+                    SqlCommandBuilder mcb = new SqlCommandBuilder(daOrgUnit);
+                    daOrgUnit.UpdateCommand = mcb.GetUpdateCommand();
+                    daOrgUnit.Update(changes);
+                    ((DataTable)orgUnitData.DataSource).AcceptChanges();
+                    MessageBox.Show("List Updated");
+                }
+        }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+}
+
+        private void wtgUpdateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable changes = ((DataTable)wtgData.DataSource).GetChanges();
+                if (changes != null)
+                {
+                    daWTG = new SqlDataAdapter("SELECT * FROM WTGtype WHERE IDstatus = 1;", connectionString.ConnectionString);
+                    SqlCommandBuilder mcb = new SqlCommandBuilder(daWTG);
+                    daWTG.UpdateCommand = mcb.GetUpdateCommand();
+                    daWTG.Update(changes);
+                    ((DataTable)wtgData.DataSource).AcceptChanges();
+                    MessageBox.Show("List Updated");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void wtgInsertBtn_Click(object sender, EventArgs e)
+        {
+            bool continueBool = true;
+
+            try
+            {
+
+                if (this.wtgTxt.Text.Length == 0)
+                {
+                    MessageBox.Show("Please fill name field", "Data Not saved", MessageBoxButtons.OK);
+                    continueBool = false;
+                }
+
+                if (continueBool == true)
+                {
+                    string query = "INSERT INTO WTGtype(IDstatus,name) VALUES (1,'" + this.wtgTxt.Text + "')";
+
+                    using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        Console.WriteLine(query);
+                        command.ExecuteNonQuery();
+                        string SQL = "SELECT * FROM WTGtype WHERE IDstatus = 1; ";
+                        daWTG = new SqlDataAdapter(SQL, connection);
+                        dsWTG = new DataTable();
+                        daWTG.Fill(dsWTG);
+                        wtgData.DataSource = dsWTG;
+                        connection.Close();
+                    }
+                    this.wtgTxt.Text = "";
+                    MessageBox.Show("WTG Saved", "Data saved", MessageBoxButtons.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ownerInsertBtn_Click(object sender, EventArgs e)
+        {
+            bool continueBool = true;
+
+            try
+            {
+                if (this.ownerCodeTxt.Text.Length > 5)
+                {
+                    MessageBox.Show("Owner Code cannot have more then 5 characters", "Data Not saved", MessageBoxButtons.OK);
+                    continueBool = false;
+                }
+                if (this.ownerCodeTxt.Text.Length == 0 || this.ownerNameTxt.Text.Length == 0)
+                {
+                    MessageBox.Show("Please fill Owner Name and Owner Code Fields", "Data Not saved", MessageBoxButtons.OK);
+                    continueBool = false;
+                }
+
+                if (continueBool == true)
+                {
+                    string query = "INSERT INTO listofOwners(Name,Code) VALUES ('" + this.ownerNameTxt.Text + "','" + this.ownerCodeTxt.Text + "')";
+
+                    using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        Console.WriteLine(query);
+                        command.ExecuteNonQuery();
+                        string SQL = "SELECT * FROM listofOwners WHERE status = 1 ORDER BY name; ";
+                        daOwner = new SqlDataAdapter(SQL, connection);
+                        dsOwner = new DataTable();
+                        daOwner.Fill(dsOwner);
+                        ownerData.DataSource = dsOwner;
+                        connection.Close();
+                    }
+                    this.ownerCodeTxt.Text = "";
+                    this.ownerNameTxt.Text = "";
+                    MessageBox.Show("Owner Saved", "Data saved", MessageBoxButtons.OK);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void ownerUpdateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable changes = ((DataTable)ownerData.DataSource).GetChanges();
+                if (changes != null)
+                {
+                    daOwner = new SqlDataAdapter("SELECT * FROM listofOwners WHERE status = 1 ORDER BY name; ", connectionString.ConnectionString);
+                    SqlCommandBuilder mcb = new SqlCommandBuilder(daOwner);
+                    daOwner.UpdateCommand = mcb.GetUpdateCommand();
+                    daOwner.Update(changes);
+                    ((DataTable)ownerData.DataSource).AcceptChanges();
+                    MessageBox.Show("List Updated");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void userUpdateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DataTable changes = ((DataTable)userData.DataSource).GetChanges();
+                if (changes != null)
+                {
+                    daUser = new SqlDataAdapter("SELECT * FROM rk_users ORDER BY Lastname, FirstName;", connectionString.ConnectionString);
+                    SqlCommandBuilder mcb = new SqlCommandBuilder(daUser);
+                    daUser.UpdateCommand = mcb.GetUpdateCommand();
+                    daUser.Update(changes);
+                    ((DataTable)userData.DataSource).AcceptChanges();
+                    MessageBox.Show("List Updated");
+                }
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void userInsertBtn_Click(object sender, EventArgs e)
+        {
+            bool continueBool = true;
+
+            try
+            {
+          
+                if (continueBool == true)
+                {
+                    string query = "INSERT INTO rk_users (Username,FirstName,MiddleName,LastName,IDroles,GID,email) VALUES ('" + this.userNameTxt.Text + "','" + this.userFirstNameTxt.Text + "','" + this.userMidNameTxt.Text + "','" + this.userLastNameTxt.Text + "'," + this.userPermCombo.SelectedValue + ",'" + this.userGIDTxt.Text + "','" + this.userEmailTxt.Text + "')";
+                    MessageBox.Show(query);
+                    using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        connection.Open();
+                        Console.WriteLine(query);
+                        command.ExecuteNonQuery();
+                        string SQL = "SELECT * FROM rk_users ORDER BY Lastname, FirstName;";
+                        daUser = new SqlDataAdapter(SQL, connection);
+                        dsUser = new DataTable();
+                        daUser.Fill(dsUser);
+                        userData.DataSource = dsUser;
+                        connection.Close();
+                    }
+                    this.userNameTxt.Text = "";
+                    this.userFirstNameTxt.Text = "";
+                    this.userMidNameTxt.Text = "";
+                    this.userLastNameTxt.Text = "";
+                    this.userGIDTxt.Text = "";
+                    this.userEmailTxt.Text = "";
+                    this.userPermCombo.SelectedItem = 0;
+
+                    MessageBox.Show("Owner Saved", "Data saved", MessageBoxButtons.OK);
                 }
             }
             catch (Exception ex)
