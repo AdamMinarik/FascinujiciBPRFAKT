@@ -56,7 +56,7 @@ namespace WindowsFormsApp1
         private DataTable dsWTG;
         private DataTable dsOwner;
         private DataTable dsUser;
-
+        
 
         public object ProjectsData { get; private set; }
 
@@ -220,7 +220,6 @@ namespace WindowsFormsApp1
 
         private void entryCurButton_Click(object sender, EventArgs e)
         {
-
             SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
             connection.Open();
             string SQL = "SELECT * FROM rk_CurrencyName ORDER BY Country";

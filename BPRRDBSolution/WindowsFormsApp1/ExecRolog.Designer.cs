@@ -452,6 +452,7 @@
             this.overviewButton.Text = "         OVERVIEW";
             this.overviewButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.overviewButton.UseVisualStyleBackColor = false;
+            this.overviewButton.Click += new System.EventHandler(this.overviewButton_Click);
             // 
             // panel1
             // 
@@ -482,7 +483,7 @@
             // 
             this.risksTab.Location = new System.Drawing.Point(4, 22);
             this.risksTab.Name = "risksTab";
-            this.risksTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.risksTab.Padding = new System.Windows.Forms.Padding(3);
             this.risksTab.Size = new System.Drawing.Size(833, 317);
             this.risksTab.TabIndex = 0;
             this.risksTab.Text = "Individual Risks";
@@ -492,8 +493,8 @@
             // 
             this.projImpactsTab.Location = new System.Drawing.Point(4, 22);
             this.projImpactsTab.Name = "projImpactsTab";
-            this.projImpactsTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.projImpactsTab.Size = new System.Drawing.Size(844, 223);
+            this.projImpactsTab.Padding = new System.Windows.Forms.Padding(3);
+            this.projImpactsTab.Size = new System.Drawing.Size(833, 317);
             this.projImpactsTab.TabIndex = 1;
             this.projImpactsTab.Text = "Project Impacts";
             this.projImpactsTab.UseVisualStyleBackColor = true;
@@ -502,8 +503,8 @@
             // 
             this.oppTab.Location = new System.Drawing.Point(4, 22);
             this.oppTab.Name = "oppTab";
-            this.oppTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.oppTab.Size = new System.Drawing.Size(844, 223);
+            this.oppTab.Padding = new System.Windows.Forms.Padding(3);
+            this.oppTab.Size = new System.Drawing.Size(833, 317);
             this.oppTab.TabIndex = 2;
             this.oppTab.Text = "Individual Opportunities";
             this.oppTab.UseVisualStyleBackColor = true;
@@ -512,8 +513,8 @@
             // 
             this.erTab.Location = new System.Drawing.Point(4, 22);
             this.erTab.Name = "erTab";
-            this.erTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.erTab.Size = new System.Drawing.Size(844, 223);
+            this.erTab.Padding = new System.Windows.Forms.Padding(3);
+            this.erTab.Size = new System.Drawing.Size(833, 317);
             this.erTab.TabIndex = 3;
             this.erTab.Text = "Enterprise Risks";
             this.erTab.UseVisualStyleBackColor = true;
@@ -522,8 +523,8 @@
             // 
             this.oUncTab.Location = new System.Drawing.Point(4, 22);
             this.oUncTab.Name = "oUncTab";
-            this.oUncTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
-            this.oUncTab.Size = new System.Drawing.Size(844, 223);
+            this.oUncTab.Padding = new System.Windows.Forms.Padding(3);
+            this.oUncTab.Size = new System.Drawing.Size(833, 317);
             this.oUncTab.TabIndex = 4;
             this.oUncTab.Text = "Other Uncertainties ";
             this.oUncTab.UseVisualStyleBackColor = true;
