@@ -601,10 +601,11 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonPanel);
             this.Controls.Add(this.locationPanel);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ExecRolog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Project";
+            this.Text = "Project Overview";
             this.locationPanel.ResumeLayout(false);
             this.locationPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).EndInit();

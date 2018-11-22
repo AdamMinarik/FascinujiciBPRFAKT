@@ -210,7 +210,7 @@ namespace WindowsFormsApp1
 
         private void guideButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("http://www.google.com");
+            System.Diagnostics.Process.Start("https://screenmessage.com/mehehehe");
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -1039,6 +1039,93 @@ namespace WindowsFormsApp1
         }
 
         private void portfolioRepGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void projectsData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+       private void ruCostsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            double ruCost;
+            double buCost;
+            if (ruCostsTextBox.Text == null || ruCostsTextBox.Text == "")
+            {
+                ruCost = 0;
+            }
+            else ruCost = Convert.ToDouble(ruCostsTextBox.Text);
+            if (buCostsTextBox.Text == null || buCostsTextBox.Text == "")
+            {
+                buCost = 0;
+            }
+            else buCost = Convert.ToDouble(buCostsTextBox.Text);
+
+            double totalCost = buCost + ruCost;
+            totalProjectCostsTextBox.Text = Convert.ToString(totalCost);
+        }
+
+        private void buCostsTextBox_TextChanged(object sender, EventArgs e)
+        {
+            double ruCost;
+            double buCost;
+            if (ruCostsTextBox.Text == null || ruCostsTextBox.Text == "")
+            {
+                ruCost = 0;
+            }
+            else ruCost = Convert.ToDouble(ruCostsTextBox.Text);
+            if (buCostsTextBox.Text == null || buCostsTextBox.Text == "")
+            {
+                buCost = 0;
+            }
+            else buCost = Convert.ToDouble(buCostsTextBox.Text);
+
+            double totalCost = buCost + ruCost;
+            totalProjectCostsTextBox.Text = Convert.ToString(totalCost);
+        }
+
+        private void buCostsTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (!(e.KeyCode == Keys.Back))
+            {
+                string text = buCostsTextBox.Text.Replace(",", "");
+                if (text.Length % 3 == 0)
+                {
+                    buCostsTextBox.Text += ",";
+                    buCostsTextBox.SelectionStart = buCostsTextBox.Text.Length;
+                }
+            }
+        }
+
+        private void ruCostsTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (!(e.KeyCode == Keys.Back))
+            {
+                string text = ruCostsTextBox.Text.Replace(",", "");
+                if (text.Length % 3 == 0)
+                {
+                    ruCostsTextBox.Text += ",";
+                    ruCostsTextBox.SelectionStart = ruCostsTextBox.Text.Length;
+                }
+            }
+        }
+
+        private void totalProjectCostsTextBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (!(e.KeyCode == Keys.Back))
+            {
+                string text = totalProjectCostsTextBox.Text.Replace(",", "");
+                if (text.Length % 3 == 0)
+                {
+                    totalProjectCostsTextBox.Text += ",";
+                    totalProjectCostsTextBox.SelectionStart = totalProjectCostsTextBox.Text.Length;
+                }
+            }
+        }
+
+        private void buCurComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

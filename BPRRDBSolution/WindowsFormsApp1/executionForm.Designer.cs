@@ -310,6 +310,7 @@ namespace WindowsFormsApp1
             this.locationPanel.Controls.Add(this.locationLabel);
             this.locationPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.locationPanel.Location = new System.Drawing.Point(0, 0);
+            this.locationPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.locationPanel.Name = "locationPanel";
             this.locationPanel.Size = new System.Drawing.Size(1278, 41);
             this.locationPanel.TabIndex = 0;
@@ -321,6 +322,7 @@ namespace WindowsFormsApp1
             this.readPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.readPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("readPictureBox.InitialImage")));
             this.readPictureBox.Location = new System.Drawing.Point(1232, 6);
+            this.readPictureBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.readPictureBox.Name = "readPictureBox";
             this.readPictureBox.Size = new System.Drawing.Size(35, 25);
             this.readPictureBox.TabIndex = 5;
@@ -336,6 +338,7 @@ namespace WindowsFormsApp1
             this.approvalPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.approvalPictureBox.InitialImage = null;
             this.approvalPictureBox.Location = new System.Drawing.Point(1232, 6);
+            this.approvalPictureBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.approvalPictureBox.Name = "approvalPictureBox";
             this.approvalPictureBox.Size = new System.Drawing.Size(35, 25);
             this.approvalPictureBox.TabIndex = 4;
@@ -350,6 +353,7 @@ namespace WindowsFormsApp1
             this.writePictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.writePictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("writePictureBox.InitialImage")));
             this.writePictureBox.Location = new System.Drawing.Point(1232, 6);
+            this.writePictureBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.writePictureBox.Name = "writePictureBox";
             this.writePictureBox.Size = new System.Drawing.Size(35, 25);
             this.writePictureBox.TabIndex = 3;
@@ -364,6 +368,7 @@ namespace WindowsFormsApp1
             this.adminPictureBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.adminPictureBox.InitialImage = ((System.Drawing.Image)(resources.GetObject("adminPictureBox.InitialImage")));
             this.adminPictureBox.Location = new System.Drawing.Point(1232, 6);
+            this.adminPictureBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.adminPictureBox.Name = "adminPictureBox";
             this.adminPictureBox.Size = new System.Drawing.Size(35, 25);
             this.adminPictureBox.TabIndex = 2;
@@ -377,7 +382,8 @@ namespace WindowsFormsApp1
             this.userLabel.AutoSize = true;
             this.userLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.userLabel.ForeColor = System.Drawing.Color.White;
-            this.userLabel.Location = new System.Drawing.Point(1108, 10);
+            this.userLabel.Location = new System.Drawing.Point(1109, 10);
+            this.userLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(193, 36);
             this.userLabel.TabIndex = 1;
@@ -392,6 +398,7 @@ namespace WindowsFormsApp1
             this.locationLabel.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.locationLabel.ForeColor = System.Drawing.Color.White;
             this.locationLabel.Location = new System.Drawing.Point(12, 10);
+            this.locationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.locationLabel.Name = "locationLabel";
             this.locationLabel.Size = new System.Drawing.Size(304, 36);
             this.locationLabel.TabIndex = 0;
@@ -419,6 +426,7 @@ namespace WindowsFormsApp1
             this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonPanel.Font = new System.Drawing.Font("Trebuchet MS", 8.25F);
             this.buttonPanel.Location = new System.Drawing.Point(0, 41);
+            this.buttonPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buttonPanel.Name = "buttonPanel";
             this.buttonPanel.Size = new System.Drawing.Size(275, 753);
             this.buttonPanel.TabIndex = 1;
@@ -434,6 +442,7 @@ namespace WindowsFormsApp1
             this.transfSalesProjButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.transfSalesProjButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.transfSalesProjButton.Location = new System.Drawing.Point(-1, 462);
+            this.transfSalesProjButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.transfSalesProjButton.Name = "transfSalesProjButton";
             this.transfSalesProjButton.Size = new System.Drawing.Size(275, 30);
             this.transfSalesProjButton.TabIndex = 15;
@@ -454,6 +463,7 @@ namespace WindowsFormsApp1
             this.usersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usersButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.usersButton.Location = new System.Drawing.Point(-1, 432);
+            this.usersButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.usersButton.Name = "usersButton";
             this.usersButton.Size = new System.Drawing.Size(275, 30);
             this.usersButton.TabIndex = 14;
@@ -474,6 +484,7 @@ namespace WindowsFormsApp1
             this.ownerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ownerButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.ownerButton.Location = new System.Drawing.Point(-2, 402);
+            this.ownerButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerButton.Name = "ownerButton";
             this.ownerButton.Size = new System.Drawing.Size(275, 30);
             this.ownerButton.TabIndex = 13;
@@ -494,6 +505,7 @@ namespace WindowsFormsApp1
             this.wtgTypeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wtgTypeButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.wtgTypeButton.Location = new System.Drawing.Point(-2, 372);
+            this.wtgTypeButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgTypeButton.Name = "wtgTypeButton";
             this.wtgTypeButton.Size = new System.Drawing.Size(275, 30);
             this.wtgTypeButton.TabIndex = 12;
@@ -515,6 +527,7 @@ namespace WindowsFormsApp1
             this.orgUnitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orgUnitButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.orgUnitButton.Location = new System.Drawing.Point(-2, 342);
+            this.orgUnitButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.orgUnitButton.Name = "orgUnitButton";
             this.orgUnitButton.Size = new System.Drawing.Size(275, 30);
             this.orgUnitButton.TabIndex = 11;
@@ -535,6 +548,7 @@ namespace WindowsFormsApp1
             this.projectOwnerButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.projectOwnerButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.projectOwnerButton.Location = new System.Drawing.Point(-2, 312);
+            this.projectOwnerButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectOwnerButton.Name = "projectOwnerButton";
             this.projectOwnerButton.Size = new System.Drawing.Size(275, 30);
             this.projectOwnerButton.TabIndex = 10;
@@ -555,6 +569,7 @@ namespace WindowsFormsApp1
             this.nccButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nccButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.nccButton.Location = new System.Drawing.Point(-2, 282);
+            this.nccButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccButton.Name = "nccButton";
             this.nccButton.Size = new System.Drawing.Size(275, 30);
             this.nccButton.TabIndex = 9;
@@ -575,6 +590,7 @@ namespace WindowsFormsApp1
             this.diCatButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.diCatButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.diCatButton.Location = new System.Drawing.Point(-2, 252);
+            this.diCatButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.diCatButton.Name = "diCatButton";
             this.diCatButton.Size = new System.Drawing.Size(275, 30);
             this.diCatButton.TabIndex = 8;
@@ -596,6 +612,7 @@ namespace WindowsFormsApp1
             this.entryCurButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.entryCurButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.entryCurButton.Location = new System.Drawing.Point(-2, 222);
+            this.entryCurButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.entryCurButton.Name = "entryCurButton";
             this.entryCurButton.Size = new System.Drawing.Size(275, 30);
             this.entryCurButton.TabIndex = 7;
@@ -616,6 +633,7 @@ namespace WindowsFormsApp1
             this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.quitButton.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quitButton.Location = new System.Drawing.Point(0, 707);
+            this.quitButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(275, 46);
             this.quitButton.TabIndex = 6;
@@ -637,6 +655,7 @@ namespace WindowsFormsApp1
             this.guideButton.Image = ((System.Drawing.Image)(resources.GetObject("guideButton.Image")));
             this.guideButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.guideButton.Location = new System.Drawing.Point(1, 147);
+            this.guideButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.guideButton.Name = "guideButton";
             this.guideButton.Size = new System.Drawing.Size(275, 38);
             this.guideButton.TabIndex = 5;
@@ -659,6 +678,7 @@ namespace WindowsFormsApp1
             this.settingsButton.Image = ((System.Drawing.Image)(resources.GetObject("settingsButton.Image")));
             this.settingsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.settingsButton.Location = new System.Drawing.Point(0, 109);
+            this.settingsButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(275, 38);
             this.settingsButton.TabIndex = 4;
@@ -681,6 +701,7 @@ namespace WindowsFormsApp1
             this.editButton.Image = ((System.Drawing.Image)(resources.GetObject("editButton.Image")));
             this.editButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.editButton.Location = new System.Drawing.Point(1, 185);
+            this.editButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.editButton.Name = "editButton";
             this.editButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.editButton.Size = new System.Drawing.Size(275, 37);
@@ -704,6 +725,7 @@ namespace WindowsFormsApp1
             this.createProjectButton.Image = ((System.Drawing.Image)(resources.GetObject("createProjectButton.Image")));
             this.createProjectButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.createProjectButton.Location = new System.Drawing.Point(0, 71);
+            this.createProjectButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createProjectButton.Name = "createProjectButton";
             this.createProjectButton.Size = new System.Drawing.Size(275, 38);
             this.createProjectButton.TabIndex = 2;
@@ -726,6 +748,7 @@ namespace WindowsFormsApp1
             this.reportsButtons.Image = ((System.Drawing.Image)(resources.GetObject("reportsButtons.Image")));
             this.reportsButtons.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.reportsButtons.Location = new System.Drawing.Point(0, 35);
+            this.reportsButtons.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.reportsButtons.Name = "reportsButtons";
             this.reportsButtons.Size = new System.Drawing.Size(275, 38);
             this.reportsButtons.TabIndex = 1;
@@ -749,6 +772,7 @@ namespace WindowsFormsApp1
             this.projectsButton.Image = ((System.Drawing.Image)(resources.GetObject("projectsButton.Image")));
             this.projectsButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.projectsButton.Location = new System.Drawing.Point(0, -1);
+            this.projectsButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectsButton.Name = "projectsButton";
             this.projectsButton.Size = new System.Drawing.Size(275, 38);
             this.projectsButton.TabIndex = 0;
@@ -762,9 +786,10 @@ namespace WindowsFormsApp1
             this.projectsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.projectsPanel.Controls.Add(this.projectsData);
             this.projectsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.projectsPanel.Location = new System.Drawing.Point(3, 3);
+            this.projectsPanel.Location = new System.Drawing.Point(2, 3);
+            this.projectsPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectsPanel.Name = "projectsPanel";
-            this.projectsPanel.Size = new System.Drawing.Size(952, 686);
+            this.projectsPanel.Size = new System.Drawing.Size(991, 708);
             this.projectsPanel.TabIndex = 2;
             // 
             // projectsData
@@ -787,10 +812,12 @@ namespace WindowsFormsApp1
             this.projectsData.DataSource = this.newprojectviewBindingSource;
             this.projectsData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projectsData.Location = new System.Drawing.Point(0, 0);
+            this.projectsData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectsData.Name = "projectsData";
-            this.projectsData.Size = new System.Drawing.Size(952, 686);
+            this.projectsData.Size = new System.Drawing.Size(991, 708);
             this.projectsData.TabIndex = 0;
             this.projectsData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectsData_CellClick);
+            this.projectsData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectsData_CellContentClick);
             // 
             // pnameDataGridViewTextBoxColumn
             // 
@@ -867,64 +894,61 @@ namespace WindowsFormsApp1
             this.portfolioPanel.Controls.Add(this.top20Button);
             this.portfolioPanel.Controls.Add(this.portfolioRepGridView);
             this.portfolioPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.portfolioPanel.Location = new System.Drawing.Point(3, 3);
+            this.portfolioPanel.Location = new System.Drawing.Point(2, 3);
+            this.portfolioPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.portfolioPanel.Name = "portfolioPanel";
-            this.portfolioPanel.Size = new System.Drawing.Size(989, 714);
+            this.portfolioPanel.Size = new System.Drawing.Size(991, 708);
             this.portfolioPanel.TabIndex = 3;
             this.portfolioPanel.Visible = false;
             // 
             // tableauButton
             // 
-            this.tableauButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableauButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tableauButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.tableauButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.tableauButton.Location = new System.Drawing.Point(760, 660);
+            this.tableauButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tableauButton.Name = "tableauButton";
-            this.tableauButton.Size = new System.Drawing.Size(220, 47);
+            this.tableauButton.Size = new System.Drawing.Size(222, 41);
             this.tableauButton.TabIndex = 4;
             this.tableauButton.Text = "Tableau Reports";
             this.tableauButton.UseVisualStyleBackColor = false;
             // 
             // riskContingencyButton
             // 
-            this.riskContingencyButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.riskContingencyButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.riskContingencyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.riskContingencyButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.riskContingencyButton.Location = new System.Drawing.Point(512, 660);
+            this.riskContingencyButton.Location = new System.Drawing.Point(508, 660);
+            this.riskContingencyButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.riskContingencyButton.Name = "riskContingencyButton";
-            this.riskContingencyButton.Size = new System.Drawing.Size(220, 47);
+            this.riskContingencyButton.Size = new System.Drawing.Size(222, 41);
             this.riskContingencyButton.TabIndex = 3;
             this.riskContingencyButton.Text = "Risk Contingency Report";
             this.riskContingencyButton.UseVisualStyleBackColor = false;
             // 
             // rologButton
             // 
-            this.rologButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.rologButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.rologButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.rologButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.rologButton.Location = new System.Drawing.Point(253, 660);
+            this.rologButton.Location = new System.Drawing.Point(258, 660);
+            this.rologButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rologButton.Name = "rologButton";
-            this.rologButton.Size = new System.Drawing.Size(220, 47);
+            this.rologButton.Size = new System.Drawing.Size(222, 41);
             this.rologButton.TabIndex = 2;
             this.rologButton.Text = "Risk && Opportunity log Report";
             this.rologButton.UseVisualStyleBackColor = false;
             // 
             // top20Button
             // 
-            this.top20Button.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.top20Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.top20Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.top20Button.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.top20Button.Location = new System.Drawing.Point(6, 660);
+            this.top20Button.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.top20Button.Name = "top20Button";
-            this.top20Button.Size = new System.Drawing.Size(220, 47);
+            this.top20Button.Size = new System.Drawing.Size(222, 41);
             this.top20Button.TabIndex = 1;
             this.top20Button.Text = "Top 20 Report";
             this.top20Button.UseVisualStyleBackColor = false;
@@ -937,8 +961,9 @@ namespace WindowsFormsApp1
             this.portfolioRepGridView.BackgroundColor = System.Drawing.Color.White;
             this.portfolioRepGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.portfolioRepGridView.Location = new System.Drawing.Point(6, 6);
+            this.portfolioRepGridView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.portfolioRepGridView.Name = "portfolioRepGridView";
-            this.portfolioRepGridView.Size = new System.Drawing.Size(974, 637);
+            this.portfolioRepGridView.Size = new System.Drawing.Size(976, 648);
             this.portfolioRepGridView.TabIndex = 0;
             this.portfolioRepGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.portfolioRepGridView_CellContentClick);
             // 
@@ -946,9 +971,10 @@ namespace WindowsFormsApp1
             // 
             this.createProjectPanel.Controls.Add(this.newProjectTableLayout);
             this.createProjectPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.createProjectPanel.Location = new System.Drawing.Point(3, 3);
+            this.createProjectPanel.Location = new System.Drawing.Point(2, 3);
+            this.createProjectPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createProjectPanel.Name = "createProjectPanel";
-            this.createProjectPanel.Size = new System.Drawing.Size(989, 714);
+            this.createProjectPanel.Size = new System.Drawing.Size(991, 708);
             this.createProjectPanel.TabIndex = 5;
             // 
             // newProjectTableLayout
@@ -1015,6 +1041,7 @@ namespace WindowsFormsApp1
             this.newProjectTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.newProjectTableLayout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.newProjectTableLayout.Location = new System.Drawing.Point(0, 0);
+            this.newProjectTableLayout.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.newProjectTableLayout.Name = "newProjectTableLayout";
             this.newProjectTableLayout.RowCount = 26;
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -1043,24 +1070,26 @@ namespace WindowsFormsApp1
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.newProjectTableLayout.Size = new System.Drawing.Size(989, 714);
+            this.newProjectTableLayout.Size = new System.Drawing.Size(991, 708);
             this.newProjectTableLayout.TabIndex = 42;
             this.newProjectTableLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // projectNameTextBox
             // 
             this.projectNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.projectNameTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.projectNameTextBox.Location = new System.Drawing.Point(27, 58);
+            this.projectNameTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.projectNameTextBox.Location = new System.Drawing.Point(26, 58);
+            this.projectNameTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectNameTextBox.Multiline = true;
             this.projectNameTextBox.Name = "projectNameTextBox";
-            this.projectNameTextBox.Size = new System.Drawing.Size(360, 24);
+            this.projectNameTextBox.Size = new System.Drawing.Size(363, 24);
             this.projectNameTextBox.TabIndex = 18;
             // 
             // projectIDLabel
             // 
             this.projectIDLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.projectIDLabel.Location = new System.Drawing.Point(27, 85);
+            this.projectIDLabel.Location = new System.Drawing.Point(26, 85);
+            this.projectIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectIDLabel.Name = "projectIDLabel";
             this.projectIDLabel.Size = new System.Drawing.Size(130, 25);
             this.projectIDLabel.TabIndex = 1;
@@ -1070,17 +1099,19 @@ namespace WindowsFormsApp1
             // projectIDTextBox
             // 
             this.projectIDTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.projectIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.projectIDTextBox.Location = new System.Drawing.Point(27, 113);
+            this.projectIDTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.projectIDTextBox.Location = new System.Drawing.Point(26, 113);
+            this.projectIDTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectIDTextBox.Multiline = true;
             this.projectIDTextBox.Name = "projectIDTextBox";
-            this.projectIDTextBox.Size = new System.Drawing.Size(360, 24);
+            this.projectIDTextBox.Size = new System.Drawing.Size(363, 24);
             this.projectIDTextBox.TabIndex = 20;
             // 
             // pmLabel
             // 
             this.pmLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.pmLabel.Location = new System.Drawing.Point(27, 170);
+            this.pmLabel.Location = new System.Drawing.Point(26, 170);
+            this.pmLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pmLabel.Name = "pmLabel";
             this.pmLabel.Size = new System.Drawing.Size(130, 20);
             this.pmLabel.TabIndex = 4;
@@ -1090,27 +1121,30 @@ namespace WindowsFormsApp1
             // wtgNoTextBox
             // 
             this.wtgNoTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wtgNoTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.wtgNoTextBox.Location = new System.Drawing.Point(27, 448);
+            this.wtgNoTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.wtgNoTextBox.Location = new System.Drawing.Point(26, 448);
+            this.wtgNoTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgNoTextBox.Multiline = true;
             this.wtgNoTextBox.Name = "wtgNoTextBox";
-            this.wtgNoTextBox.Size = new System.Drawing.Size(360, 24);
+            this.wtgNoTextBox.Size = new System.Drawing.Size(363, 24);
             this.wtgNoTextBox.TabIndex = 30;
             // 
             // PMTextBox
             // 
             this.PMTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PMTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.PMTextBox.Location = new System.Drawing.Point(27, 198);
+            this.PMTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.PMTextBox.Location = new System.Drawing.Point(26, 198);
+            this.PMTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.PMTextBox.Multiline = true;
             this.PMTextBox.Name = "PMTextBox";
-            this.PMTextBox.Size = new System.Drawing.Size(360, 24);
+            this.PMTextBox.Size = new System.Drawing.Size(363, 24);
             this.PMTextBox.TabIndex = 22;
             // 
             // cpmLabel
             // 
             this.cpmLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.cpmLabel.Location = new System.Drawing.Point(27, 225);
+            this.cpmLabel.Location = new System.Drawing.Point(26, 225);
+            this.cpmLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpmLabel.Name = "cpmLabel";
             this.cpmLabel.Size = new System.Drawing.Size(186, 25);
             this.cpmLabel.TabIndex = 3;
@@ -1120,17 +1154,19 @@ namespace WindowsFormsApp1
             // CPMTextBox
             // 
             this.CPMTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.CPMTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.CPMTextBox.Location = new System.Drawing.Point(27, 253);
+            this.CPMTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.CPMTextBox.Location = new System.Drawing.Point(26, 253);
+            this.CPMTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CPMTextBox.Multiline = true;
             this.CPMTextBox.Name = "CPMTextBox";
-            this.CPMTextBox.Size = new System.Drawing.Size(360, 24);
+            this.CPMTextBox.Size = new System.Drawing.Size(363, 24);
             this.CPMTextBox.TabIndex = 23;
             // 
             // wtgNoLabel
             // 
             this.wtgNoLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.wtgNoLabel.Location = new System.Drawing.Point(27, 420);
+            this.wtgNoLabel.Location = new System.Drawing.Point(26, 420);
+            this.wtgNoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.wtgNoLabel.Name = "wtgNoLabel";
             this.wtgNoLabel.Size = new System.Drawing.Size(130, 25);
             this.wtgNoLabel.TabIndex = 9;
@@ -1140,7 +1176,8 @@ namespace WindowsFormsApp1
             // preparedByLabel
             // 
             this.preparedByLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.preparedByLabel.Location = new System.Drawing.Point(27, 280);
+            this.preparedByLabel.Location = new System.Drawing.Point(26, 280);
+            this.preparedByLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.preparedByLabel.Name = "preparedByLabel";
             this.preparedByLabel.Size = new System.Drawing.Size(130, 25);
             this.preparedByLabel.TabIndex = 5;
@@ -1150,17 +1187,19 @@ namespace WindowsFormsApp1
             // preparedByTextBox
             // 
             this.preparedByTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.preparedByTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.preparedByTextBox.Location = new System.Drawing.Point(27, 308);
+            this.preparedByTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.preparedByTextBox.Location = new System.Drawing.Point(26, 308);
+            this.preparedByTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.preparedByTextBox.Multiline = true;
             this.preparedByTextBox.Name = "preparedByTextBox";
-            this.preparedByTextBox.Size = new System.Drawing.Size(360, 24);
+            this.preparedByTextBox.Size = new System.Drawing.Size(363, 24);
             this.preparedByTextBox.TabIndex = 24;
             // 
             // TOCLabel
             // 
             this.TOCLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.TOCLabel.Location = new System.Drawing.Point(27, 365);
+            this.TOCLabel.Location = new System.Drawing.Point(26, 365);
+            this.TOCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TOCLabel.Name = "TOCLabel";
             this.TOCLabel.Size = new System.Drawing.Size(130, 25);
             this.TOCLabel.TabIndex = 6;
@@ -1170,18 +1209,20 @@ namespace WindowsFormsApp1
             // totalProjectCostsTextBox
             // 
             this.totalProjectCostsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.totalProjectCostsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.totalProjectCostsTextBox.Location = new System.Drawing.Point(27, 643);
+            this.totalProjectCostsTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.totalProjectCostsTextBox.Location = new System.Drawing.Point(26, 643);
+            this.totalProjectCostsTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.totalProjectCostsTextBox.Multiline = true;
             this.totalProjectCostsTextBox.Name = "totalProjectCostsTextBox";
             this.totalProjectCostsTextBox.ReadOnly = true;
-            this.totalProjectCostsTextBox.Size = new System.Drawing.Size(360, 24);
+            this.totalProjectCostsTextBox.Size = new System.Drawing.Size(363, 24);
             this.totalProjectCostsTextBox.TabIndex = 38;
             // 
             // totalCostsLabel
             // 
             this.totalCostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.totalCostsLabel.Location = new System.Drawing.Point(27, 615);
+            this.totalCostsLabel.Location = new System.Drawing.Point(26, 615);
+            this.totalCostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalCostsLabel.Name = "totalCostsLabel";
             this.totalCostsLabel.Size = new System.Drawing.Size(130, 25);
             this.totalCostsLabel.TabIndex = 15;
@@ -1191,17 +1232,20 @@ namespace WindowsFormsApp1
             // ruCostsTextBox
             // 
             this.ruCostsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ruCostsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ruCostsTextBox.Location = new System.Drawing.Point(27, 588);
+            this.ruCostsTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.ruCostsTextBox.Location = new System.Drawing.Point(26, 588);
+            this.ruCostsTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ruCostsTextBox.Multiline = true;
             this.ruCostsTextBox.Name = "ruCostsTextBox";
-            this.ruCostsTextBox.Size = new System.Drawing.Size(360, 24);
+            this.ruCostsTextBox.Size = new System.Drawing.Size(363, 24);
             this.ruCostsTextBox.TabIndex = 35;
+            this.ruCostsTextBox.TextChanged += new System.EventHandler(this.ruCostsTextBox_TextChanged);
             // 
             // RUcostsLabel
             // 
             this.RUcostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.RUcostsLabel.Location = new System.Drawing.Point(27, 560);
+            this.RUcostsLabel.Location = new System.Drawing.Point(26, 560);
+            this.RUcostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RUcostsLabel.Name = "RUcostsLabel";
             this.RUcostsLabel.Size = new System.Drawing.Size(130, 25);
             this.RUcostsLabel.TabIndex = 14;
@@ -1211,17 +1255,20 @@ namespace WindowsFormsApp1
             // buCostsTextBox
             // 
             this.buCostsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buCostsTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buCostsTextBox.Location = new System.Drawing.Point(27, 533);
+            this.buCostsTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.buCostsTextBox.Location = new System.Drawing.Point(26, 533);
+            this.buCostsTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buCostsTextBox.Multiline = true;
             this.buCostsTextBox.Name = "buCostsTextBox";
-            this.buCostsTextBox.Size = new System.Drawing.Size(360, 24);
+            this.buCostsTextBox.Size = new System.Drawing.Size(363, 24);
             this.buCostsTextBox.TabIndex = 32;
+            this.buCostsTextBox.TextChanged += new System.EventHandler(this.buCostsTextBox_TextChanged);
             // 
             // BUcostsLabel
             // 
             this.BUcostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.BUcostsLabel.Location = new System.Drawing.Point(27, 505);
+            this.BUcostsLabel.Location = new System.Drawing.Point(26, 505);
+            this.BUcostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BUcostsLabel.Name = "BUcostsLabel";
             this.BUcostsLabel.Size = new System.Drawing.Size(130, 25);
             this.BUcostsLabel.TabIndex = 13;
@@ -1232,6 +1279,7 @@ namespace WindowsFormsApp1
             // 
             this.BUCurLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.BUCurLabel.Location = new System.Drawing.Point(441, 505);
+            this.BUCurLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BUCurLabel.Name = "BUCurLabel";
             this.BUCurLabel.Size = new System.Drawing.Size(130, 25);
             this.BUCurLabel.TabIndex = 16;
@@ -1246,10 +1294,12 @@ namespace WindowsFormsApp1
             this.buCurComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.buCurComboBox.FormattingEnabled = true;
             this.buCurComboBox.Location = new System.Drawing.Point(441, 533);
+            this.buCurComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buCurComboBox.Name = "buCurComboBox";
-            this.buCurComboBox.Size = new System.Drawing.Size(360, 32);
+            this.buCurComboBox.Size = new System.Drawing.Size(363, 32);
             this.buCurComboBox.TabIndex = 33;
             this.buCurComboBox.ValueMember = "ID";
+            this.buCurComboBox.SelectedIndexChanged += new System.EventHandler(this.buCurComboBox_SelectedIndexChanged);
             // 
             // rkCurrencyNameBindingSource
             // 
@@ -1261,11 +1311,12 @@ namespace WindowsFormsApp1
             this.ruCurComboBox.DataSource = this.rkCurrencyNameBindingSource;
             this.ruCurComboBox.DisplayMember = "Code";
             this.ruCurComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ruCurComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ruCurComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.ruCurComboBox.FormattingEnabled = true;
             this.ruCurComboBox.Location = new System.Drawing.Point(441, 588);
+            this.ruCurComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ruCurComboBox.Name = "ruCurComboBox";
-            this.ruCurComboBox.Size = new System.Drawing.Size(360, 28);
+            this.ruCurComboBox.Size = new System.Drawing.Size(363, 32);
             this.ruCurComboBox.TabIndex = 36;
             this.ruCurComboBox.ValueMember = "ID";
             // 
@@ -1273,6 +1324,7 @@ namespace WindowsFormsApp1
             // 
             this.RUcurLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.RUcurLabel.Location = new System.Drawing.Point(441, 560);
+            this.RUcurLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RUcurLabel.Name = "RUcurLabel";
             this.RUcurLabel.Size = new System.Drawing.Size(130, 25);
             this.RUcurLabel.TabIndex = 17;
@@ -1282,7 +1334,8 @@ namespace WindowsFormsApp1
             // ruEurLabel
             // 
             this.ruEurLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.ruEurLabel.Location = new System.Drawing.Point(807, 585);
+            this.ruEurLabel.Location = new System.Drawing.Point(808, 585);
+            this.ruEurLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ruEurLabel.Name = "ruEurLabel";
             this.ruEurLabel.Size = new System.Drawing.Size(40, 21);
             this.ruEurLabel.TabIndex = 38;
@@ -1292,7 +1345,8 @@ namespace WindowsFormsApp1
             // buEurLabel
             // 
             this.buEurLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.buEurLabel.Location = new System.Drawing.Point(807, 530);
+            this.buEurLabel.Location = new System.Drawing.Point(808, 530);
+            this.buEurLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.buEurLabel.Name = "buEurLabel";
             this.buEurLabel.Size = new System.Drawing.Size(40, 21);
             this.buEurLabel.TabIndex = 39;
@@ -1303,27 +1357,30 @@ namespace WindowsFormsApp1
             // ruRateTextBox
             // 
             this.ruRateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ruRateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ruRateTextBox.Location = new System.Drawing.Point(868, 588);
+            this.ruRateTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.ruRateTextBox.Location = new System.Drawing.Point(869, 588);
+            this.ruRateTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ruRateTextBox.Multiline = true;
             this.ruRateTextBox.Name = "ruRateTextBox";
-            this.ruRateTextBox.Size = new System.Drawing.Size(91, 24);
+            this.ruRateTextBox.Size = new System.Drawing.Size(93, 24);
             this.ruRateTextBox.TabIndex = 37;
             // 
             // buRateTextBox
             // 
             this.buRateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.buRateTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buRateTextBox.Location = new System.Drawing.Point(868, 533);
+            this.buRateTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.buRateTextBox.Location = new System.Drawing.Point(869, 533);
+            this.buRateTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buRateTextBox.Multiline = true;
             this.buRateTextBox.Name = "buRateTextBox";
-            this.buRateTextBox.Size = new System.Drawing.Size(91, 24);
+            this.buRateTextBox.Size = new System.Drawing.Size(93, 24);
             this.buRateTextBox.TabIndex = 34;
             // 
             // projectNameLabel
             // 
             this.projectNameLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.projectNameLabel.Location = new System.Drawing.Point(27, 30);
+            this.projectNameLabel.Location = new System.Drawing.Point(26, 30);
+            this.projectNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectNameLabel.Name = "projectNameLabel";
             this.projectNameLabel.Size = new System.Drawing.Size(130, 25);
             this.projectNameLabel.TabIndex = 0;
@@ -1334,6 +1391,7 @@ namespace WindowsFormsApp1
             // 
             this.foundationLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.foundationLabel.Location = new System.Drawing.Point(441, 225);
+            this.foundationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.foundationLabel.Name = "foundationLabel";
             this.foundationLabel.Size = new System.Drawing.Size(130, 25);
             this.foundationLabel.TabIndex = 11;
@@ -1344,6 +1402,7 @@ namespace WindowsFormsApp1
             // 
             this.preassemblyLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.preassemblyLabel.Location = new System.Drawing.Point(441, 280);
+            this.preassemblyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.preassemblyLabel.Name = "preassemblyLabel";
             this.preassemblyLabel.Size = new System.Drawing.Size(130, 25);
             this.preassemblyLabel.TabIndex = 12;
@@ -1355,11 +1414,12 @@ namespace WindowsFormsApp1
             this.portComboBox.DataSource = this.rkPreAssemblyHarbourBindingSource;
             this.portComboBox.DisplayMember = "Code";
             this.portComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.portComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.portComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.portComboBox.FormattingEnabled = true;
             this.portComboBox.Location = new System.Drawing.Point(441, 308);
+            this.portComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.portComboBox.Name = "portComboBox";
-            this.portComboBox.Size = new System.Drawing.Size(360, 28);
+            this.portComboBox.Size = new System.Drawing.Size(363, 32);
             this.portComboBox.TabIndex = 27;
             this.portComboBox.ValueMember = "ID";
             // 
@@ -1373,11 +1433,12 @@ namespace WindowsFormsApp1
             this.foundationComboBox.DataSource = this.rkFoundationTypeBindingSource;
             this.foundationComboBox.DisplayMember = "Code";
             this.foundationComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.foundationComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.foundationComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.foundationComboBox.FormattingEnabled = true;
             this.foundationComboBox.Location = new System.Drawing.Point(441, 253);
+            this.foundationComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.foundationComboBox.Name = "foundationComboBox";
-            this.foundationComboBox.Size = new System.Drawing.Size(360, 28);
+            this.foundationComboBox.Size = new System.Drawing.Size(363, 32);
             this.foundationComboBox.TabIndex = 26;
             this.foundationComboBox.ValueMember = "ID";
             this.foundationComboBox.SelectedIndexChanged += new System.EventHandler(this.foundationComboBox_SelectedIndexChanged);
@@ -1391,6 +1452,7 @@ namespace WindowsFormsApp1
             // 
             this.segmentLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.segmentLabel.Location = new System.Drawing.Point(441, 365);
+            this.segmentLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.segmentLabel.Name = "segmentLabel";
             this.segmentLabel.Size = new System.Drawing.Size(130, 25);
             this.segmentLabel.TabIndex = 7;
@@ -1401,6 +1463,7 @@ namespace WindowsFormsApp1
             // 
             this.scopeLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.scopeLabel.Location = new System.Drawing.Point(441, 170);
+            this.scopeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.scopeLabel.Name = "scopeLabel";
             this.scopeLabel.Size = new System.Drawing.Size(130, 25);
             this.scopeLabel.TabIndex = 10;
@@ -1412,11 +1475,12 @@ namespace WindowsFormsApp1
             this.segmentComboBox.DataSource = this.rkSegmentBindingSource;
             this.segmentComboBox.DisplayMember = "Segment";
             this.segmentComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.segmentComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.segmentComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.segmentComboBox.FormattingEnabled = true;
             this.segmentComboBox.Location = new System.Drawing.Point(441, 393);
+            this.segmentComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.segmentComboBox.Name = "segmentComboBox";
-            this.segmentComboBox.Size = new System.Drawing.Size(360, 28);
+            this.segmentComboBox.Size = new System.Drawing.Size(363, 32);
             this.segmentComboBox.TabIndex = 29;
             this.segmentComboBox.ValueMember = "ID";
             // 
@@ -1430,11 +1494,12 @@ namespace WindowsFormsApp1
             this.scopeComboBox.DataSource = this.rkscopeBindingSource;
             this.scopeComboBox.DisplayMember = "scope";
             this.scopeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.scopeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.scopeComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.scopeComboBox.FormattingEnabled = true;
             this.scopeComboBox.Location = new System.Drawing.Point(441, 198);
+            this.scopeComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.scopeComboBox.Name = "scopeComboBox";
-            this.scopeComboBox.Size = new System.Drawing.Size(360, 28);
+            this.scopeComboBox.Size = new System.Drawing.Size(363, 32);
             this.scopeComboBox.TabIndex = 25;
             this.scopeComboBox.ValueMember = "ID";
             // 
@@ -1447,6 +1512,7 @@ namespace WindowsFormsApp1
             // 
             this.wtgTypeLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.wtgTypeLabel.Location = new System.Drawing.Point(441, 420);
+            this.wtgTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.wtgTypeLabel.Name = "wtgTypeLabel";
             this.wtgTypeLabel.Size = new System.Drawing.Size(130, 25);
             this.wtgTypeLabel.TabIndex = 8;
@@ -1458,11 +1524,12 @@ namespace WindowsFormsApp1
             this.wtgTypeComboBox.DataSource = this.wTGtypeBindingSource;
             this.wtgTypeComboBox.DisplayMember = "Name";
             this.wtgTypeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wtgTypeComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.wtgTypeComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.wtgTypeComboBox.FormattingEnabled = true;
             this.wtgTypeComboBox.Location = new System.Drawing.Point(441, 448);
+            this.wtgTypeComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgTypeComboBox.Name = "wtgTypeComboBox";
-            this.wtgTypeComboBox.Size = new System.Drawing.Size(360, 28);
+            this.wtgTypeComboBox.Size = new System.Drawing.Size(363, 32);
             this.wtgTypeComboBox.TabIndex = 31;
             this.wtgTypeComboBox.ValueMember = "ID";
             // 
@@ -1475,6 +1542,7 @@ namespace WindowsFormsApp1
             // 
             this.LoAIDLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.LoAIDLabel.Location = new System.Drawing.Point(441, 85);
+            this.LoAIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LoAIDLabel.Name = "LoAIDLabel";
             this.LoAIDLabel.Size = new System.Drawing.Size(130, 25);
             this.LoAIDLabel.TabIndex = 2;
@@ -1484,11 +1552,12 @@ namespace WindowsFormsApp1
             // LoaIDTextBox
             // 
             this.LoaIDTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LoaIDTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.LoaIDTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.LoaIDTextBox.Location = new System.Drawing.Point(441, 113);
+            this.LoaIDTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.LoaIDTextBox.Multiline = true;
             this.LoaIDTextBox.Name = "LoaIDTextBox";
-            this.LoaIDTextBox.Size = new System.Drawing.Size(360, 24);
+            this.LoaIDTextBox.Size = new System.Drawing.Size(363, 24);
             this.LoaIDTextBox.TabIndex = 21;
             // 
             // projectSpecificDataLabel
@@ -1497,7 +1566,8 @@ namespace WindowsFormsApp1
             this.projectSpecificDataLabel.AutoSize = true;
             this.projectSpecificDataLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectSpecificDataLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.projectSpecificDataLabel.Location = new System.Drawing.Point(27, 3);
+            this.projectSpecificDataLabel.Location = new System.Drawing.Point(26, 3);
+            this.projectSpecificDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectSpecificDataLabel.Name = "projectSpecificDataLabel";
             this.projectSpecificDataLabel.Size = new System.Drawing.Size(189, 24);
             this.projectSpecificDataLabel.TabIndex = 42;
@@ -1509,7 +1579,8 @@ namespace WindowsFormsApp1
             this.projectPersonalDataLabel.AutoSize = true;
             this.projectPersonalDataLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectPersonalDataLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.projectPersonalDataLabel.Location = new System.Drawing.Point(27, 143);
+            this.projectPersonalDataLabel.Location = new System.Drawing.Point(26, 143);
+            this.projectPersonalDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectPersonalDataLabel.Name = "projectPersonalDataLabel";
             this.projectPersonalDataLabel.Size = new System.Drawing.Size(194, 24);
             this.projectPersonalDataLabel.TabIndex = 43;
@@ -1521,7 +1592,8 @@ namespace WindowsFormsApp1
             this.projectOrderDataLabel.AutoSize = true;
             this.projectOrderDataLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectOrderDataLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.projectOrderDataLabel.Location = new System.Drawing.Point(27, 338);
+            this.projectOrderDataLabel.Location = new System.Drawing.Point(26, 338);
+            this.projectOrderDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectOrderDataLabel.Name = "projectOrderDataLabel";
             this.projectOrderDataLabel.Size = new System.Drawing.Size(171, 24);
             this.projectOrderDataLabel.TabIndex = 44;
@@ -1533,7 +1605,8 @@ namespace WindowsFormsApp1
             this.projectCostsLabel.AutoSize = true;
             this.projectCostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectCostsLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.projectCostsLabel.Location = new System.Drawing.Point(27, 478);
+            this.projectCostsLabel.Location = new System.Drawing.Point(26, 478);
+            this.projectCostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectCostsLabel.Name = "projectCostsLabel";
             this.projectCostsLabel.Size = new System.Drawing.Size(122, 24);
             this.projectCostsLabel.TabIndex = 45;
@@ -1546,6 +1619,7 @@ namespace WindowsFormsApp1
             this.scopeLocationLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.scopeLocationLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
             this.scopeLocationLabel.Location = new System.Drawing.Point(441, 143);
+            this.scopeLocationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.scopeLocationLabel.Name = "scopeLocationLabel";
             this.scopeLocationLabel.Size = new System.Drawing.Size(157, 24);
             this.scopeLocationLabel.TabIndex = 46;
@@ -1558,9 +1632,10 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.insertProjectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.insertProjectButton.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertProjectButton.Location = new System.Drawing.Point(868, 673);
+            this.insertProjectButton.Location = new System.Drawing.Point(869, 673);
+            this.insertProjectButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.insertProjectButton.Name = "insertProjectButton";
-            this.insertProjectButton.Size = new System.Drawing.Size(91, 44);
+            this.insertProjectButton.Size = new System.Drawing.Size(93, 44);
             this.insertProjectButton.TabIndex = 47;
             this.insertProjectButton.Text = "GO!";
             this.insertProjectButton.UseVisualStyleBackColor = false;
@@ -1570,6 +1645,7 @@ namespace WindowsFormsApp1
             // 
             this.projectOwnerLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectOwnerLabel.Location = new System.Drawing.Point(441, 30);
+            this.projectOwnerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectOwnerLabel.Name = "projectOwnerLabel";
             this.projectOwnerLabel.Size = new System.Drawing.Size(130, 25);
             this.projectOwnerLabel.TabIndex = 48;
@@ -1581,10 +1657,12 @@ namespace WindowsFormsApp1
             this.projectOwnerComboBox.DataSource = this.rkUsersListviewBindingSource1;
             this.projectOwnerComboBox.DisplayMember = "LastName";
             this.projectOwnerComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.projectOwnerComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectOwnerComboBox.FormattingEnabled = true;
             this.projectOwnerComboBox.Location = new System.Drawing.Point(441, 58);
+            this.projectOwnerComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectOwnerComboBox.Name = "projectOwnerComboBox";
-            this.projectOwnerComboBox.Size = new System.Drawing.Size(360, 28);
+            this.projectOwnerComboBox.Size = new System.Drawing.Size(363, 32);
             this.projectOwnerComboBox.TabIndex = 19;
             this.projectOwnerComboBox.ValueMember = "ID";
             // 
@@ -1596,9 +1674,11 @@ namespace WindowsFormsApp1
             // tocTextBox
             // 
             this.tocTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tocTextBox.Location = new System.Drawing.Point(27, 393);
+            this.tocTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.tocTextBox.Location = new System.Drawing.Point(26, 393);
+            this.tocTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tocTextBox.Name = "tocTextBox";
-            this.tocTextBox.Size = new System.Drawing.Size(360, 26);
+            this.tocTextBox.Size = new System.Drawing.Size(363, 30);
             this.tocTextBox.TabIndex = 28;
             // 
             // dataSet1BindingSource
@@ -1674,6 +1754,7 @@ namespace WindowsFormsApp1
             this.tabController.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabController.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.tabController.Location = new System.Drawing.Point(275, 41);
+            this.tabController.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tabController.Name = "tabController";
             this.tabController.SelectedIndex = 0;
             this.tabController.Size = new System.Drawing.Size(1003, 753);
@@ -1682,10 +1763,11 @@ namespace WindowsFormsApp1
             // projectDataTab
             // 
             this.projectDataTab.Controls.Add(this.projectsPanel);
-            this.projectDataTab.Location = new System.Drawing.Point(4, 29);
+            this.projectDataTab.Location = new System.Drawing.Point(4, 35);
+            this.projectDataTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectDataTab.Name = "projectDataTab";
-            this.projectDataTab.Padding = new System.Windows.Forms.Padding(3);
-            this.projectDataTab.Size = new System.Drawing.Size(958, 692);
+            this.projectDataTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.projectDataTab.Size = new System.Drawing.Size(995, 714);
             this.projectDataTab.TabIndex = 0;
             this.projectDataTab.Text = "Projects";
             this.projectDataTab.UseVisualStyleBackColor = true;
@@ -1693,10 +1775,11 @@ namespace WindowsFormsApp1
             // portfolioReportsTab
             // 
             this.portfolioReportsTab.Controls.Add(this.portfolioPanel);
-            this.portfolioReportsTab.Location = new System.Drawing.Point(4, 29);
+            this.portfolioReportsTab.Location = new System.Drawing.Point(4, 35);
+            this.portfolioReportsTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.portfolioReportsTab.Name = "portfolioReportsTab";
-            this.portfolioReportsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.portfolioReportsTab.Size = new System.Drawing.Size(995, 720);
+            this.portfolioReportsTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.portfolioReportsTab.Size = new System.Drawing.Size(995, 714);
             this.portfolioReportsTab.TabIndex = 1;
             this.portfolioReportsTab.Text = "Portfolio Reports";
             this.portfolioReportsTab.UseVisualStyleBackColor = true;
@@ -1704,10 +1787,11 @@ namespace WindowsFormsApp1
             // createProjectTab
             // 
             this.createProjectTab.Controls.Add(this.createProjectPanel);
-            this.createProjectTab.Location = new System.Drawing.Point(4, 29);
+            this.createProjectTab.Location = new System.Drawing.Point(4, 35);
+            this.createProjectTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createProjectTab.Name = "createProjectTab";
-            this.createProjectTab.Padding = new System.Windows.Forms.Padding(3);
-            this.createProjectTab.Size = new System.Drawing.Size(995, 720);
+            this.createProjectTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.createProjectTab.Size = new System.Drawing.Size(995, 714);
             this.createProjectTab.TabIndex = 2;
             this.createProjectTab.Text = "Create Project";
             this.createProjectTab.UseVisualStyleBackColor = true;
@@ -1716,10 +1800,11 @@ namespace WindowsFormsApp1
             // 
             this.entryCurTab.Controls.Add(this.panel1);
             this.entryCurTab.Controls.Add(this.entryCurList);
-            this.entryCurTab.Location = new System.Drawing.Point(4, 29);
+            this.entryCurTab.Location = new System.Drawing.Point(4, 35);
+            this.entryCurTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.entryCurTab.Name = "entryCurTab";
-            this.entryCurTab.Padding = new System.Windows.Forms.Padding(3);
-            this.entryCurTab.Size = new System.Drawing.Size(995, 720);
+            this.entryCurTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.entryCurTab.Size = new System.Drawing.Size(995, 714);
             this.entryCurTab.TabIndex = 3;
             this.entryCurTab.Text = "Entry Currency";
             this.entryCurTab.UseVisualStyleBackColor = true;
@@ -1733,8 +1818,9 @@ namespace WindowsFormsApp1
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(525, 3);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(467, 714);
+            this.panel1.Size = new System.Drawing.Size(468, 708);
             this.panel1.TabIndex = 1;
             // 
             // entryCurrInsertButton
@@ -1742,6 +1828,7 @@ namespace WindowsFormsApp1
             this.entryCurrInsertButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.entryCurrInsertButton.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.entryCurrInsertButton.Location = new System.Drawing.Point(130, 273);
+            this.entryCurrInsertButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.entryCurrInsertButton.Name = "entryCurrInsertButton";
             this.entryCurrInsertButton.Size = new System.Drawing.Size(205, 45);
             this.entryCurrInsertButton.TabIndex = 4;
@@ -1752,7 +1839,8 @@ namespace WindowsFormsApp1
             // codeEntryTextBox
             // 
             this.codeEntryTextBox.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.codeEntryTextBox.Location = new System.Drawing.Point(107, 232);
+            this.codeEntryTextBox.Location = new System.Drawing.Point(108, 232);
+            this.codeEntryTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.codeEntryTextBox.Name = "codeEntryTextBox";
             this.codeEntryTextBox.Size = new System.Drawing.Size(250, 31);
             this.codeEntryTextBox.TabIndex = 3;
@@ -1760,7 +1848,8 @@ namespace WindowsFormsApp1
             // countryEntryTextBox
             // 
             this.countryEntryTextBox.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.countryEntryTextBox.Location = new System.Drawing.Point(107, 177);
+            this.countryEntryTextBox.Location = new System.Drawing.Point(108, 177);
+            this.countryEntryTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.countryEntryTextBox.Name = "countryEntryTextBox";
             this.countryEntryTextBox.Size = new System.Drawing.Size(250, 31);
             this.countryEntryTextBox.TabIndex = 2;
@@ -1770,6 +1859,7 @@ namespace WindowsFormsApp1
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label2.Location = new System.Drawing.Point(105, 206);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 26);
             this.label2.TabIndex = 1;
@@ -1780,6 +1870,7 @@ namespace WindowsFormsApp1
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label1.Location = new System.Drawing.Point(103, 151);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 26);
             this.label1.TabIndex = 0;
@@ -1790,9 +1881,10 @@ namespace WindowsFormsApp1
             this.entryCurList.Controls.Add(this.entryCurrUpdateBtn);
             this.entryCurList.Controls.Add(this.entryCurData);
             this.entryCurList.Dock = System.Windows.Forms.DockStyle.Left;
-            this.entryCurList.Location = new System.Drawing.Point(3, 3);
+            this.entryCurList.Location = new System.Drawing.Point(2, 3);
+            this.entryCurList.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.entryCurList.Name = "entryCurList";
-            this.entryCurList.Size = new System.Drawing.Size(952, 714);
+            this.entryCurList.Size = new System.Drawing.Size(952, 708);
             this.entryCurList.TabIndex = 0;
             // 
             // entryCurrUpdateBtn
@@ -1800,7 +1892,8 @@ namespace WindowsFormsApp1
             this.entryCurrUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.entryCurrUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.entryCurrUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.entryCurrUpdateBtn.Location = new System.Drawing.Point(165, 655);
+            this.entryCurrUpdateBtn.Location = new System.Drawing.Point(165, 649);
+            this.entryCurrUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.entryCurrUpdateBtn.Name = "entryCurrUpdateBtn";
             this.entryCurrUpdateBtn.Size = new System.Drawing.Size(205, 45);
             this.entryCurrUpdateBtn.TabIndex = 1;
@@ -1817,18 +1910,20 @@ namespace WindowsFormsApp1
             this.entryCurData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.entryCurData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.entryCurData.Location = new System.Drawing.Point(22, 11);
+            this.entryCurData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.entryCurData.Name = "entryCurData";
-            this.entryCurData.Size = new System.Drawing.Size(481, 635);
+            this.entryCurData.Size = new System.Drawing.Size(482, 629);
             this.entryCurData.TabIndex = 0;
             // 
             // diCatTab
             // 
             this.diCatTab.Controls.Add(this.panel3);
             this.diCatTab.Controls.Add(this.panel2);
-            this.diCatTab.Location = new System.Drawing.Point(4, 32);
+            this.diCatTab.Location = new System.Drawing.Point(4, 35);
+            this.diCatTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.diCatTab.Name = "diCatTab";
-            this.diCatTab.Padding = new System.Windows.Forms.Padding(3);
-            this.diCatTab.Size = new System.Drawing.Size(995, 717);
+            this.diCatTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.diCatTab.Size = new System.Drawing.Size(995, 714);
             this.diCatTab.TabIndex = 4;
             this.diCatTab.Text = "DI Category";
             this.diCatTab.UseVisualStyleBackColor = true;
@@ -1840,8 +1935,9 @@ namespace WindowsFormsApp1
             this.panel3.Controls.Add(this.DICatInsertLbl);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel3.Location = new System.Drawing.Point(525, 3);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(467, 711);
+            this.panel3.Size = new System.Drawing.Size(468, 708);
             this.panel3.TabIndex = 1;
             // 
             // DIcatInsertBtn
@@ -1849,6 +1945,7 @@ namespace WindowsFormsApp1
             this.DIcatInsertBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.DIcatInsertBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.DIcatInsertBtn.Location = new System.Drawing.Point(136, 265);
+            this.DIcatInsertBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DIcatInsertBtn.Name = "DIcatInsertBtn";
             this.DIcatInsertBtn.Size = new System.Drawing.Size(205, 45);
             this.DIcatInsertBtn.TabIndex = 5;
@@ -1860,6 +1957,7 @@ namespace WindowsFormsApp1
             // 
             this.DIcatText.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.DIcatText.Location = new System.Drawing.Point(116, 228);
+            this.DIcatText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DIcatText.Name = "DIcatText";
             this.DIcatText.Size = new System.Drawing.Size(250, 31);
             this.DIcatText.TabIndex = 4;
@@ -1870,6 +1968,7 @@ namespace WindowsFormsApp1
             this.DICatInsertLbl.AutoSize = true;
             this.DICatInsertLbl.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.DICatInsertLbl.Location = new System.Drawing.Point(111, 199);
+            this.DICatInsertLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DICatInsertLbl.Name = "DICatInsertLbl";
             this.DICatInsertLbl.Size = new System.Drawing.Size(117, 26);
             this.DICatInsertLbl.TabIndex = 3;
@@ -1880,9 +1979,10 @@ namespace WindowsFormsApp1
             this.panel2.Controls.Add(this.DIcatUpdateBtn);
             this.panel2.Controls.Add(this.DIcatData);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(3, 3);
+            this.panel2.Location = new System.Drawing.Point(2, 3);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(531, 711);
+            this.panel2.Size = new System.Drawing.Size(530, 708);
             this.panel2.TabIndex = 0;
             // 
             // DIcatUpdateBtn
@@ -1890,7 +1990,8 @@ namespace WindowsFormsApp1
             this.DIcatUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.DIcatUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.DIcatUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
-            this.DIcatUpdateBtn.Location = new System.Drawing.Point(165, 652);
+            this.DIcatUpdateBtn.Location = new System.Drawing.Point(165, 649);
+            this.DIcatUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DIcatUpdateBtn.Name = "DIcatUpdateBtn";
             this.DIcatUpdateBtn.Size = new System.Drawing.Size(205, 45);
             this.DIcatUpdateBtn.TabIndex = 2;
@@ -1903,6 +2004,7 @@ namespace WindowsFormsApp1
             this.DIcatData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.DIcatData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DIcatData.Location = new System.Drawing.Point(20, 15);
+            this.DIcatData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DIcatData.Name = "DIcatData";
             this.DIcatData.Size = new System.Drawing.Size(484, 631);
             this.DIcatData.TabIndex = 0;
@@ -1912,8 +2014,9 @@ namespace WindowsFormsApp1
             this.nccTab.Controls.Add(this.panel4);
             this.nccTab.Controls.Add(this.panel5);
             this.nccTab.Location = new System.Drawing.Point(4, 35);
+            this.nccTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccTab.Name = "nccTab";
-            this.nccTab.Padding = new System.Windows.Forms.Padding(3);
+            this.nccTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccTab.Size = new System.Drawing.Size(995, 714);
             this.nccTab.TabIndex = 5;
             this.nccTab.Text = "NCC";
@@ -1925,9 +2028,10 @@ namespace WindowsFormsApp1
             this.panel4.Controls.Add(this.nccText);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(516, 3);
+            this.panel4.Location = new System.Drawing.Point(518, 3);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(476, 708);
+            this.panel4.Size = new System.Drawing.Size(475, 708);
             this.panel4.TabIndex = 3;
             // 
             // nccInsertBtn
@@ -1935,6 +2039,7 @@ namespace WindowsFormsApp1
             this.nccInsertBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.nccInsertBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.nccInsertBtn.Location = new System.Drawing.Point(136, 265);
+            this.nccInsertBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccInsertBtn.Name = "nccInsertBtn";
             this.nccInsertBtn.Size = new System.Drawing.Size(205, 45);
             this.nccInsertBtn.TabIndex = 5;
@@ -1946,6 +2051,7 @@ namespace WindowsFormsApp1
             // 
             this.nccText.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.nccText.Location = new System.Drawing.Point(117, 228);
+            this.nccText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccText.Name = "nccText";
             this.nccText.Size = new System.Drawing.Size(250, 31);
             this.nccText.TabIndex = 4;
@@ -1955,6 +2061,7 @@ namespace WindowsFormsApp1
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label3.Location = new System.Drawing.Point(112, 199);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 26);
             this.label3.TabIndex = 3;
@@ -1965,7 +2072,8 @@ namespace WindowsFormsApp1
             this.panel5.Controls.Add(this.nccUpdateBtn);
             this.panel5.Controls.Add(this.nccData);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(3, 3);
+            this.panel5.Location = new System.Drawing.Point(2, 3);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(519, 708);
             this.panel5.TabIndex = 2;
@@ -1976,6 +2084,7 @@ namespace WindowsFormsApp1
             this.nccUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.nccUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.nccUpdateBtn.Location = new System.Drawing.Point(165, 649);
+            this.nccUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccUpdateBtn.Name = "nccUpdateBtn";
             this.nccUpdateBtn.Size = new System.Drawing.Size(205, 45);
             this.nccUpdateBtn.TabIndex = 2;
@@ -1987,7 +2096,8 @@ namespace WindowsFormsApp1
             // 
             this.nccData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.nccData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.nccData.Location = new System.Drawing.Point(19, 15);
+            this.nccData.Location = new System.Drawing.Point(20, 15);
+            this.nccData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccData.Name = "nccData";
             this.nccData.Size = new System.Drawing.Size(474, 634);
             this.nccData.TabIndex = 0;
@@ -1996,10 +2106,11 @@ namespace WindowsFormsApp1
             // 
             this.projectOwnershipTab.Controls.Add(this.panel6);
             this.projectOwnershipTab.Controls.Add(this.panel7);
-            this.projectOwnershipTab.Location = new System.Drawing.Point(4, 32);
+            this.projectOwnershipTab.Location = new System.Drawing.Point(4, 35);
+            this.projectOwnershipTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectOwnershipTab.Name = "projectOwnershipTab";
-            this.projectOwnershipTab.Padding = new System.Windows.Forms.Padding(3);
-            this.projectOwnershipTab.Size = new System.Drawing.Size(995, 717);
+            this.projectOwnershipTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.projectOwnershipTab.Size = new System.Drawing.Size(995, 714);
             this.projectOwnershipTab.TabIndex = 6;
             this.projectOwnershipTab.Text = "Project Ownership";
             this.projectOwnershipTab.UseVisualStyleBackColor = true;
@@ -2012,16 +2123,18 @@ namespace WindowsFormsApp1
             this.panel6.Controls.Add(this.projOwnerUpdateBtn);
             this.panel6.Controls.Add(this.label4);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(472, 3);
+            this.panel6.Location = new System.Drawing.Point(474, 3);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(520, 711);
+            this.panel6.Size = new System.Drawing.Size(519, 708);
             this.panel6.TabIndex = 5;
             // 
             // projOwnerCombo
             // 
             this.projOwnerCombo.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.projOwnerCombo.FormattingEnabled = true;
-            this.projOwnerCombo.Location = new System.Drawing.Point(102, 225);
+            this.projOwnerCombo.Location = new System.Drawing.Point(101, 225);
+            this.projOwnerCombo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projOwnerCombo.Name = "projOwnerCombo";
             this.projOwnerCombo.Size = new System.Drawing.Size(283, 34);
             this.projOwnerCombo.TabIndex = 8;
@@ -2031,6 +2144,7 @@ namespace WindowsFormsApp1
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label5.Location = new System.Drawing.Point(98, 196);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(248, 26);
             this.label5.TabIndex = 7;
@@ -2040,7 +2154,8 @@ namespace WindowsFormsApp1
             // 
             this.projNameCombo.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.projNameCombo.FormattingEnabled = true;
-            this.projNameCombo.Location = new System.Drawing.Point(102, 158);
+            this.projNameCombo.Location = new System.Drawing.Point(101, 158);
+            this.projNameCombo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projNameCombo.Name = "projNameCombo";
             this.projNameCombo.Size = new System.Drawing.Size(283, 34);
             this.projNameCombo.TabIndex = 6;
@@ -2050,6 +2165,7 @@ namespace WindowsFormsApp1
             this.projOwnerUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.projOwnerUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.projOwnerUpdateBtn.Location = new System.Drawing.Point(136, 265);
+            this.projOwnerUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projOwnerUpdateBtn.Name = "projOwnerUpdateBtn";
             this.projOwnerUpdateBtn.Size = new System.Drawing.Size(205, 45);
             this.projOwnerUpdateBtn.TabIndex = 5;
@@ -2062,6 +2178,7 @@ namespace WindowsFormsApp1
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label4.Location = new System.Drawing.Point(98, 129);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(233, 26);
             this.label4.TabIndex = 3;
@@ -2071,9 +2188,10 @@ namespace WindowsFormsApp1
             // 
             this.panel7.Controls.Add(this.projOwnerData);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Location = new System.Drawing.Point(2, 3);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(463, 711);
+            this.panel7.Size = new System.Drawing.Size(463, 708);
             this.panel7.TabIndex = 4;
             // 
             // projOwnerData
@@ -2082,8 +2200,9 @@ namespace WindowsFormsApp1
             this.projOwnerData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.projOwnerData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projOwnerData.Location = new System.Drawing.Point(0, 0);
+            this.projOwnerData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projOwnerData.Name = "projOwnerData";
-            this.projOwnerData.Size = new System.Drawing.Size(463, 711);
+            this.projOwnerData.Size = new System.Drawing.Size(463, 708);
             this.projOwnerData.TabIndex = 0;
             // 
             // orgUnitTab
@@ -2091,8 +2210,9 @@ namespace WindowsFormsApp1
             this.orgUnitTab.Controls.Add(this.panel8);
             this.orgUnitTab.Controls.Add(this.panel9);
             this.orgUnitTab.Location = new System.Drawing.Point(4, 35);
+            this.orgUnitTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.orgUnitTab.Name = "orgUnitTab";
-            this.orgUnitTab.Padding = new System.Windows.Forms.Padding(3);
+            this.orgUnitTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.orgUnitTab.Size = new System.Drawing.Size(995, 714);
             this.orgUnitTab.TabIndex = 7;
             this.orgUnitTab.Text = "OriginatingUnit";
@@ -2104,7 +2224,8 @@ namespace WindowsFormsApp1
             this.panel8.Controls.Add(this.orgUnitTxt);
             this.panel8.Controls.Add(this.orgUnitLbl);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel8.Location = new System.Drawing.Point(510, 3);
+            this.panel8.Location = new System.Drawing.Point(511, 3);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(482, 708);
             this.panel8.TabIndex = 5;
@@ -2114,6 +2235,7 @@ namespace WindowsFormsApp1
             this.origUnitInsertBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.origUnitInsertBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.origUnitInsertBtn.Location = new System.Drawing.Point(136, 265);
+            this.origUnitInsertBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.origUnitInsertBtn.Name = "origUnitInsertBtn";
             this.origUnitInsertBtn.Size = new System.Drawing.Size(205, 45);
             this.origUnitInsertBtn.TabIndex = 5;
@@ -2125,6 +2247,7 @@ namespace WindowsFormsApp1
             // 
             this.orgUnitTxt.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.orgUnitTxt.Location = new System.Drawing.Point(112, 227);
+            this.orgUnitTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.orgUnitTxt.Name = "orgUnitTxt";
             this.orgUnitTxt.Size = new System.Drawing.Size(250, 31);
             this.orgUnitTxt.TabIndex = 4;
@@ -2133,7 +2256,8 @@ namespace WindowsFormsApp1
             // 
             this.orgUnitLbl.AutoSize = true;
             this.orgUnitLbl.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.orgUnitLbl.Location = new System.Drawing.Point(107, 198);
+            this.orgUnitLbl.Location = new System.Drawing.Point(108, 198);
+            this.orgUnitLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.orgUnitLbl.Name = "orgUnitLbl";
             this.orgUnitLbl.Size = new System.Drawing.Size(214, 26);
             this.orgUnitLbl.TabIndex = 3;
@@ -2144,7 +2268,8 @@ namespace WindowsFormsApp1
             this.panel9.Controls.Add(this.orgUnitUpdateBtn);
             this.panel9.Controls.Add(this.orgUnitData);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(3, 3);
+            this.panel9.Location = new System.Drawing.Point(2, 3);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(513, 708);
             this.panel9.TabIndex = 4;
@@ -2155,6 +2280,7 @@ namespace WindowsFormsApp1
             this.orgUnitUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.orgUnitUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.orgUnitUpdateBtn.Location = new System.Drawing.Point(165, 649);
+            this.orgUnitUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.orgUnitUpdateBtn.Name = "orgUnitUpdateBtn";
             this.orgUnitUpdateBtn.Size = new System.Drawing.Size(205, 45);
             this.orgUnitUpdateBtn.TabIndex = 2;
@@ -2167,6 +2293,7 @@ namespace WindowsFormsApp1
             this.orgUnitData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.orgUnitData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.orgUnitData.Location = new System.Drawing.Point(11, 14);
+            this.orgUnitData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.orgUnitData.Name = "orgUnitData";
             this.orgUnitData.Size = new System.Drawing.Size(477, 635);
             this.orgUnitData.TabIndex = 0;
@@ -2176,8 +2303,9 @@ namespace WindowsFormsApp1
             this.wtgTypeTab.Controls.Add(this.panel10);
             this.wtgTypeTab.Controls.Add(this.panel11);
             this.wtgTypeTab.Location = new System.Drawing.Point(4, 35);
+            this.wtgTypeTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgTypeTab.Name = "wtgTypeTab";
-            this.wtgTypeTab.Padding = new System.Windows.Forms.Padding(3);
+            this.wtgTypeTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgTypeTab.Size = new System.Drawing.Size(995, 714);
             this.wtgTypeTab.TabIndex = 9;
             this.wtgTypeTab.Text = "WTG Type";
@@ -2189,7 +2317,8 @@ namespace WindowsFormsApp1
             this.panel10.Controls.Add(this.wtgTxt);
             this.panel10.Controls.Add(this.wtgLbl);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel10.Location = new System.Drawing.Point(508, 3);
+            this.panel10.Location = new System.Drawing.Point(509, 3);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(484, 708);
             this.panel10.TabIndex = 7;
@@ -2199,6 +2328,7 @@ namespace WindowsFormsApp1
             this.wtgInsertBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.wtgInsertBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.wtgInsertBtn.Location = new System.Drawing.Point(136, 265);
+            this.wtgInsertBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgInsertBtn.Name = "wtgInsertBtn";
             this.wtgInsertBtn.Size = new System.Drawing.Size(205, 45);
             this.wtgInsertBtn.TabIndex = 5;
@@ -2210,6 +2340,7 @@ namespace WindowsFormsApp1
             // 
             this.wtgTxt.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.wtgTxt.Location = new System.Drawing.Point(117, 228);
+            this.wtgTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgTxt.Name = "wtgTxt";
             this.wtgTxt.Size = new System.Drawing.Size(250, 31);
             this.wtgTxt.TabIndex = 4;
@@ -2218,7 +2349,8 @@ namespace WindowsFormsApp1
             // 
             this.wtgLbl.AutoSize = true;
             this.wtgLbl.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.wtgLbl.Location = new System.Drawing.Point(113, 203);
+            this.wtgLbl.Location = new System.Drawing.Point(112, 203);
+            this.wtgLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.wtgLbl.Name = "wtgLbl";
             this.wtgLbl.Size = new System.Drawing.Size(113, 26);
             this.wtgLbl.TabIndex = 3;
@@ -2229,7 +2361,8 @@ namespace WindowsFormsApp1
             this.panel11.Controls.Add(this.wtgUpdateBtn);
             this.panel11.Controls.Add(this.wtgData);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Location = new System.Drawing.Point(2, 3);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(508, 708);
             this.panel11.TabIndex = 6;
@@ -2240,6 +2373,7 @@ namespace WindowsFormsApp1
             this.wtgUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.wtgUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.wtgUpdateBtn.Location = new System.Drawing.Point(165, 649);
+            this.wtgUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgUpdateBtn.Name = "wtgUpdateBtn";
             this.wtgUpdateBtn.Size = new System.Drawing.Size(205, 45);
             this.wtgUpdateBtn.TabIndex = 2;
@@ -2252,8 +2386,9 @@ namespace WindowsFormsApp1
             this.wtgData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.wtgData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.wtgData.Location = new System.Drawing.Point(11, 14);
+            this.wtgData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgData.Name = "wtgData";
-            this.wtgData.Size = new System.Drawing.Size(478, 635);
+            this.wtgData.Size = new System.Drawing.Size(479, 635);
             this.wtgData.TabIndex = 0;
             // 
             // ownerTab
@@ -2261,8 +2396,9 @@ namespace WindowsFormsApp1
             this.ownerTab.Controls.Add(this.ownerNameLbl);
             this.ownerTab.Controls.Add(this.panel13);
             this.ownerTab.Location = new System.Drawing.Point(4, 35);
+            this.ownerTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerTab.Name = "ownerTab";
-            this.ownerTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ownerTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerTab.Size = new System.Drawing.Size(995, 714);
             this.ownerTab.TabIndex = 10;
             this.ownerTab.Text = "Owner";
@@ -2278,8 +2414,9 @@ namespace WindowsFormsApp1
             this.ownerNameLbl.Dock = System.Windows.Forms.DockStyle.Right;
             this.ownerNameLbl.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.ownerNameLbl.Location = new System.Drawing.Point(514, 3);
+            this.ownerNameLbl.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerNameLbl.Name = "ownerNameLbl";
-            this.ownerNameLbl.Size = new System.Drawing.Size(478, 708);
+            this.ownerNameLbl.Size = new System.Drawing.Size(479, 708);
             this.ownerNameLbl.TabIndex = 3;
             // 
             // ownerInsertBtn
@@ -2287,6 +2424,7 @@ namespace WindowsFormsApp1
             this.ownerInsertBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.ownerInsertBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.ownerInsertBtn.Location = new System.Drawing.Point(136, 265);
+            this.ownerInsertBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerInsertBtn.Name = "ownerInsertBtn";
             this.ownerInsertBtn.Size = new System.Drawing.Size(205, 45);
             this.ownerInsertBtn.TabIndex = 4;
@@ -2298,6 +2436,7 @@ namespace WindowsFormsApp1
             // 
             this.ownerCodeTxt.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.ownerCodeTxt.Location = new System.Drawing.Point(116, 228);
+            this.ownerCodeTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerCodeTxt.Name = "ownerCodeTxt";
             this.ownerCodeTxt.Size = new System.Drawing.Size(250, 31);
             this.ownerCodeTxt.TabIndex = 3;
@@ -2306,6 +2445,7 @@ namespace WindowsFormsApp1
             // 
             this.ownerNameTxt.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.ownerNameTxt.Location = new System.Drawing.Point(116, 171);
+            this.ownerNameTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerNameTxt.Name = "ownerNameTxt";
             this.ownerNameTxt.Size = new System.Drawing.Size(250, 31);
             this.ownerNameTxt.TabIndex = 2;
@@ -2315,6 +2455,7 @@ namespace WindowsFormsApp1
             this.ownerCodeLbl.AutoSize = true;
             this.ownerCodeLbl.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.ownerCodeLbl.Location = new System.Drawing.Point(112, 202);
+            this.ownerCodeLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ownerCodeLbl.Name = "ownerCodeLbl";
             this.ownerCodeLbl.Size = new System.Drawing.Size(121, 26);
             this.ownerCodeLbl.TabIndex = 1;
@@ -2325,6 +2466,7 @@ namespace WindowsFormsApp1
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label7.Location = new System.Drawing.Point(112, 145);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(128, 26);
             this.label7.TabIndex = 0;
@@ -2335,7 +2477,8 @@ namespace WindowsFormsApp1
             this.panel13.Controls.Add(this.ownerUpdateBtn);
             this.panel13.Controls.Add(this.ownerData);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel13.Location = new System.Drawing.Point(3, 3);
+            this.panel13.Location = new System.Drawing.Point(2, 3);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(516, 708);
             this.panel13.TabIndex = 2;
@@ -2346,6 +2489,7 @@ namespace WindowsFormsApp1
             this.ownerUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.ownerUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.ownerUpdateBtn.Location = new System.Drawing.Point(165, 649);
+            this.ownerUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerUpdateBtn.Name = "ownerUpdateBtn";
             this.ownerUpdateBtn.Size = new System.Drawing.Size(205, 45);
             this.ownerUpdateBtn.TabIndex = 1;
@@ -2362,6 +2506,7 @@ namespace WindowsFormsApp1
             this.ownerData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.ownerData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ownerData.Location = new System.Drawing.Point(10, 13);
+            this.ownerData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerData.Name = "ownerData";
             this.ownerData.Size = new System.Drawing.Size(479, 626);
             this.ownerData.TabIndex = 0;
@@ -2371,8 +2516,9 @@ namespace WindowsFormsApp1
             this.usersTab.Controls.Add(this.panel12);
             this.usersTab.Controls.Add(this.panel14);
             this.usersTab.Location = new System.Drawing.Point(4, 35);
+            this.usersTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.usersTab.Name = "usersTab";
-            this.usersTab.Padding = new System.Windows.Forms.Padding(3);
+            this.usersTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.usersTab.Size = new System.Drawing.Size(995, 714);
             this.usersTab.TabIndex = 11;
             this.usersTab.Text = "Users";
@@ -2397,9 +2543,10 @@ namespace WindowsFormsApp1
             this.panel12.Controls.Add(this.label8);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel12.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.panel12.Location = new System.Drawing.Point(516, 3);
+            this.panel12.Location = new System.Drawing.Point(518, 3);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(476, 708);
+            this.panel12.Size = new System.Drawing.Size(475, 708);
             this.panel12.TabIndex = 5;
             // 
             // userPermCombo
@@ -2407,6 +2554,7 @@ namespace WindowsFormsApp1
             this.userPermCombo.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.userPermCombo.FormattingEnabled = true;
             this.userPermCombo.Location = new System.Drawing.Point(67, 445);
+            this.userPermCombo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userPermCombo.Name = "userPermCombo";
             this.userPermCombo.Size = new System.Drawing.Size(354, 34);
             this.userPermCombo.TabIndex = 14;
@@ -2415,7 +2563,8 @@ namespace WindowsFormsApp1
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.label13.Location = new System.Drawing.Point(63, 419);
+            this.label13.Location = new System.Drawing.Point(64, 419);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(180, 26);
             this.label13.TabIndex = 13;
@@ -2425,6 +2574,7 @@ namespace WindowsFormsApp1
             // 
             this.userEmailTxt.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.userEmailTxt.Location = new System.Drawing.Point(67, 388);
+            this.userEmailTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userEmailTxt.Name = "userEmailTxt";
             this.userEmailTxt.Size = new System.Drawing.Size(354, 31);
             this.userEmailTxt.TabIndex = 12;
@@ -2433,7 +2583,8 @@ namespace WindowsFormsApp1
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.label12.Location = new System.Drawing.Point(63, 362);
+            this.label12.Location = new System.Drawing.Point(64, 362);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(63, 26);
             this.label12.TabIndex = 11;
@@ -2443,6 +2594,7 @@ namespace WindowsFormsApp1
             // 
             this.userGIDTxt.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.userGIDTxt.Location = new System.Drawing.Point(67, 331);
+            this.userGIDTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userGIDTxt.Name = "userGIDTxt";
             this.userGIDTxt.Size = new System.Drawing.Size(354, 31);
             this.userGIDTxt.TabIndex = 10;
@@ -2451,7 +2603,8 @@ namespace WindowsFormsApp1
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.label11.Location = new System.Drawing.Point(63, 305);
+            this.label11.Location = new System.Drawing.Point(64, 305);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(44, 26);
             this.label11.TabIndex = 9;
@@ -2461,6 +2614,7 @@ namespace WindowsFormsApp1
             // 
             this.userLastNameTxt.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.userLastNameTxt.Location = new System.Drawing.Point(67, 274);
+            this.userLastNameTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userLastNameTxt.Name = "userLastNameTxt";
             this.userLastNameTxt.Size = new System.Drawing.Size(354, 31);
             this.userLastNameTxt.TabIndex = 8;
@@ -2470,6 +2624,7 @@ namespace WindowsFormsApp1
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label10.Location = new System.Drawing.Point(61, 248);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(107, 26);
             this.label10.TabIndex = 7;
@@ -2479,6 +2634,7 @@ namespace WindowsFormsApp1
             // 
             this.userMidNameTxt.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.userMidNameTxt.Location = new System.Drawing.Point(67, 213);
+            this.userMidNameTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userMidNameTxt.Name = "userMidNameTxt";
             this.userMidNameTxt.Size = new System.Drawing.Size(354, 31);
             this.userMidNameTxt.TabIndex = 6;
@@ -2488,6 +2644,7 @@ namespace WindowsFormsApp1
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label9.Location = new System.Drawing.Point(64, 184);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(130, 26);
             this.label9.TabIndex = 5;
@@ -2498,6 +2655,7 @@ namespace WindowsFormsApp1
             this.userInsertBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.userInsertBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.userInsertBtn.Location = new System.Drawing.Point(136, 485);
+            this.userInsertBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userInsertBtn.Name = "userInsertBtn";
             this.userInsertBtn.Size = new System.Drawing.Size(205, 45);
             this.userInsertBtn.TabIndex = 4;
@@ -2509,6 +2667,7 @@ namespace WindowsFormsApp1
             // 
             this.userFirstNameTxt.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.userFirstNameTxt.Location = new System.Drawing.Point(68, 151);
+            this.userFirstNameTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userFirstNameTxt.Name = "userFirstNameTxt";
             this.userFirstNameTxt.Size = new System.Drawing.Size(354, 31);
             this.userFirstNameTxt.TabIndex = 3;
@@ -2517,6 +2676,7 @@ namespace WindowsFormsApp1
             // 
             this.userNameTxt.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.userNameTxt.Location = new System.Drawing.Point(66, 88);
+            this.userNameTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userNameTxt.Name = "userNameTxt";
             this.userNameTxt.Size = new System.Drawing.Size(354, 31);
             this.userNameTxt.TabIndex = 2;
@@ -2526,6 +2686,7 @@ namespace WindowsFormsApp1
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label6.Location = new System.Drawing.Point(64, 122);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 26);
             this.label6.TabIndex = 1;
@@ -2536,6 +2697,7 @@ namespace WindowsFormsApp1
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.label8.Location = new System.Drawing.Point(64, 59);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(110, 26);
             this.label8.TabIndex = 0;
@@ -2546,7 +2708,8 @@ namespace WindowsFormsApp1
             this.panel14.Controls.Add(this.userUpdateBtn);
             this.panel14.Controls.Add(this.userData);
             this.panel14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel14.Location = new System.Drawing.Point(3, 3);
+            this.panel14.Location = new System.Drawing.Point(2, 3);
+            this.panel14.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(516, 708);
             this.panel14.TabIndex = 4;
@@ -2557,6 +2720,7 @@ namespace WindowsFormsApp1
             this.userUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.userUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
             this.userUpdateBtn.Location = new System.Drawing.Point(165, 649);
+            this.userUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userUpdateBtn.Name = "userUpdateBtn";
             this.userUpdateBtn.Size = new System.Drawing.Size(205, 45);
             this.userUpdateBtn.TabIndex = 1;
@@ -2572,7 +2736,8 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.userData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.userData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.userData.Location = new System.Drawing.Point(14, 12);
+            this.userData.Location = new System.Drawing.Point(13, 12);
+            this.userData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userData.Name = "userData";
             this.userData.Size = new System.Drawing.Size(479, 628);
             this.userData.TabIndex = 0;
@@ -2580,10 +2745,11 @@ namespace WindowsFormsApp1
             // transfSalesProjTab
             // 
             this.transfSalesProjTab.Controls.Add(this.label14);
-            this.transfSalesProjTab.Location = new System.Drawing.Point(4, 29);
+            this.transfSalesProjTab.Location = new System.Drawing.Point(4, 35);
+            this.transfSalesProjTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.transfSalesProjTab.Name = "transfSalesProjTab";
-            this.transfSalesProjTab.Padding = new System.Windows.Forms.Padding(3);
-            this.transfSalesProjTab.Size = new System.Drawing.Size(995, 720);
+            this.transfSalesProjTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.transfSalesProjTab.Size = new System.Drawing.Size(995, 714);
             this.transfSalesProjTab.TabIndex = 12;
             this.transfSalesProjTab.Text = "Transferred Sales Projects";
             this.transfSalesProjTab.UseVisualStyleBackColor = true;
@@ -2593,6 +2759,7 @@ namespace WindowsFormsApp1
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.label14.Location = new System.Drawing.Point(336, 342);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(366, 29);
             this.label14.TabIndex = 1;
@@ -2612,9 +2779,11 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.buttonPanel);
             this.Controls.Add(this.locationPanel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "executionForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "executionForm";
+            this.Text = "Execution Projects";
             this.Load += new System.EventHandler(this.executionForm_Load);
             this.locationPanel.ResumeLayout(false);
             this.locationPanel.PerformLayout();
@@ -2900,5 +3069,6 @@ namespace WindowsFormsApp1
         private ComboBox userPermCombo;
         private Label label13;
         private Label label14;
+
     }
 }
