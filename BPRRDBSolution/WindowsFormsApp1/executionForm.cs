@@ -1037,6 +1037,11 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void portfolioRepGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
 

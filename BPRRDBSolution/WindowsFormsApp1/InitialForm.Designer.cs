@@ -42,38 +42,45 @@
             // 
             this.execUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.execUser.Cursor = System.Windows.Forms.Cursors.Default;
-            this.execUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.execUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.execUser.Location = new System.Drawing.Point(230, 25);
+            this.execUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            this.execUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.execUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.execUser.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.execUser.Location = new System.Drawing.Point(467, 49);
             this.execUser.Margin = new System.Windows.Forms.Padding(2);
             this.execUser.Name = "execUser";
-            this.execUser.Size = new System.Drawing.Size(175, 78);
+            this.execUser.Size = new System.Drawing.Size(326, 140);
             this.execUser.TabIndex = 0;
-            this.execUser.Text = "I am an Execution User";
+            this.execUser.Text = "Execution Projects";
             this.execUser.UseVisualStyleBackColor = true;
             this.execUser.Click += new System.EventHandler(this.execUser_Click);
             // 
             // salesUser
             // 
-            this.salesUser.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.salesUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salesUser.Location = new System.Drawing.Point(230, 107);
+            this.salesUser.Cursor = System.Windows.Forms.Cursors.UpArrow;
+            this.salesUser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            this.salesUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.salesUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.salesUser.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.salesUser.Location = new System.Drawing.Point(467, 206);
             this.salesUser.Margin = new System.Windows.Forms.Padding(2);
             this.salesUser.Name = "salesUser";
-            this.salesUser.Size = new System.Drawing.Size(175, 78);
+            this.salesUser.Size = new System.Drawing.Size(326, 140);
             this.salesUser.TabIndex = 1;
-            this.salesUser.Text = "I am a Sales User";
+            this.salesUser.Text = "Sales Projects";
             this.salesUser.UseVisualStyleBackColor = true;
             this.salesUser.Click += new System.EventHandler(this.salesUser_Click);
             // 
             // quitButton
             // 
-            this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.quitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quitButton.Location = new System.Drawing.Point(259, 194);
+            this.quitButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            this.quitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.quitButton.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.quitButton.Location = new System.Drawing.Point(498, 362);
             this.quitButton.Margin = new System.Windows.Forms.Padding(2);
             this.quitButton.Name = "quitButton";
-            this.quitButton.Size = new System.Drawing.Size(116, 52);
+            this.quitButton.Size = new System.Drawing.Size(267, 114);
             this.quitButton.TabIndex = 2;
             this.quitButton.Text = "Quit";
             this.quitButton.UseVisualStyleBackColor = true;
@@ -83,10 +90,10 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(120, 267);
+            this.pictureBox1.Location = new System.Drawing.Point(324, 518);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(387, 77);
+            this.pictureBox1.Size = new System.Drawing.Size(600, 123);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -94,6 +101,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.panel1.Controls.Add(this.quitButton);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.salesUser);
@@ -102,14 +110,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(640, 379);
+            this.panel1.Size = new System.Drawing.Size(1228, 744);
             this.panel1.TabIndex = 4;
             // 
             // InitialForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 379);
+            this.ClientSize = new System.Drawing.Size(1228, 744);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
