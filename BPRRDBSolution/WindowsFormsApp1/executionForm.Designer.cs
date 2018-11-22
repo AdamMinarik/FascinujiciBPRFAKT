@@ -194,10 +194,6 @@ namespace WindowsFormsApp1
             this.orgUnitUpdateBtn = new System.Windows.Forms.Button();
             this.orgUnitData = new System.Windows.Forms.DataGridView();
             this.wtgTypeTab = new System.Windows.Forms.TabPage();
-            this.ownerTab = new System.Windows.Forms.TabPage();
-            this.usersTab = new System.Windows.Forms.TabPage();
-            this.transfSalesProjTab = new System.Windows.Forms.TabPage();
-            this.rkCurrencyNameBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.panel10 = new System.Windows.Forms.Panel();
             this.wtgInsertBtn = new System.Windows.Forms.Button();
             this.wtgTxt = new System.Windows.Forms.TextBox();
@@ -205,6 +201,7 @@ namespace WindowsFormsApp1
             this.panel11 = new System.Windows.Forms.Panel();
             this.wtgUpdateBtn = new System.Windows.Forms.Button();
             this.wtgData = new System.Windows.Forms.DataGridView();
+            this.ownerTab = new System.Windows.Forms.TabPage();
             this.ownerNameLbl = new System.Windows.Forms.Panel();
             this.ownerInsertBtn = new System.Windows.Forms.Button();
             this.ownerCodeTxt = new System.Windows.Forms.TextBox();
@@ -214,7 +211,18 @@ namespace WindowsFormsApp1
             this.panel13 = new System.Windows.Forms.Panel();
             this.ownerUpdateBtn = new System.Windows.Forms.Button();
             this.ownerData = new System.Windows.Forms.DataGridView();
+            this.usersTab = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.userPermCombo = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.userEmailTxt = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.userGIDTxt = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.userLastNameTxt = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.userMidNameTxt = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.userInsertBtn = new System.Windows.Forms.Button();
             this.userFirstNameTxt = new System.Windows.Forms.TextBox();
             this.userNameTxt = new System.Windows.Forms.TextBox();
@@ -223,17 +231,9 @@ namespace WindowsFormsApp1
             this.panel14 = new System.Windows.Forms.Panel();
             this.userUpdateBtn = new System.Windows.Forms.Button();
             this.userData = new System.Windows.Forms.DataGridView();
-            this.userMidNameTxt = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.userLastNameTxt = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.userGIDTxt = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.userEmailTxt = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.userPermCombo = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.transfSalesProjTab = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
+            this.rkCurrencyNameBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -284,19 +284,19 @@ namespace WindowsFormsApp1
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orgUnitData)).BeginInit();
             this.wtgTypeTab.SuspendLayout();
-            this.ownerTab.SuspendLayout();
-            this.usersTab.SuspendLayout();
-            this.transfSalesProjTab.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource1)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.wtgData)).BeginInit();
+            this.ownerTab.SuspendLayout();
             this.ownerNameLbl.SuspendLayout();
             this.panel13.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ownerData)).BeginInit();
+            this.usersTab.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.userData)).BeginInit();
+            this.transfSalesProjTab.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // locationPanel
@@ -327,6 +327,7 @@ namespace WindowsFormsApp1
             this.readPictureBox.TabStop = false;
             this.readPictureBox.Visible = false;
             this.readPictureBox.WaitOnLoad = true;
+            this.readPictureBox.Click += new System.EventHandler(this.readPictureBox_Click);
             // 
             // approvalPictureBox
             // 
@@ -2132,46 +2133,6 @@ namespace WindowsFormsApp1
             this.wtgTypeTab.Text = "WTG Type";
             this.wtgTypeTab.UseVisualStyleBackColor = true;
             // 
-            // ownerTab
-            // 
-            this.ownerTab.Controls.Add(this.ownerNameLbl);
-            this.ownerTab.Controls.Add(this.panel13);
-            this.ownerTab.Location = new System.Drawing.Point(4, 22);
-            this.ownerTab.Name = "ownerTab";
-            this.ownerTab.Padding = new System.Windows.Forms.Padding(3);
-            this.ownerTab.Size = new System.Drawing.Size(958, 699);
-            this.ownerTab.TabIndex = 10;
-            this.ownerTab.Text = "Owner";
-            this.ownerTab.UseVisualStyleBackColor = true;
-            // 
-            // usersTab
-            // 
-            this.usersTab.Controls.Add(this.panel12);
-            this.usersTab.Controls.Add(this.panel14);
-            this.usersTab.Location = new System.Drawing.Point(4, 22);
-            this.usersTab.Name = "usersTab";
-            this.usersTab.Padding = new System.Windows.Forms.Padding(3);
-            this.usersTab.Size = new System.Drawing.Size(958, 699);
-            this.usersTab.TabIndex = 11;
-            this.usersTab.Text = "Users";
-            this.usersTab.UseVisualStyleBackColor = true;
-            // 
-            // transfSalesProjTab
-            // 
-            this.transfSalesProjTab.Controls.Add(this.label14);
-            this.transfSalesProjTab.Location = new System.Drawing.Point(4, 22);
-            this.transfSalesProjTab.Name = "transfSalesProjTab";
-            this.transfSalesProjTab.Padding = new System.Windows.Forms.Padding(3);
-            this.transfSalesProjTab.Size = new System.Drawing.Size(958, 699);
-            this.transfSalesProjTab.TabIndex = 12;
-            this.transfSalesProjTab.Text = "Transferred Sales Projects";
-            this.transfSalesProjTab.UseVisualStyleBackColor = true;
-            // 
-            // rkCurrencyNameBindingSource1
-            // 
-            this.rkCurrencyNameBindingSource1.DataMember = "rk_CurrencyName";
-            this.rkCurrencyNameBindingSource1.DataSource = this.dataSet1;
-            // 
             // panel10
             // 
             this.panel10.Controls.Add(this.wtgInsertBtn);
@@ -2237,6 +2198,18 @@ namespace WindowsFormsApp1
             this.wtgData.Name = "wtgData";
             this.wtgData.Size = new System.Drawing.Size(440, 549);
             this.wtgData.TabIndex = 0;
+            // 
+            // ownerTab
+            // 
+            this.ownerTab.Controls.Add(this.ownerNameLbl);
+            this.ownerTab.Controls.Add(this.panel13);
+            this.ownerTab.Location = new System.Drawing.Point(4, 22);
+            this.ownerTab.Name = "ownerTab";
+            this.ownerTab.Padding = new System.Windows.Forms.Padding(3);
+            this.ownerTab.Size = new System.Drawing.Size(958, 699);
+            this.ownerTab.TabIndex = 10;
+            this.ownerTab.Text = "Owner";
+            this.ownerTab.UseVisualStyleBackColor = true;
             // 
             // ownerNameLbl
             // 
@@ -2326,6 +2299,18 @@ namespace WindowsFormsApp1
             this.ownerData.Size = new System.Drawing.Size(476, 613);
             this.ownerData.TabIndex = 0;
             // 
+            // usersTab
+            // 
+            this.usersTab.Controls.Add(this.panel12);
+            this.usersTab.Controls.Add(this.panel14);
+            this.usersTab.Location = new System.Drawing.Point(4, 22);
+            this.usersTab.Name = "usersTab";
+            this.usersTab.Padding = new System.Windows.Forms.Padding(3);
+            this.usersTab.Size = new System.Drawing.Size(958, 699);
+            this.usersTab.TabIndex = 11;
+            this.usersTab.Text = "Users";
+            this.usersTab.UseVisualStyleBackColor = true;
+            // 
             // panel12
             // 
             this.panel12.Controls.Add(this.userPermCombo);
@@ -2348,6 +2333,87 @@ namespace WindowsFormsApp1
             this.panel12.Name = "panel12";
             this.panel12.Size = new System.Drawing.Size(467, 693);
             this.panel12.TabIndex = 5;
+            // 
+            // userPermCombo
+            // 
+            this.userPermCombo.FormattingEnabled = true;
+            this.userPermCombo.Location = new System.Drawing.Point(56, 351);
+            this.userPermCombo.Name = "userPermCombo";
+            this.userPermCombo.Size = new System.Drawing.Size(354, 21);
+            this.userPermCombo.TabIndex = 14;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(53, 334);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(114, 13);
+            this.label13.TabIndex = 13;
+            this.label13.Text = "Type of Permission";
+            // 
+            // userEmailTxt
+            // 
+            this.userEmailTxt.Location = new System.Drawing.Point(56, 308);
+            this.userEmailTxt.Name = "userEmailTxt";
+            this.userEmailTxt.Size = new System.Drawing.Size(354, 20);
+            this.userEmailTxt.TabIndex = 12;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(53, 290);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(37, 13);
+            this.label12.TabIndex = 11;
+            this.label12.Text = "Email";
+            // 
+            // userGIDTxt
+            // 
+            this.userGIDTxt.Location = new System.Drawing.Point(56, 263);
+            this.userGIDTxt.Name = "userGIDTxt";
+            this.userGIDTxt.Size = new System.Drawing.Size(354, 20);
+            this.userGIDTxt.TabIndex = 10;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(53, 245);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(29, 13);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "GID";
+            // 
+            // userLastNameTxt
+            // 
+            this.userLastNameTxt.Location = new System.Drawing.Point(56, 218);
+            this.userLastNameTxt.Name = "userLastNameTxt";
+            this.userLastNameTxt.Size = new System.Drawing.Size(354, 20);
+            this.userLastNameTxt.TabIndex = 8;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(53, 200);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 13);
+            this.label10.TabIndex = 7;
+            this.label10.Text = "Last Name";
+            // 
+            // userMidNameTxt
+            // 
+            this.userMidNameTxt.Location = new System.Drawing.Point(56, 177);
+            this.userMidNameTxt.Name = "userMidNameTxt";
+            this.userMidNameTxt.Size = new System.Drawing.Size(354, 20);
+            this.userMidNameTxt.TabIndex = 6;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(53, 159);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(80, 13);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Middle Name";
             // 
             // userInsertBtn
             // 
@@ -2424,86 +2490,16 @@ namespace WindowsFormsApp1
             this.userData.Size = new System.Drawing.Size(476, 613);
             this.userData.TabIndex = 0;
             // 
-            // userMidNameTxt
+            // transfSalesProjTab
             // 
-            this.userMidNameTxt.Location = new System.Drawing.Point(56, 177);
-            this.userMidNameTxt.Name = "userMidNameTxt";
-            this.userMidNameTxt.Size = new System.Drawing.Size(354, 20);
-            this.userMidNameTxt.TabIndex = 6;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(53, 159);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(80, 13);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Middle Name";
-            // 
-            // userLastNameTxt
-            // 
-            this.userLastNameTxt.Location = new System.Drawing.Point(56, 218);
-            this.userLastNameTxt.Name = "userLastNameTxt";
-            this.userLastNameTxt.Size = new System.Drawing.Size(354, 20);
-            this.userLastNameTxt.TabIndex = 8;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(53, 200);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 13);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Last Name";
-            // 
-            // userGIDTxt
-            // 
-            this.userGIDTxt.Location = new System.Drawing.Point(56, 263);
-            this.userGIDTxt.Name = "userGIDTxt";
-            this.userGIDTxt.Size = new System.Drawing.Size(354, 20);
-            this.userGIDTxt.TabIndex = 10;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(53, 245);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(29, 13);
-            this.label11.TabIndex = 9;
-            this.label11.Text = "GID";
-            // 
-            // userEmailTxt
-            // 
-            this.userEmailTxt.Location = new System.Drawing.Point(56, 308);
-            this.userEmailTxt.Name = "userEmailTxt";
-            this.userEmailTxt.Size = new System.Drawing.Size(354, 20);
-            this.userEmailTxt.TabIndex = 12;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(53, 290);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(37, 13);
-            this.label12.TabIndex = 11;
-            this.label12.Text = "Email";
-            // 
-            // userPermCombo
-            // 
-            this.userPermCombo.FormattingEnabled = true;
-            this.userPermCombo.Location = new System.Drawing.Point(56, 351);
-            this.userPermCombo.Name = "userPermCombo";
-            this.userPermCombo.Size = new System.Drawing.Size(354, 21);
-            this.userPermCombo.TabIndex = 14;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(53, 334);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(114, 13);
-            this.label13.TabIndex = 13;
-            this.label13.Text = "Type of Permission";
+            this.transfSalesProjTab.Controls.Add(this.label14);
+            this.transfSalesProjTab.Location = new System.Drawing.Point(4, 22);
+            this.transfSalesProjTab.Name = "transfSalesProjTab";
+            this.transfSalesProjTab.Padding = new System.Windows.Forms.Padding(3);
+            this.transfSalesProjTab.Size = new System.Drawing.Size(958, 699);
+            this.transfSalesProjTab.TabIndex = 12;
+            this.transfSalesProjTab.Text = "Transferred Sales Projects";
+            this.transfSalesProjTab.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -2513,6 +2509,11 @@ namespace WindowsFormsApp1
             this.label14.Size = new System.Drawing.Size(217, 13);
             this.label14.TabIndex = 1;
             this.label14.Text = "TO BE IMPLEMENTED WITH SALES";
+            // 
+            // rkCurrencyNameBindingSource1
+            // 
+            this.rkCurrencyNameBindingSource1.DataMember = "rk_CurrencyName";
+            this.rkCurrencyNameBindingSource1.DataSource = this.dataSet1;
             // 
             // executionForm
             // 
@@ -2585,23 +2586,23 @@ namespace WindowsFormsApp1
             this.panel9.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.orgUnitData)).EndInit();
             this.wtgTypeTab.ResumeLayout(false);
-            this.ownerTab.ResumeLayout(false);
-            this.usersTab.ResumeLayout(false);
-            this.transfSalesProjTab.ResumeLayout(false);
-            this.transfSalesProjTab.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource1)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.wtgData)).EndInit();
+            this.ownerTab.ResumeLayout(false);
             this.ownerNameLbl.ResumeLayout(false);
             this.ownerNameLbl.PerformLayout();
             this.panel13.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ownerData)).EndInit();
+            this.usersTab.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel14.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.userData)).EndInit();
+            this.transfSalesProjTab.ResumeLayout(false);
+            this.transfSalesProjTab.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }

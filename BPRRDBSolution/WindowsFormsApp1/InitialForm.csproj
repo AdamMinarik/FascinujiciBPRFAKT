@@ -72,7 +72,6 @@
     <Compile Include="InitialForm.Designer.cs">
       <DependentUpon>InitialForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Mediator\IStorage.cs" />
     <Compile Include="Mediator\ModelManager.cs" />
     <Compile Include="Mediator\RDBModel.cs" />
     <Compile Include="Mediator\Storage.cs" />
