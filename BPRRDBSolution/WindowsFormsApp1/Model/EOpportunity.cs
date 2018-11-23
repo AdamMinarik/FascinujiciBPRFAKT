@@ -8,106 +8,66 @@ namespace WindowsFormsApp1.Model
 {
     class EOpportunity : EProjectItem
     {
-        //Long
-        //private long itemID;
         //String
-        private string mainRootCause;
-        private string otherRootCause;
-        private string actionsRootCause;
-        private string riskDesc;
-        private string impactDesc;
-        private string formulaBefore;
-        private string formulaBeforeDesc;
-        private string actionsImpact;
-        private string monetaryValueAfterDesc;
-        private string remarks;
+        public string oppImpact { get; set; }
+        public string formulaBefore { get; set; }
+        public string formulaBeforeDesc { get; set; }
+        public string actions { get; set; }
+        public string remarks { get; set; }
         //Int
-        private int itemStatusID;
-        private int customerShareID;
-        private int categoryID;
-        private int respStratRootCauseID;
-        private int actionOwnerRootCauseID;
-        private int riskOwnerID;
-        private int phaseID;
-        private int wbsID;
-        private int daysImpactBefore;
-        private int respStratImpactID;
-        private int actionOwnerImpactID;
-        private int daysImpactAfter;
-        private int buRate;
-        private int nccID;
-        private int orgUnitID;
+        public int oppTypeID { get; set; }
+        public int riskOwnerID { get; set; }
+        public int phaseID { get; set; }
+        public int respStratID { get; set; }
+        public int actionOwnerID { get; set; }
+        public int diCatID { get; set; }
+        public int buRate { get; set; }
         //Boolean
-        private Boolean timeObjective;
-        private Boolean costObjective;
-        private Boolean customerSatisfObjective;
-        private Boolean safetyObjective;
-        private Boolean qualityObjective;
         public Boolean newChanges { get; set; } //NEEED
         //Double
-        private Double costRootCause;
-        private Double monetaryValueBefore;
-        private Double monetaryValueAfter;
-        private Double percentageBefore;
-        private Double percentageAfter;
+        public Double oppCost { get; set; }
+        public Double percentageBefore { get; set; }
+        public Double percentageAfter { get; set; }
+        public Double monetaryValueAfter { get; set; }
+
         //DateTime
-        private DateTime createDate;
-        private DateTime updateDate;
-        private DateTime ResponseRootCauseDate;
-        private DateTime ResponseImpactDate;
-        private DateTime impactStartDate;
-        private DateTime impactEndDate;
+        public DateTime responseDate { get; set; }
+        public DateTime responseStartDate { get; set; }
+        public DateTime responseEndDate { get; set; }
 
         //Consturctor
         public EOpportunity
             (
-            long itemID,
-            string excelID, string itemName, string mainRootCause, string otherRootCause, string actionsRootCause, string riskDesc, string impactDesc, string formulaBefore, string formulaBeforeDesc, string actionsImpact,
-            string monetaryValueAfterDesc, string remarks,
-            int itemStatusID, int customerShareID, int categoryID, Double percentageBefore, int respStratRootCauseID, int actionOwnerRootCauseID, Double percentageAfter, int riskOwnerID, int phaseID, int wbsID, int daysImpactBefore,
-            int respStratImpactID, int actionOwnerImpactID, int daysImpactAfter, int buRate, int nccID, int orgUnitID, Boolean removedItem, Boolean watchlist, Boolean newChanges,
-            Boolean timeObjective, Boolean costObjective, Boolean customerSatisfObjective, Boolean safetyObjective, Boolean qualityObjective,
-            Double costRootCause, Double monetaryValueBefore, Double monetaryValueAfter,
-            DateTime createDate, DateTime updateDate, DateTime ResponseRootCauseDate, DateTime ResponseImpactDate, DateTime impactStartDate, DateTime impactEndDate
-            ) : base(itemID, excelID, itemName, riskDesc, itemStatusID, customerShareID, removedItem, watchlist, createDate, updateDate)
+             long itemID, string excelID, string itemName, string oppDesc, int itemStatusID, int customerShareID, bool removedItem, bool watchlist, DateTime createDate, DateTime updateDate,
+             string oppImpact, string formulaBefore, string formulaBeforeDesc, string actions, string remarks, int oppTypeID, int riskOwnerID, int phaseID, int respStratID, int actionOwnerID, int diCatID, int buRate,
+            Boolean newChanges, Double oppCost, Double percentageBefore, Double percentageAfter, Double monetaryValueAfter, DateTime responseDate, DateTime responseStartDate, DateTime responseEndDate
+            ) : base(itemID, excelID, itemName, oppDesc, itemStatusID, customerShareID, removedItem, watchlist, createDate, updateDate)
         {
-            this.mainRootCause = mainRootCause;
-            this.otherRootCause = otherRootCause;
-            this.actionsRootCause = actionsRootCause;
-            this.impactDesc = impactDesc;
+            //String
+            this.oppImpact = oppImpact;
             this.formulaBefore = formulaBefore;
             this.formulaBeforeDesc = formulaBeforeDesc;
-            this.actionsImpact = actionsImpact;
-            this.monetaryValueAfterDesc = monetaryValueAfterDesc;
+            this.actions = actions;
             this.remarks = remarks;
-            this.categoryID = categoryID;
-            this.percentageBefore = percentageBefore;
-            this.respStratRootCauseID = respStratRootCauseID;
-            this.actionOwnerRootCauseID = actionOwnerRootCauseID;
-            this.percentageAfter = percentageAfter;
+            //Int
+            this.oppTypeID = oppTypeID;
             this.riskOwnerID = riskOwnerID;
             this.phaseID = phaseID;
-            this.wbsID = wbsID;
-            this.daysImpactBefore = daysImpactBefore;
-            this.respStratImpactID = respStratImpactID;
-            this.actionOwnerImpactID = actionOwnerImpactID;
-            this.daysImpactAfter = daysImpactAfter;
+            this.respStratID = respStratID;
+            this.actionOwnerID = actionOwnerID;
+            this.diCatID = diCatID;
             this.buRate = buRate;
-            this.nccID = nccID;
-            this.orgUnitID = orgUnitID;
-            this.timeObjective = timeObjective;
-            this.costObjective = costObjective;
-            this.customerSatisfObjective = customerSatisfObjective;
-            this.safetyObjective = safetyObjective;
-            this.qualityObjective = qualityObjective;
-            this.costRootCause = costRootCause;
-            this.monetaryValueBefore = monetaryValueBefore;
-            this.monetaryValueAfter = monetaryValueAfter;
-            this.ResponseRootCauseDate = ResponseRootCauseDate;
-            this.ResponseImpactDate = ResponseImpactDate;
-            this.impactStartDate = impactStartDate;
-            this.impactEndDate = impactEndDate;
+            //Boolean
             this.newChanges = newChanges;
-        }
+            //Double
+            this.oppCost = oppCost;
+            this.percentageBefore = percentageBefore;
+            this.percentageAfter = percentageAfter;
+            this.monetaryValueAfter = monetaryValueAfter;
+            //DateTime
+            this.responseDate = responseDate;
+            this.responseStartDate = responseStartDate;
+            this.responseEndDate = responseEndDate;
     }
+  }
 }

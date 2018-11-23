@@ -9,14 +9,13 @@ namespace WindowsFormsApp1.Model
     abstract class EProjectItem
     {
         public long itemID { get; set; }
-
+        //String
         public string excelID { get; set; }
         public string itemName { get; set; }
         public string itemDescription { get; set; }
-
+        //Int
         public int itemStatusID { get; set; }
         public int customerShareID { get; set; }
-
 
         public bool removedItem { get; set; }
         public bool watchlist { get; set; }
