@@ -60,16 +60,17 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.chartSumPanel = new System.Windows.Forms.Panel();
             this.infoSumPanel = new System.Windows.Forms.Panel();
-            this.monValueToRCLabel = new System.Windows.Forms.Label();
-            this.monValueLabel = new System.Windows.Forms.Label();
-            this.eMVBeforeRCLabel = new System.Windows.Forms.Label();
-            this.eMVAfterRCLabel = new System.Windows.Forms.Label();
-            this.responseExposureLabel = new System.Windows.Forms.Label();
-            this.riskContingencyLabel = new System.Windows.Forms.Label();
-            this.opportunityLabel = new System.Windows.Forms.Label();
-            this.bUCostLabel = new System.Windows.Forms.Label();
-            this.rUCostLabel = new System.Windows.Forms.Label();
             this.totalCostLabel = new System.Windows.Forms.Label();
+            this.rUCostLabel = new System.Windows.Forms.Label();
+            this.bUCostLabel = new System.Windows.Forms.Label();
+            this.opportunityLabel = new System.Windows.Forms.Label();
+            this.riskContingencyLabel = new System.Windows.Forms.Label();
+            this.responseExposureLabel = new System.Windows.Forms.Label();
+            this.eMVAfterRCLabel = new System.Windows.Forms.Label();
+            this.eMVBeforeRCLabel = new System.Windows.Forms.Label();
+            this.monValueLabel = new System.Windows.Forms.Label();
+            this.monValueToRCLabel = new System.Windows.Forms.Label();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -533,7 +534,7 @@
             this.projImpactsTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.projImpactsTab.Name = "projImpactsTab";
             this.projImpactsTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.projImpactsTab.Size = new System.Drawing.Size(1254, 364);
+            this.projImpactsTab.Size = new System.Drawing.Size(1254, 495);
             this.projImpactsTab.TabIndex = 1;
             this.projImpactsTab.Text = "Project Impacts";
             this.projImpactsTab.UseVisualStyleBackColor = true;
@@ -544,7 +545,7 @@
             this.oppTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.oppTab.Name = "oppTab";
             this.oppTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.oppTab.Size = new System.Drawing.Size(1254, 364);
+            this.oppTab.Size = new System.Drawing.Size(1254, 495);
             this.oppTab.TabIndex = 2;
             this.oppTab.Text = "Individual Opportunities";
             this.oppTab.UseVisualStyleBackColor = true;
@@ -555,7 +556,7 @@
             this.erTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.erTab.Name = "erTab";
             this.erTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.erTab.Size = new System.Drawing.Size(1254, 364);
+            this.erTab.Size = new System.Drawing.Size(1254, 495);
             this.erTab.TabIndex = 3;
             this.erTab.Text = "Enterprise Risks";
             this.erTab.UseVisualStyleBackColor = true;
@@ -566,7 +567,7 @@
             this.oUncTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.oUncTab.Name = "oUncTab";
             this.oUncTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.oUncTab.Size = new System.Drawing.Size(1254, 364);
+            this.oUncTab.Size = new System.Drawing.Size(1254, 495);
             this.oUncTab.TabIndex = 4;
             this.oUncTab.Text = "Other Uncertainties ";
             this.oUncTab.UseVisualStyleBackColor = true;
@@ -597,6 +598,7 @@
             // infoSumPanel
             // 
             this.infoSumPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
+            this.infoSumPanel.Controls.Add(this.tableLayoutPanel1);
             this.infoSumPanel.Controls.Add(this.totalCostLabel);
             this.infoSumPanel.Controls.Add(this.rUCostLabel);
             this.infoSumPanel.Controls.Add(this.bUCostLabel);
@@ -614,26 +616,75 @@
             this.infoSumPanel.Size = new System.Drawing.Size(806, 548);
             this.infoSumPanel.TabIndex = 0;
             // 
-            // monValueToRCLabel
+            // totalCostLabel
             // 
-            this.monValueToRCLabel.AutoSize = true;
-            this.monValueToRCLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.monValueToRCLabel.Location = new System.Drawing.Point(7, 33);
-            this.monValueToRCLabel.Name = "monValueToRCLabel";
-            this.monValueToRCLabel.Size = new System.Drawing.Size(360, 23);
-            this.monValueToRCLabel.TabIndex = 0;
-            this.monValueToRCLabel.Text = "From Monetary Value to Risk Contingency";
+            this.totalCostLabel.AutoSize = true;
+            this.totalCostLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.totalCostLabel.Location = new System.Drawing.Point(698, 33);
+            this.totalCostLabel.Name = "totalCostLabel";
+            this.totalCostLabel.Size = new System.Drawing.Size(51, 23);
+            this.totalCostLabel.TabIndex = 9;
+            this.totalCostLabel.Text = "Total";
             // 
-            // monValueLabel
+            // rUCostLabel
             // 
-            this.monValueLabel.AutoSize = true;
-            this.monValueLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, System.Drawing.FontStyle.Bold);
-            this.monValueLabel.Location = new System.Drawing.Point(7, 92);
-            this.monValueLabel.Name = "monValueLabel";
-            this.monValueLabel.Size = new System.Drawing.Size(145, 22);
-            this.monValueLabel.TabIndex = 1;
-            this.monValueLabel.Text = "1. Monetary Value";
-            this.monValueLabel.Click += new System.EventHandler(this.MonValueLabel_Click);
+            this.rUCostLabel.AutoSize = true;
+            this.rUCostLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.rUCostLabel.Location = new System.Drawing.Point(560, 33);
+            this.rUCostLabel.Name = "rUCostLabel";
+            this.rUCostLabel.Size = new System.Drawing.Size(33, 23);
+            this.rUCostLabel.TabIndex = 8;
+            this.rUCostLabel.Text = "RU";
+            // 
+            // bUCostLabel
+            // 
+            this.bUCostLabel.AutoSize = true;
+            this.bUCostLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.bUCostLabel.Location = new System.Drawing.Point(416, 33);
+            this.bUCostLabel.Name = "bUCostLabel";
+            this.bUCostLabel.Size = new System.Drawing.Size(33, 23);
+            this.bUCostLabel.TabIndex = 7;
+            this.bUCostLabel.Text = "BU";
+            // 
+            // opportunityLabel
+            // 
+            this.opportunityLabel.AutoSize = true;
+            this.opportunityLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.opportunityLabel.Location = new System.Drawing.Point(7, 391);
+            this.opportunityLabel.Name = "opportunityLabel";
+            this.opportunityLabel.Size = new System.Drawing.Size(294, 23);
+            this.opportunityLabel.TabIndex = 6;
+            this.opportunityLabel.Text = "Opportunity - EMV after Response";
+            // 
+            // riskContingencyLabel
+            // 
+            this.riskContingencyLabel.AutoSize = true;
+            this.riskContingencyLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.riskContingencyLabel.Location = new System.Drawing.Point(7, 329);
+            this.riskContingencyLabel.Name = "riskContingencyLabel";
+            this.riskContingencyLabel.Size = new System.Drawing.Size(304, 23);
+            this.riskContingencyLabel.TabIndex = 5;
+            this.riskContingencyLabel.Text = "Risk Contingency (% of OIC Budget)";
+            // 
+            // responseExposureLabel
+            // 
+            this.responseExposureLabel.AutoSize = true;
+            this.responseExposureLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.responseExposureLabel.Location = new System.Drawing.Point(7, 266);
+            this.responseExposureLabel.Name = "responseExposureLabel";
+            this.responseExposureLabel.Size = new System.Drawing.Size(321, 23);
+            this.responseExposureLabel.TabIndex = 4;
+            this.responseExposureLabel.Text = "Response Exposure (% of OIC Budget)";
+            // 
+            // eMVAfterRCLabel
+            // 
+            this.eMVAfterRCLabel.AutoSize = true;
+            this.eMVAfterRCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, System.Drawing.FontStyle.Bold);
+            this.eMVAfterRCLabel.Location = new System.Drawing.Point(7, 206);
+            this.eMVAfterRCLabel.Name = "eMVAfterRCLabel";
+            this.eMVAfterRCLabel.Size = new System.Drawing.Size(335, 22);
+            this.eMVAfterRCLabel.TabIndex = 3;
+            this.eMVAfterRCLabel.Text = "3. Expected Monetary Value after Response";
             // 
             // eMVBeforeRCLabel
             // 
@@ -646,75 +697,47 @@
             this.eMVBeforeRCLabel.Text = "2. Expected Monetary Value before Response";
             this.eMVBeforeRCLabel.Click += new System.EventHandler(this.EMVBeforeRCLabel_Click);
             // 
-            // eMVAfterRCLabel
+            // monValueLabel
             // 
-            this.eMVAfterRCLabel.AutoSize = true;
-            this.eMVAfterRCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, System.Drawing.FontStyle.Bold);
-            this.eMVAfterRCLabel.Location = new System.Drawing.Point(7, 206);
-            this.eMVAfterRCLabel.Name = "eMVAfterRCLabel";
-            this.eMVAfterRCLabel.Size = new System.Drawing.Size(335, 22);
-            this.eMVAfterRCLabel.TabIndex = 3;
-            this.eMVAfterRCLabel.Text = "3. Expected Monetary Value after Response";
+            this.monValueLabel.AutoSize = true;
+            this.monValueLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, System.Drawing.FontStyle.Bold);
+            this.monValueLabel.Location = new System.Drawing.Point(7, 92);
+            this.monValueLabel.Name = "monValueLabel";
+            this.monValueLabel.Size = new System.Drawing.Size(145, 22);
+            this.monValueLabel.TabIndex = 1;
+            this.monValueLabel.Text = "1. Monetary Value";
+            this.monValueLabel.Click += new System.EventHandler(this.MonValueLabel_Click);
             // 
-            // responseExposureLabel
+            // monValueToRCLabel
             // 
-            this.responseExposureLabel.AutoSize = true;
-            this.responseExposureLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.responseExposureLabel.Location = new System.Drawing.Point(7, 266);
-            this.responseExposureLabel.Name = "responseExposureLabel";
-            this.responseExposureLabel.Size = new System.Drawing.Size(321, 23);
-            this.responseExposureLabel.TabIndex = 4;
-            this.responseExposureLabel.Text = "Response Exposure (% of OIC Budget)";
+            this.monValueToRCLabel.AutoSize = true;
+            this.monValueToRCLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
+            this.monValueToRCLabel.Location = new System.Drawing.Point(7, 33);
+            this.monValueToRCLabel.Name = "monValueToRCLabel";
+            this.monValueToRCLabel.Size = new System.Drawing.Size(360, 23);
+            this.monValueToRCLabel.TabIndex = 0;
+            this.monValueToRCLabel.Text = "From Monetary Value to Risk Contingency";
             // 
-            // riskContingencyLabel
+            // tableLayoutPanel1
             // 
-            this.riskContingencyLabel.AutoSize = true;
-            this.riskContingencyLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.riskContingencyLabel.Location = new System.Drawing.Point(7, 329);
-            this.riskContingencyLabel.Name = "riskContingencyLabel";
-            this.riskContingencyLabel.Size = new System.Drawing.Size(304, 23);
-            this.riskContingencyLabel.TabIndex = 5;
-            this.riskContingencyLabel.Text = "Risk Contingency (% of OIC Budget)";
-            // 
-            // opportunityLabel
-            // 
-            this.opportunityLabel.AutoSize = true;
-            this.opportunityLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.opportunityLabel.Location = new System.Drawing.Point(7, 391);
-            this.opportunityLabel.Name = "opportunityLabel";
-            this.opportunityLabel.Size = new System.Drawing.Size(294, 23);
-            this.opportunityLabel.TabIndex = 6;
-            this.opportunityLabel.Text = "Opportunity - EMV after Response";
-            // 
-            // bUCostLabel
-            // 
-            this.bUCostLabel.AutoSize = true;
-            this.bUCostLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.bUCostLabel.Location = new System.Drawing.Point(460, 33);
-            this.bUCostLabel.Name = "bUCostLabel";
-            this.bUCostLabel.Size = new System.Drawing.Size(33, 23);
-            this.bUCostLabel.TabIndex = 7;
-            this.bUCostLabel.Text = "BU";
-            // 
-            // rUCostLabel
-            // 
-            this.rUCostLabel.AutoSize = true;
-            this.rUCostLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.rUCostLabel.Location = new System.Drawing.Point(593, 33);
-            this.rUCostLabel.Name = "rUCostLabel";
-            this.rUCostLabel.Size = new System.Drawing.Size(33, 23);
-            this.rUCostLabel.TabIndex = 8;
-            this.rUCostLabel.Text = "RU";
-            // 
-            // totalCostLabel
-            // 
-            this.totalCostLabel.AutoSize = true;
-            this.totalCostLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.totalCostLabel.Location = new System.Drawing.Point(716, 33);
-            this.totalCostLabel.Name = "totalCostLabel";
-            this.totalCostLabel.Size = new System.Drawing.Size(51, 23);
-            this.totalCostLabel.TabIndex = 9;
-            this.totalCostLabel.Text = "Total";
+            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(361, 70);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(437, 344);
+            this.tableLayoutPanel1.TabIndex = 10;
             // 
             // ExecRolog
             // 
@@ -789,5 +812,6 @@
         private System.Windows.Forms.Label opportunityLabel;
         private System.Windows.Forms.Label riskContingencyLabel;
         private System.Windows.Forms.Label responseExposureLabel;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
     }
 }
