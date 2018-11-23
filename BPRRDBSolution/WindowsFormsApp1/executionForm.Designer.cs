@@ -385,7 +385,7 @@ namespace WindowsFormsApp1
             this.userLabel.Location = new System.Drawing.Point(1109, 10);
             this.userLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.userLabel.Name = "userLabel";
-            this.userLabel.Size = new System.Drawing.Size(130, 24);
+            this.userLabel.Size = new System.Drawing.Size(193, 36);
             this.userLabel.TabIndex = 1;
             this.userLabel.Text = "Adam Minarik";
             this.userLabel.Click += new System.EventHandler(this.userLabel_Click);
@@ -400,7 +400,7 @@ namespace WindowsFormsApp1
             this.locationLabel.Location = new System.Drawing.Point(12, 10);
             this.locationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.locationLabel.Name = "locationLabel";
-            this.locationLabel.Size = new System.Drawing.Size(208, 24);
+            this.locationLabel.Size = new System.Drawing.Size(304, 36);
             this.locationLabel.TabIndex = 0;
             this.locationLabel.Text = "EXECUTION PROJECTS";
             // 
@@ -789,7 +789,7 @@ namespace WindowsFormsApp1
             this.projectsPanel.Location = new System.Drawing.Point(2, 3);
             this.projectsPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectsPanel.Name = "projectsPanel";
-            this.projectsPanel.Size = new System.Drawing.Size(991, 716);
+            this.projectsPanel.Size = new System.Drawing.Size(991, 708);
             this.projectsPanel.TabIndex = 2;
             // 
             // projectsData
@@ -814,7 +814,7 @@ namespace WindowsFormsApp1
             this.projectsData.Location = new System.Drawing.Point(0, 0);
             this.projectsData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectsData.Name = "projectsData";
-            this.projectsData.Size = new System.Drawing.Size(991, 716);
+            this.projectsData.Size = new System.Drawing.Size(991, 708);
             this.projectsData.TabIndex = 0;
             this.projectsData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectsData_CellClick);
             this.projectsData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectsData_CellContentClick);
@@ -897,7 +897,7 @@ namespace WindowsFormsApp1
             this.portfolioPanel.Location = new System.Drawing.Point(2, 3);
             this.portfolioPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.portfolioPanel.Name = "portfolioPanel";
-            this.portfolioPanel.Size = new System.Drawing.Size(991, 716);
+            this.portfolioPanel.Size = new System.Drawing.Size(991, 708);
             this.portfolioPanel.TabIndex = 3;
             this.portfolioPanel.Visible = false;
             // 
@@ -906,7 +906,7 @@ namespace WindowsFormsApp1
             this.tableauButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tableauButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.tableauButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.tableauButton.Location = new System.Drawing.Point(760, 668);
+            this.tableauButton.Location = new System.Drawing.Point(760, 660);
             this.tableauButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tableauButton.Name = "tableauButton";
             this.tableauButton.Size = new System.Drawing.Size(222, 41);
@@ -919,7 +919,7 @@ namespace WindowsFormsApp1
             this.riskContingencyButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.riskContingencyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.riskContingencyButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.riskContingencyButton.Location = new System.Drawing.Point(508, 668);
+            this.riskContingencyButton.Location = new System.Drawing.Point(508, 660);
             this.riskContingencyButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.riskContingencyButton.Name = "riskContingencyButton";
             this.riskContingencyButton.Size = new System.Drawing.Size(222, 41);
@@ -932,7 +932,7 @@ namespace WindowsFormsApp1
             this.rologButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.rologButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.rologButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.rologButton.Location = new System.Drawing.Point(258, 668);
+            this.rologButton.Location = new System.Drawing.Point(258, 660);
             this.rologButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rologButton.Name = "rologButton";
             this.rologButton.Size = new System.Drawing.Size(222, 41);
@@ -945,7 +945,7 @@ namespace WindowsFormsApp1
             this.top20Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.top20Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.top20Button.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.top20Button.Location = new System.Drawing.Point(6, 668);
+            this.top20Button.Location = new System.Drawing.Point(6, 660);
             this.top20Button.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.top20Button.Name = "top20Button";
             this.top20Button.Size = new System.Drawing.Size(222, 41);
@@ -963,7 +963,7 @@ namespace WindowsFormsApp1
             this.portfolioRepGridView.Location = new System.Drawing.Point(6, 6);
             this.portfolioRepGridView.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.portfolioRepGridView.Name = "portfolioRepGridView";
-            this.portfolioRepGridView.Size = new System.Drawing.Size(976, 656);
+            this.portfolioRepGridView.Size = new System.Drawing.Size(976, 648);
             this.portfolioRepGridView.TabIndex = 0;
             this.portfolioRepGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.portfolioRepGridView_CellContentClick);
             // 
@@ -974,7 +974,7 @@ namespace WindowsFormsApp1
             this.createProjectPanel.Location = new System.Drawing.Point(2, 3);
             this.createProjectPanel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createProjectPanel.Name = "createProjectPanel";
-            this.createProjectPanel.Size = new System.Drawing.Size(991, 716);
+            this.createProjectPanel.Size = new System.Drawing.Size(991, 708);
             this.createProjectPanel.TabIndex = 5;
             // 
             // newProjectTableLayout
@@ -1070,7 +1070,7 @@ namespace WindowsFormsApp1
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.newProjectTableLayout.Size = new System.Drawing.Size(991, 716);
+            this.newProjectTableLayout.Size = new System.Drawing.Size(991, 708);
             this.newProjectTableLayout.TabIndex = 42;
             this.newProjectTableLayout.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -1296,7 +1296,7 @@ namespace WindowsFormsApp1
             this.buCurComboBox.Location = new System.Drawing.Point(441, 533);
             this.buCurComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buCurComboBox.Name = "buCurComboBox";
-            this.buCurComboBox.Size = new System.Drawing.Size(363, 26);
+            this.buCurComboBox.Size = new System.Drawing.Size(363, 32);
             this.buCurComboBox.TabIndex = 33;
             this.buCurComboBox.ValueMember = "ID";
             this.buCurComboBox.SelectedIndexChanged += new System.EventHandler(this.buCurComboBox_SelectedIndexChanged);
@@ -1316,7 +1316,7 @@ namespace WindowsFormsApp1
             this.ruCurComboBox.Location = new System.Drawing.Point(441, 588);
             this.ruCurComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ruCurComboBox.Name = "ruCurComboBox";
-            this.ruCurComboBox.Size = new System.Drawing.Size(363, 26);
+            this.ruCurComboBox.Size = new System.Drawing.Size(363, 32);
             this.ruCurComboBox.TabIndex = 36;
             this.ruCurComboBox.ValueMember = "ID";
             // 
@@ -1419,7 +1419,7 @@ namespace WindowsFormsApp1
             this.portComboBox.Location = new System.Drawing.Point(441, 308);
             this.portComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.portComboBox.Name = "portComboBox";
-            this.portComboBox.Size = new System.Drawing.Size(363, 26);
+            this.portComboBox.Size = new System.Drawing.Size(363, 32);
             this.portComboBox.TabIndex = 27;
             this.portComboBox.ValueMember = "ID";
             // 
@@ -1438,7 +1438,7 @@ namespace WindowsFormsApp1
             this.foundationComboBox.Location = new System.Drawing.Point(441, 253);
             this.foundationComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.foundationComboBox.Name = "foundationComboBox";
-            this.foundationComboBox.Size = new System.Drawing.Size(363, 26);
+            this.foundationComboBox.Size = new System.Drawing.Size(363, 32);
             this.foundationComboBox.TabIndex = 26;
             this.foundationComboBox.ValueMember = "ID";
             this.foundationComboBox.SelectedIndexChanged += new System.EventHandler(this.foundationComboBox_SelectedIndexChanged);
@@ -1480,7 +1480,7 @@ namespace WindowsFormsApp1
             this.segmentComboBox.Location = new System.Drawing.Point(441, 393);
             this.segmentComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.segmentComboBox.Name = "segmentComboBox";
-            this.segmentComboBox.Size = new System.Drawing.Size(363, 26);
+            this.segmentComboBox.Size = new System.Drawing.Size(363, 32);
             this.segmentComboBox.TabIndex = 29;
             this.segmentComboBox.ValueMember = "ID";
             // 
@@ -1499,7 +1499,7 @@ namespace WindowsFormsApp1
             this.scopeComboBox.Location = new System.Drawing.Point(441, 198);
             this.scopeComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.scopeComboBox.Name = "scopeComboBox";
-            this.scopeComboBox.Size = new System.Drawing.Size(363, 26);
+            this.scopeComboBox.Size = new System.Drawing.Size(363, 32);
             this.scopeComboBox.TabIndex = 25;
             this.scopeComboBox.ValueMember = "ID";
             // 
@@ -1529,7 +1529,7 @@ namespace WindowsFormsApp1
             this.wtgTypeComboBox.Location = new System.Drawing.Point(441, 448);
             this.wtgTypeComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgTypeComboBox.Name = "wtgTypeComboBox";
-            this.wtgTypeComboBox.Size = new System.Drawing.Size(363, 26);
+            this.wtgTypeComboBox.Size = new System.Drawing.Size(363, 32);
             this.wtgTypeComboBox.TabIndex = 31;
             this.wtgTypeComboBox.ValueMember = "ID";
             // 
@@ -1566,10 +1566,10 @@ namespace WindowsFormsApp1
             this.projectSpecificDataLabel.AutoSize = true;
             this.projectSpecificDataLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectSpecificDataLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.projectSpecificDataLabel.Location = new System.Drawing.Point(26, 6);
+            this.projectSpecificDataLabel.Location = new System.Drawing.Point(26, 3);
             this.projectSpecificDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectSpecificDataLabel.Name = "projectSpecificDataLabel";
-            this.projectSpecificDataLabel.Size = new System.Drawing.Size(130, 18);
+            this.projectSpecificDataLabel.Size = new System.Drawing.Size(189, 24);
             this.projectSpecificDataLabel.TabIndex = 42;
             this.projectSpecificDataLabel.Text = "Project Specific Data";
             // 
@@ -1579,10 +1579,10 @@ namespace WindowsFormsApp1
             this.projectPersonalDataLabel.AutoSize = true;
             this.projectPersonalDataLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectPersonalDataLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.projectPersonalDataLabel.Location = new System.Drawing.Point(26, 146);
+            this.projectPersonalDataLabel.Location = new System.Drawing.Point(26, 143);
             this.projectPersonalDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectPersonalDataLabel.Name = "projectPersonalDataLabel";
-            this.projectPersonalDataLabel.Size = new System.Drawing.Size(132, 18);
+            this.projectPersonalDataLabel.Size = new System.Drawing.Size(194, 24);
             this.projectPersonalDataLabel.TabIndex = 43;
             this.projectPersonalDataLabel.Text = "Project Personal Data";
             // 
@@ -1592,10 +1592,10 @@ namespace WindowsFormsApp1
             this.projectOrderDataLabel.AutoSize = true;
             this.projectOrderDataLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectOrderDataLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.projectOrderDataLabel.Location = new System.Drawing.Point(26, 341);
+            this.projectOrderDataLabel.Location = new System.Drawing.Point(26, 338);
             this.projectOrderDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectOrderDataLabel.Name = "projectOrderDataLabel";
-            this.projectOrderDataLabel.Size = new System.Drawing.Size(117, 18);
+            this.projectOrderDataLabel.Size = new System.Drawing.Size(171, 24);
             this.projectOrderDataLabel.TabIndex = 44;
             this.projectOrderDataLabel.Text = "Project Order Data";
             // 
@@ -1605,10 +1605,10 @@ namespace WindowsFormsApp1
             this.projectCostsLabel.AutoSize = true;
             this.projectCostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectCostsLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.projectCostsLabel.Location = new System.Drawing.Point(26, 481);
+            this.projectCostsLabel.Location = new System.Drawing.Point(26, 478);
             this.projectCostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectCostsLabel.Name = "projectCostsLabel";
-            this.projectCostsLabel.Size = new System.Drawing.Size(85, 18);
+            this.projectCostsLabel.Size = new System.Drawing.Size(122, 24);
             this.projectCostsLabel.TabIndex = 45;
             this.projectCostsLabel.Text = "Project Costs";
             // 
@@ -1618,10 +1618,10 @@ namespace WindowsFormsApp1
             this.scopeLocationLabel.AutoSize = true;
             this.scopeLocationLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.scopeLocationLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.scopeLocationLabel.Location = new System.Drawing.Point(441, 146);
+            this.scopeLocationLabel.Location = new System.Drawing.Point(441, 143);
             this.scopeLocationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.scopeLocationLabel.Name = "scopeLocationLabel";
-            this.scopeLocationLabel.Size = new System.Drawing.Size(109, 18);
+            this.scopeLocationLabel.Size = new System.Drawing.Size(157, 24);
             this.scopeLocationLabel.TabIndex = 46;
             this.scopeLocationLabel.Text = "Scope && Location";
             // 
@@ -1662,7 +1662,7 @@ namespace WindowsFormsApp1
             this.projectOwnerComboBox.Location = new System.Drawing.Point(441, 58);
             this.projectOwnerComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectOwnerComboBox.Name = "projectOwnerComboBox";
-            this.projectOwnerComboBox.Size = new System.Drawing.Size(363, 26);
+            this.projectOwnerComboBox.Size = new System.Drawing.Size(363, 32);
             this.projectOwnerComboBox.TabIndex = 19;
             this.projectOwnerComboBox.ValueMember = "ID";
             // 
@@ -1678,7 +1678,7 @@ namespace WindowsFormsApp1
             this.tocTextBox.Location = new System.Drawing.Point(26, 393);
             this.tocTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tocTextBox.Name = "tocTextBox";
-            this.tocTextBox.Size = new System.Drawing.Size(363, 22);
+            this.tocTextBox.Size = new System.Drawing.Size(363, 30);
             this.tocTextBox.TabIndex = 28;
             // 
             // dataSet1BindingSource
@@ -1763,11 +1763,11 @@ namespace WindowsFormsApp1
             // projectDataTab
             // 
             this.projectDataTab.Controls.Add(this.projectsPanel);
-            this.projectDataTab.Location = new System.Drawing.Point(4, 27);
+            this.projectDataTab.Location = new System.Drawing.Point(4, 35);
             this.projectDataTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectDataTab.Name = "projectDataTab";
             this.projectDataTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.projectDataTab.Size = new System.Drawing.Size(995, 722);
+            this.projectDataTab.Size = new System.Drawing.Size(995, 714);
             this.projectDataTab.TabIndex = 0;
             this.projectDataTab.Text = "Projects";
             this.projectDataTab.UseVisualStyleBackColor = true;
@@ -1775,11 +1775,11 @@ namespace WindowsFormsApp1
             // portfolioReportsTab
             // 
             this.portfolioReportsTab.Controls.Add(this.portfolioPanel);
-            this.portfolioReportsTab.Location = new System.Drawing.Point(4, 27);
+            this.portfolioReportsTab.Location = new System.Drawing.Point(4, 35);
             this.portfolioReportsTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.portfolioReportsTab.Name = "portfolioReportsTab";
             this.portfolioReportsTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.portfolioReportsTab.Size = new System.Drawing.Size(995, 722);
+            this.portfolioReportsTab.Size = new System.Drawing.Size(995, 714);
             this.portfolioReportsTab.TabIndex = 1;
             this.portfolioReportsTab.Text = "Portfolio Reports";
             this.portfolioReportsTab.UseVisualStyleBackColor = true;
@@ -1787,11 +1787,11 @@ namespace WindowsFormsApp1
             // createProjectTab
             // 
             this.createProjectTab.Controls.Add(this.createProjectPanel);
-            this.createProjectTab.Location = new System.Drawing.Point(4, 27);
+            this.createProjectTab.Location = new System.Drawing.Point(4, 35);
             this.createProjectTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.createProjectTab.Name = "createProjectTab";
             this.createProjectTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.createProjectTab.Size = new System.Drawing.Size(995, 722);
+            this.createProjectTab.Size = new System.Drawing.Size(995, 714);
             this.createProjectTab.TabIndex = 2;
             this.createProjectTab.Text = "Create Project";
             this.createProjectTab.UseVisualStyleBackColor = true;
@@ -1800,11 +1800,11 @@ namespace WindowsFormsApp1
             // 
             this.entryCurTab.Controls.Add(this.panel1);
             this.entryCurTab.Controls.Add(this.entryCurList);
-            this.entryCurTab.Location = new System.Drawing.Point(4, 27);
+            this.entryCurTab.Location = new System.Drawing.Point(4, 35);
             this.entryCurTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.entryCurTab.Name = "entryCurTab";
             this.entryCurTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.entryCurTab.Size = new System.Drawing.Size(995, 722);
+            this.entryCurTab.Size = new System.Drawing.Size(995, 714);
             this.entryCurTab.TabIndex = 3;
             this.entryCurTab.Text = "Entry Currency";
             this.entryCurTab.UseVisualStyleBackColor = true;
@@ -1820,7 +1820,7 @@ namespace WindowsFormsApp1
             this.panel1.Location = new System.Drawing.Point(525, 3);
             this.panel1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(468, 716);
+            this.panel1.Size = new System.Drawing.Size(468, 708);
             this.panel1.TabIndex = 1;
             // 
             // entryCurrInsertButton
@@ -1842,7 +1842,7 @@ namespace WindowsFormsApp1
             this.codeEntryTextBox.Location = new System.Drawing.Point(108, 232);
             this.codeEntryTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.codeEntryTextBox.Name = "codeEntryTextBox";
-            this.codeEntryTextBox.Size = new System.Drawing.Size(250, 23);
+            this.codeEntryTextBox.Size = new System.Drawing.Size(250, 31);
             this.codeEntryTextBox.TabIndex = 3;
             // 
             // countryEntryTextBox
@@ -1851,7 +1851,7 @@ namespace WindowsFormsApp1
             this.countryEntryTextBox.Location = new System.Drawing.Point(108, 177);
             this.countryEntryTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.countryEntryTextBox.Name = "countryEntryTextBox";
-            this.countryEntryTextBox.Size = new System.Drawing.Size(250, 23);
+            this.countryEntryTextBox.Size = new System.Drawing.Size(250, 31);
             this.countryEntryTextBox.TabIndex = 2;
             // 
             // label2
@@ -1861,7 +1861,7 @@ namespace WindowsFormsApp1
             this.label2.Location = new System.Drawing.Point(105, 206);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(40, 18);
+            this.label2.Size = new System.Drawing.Size(57, 26);
             this.label2.TabIndex = 1;
             this.label2.Text = "Code";
             // 
@@ -1872,7 +1872,7 @@ namespace WindowsFormsApp1
             this.label1.Location = new System.Drawing.Point(103, 151);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 18);
+            this.label1.Size = new System.Drawing.Size(83, 26);
             this.label1.TabIndex = 0;
             this.label1.Text = "Country";
             // 
@@ -1884,7 +1884,7 @@ namespace WindowsFormsApp1
             this.entryCurList.Location = new System.Drawing.Point(2, 3);
             this.entryCurList.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.entryCurList.Name = "entryCurList";
-            this.entryCurList.Size = new System.Drawing.Size(952, 716);
+            this.entryCurList.Size = new System.Drawing.Size(952, 708);
             this.entryCurList.TabIndex = 0;
             // 
             // entryCurrUpdateBtn
@@ -1892,7 +1892,7 @@ namespace WindowsFormsApp1
             this.entryCurrUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.entryCurrUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.entryCurrUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.entryCurrUpdateBtn.Location = new System.Drawing.Point(165, 657);
+            this.entryCurrUpdateBtn.Location = new System.Drawing.Point(165, 649);
             this.entryCurrUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.entryCurrUpdateBtn.Name = "entryCurrUpdateBtn";
             this.entryCurrUpdateBtn.Size = new System.Drawing.Size(205, 45);
@@ -1912,18 +1912,18 @@ namespace WindowsFormsApp1
             this.entryCurData.Location = new System.Drawing.Point(22, 11);
             this.entryCurData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.entryCurData.Name = "entryCurData";
-            this.entryCurData.Size = new System.Drawing.Size(482, 637);
+            this.entryCurData.Size = new System.Drawing.Size(482, 629);
             this.entryCurData.TabIndex = 0;
             // 
             // diCatTab
             // 
             this.diCatTab.Controls.Add(this.panel3);
             this.diCatTab.Controls.Add(this.panel2);
-            this.diCatTab.Location = new System.Drawing.Point(4, 27);
+            this.diCatTab.Location = new System.Drawing.Point(4, 35);
             this.diCatTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.diCatTab.Name = "diCatTab";
             this.diCatTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.diCatTab.Size = new System.Drawing.Size(995, 722);
+            this.diCatTab.Size = new System.Drawing.Size(995, 714);
             this.diCatTab.TabIndex = 4;
             this.diCatTab.Text = "DI Category";
             this.diCatTab.UseVisualStyleBackColor = true;
@@ -1937,7 +1937,7 @@ namespace WindowsFormsApp1
             this.panel3.Location = new System.Drawing.Point(525, 3);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(468, 716);
+            this.panel3.Size = new System.Drawing.Size(468, 708);
             this.panel3.TabIndex = 1;
             // 
             // DIcatInsertBtn
@@ -1948,7 +1948,7 @@ namespace WindowsFormsApp1
             this.DIcatInsertBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DIcatInsertBtn.Name = "DIcatInsertBtn";
             this.DIcatInsertBtn.Size = new System.Drawing.Size(205, 45);
-            this.DIcatInsertBtn.TabIndex = 5;
+            this.DIcatInsertBtn.TabIndex = 3;
             this.DIcatInsertBtn.Text = "INSERT";
             this.DIcatInsertBtn.UseVisualStyleBackColor = false;
             this.DIcatInsertBtn.Click += new System.EventHandler(this.DIcatInsertBtn_Click);
@@ -1959,8 +1959,8 @@ namespace WindowsFormsApp1
             this.DIcatText.Location = new System.Drawing.Point(116, 228);
             this.DIcatText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DIcatText.Name = "DIcatText";
-            this.DIcatText.Size = new System.Drawing.Size(250, 23);
-            this.DIcatText.TabIndex = 4;
+            this.DIcatText.Size = new System.Drawing.Size(250, 31);
+            this.DIcatText.TabIndex = 2;
             this.DIcatText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // DICatInsertLbl
@@ -1970,7 +1970,7 @@ namespace WindowsFormsApp1
             this.DICatInsertLbl.Location = new System.Drawing.Point(111, 199);
             this.DICatInsertLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.DICatInsertLbl.Name = "DICatInsertLbl";
-            this.DICatInsertLbl.Size = new System.Drawing.Size(81, 18);
+            this.DICatInsertLbl.Size = new System.Drawing.Size(117, 26);
             this.DICatInsertLbl.TabIndex = 3;
             this.DICatInsertLbl.Text = "DI Category";
             // 
@@ -1982,7 +1982,7 @@ namespace WindowsFormsApp1
             this.panel2.Location = new System.Drawing.Point(2, 3);
             this.panel2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(530, 716);
+            this.panel2.Size = new System.Drawing.Size(530, 708);
             this.panel2.TabIndex = 0;
             // 
             // DIcatUpdateBtn
@@ -1990,11 +1990,11 @@ namespace WindowsFormsApp1
             this.DIcatUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.DIcatUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.DIcatUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
-            this.DIcatUpdateBtn.Location = new System.Drawing.Point(165, 657);
+            this.DIcatUpdateBtn.Location = new System.Drawing.Point(165, 649);
             this.DIcatUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DIcatUpdateBtn.Name = "DIcatUpdateBtn";
             this.DIcatUpdateBtn.Size = new System.Drawing.Size(205, 45);
-            this.DIcatUpdateBtn.TabIndex = 2;
+            this.DIcatUpdateBtn.TabIndex = 1;
             this.DIcatUpdateBtn.Text = "UPDATE";
             this.DIcatUpdateBtn.UseVisualStyleBackColor = false;
             this.DIcatUpdateBtn.Click += new System.EventHandler(this.DIcatUpdateBtn_Click);
@@ -2013,11 +2013,11 @@ namespace WindowsFormsApp1
             // 
             this.nccTab.Controls.Add(this.panel4);
             this.nccTab.Controls.Add(this.panel5);
-            this.nccTab.Location = new System.Drawing.Point(4, 27);
+            this.nccTab.Location = new System.Drawing.Point(4, 35);
             this.nccTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccTab.Name = "nccTab";
             this.nccTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.nccTab.Size = new System.Drawing.Size(995, 722);
+            this.nccTab.Size = new System.Drawing.Size(995, 714);
             this.nccTab.TabIndex = 5;
             this.nccTab.Text = "NCC";
             this.nccTab.UseVisualStyleBackColor = true;
@@ -2031,7 +2031,7 @@ namespace WindowsFormsApp1
             this.panel4.Location = new System.Drawing.Point(518, 3);
             this.panel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(475, 716);
+            this.panel4.Size = new System.Drawing.Size(475, 708);
             this.panel4.TabIndex = 3;
             // 
             // nccInsertBtn
@@ -2042,7 +2042,7 @@ namespace WindowsFormsApp1
             this.nccInsertBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccInsertBtn.Name = "nccInsertBtn";
             this.nccInsertBtn.Size = new System.Drawing.Size(205, 45);
-            this.nccInsertBtn.TabIndex = 5;
+            this.nccInsertBtn.TabIndex = 3;
             this.nccInsertBtn.Text = "INSERT";
             this.nccInsertBtn.UseVisualStyleBackColor = false;
             this.nccInsertBtn.Click += new System.EventHandler(this.nccInsertBtn_Click);
@@ -2053,8 +2053,8 @@ namespace WindowsFormsApp1
             this.nccText.Location = new System.Drawing.Point(117, 228);
             this.nccText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccText.Name = "nccText";
-            this.nccText.Size = new System.Drawing.Size(250, 23);
-            this.nccText.TabIndex = 4;
+            this.nccText.Size = new System.Drawing.Size(250, 31);
+            this.nccText.TabIndex = 2;
             // 
             // label3
             // 
@@ -2063,7 +2063,7 @@ namespace WindowsFormsApp1
             this.label3.Location = new System.Drawing.Point(112, 199);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(72, 18);
+            this.label3.Size = new System.Drawing.Size(107, 26);
             this.label3.TabIndex = 3;
             this.label3.Text = "NCC Name";
             // 
@@ -2075,7 +2075,7 @@ namespace WindowsFormsApp1
             this.panel5.Location = new System.Drawing.Point(2, 3);
             this.panel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(519, 716);
+            this.panel5.Size = new System.Drawing.Size(519, 708);
             this.panel5.TabIndex = 2;
             // 
             // nccUpdateBtn
@@ -2083,11 +2083,11 @@ namespace WindowsFormsApp1
             this.nccUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.nccUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.nccUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
-            this.nccUpdateBtn.Location = new System.Drawing.Point(165, 657);
+            this.nccUpdateBtn.Location = new System.Drawing.Point(165, 649);
             this.nccUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccUpdateBtn.Name = "nccUpdateBtn";
             this.nccUpdateBtn.Size = new System.Drawing.Size(205, 45);
-            this.nccUpdateBtn.TabIndex = 2;
+            this.nccUpdateBtn.TabIndex = 1;
             this.nccUpdateBtn.Text = "UPDATE";
             this.nccUpdateBtn.UseVisualStyleBackColor = false;
             this.nccUpdateBtn.Click += new System.EventHandler(this.nccUpdateBtn_Click);
@@ -2106,11 +2106,11 @@ namespace WindowsFormsApp1
             // 
             this.projectOwnershipTab.Controls.Add(this.panel6);
             this.projectOwnershipTab.Controls.Add(this.panel7);
-            this.projectOwnershipTab.Location = new System.Drawing.Point(4, 27);
+            this.projectOwnershipTab.Location = new System.Drawing.Point(4, 35);
             this.projectOwnershipTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectOwnershipTab.Name = "projectOwnershipTab";
             this.projectOwnershipTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.projectOwnershipTab.Size = new System.Drawing.Size(995, 722);
+            this.projectOwnershipTab.Size = new System.Drawing.Size(995, 714);
             this.projectOwnershipTab.TabIndex = 6;
             this.projectOwnershipTab.Text = "Project Ownership";
             this.projectOwnershipTab.UseVisualStyleBackColor = true;
@@ -2126,7 +2126,7 @@ namespace WindowsFormsApp1
             this.panel6.Location = new System.Drawing.Point(474, 3);
             this.panel6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(519, 716);
+            this.panel6.Size = new System.Drawing.Size(519, 708);
             this.panel6.TabIndex = 5;
             // 
             // projOwnerCombo
@@ -2136,8 +2136,8 @@ namespace WindowsFormsApp1
             this.projOwnerCombo.Location = new System.Drawing.Point(101, 225);
             this.projOwnerCombo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projOwnerCombo.Name = "projOwnerCombo";
-            this.projOwnerCombo.Size = new System.Drawing.Size(283, 26);
-            this.projOwnerCombo.TabIndex = 8;
+            this.projOwnerCombo.Size = new System.Drawing.Size(283, 34);
+            this.projOwnerCombo.TabIndex = 2;
             // 
             // label5
             // 
@@ -2146,7 +2146,7 @@ namespace WindowsFormsApp1
             this.label5.Location = new System.Drawing.Point(98, 196);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(174, 18);
+            this.label5.Size = new System.Drawing.Size(248, 26);
             this.label5.TabIndex = 7;
             this.label5.Text = "Select New Project Owner";
             // 
@@ -2157,8 +2157,8 @@ namespace WindowsFormsApp1
             this.projNameCombo.Location = new System.Drawing.Point(101, 158);
             this.projNameCombo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projNameCombo.Name = "projNameCombo";
-            this.projNameCombo.Size = new System.Drawing.Size(283, 26);
-            this.projNameCombo.TabIndex = 6;
+            this.projNameCombo.Size = new System.Drawing.Size(283, 34);
+            this.projNameCombo.TabIndex = 1;
             // 
             // projOwnerUpdateBtn
             // 
@@ -2168,7 +2168,7 @@ namespace WindowsFormsApp1
             this.projOwnerUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projOwnerUpdateBtn.Name = "projOwnerUpdateBtn";
             this.projOwnerUpdateBtn.Size = new System.Drawing.Size(205, 45);
-            this.projOwnerUpdateBtn.TabIndex = 5;
+            this.projOwnerUpdateBtn.TabIndex = 3;
             this.projOwnerUpdateBtn.Text = "UPDATE";
             this.projOwnerUpdateBtn.UseVisualStyleBackColor = false;
             this.projOwnerUpdateBtn.Click += new System.EventHandler(this.projOwnerUpdateBtn_Click);
@@ -2180,7 +2180,7 @@ namespace WindowsFormsApp1
             this.label4.Location = new System.Drawing.Point(98, 129);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(164, 18);
+            this.label4.Size = new System.Drawing.Size(233, 26);
             this.label4.TabIndex = 3;
             this.label4.Text = "Select Project to update";
             // 
@@ -2191,7 +2191,7 @@ namespace WindowsFormsApp1
             this.panel7.Location = new System.Drawing.Point(2, 3);
             this.panel7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(463, 716);
+            this.panel7.Size = new System.Drawing.Size(463, 708);
             this.panel7.TabIndex = 4;
             // 
             // projOwnerData
@@ -2202,18 +2202,18 @@ namespace WindowsFormsApp1
             this.projOwnerData.Location = new System.Drawing.Point(0, 0);
             this.projOwnerData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projOwnerData.Name = "projOwnerData";
-            this.projOwnerData.Size = new System.Drawing.Size(463, 716);
+            this.projOwnerData.Size = new System.Drawing.Size(463, 708);
             this.projOwnerData.TabIndex = 0;
             // 
             // orgUnitTab
             // 
             this.orgUnitTab.Controls.Add(this.panel8);
             this.orgUnitTab.Controls.Add(this.panel9);
-            this.orgUnitTab.Location = new System.Drawing.Point(4, 27);
+            this.orgUnitTab.Location = new System.Drawing.Point(4, 35);
             this.orgUnitTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.orgUnitTab.Name = "orgUnitTab";
             this.orgUnitTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.orgUnitTab.Size = new System.Drawing.Size(995, 722);
+            this.orgUnitTab.Size = new System.Drawing.Size(995, 714);
             this.orgUnitTab.TabIndex = 7;
             this.orgUnitTab.Text = "OriginatingUnit";
             this.orgUnitTab.UseVisualStyleBackColor = true;
@@ -2227,7 +2227,7 @@ namespace WindowsFormsApp1
             this.panel8.Location = new System.Drawing.Point(511, 3);
             this.panel8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(482, 716);
+            this.panel8.Size = new System.Drawing.Size(482, 708);
             this.panel8.TabIndex = 5;
             // 
             // origUnitInsertBtn
@@ -2238,7 +2238,7 @@ namespace WindowsFormsApp1
             this.origUnitInsertBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.origUnitInsertBtn.Name = "origUnitInsertBtn";
             this.origUnitInsertBtn.Size = new System.Drawing.Size(205, 45);
-            this.origUnitInsertBtn.TabIndex = 5;
+            this.origUnitInsertBtn.TabIndex = 3;
             this.origUnitInsertBtn.Text = "INSERT";
             this.origUnitInsertBtn.UseVisualStyleBackColor = false;
             this.origUnitInsertBtn.Click += new System.EventHandler(this.origUnitInsertBtn_Click);
@@ -2249,8 +2249,8 @@ namespace WindowsFormsApp1
             this.orgUnitTxt.Location = new System.Drawing.Point(112, 227);
             this.orgUnitTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.orgUnitTxt.Name = "orgUnitTxt";
-            this.orgUnitTxt.Size = new System.Drawing.Size(250, 23);
-            this.orgUnitTxt.TabIndex = 4;
+            this.orgUnitTxt.Size = new System.Drawing.Size(250, 31);
+            this.orgUnitTxt.TabIndex = 2;
             // 
             // orgUnitLbl
             // 
@@ -2259,7 +2259,7 @@ namespace WindowsFormsApp1
             this.orgUnitLbl.Location = new System.Drawing.Point(108, 198);
             this.orgUnitLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.orgUnitLbl.Name = "orgUnitLbl";
-            this.orgUnitLbl.Size = new System.Drawing.Size(147, 18);
+            this.orgUnitLbl.Size = new System.Drawing.Size(214, 26);
             this.orgUnitLbl.TabIndex = 3;
             this.orgUnitLbl.Text = "Originating Unit Name";
             // 
@@ -2271,7 +2271,7 @@ namespace WindowsFormsApp1
             this.panel9.Location = new System.Drawing.Point(2, 3);
             this.panel9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(513, 716);
+            this.panel9.Size = new System.Drawing.Size(513, 708);
             this.panel9.TabIndex = 4;
             // 
             // orgUnitUpdateBtn
@@ -2279,11 +2279,11 @@ namespace WindowsFormsApp1
             this.orgUnitUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.orgUnitUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.orgUnitUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
-            this.orgUnitUpdateBtn.Location = new System.Drawing.Point(165, 657);
+            this.orgUnitUpdateBtn.Location = new System.Drawing.Point(165, 649);
             this.orgUnitUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.orgUnitUpdateBtn.Name = "orgUnitUpdateBtn";
             this.orgUnitUpdateBtn.Size = new System.Drawing.Size(205, 45);
-            this.orgUnitUpdateBtn.TabIndex = 2;
+            this.orgUnitUpdateBtn.TabIndex = 1;
             this.orgUnitUpdateBtn.Text = "UPDATE";
             this.orgUnitUpdateBtn.UseVisualStyleBackColor = false;
             this.orgUnitUpdateBtn.Click += new System.EventHandler(this.orgUnitUpdateBtn_Click);
@@ -2302,11 +2302,11 @@ namespace WindowsFormsApp1
             // 
             this.wtgTypeTab.Controls.Add(this.panel10);
             this.wtgTypeTab.Controls.Add(this.panel11);
-            this.wtgTypeTab.Location = new System.Drawing.Point(4, 27);
+            this.wtgTypeTab.Location = new System.Drawing.Point(4, 35);
             this.wtgTypeTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgTypeTab.Name = "wtgTypeTab";
             this.wtgTypeTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.wtgTypeTab.Size = new System.Drawing.Size(995, 722);
+            this.wtgTypeTab.Size = new System.Drawing.Size(995, 714);
             this.wtgTypeTab.TabIndex = 9;
             this.wtgTypeTab.Text = "WTG Type";
             this.wtgTypeTab.UseVisualStyleBackColor = true;
@@ -2320,7 +2320,7 @@ namespace WindowsFormsApp1
             this.panel10.Location = new System.Drawing.Point(509, 3);
             this.panel10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(484, 716);
+            this.panel10.Size = new System.Drawing.Size(484, 708);
             this.panel10.TabIndex = 7;
             // 
             // wtgInsertBtn
@@ -2331,7 +2331,7 @@ namespace WindowsFormsApp1
             this.wtgInsertBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgInsertBtn.Name = "wtgInsertBtn";
             this.wtgInsertBtn.Size = new System.Drawing.Size(205, 45);
-            this.wtgInsertBtn.TabIndex = 5;
+            this.wtgInsertBtn.TabIndex = 3;
             this.wtgInsertBtn.Text = "INSERT";
             this.wtgInsertBtn.UseVisualStyleBackColor = false;
             this.wtgInsertBtn.Click += new System.EventHandler(this.wtgInsertBtn_Click);
@@ -2342,8 +2342,8 @@ namespace WindowsFormsApp1
             this.wtgTxt.Location = new System.Drawing.Point(117, 228);
             this.wtgTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgTxt.Name = "wtgTxt";
-            this.wtgTxt.Size = new System.Drawing.Size(250, 23);
-            this.wtgTxt.TabIndex = 4;
+            this.wtgTxt.Size = new System.Drawing.Size(250, 31);
+            this.wtgTxt.TabIndex = 2;
             // 
             // wtgLbl
             // 
@@ -2352,7 +2352,7 @@ namespace WindowsFormsApp1
             this.wtgLbl.Location = new System.Drawing.Point(112, 203);
             this.wtgLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.wtgLbl.Name = "wtgLbl";
-            this.wtgLbl.Size = new System.Drawing.Size(76, 18);
+            this.wtgLbl.Size = new System.Drawing.Size(113, 26);
             this.wtgLbl.TabIndex = 3;
             this.wtgLbl.Text = "WTG Name";
             // 
@@ -2364,7 +2364,7 @@ namespace WindowsFormsApp1
             this.panel11.Location = new System.Drawing.Point(2, 3);
             this.panel11.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(508, 716);
+            this.panel11.Size = new System.Drawing.Size(508, 708);
             this.panel11.TabIndex = 6;
             // 
             // wtgUpdateBtn
@@ -2372,11 +2372,11 @@ namespace WindowsFormsApp1
             this.wtgUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.wtgUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.wtgUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
-            this.wtgUpdateBtn.Location = new System.Drawing.Point(165, 657);
+            this.wtgUpdateBtn.Location = new System.Drawing.Point(165, 649);
             this.wtgUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgUpdateBtn.Name = "wtgUpdateBtn";
             this.wtgUpdateBtn.Size = new System.Drawing.Size(205, 45);
-            this.wtgUpdateBtn.TabIndex = 2;
+            this.wtgUpdateBtn.TabIndex = 1;
             this.wtgUpdateBtn.Text = "UPDATE";
             this.wtgUpdateBtn.UseVisualStyleBackColor = false;
             this.wtgUpdateBtn.Click += new System.EventHandler(this.wtgUpdateBtn_Click);
@@ -2395,11 +2395,11 @@ namespace WindowsFormsApp1
             // 
             this.ownerTab.Controls.Add(this.ownerNameLbl);
             this.ownerTab.Controls.Add(this.panel13);
-            this.ownerTab.Location = new System.Drawing.Point(4, 27);
+            this.ownerTab.Location = new System.Drawing.Point(4, 35);
             this.ownerTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerTab.Name = "ownerTab";
             this.ownerTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.ownerTab.Size = new System.Drawing.Size(995, 722);
+            this.ownerTab.Size = new System.Drawing.Size(995, 714);
             this.ownerTab.TabIndex = 10;
             this.ownerTab.Text = "Owner";
             this.ownerTab.UseVisualStyleBackColor = true;
@@ -2416,7 +2416,7 @@ namespace WindowsFormsApp1
             this.ownerNameLbl.Location = new System.Drawing.Point(514, 3);
             this.ownerNameLbl.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerNameLbl.Name = "ownerNameLbl";
-            this.ownerNameLbl.Size = new System.Drawing.Size(479, 716);
+            this.ownerNameLbl.Size = new System.Drawing.Size(479, 708);
             this.ownerNameLbl.TabIndex = 3;
             // 
             // ownerInsertBtn
@@ -2438,7 +2438,7 @@ namespace WindowsFormsApp1
             this.ownerCodeTxt.Location = new System.Drawing.Point(116, 228);
             this.ownerCodeTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerCodeTxt.Name = "ownerCodeTxt";
-            this.ownerCodeTxt.Size = new System.Drawing.Size(250, 23);
+            this.ownerCodeTxt.Size = new System.Drawing.Size(250, 31);
             this.ownerCodeTxt.TabIndex = 3;
             // 
             // ownerNameTxt
@@ -2447,7 +2447,7 @@ namespace WindowsFormsApp1
             this.ownerNameTxt.Location = new System.Drawing.Point(116, 171);
             this.ownerNameTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerNameTxt.Name = "ownerNameTxt";
-            this.ownerNameTxt.Size = new System.Drawing.Size(250, 23);
+            this.ownerNameTxt.Size = new System.Drawing.Size(250, 31);
             this.ownerNameTxt.TabIndex = 2;
             // 
             // ownerCodeLbl
@@ -2457,7 +2457,7 @@ namespace WindowsFormsApp1
             this.ownerCodeLbl.Location = new System.Drawing.Point(112, 202);
             this.ownerCodeLbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ownerCodeLbl.Name = "ownerCodeLbl";
-            this.ownerCodeLbl.Size = new System.Drawing.Size(85, 18);
+            this.ownerCodeLbl.Size = new System.Drawing.Size(121, 26);
             this.ownerCodeLbl.TabIndex = 1;
             this.ownerCodeLbl.Text = "Owner Code";
             // 
@@ -2468,7 +2468,7 @@ namespace WindowsFormsApp1
             this.label7.Location = new System.Drawing.Point(112, 145);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 18);
+            this.label7.Size = new System.Drawing.Size(128, 26);
             this.label7.TabIndex = 0;
             this.label7.Text = "Owner Name";
             // 
@@ -2480,7 +2480,7 @@ namespace WindowsFormsApp1
             this.panel13.Location = new System.Drawing.Point(2, 3);
             this.panel13.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(516, 716);
+            this.panel13.Size = new System.Drawing.Size(516, 708);
             this.panel13.TabIndex = 2;
             // 
             // ownerUpdateBtn
@@ -2488,7 +2488,7 @@ namespace WindowsFormsApp1
             this.ownerUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.ownerUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.ownerUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
-            this.ownerUpdateBtn.Location = new System.Drawing.Point(165, 657);
+            this.ownerUpdateBtn.Location = new System.Drawing.Point(165, 649);
             this.ownerUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerUpdateBtn.Name = "ownerUpdateBtn";
             this.ownerUpdateBtn.Size = new System.Drawing.Size(205, 45);
@@ -2508,18 +2508,18 @@ namespace WindowsFormsApp1
             this.ownerData.Location = new System.Drawing.Point(10, 13);
             this.ownerData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerData.Name = "ownerData";
-            this.ownerData.Size = new System.Drawing.Size(479, 634);
+            this.ownerData.Size = new System.Drawing.Size(479, 626);
             this.ownerData.TabIndex = 0;
             // 
             // usersTab
             // 
             this.usersTab.Controls.Add(this.panel12);
             this.usersTab.Controls.Add(this.panel14);
-            this.usersTab.Location = new System.Drawing.Point(4, 27);
+            this.usersTab.Location = new System.Drawing.Point(4, 35);
             this.usersTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.usersTab.Name = "usersTab";
             this.usersTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.usersTab.Size = new System.Drawing.Size(995, 722);
+            this.usersTab.Size = new System.Drawing.Size(995, 714);
             this.usersTab.TabIndex = 11;
             this.usersTab.Text = "Users";
             this.usersTab.UseVisualStyleBackColor = true;
@@ -2546,7 +2546,7 @@ namespace WindowsFormsApp1
             this.panel12.Location = new System.Drawing.Point(518, 3);
             this.panel12.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(475, 716);
+            this.panel12.Size = new System.Drawing.Size(475, 708);
             this.panel12.TabIndex = 5;
             // 
             // userPermCombo
@@ -2556,8 +2556,8 @@ namespace WindowsFormsApp1
             this.userPermCombo.Location = new System.Drawing.Point(67, 445);
             this.userPermCombo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userPermCombo.Name = "userPermCombo";
-            this.userPermCombo.Size = new System.Drawing.Size(354, 26);
-            this.userPermCombo.TabIndex = 14;
+            this.userPermCombo.Size = new System.Drawing.Size(354, 34);
+            this.userPermCombo.TabIndex = 8;
             // 
             // label13
             // 
@@ -2566,7 +2566,7 @@ namespace WindowsFormsApp1
             this.label13.Location = new System.Drawing.Point(64, 419);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(125, 18);
+            this.label13.Size = new System.Drawing.Size(180, 26);
             this.label13.TabIndex = 13;
             this.label13.Text = "Type of Permission";
             // 
@@ -2576,8 +2576,8 @@ namespace WindowsFormsApp1
             this.userEmailTxt.Location = new System.Drawing.Point(67, 388);
             this.userEmailTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userEmailTxt.Name = "userEmailTxt";
-            this.userEmailTxt.Size = new System.Drawing.Size(354, 23);
-            this.userEmailTxt.TabIndex = 12;
+            this.userEmailTxt.Size = new System.Drawing.Size(354, 31);
+            this.userEmailTxt.TabIndex = 7;
             // 
             // label12
             // 
@@ -2586,7 +2586,7 @@ namespace WindowsFormsApp1
             this.label12.Location = new System.Drawing.Point(64, 362);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(41, 18);
+            this.label12.Size = new System.Drawing.Size(63, 26);
             this.label12.TabIndex = 11;
             this.label12.Text = "Email";
             // 
@@ -2596,8 +2596,8 @@ namespace WindowsFormsApp1
             this.userGIDTxt.Location = new System.Drawing.Point(67, 331);
             this.userGIDTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userGIDTxt.Name = "userGIDTxt";
-            this.userGIDTxt.Size = new System.Drawing.Size(354, 23);
-            this.userGIDTxt.TabIndex = 10;
+            this.userGIDTxt.Size = new System.Drawing.Size(354, 31);
+            this.userGIDTxt.TabIndex = 6;
             // 
             // label11
             // 
@@ -2606,7 +2606,7 @@ namespace WindowsFormsApp1
             this.label11.Location = new System.Drawing.Point(64, 305);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 18);
+            this.label11.Size = new System.Drawing.Size(44, 26);
             this.label11.TabIndex = 9;
             this.label11.Text = "GID";
             // 
@@ -2616,8 +2616,8 @@ namespace WindowsFormsApp1
             this.userLastNameTxt.Location = new System.Drawing.Point(67, 274);
             this.userLastNameTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userLastNameTxt.Name = "userLastNameTxt";
-            this.userLastNameTxt.Size = new System.Drawing.Size(354, 23);
-            this.userLastNameTxt.TabIndex = 8;
+            this.userLastNameTxt.Size = new System.Drawing.Size(354, 31);
+            this.userLastNameTxt.TabIndex = 5;
             // 
             // label10
             // 
@@ -2626,7 +2626,7 @@ namespace WindowsFormsApp1
             this.label10.Location = new System.Drawing.Point(61, 248);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(73, 18);
+            this.label10.Size = new System.Drawing.Size(107, 26);
             this.label10.TabIndex = 7;
             this.label10.Text = "Last Name";
             // 
@@ -2636,8 +2636,8 @@ namespace WindowsFormsApp1
             this.userMidNameTxt.Location = new System.Drawing.Point(67, 213);
             this.userMidNameTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userMidNameTxt.Name = "userMidNameTxt";
-            this.userMidNameTxt.Size = new System.Drawing.Size(354, 23);
-            this.userMidNameTxt.TabIndex = 6;
+            this.userMidNameTxt.Size = new System.Drawing.Size(354, 31);
+            this.userMidNameTxt.TabIndex = 4;
             // 
             // label9
             // 
@@ -2646,7 +2646,7 @@ namespace WindowsFormsApp1
             this.label9.Location = new System.Drawing.Point(64, 184);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 18);
+            this.label9.Size = new System.Drawing.Size(130, 26);
             this.label9.TabIndex = 5;
             this.label9.Text = "Middle Name";
             // 
@@ -2658,7 +2658,7 @@ namespace WindowsFormsApp1
             this.userInsertBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userInsertBtn.Name = "userInsertBtn";
             this.userInsertBtn.Size = new System.Drawing.Size(205, 45);
-            this.userInsertBtn.TabIndex = 4;
+            this.userInsertBtn.TabIndex = 9;
             this.userInsertBtn.Text = "INSERT";
             this.userInsertBtn.UseVisualStyleBackColor = false;
             this.userInsertBtn.Click += new System.EventHandler(this.userInsertBtn_Click);
@@ -2669,7 +2669,7 @@ namespace WindowsFormsApp1
             this.userFirstNameTxt.Location = new System.Drawing.Point(68, 151);
             this.userFirstNameTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userFirstNameTxt.Name = "userFirstNameTxt";
-            this.userFirstNameTxt.Size = new System.Drawing.Size(354, 23);
+            this.userFirstNameTxt.Size = new System.Drawing.Size(354, 31);
             this.userFirstNameTxt.TabIndex = 3;
             // 
             // userNameTxt
@@ -2678,7 +2678,7 @@ namespace WindowsFormsApp1
             this.userNameTxt.Location = new System.Drawing.Point(66, 88);
             this.userNameTxt.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userNameTxt.Name = "userNameTxt";
-            this.userNameTxt.Size = new System.Drawing.Size(354, 23);
+            this.userNameTxt.Size = new System.Drawing.Size(354, 31);
             this.userNameTxt.TabIndex = 2;
             // 
             // label6
@@ -2688,7 +2688,7 @@ namespace WindowsFormsApp1
             this.label6.Location = new System.Drawing.Point(64, 122);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 18);
+            this.label6.Size = new System.Drawing.Size(111, 26);
             this.label6.TabIndex = 1;
             this.label6.Text = "First Name";
             // 
@@ -2699,7 +2699,7 @@ namespace WindowsFormsApp1
             this.label8.Location = new System.Drawing.Point(64, 59);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(75, 18);
+            this.label8.Size = new System.Drawing.Size(110, 26);
             this.label8.TabIndex = 0;
             this.label8.Text = "User Name";
             // 
@@ -2711,7 +2711,7 @@ namespace WindowsFormsApp1
             this.panel14.Location = new System.Drawing.Point(2, 3);
             this.panel14.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(516, 716);
+            this.panel14.Size = new System.Drawing.Size(516, 708);
             this.panel14.TabIndex = 4;
             // 
             // userUpdateBtn
@@ -2719,7 +2719,7 @@ namespace WindowsFormsApp1
             this.userUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.userUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.userUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
-            this.userUpdateBtn.Location = new System.Drawing.Point(165, 657);
+            this.userUpdateBtn.Location = new System.Drawing.Point(165, 649);
             this.userUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userUpdateBtn.Name = "userUpdateBtn";
             this.userUpdateBtn.Size = new System.Drawing.Size(205, 45);
@@ -2739,17 +2739,17 @@ namespace WindowsFormsApp1
             this.userData.Location = new System.Drawing.Point(13, 12);
             this.userData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userData.Name = "userData";
-            this.userData.Size = new System.Drawing.Size(479, 636);
+            this.userData.Size = new System.Drawing.Size(479, 628);
             this.userData.TabIndex = 0;
             // 
             // transfSalesProjTab
             // 
             this.transfSalesProjTab.Controls.Add(this.label14);
-            this.transfSalesProjTab.Location = new System.Drawing.Point(4, 27);
+            this.transfSalesProjTab.Location = new System.Drawing.Point(4, 35);
             this.transfSalesProjTab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.transfSalesProjTab.Name = "transfSalesProjTab";
             this.transfSalesProjTab.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.transfSalesProjTab.Size = new System.Drawing.Size(995, 722);
+            this.transfSalesProjTab.Size = new System.Drawing.Size(995, 714);
             this.transfSalesProjTab.TabIndex = 12;
             this.transfSalesProjTab.Text = "Transferred Sales Projects";
             this.transfSalesProjTab.UseVisualStyleBackColor = true;
@@ -2761,7 +2761,7 @@ namespace WindowsFormsApp1
             this.label14.Location = new System.Drawing.Point(336, 342);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(246, 22);
+            this.label14.Size = new System.Drawing.Size(366, 29);
             this.label14.TabIndex = 1;
             this.label14.Text = "TO BE IMPLEMENTED WITH SALES";
             // 
@@ -2772,7 +2772,7 @@ namespace WindowsFormsApp1
             // 
             // executionForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1278, 794);
             this.Controls.Add(this.tabController);

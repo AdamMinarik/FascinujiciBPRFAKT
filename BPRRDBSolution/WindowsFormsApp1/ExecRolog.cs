@@ -74,6 +74,16 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void MonValueLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void EMVBeforeRCLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
