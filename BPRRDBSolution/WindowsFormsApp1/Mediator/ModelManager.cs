@@ -14,7 +14,7 @@ namespace WindowsFormsApp1.Mediator
             throw new NotImplementedException();
         }
 
-        public EProjectItemList getClosedItems(int projectID, string month)
+        public EProjectItemList getClosedItems(int projectID, string month, string type)
         {
             throw new NotImplementedException();
         }
@@ -34,12 +34,12 @@ namespace WindowsFormsApp1.Mediator
             throw new NotImplementedException();
         }
 
-        public EProjectItemList getRemovedItems(int projectID, string month)
+        public EProjectItemList getRemovedItems(int projectID, string month, string type)
         {
             throw new NotImplementedException();
         }
 
-        public EProjectItemList getWatchlistItems(int projectID, string month)
+        public EProjectItemList getWatchlistItems(int projectID, string month, string type)
         {
             throw new NotImplementedException();
         }
