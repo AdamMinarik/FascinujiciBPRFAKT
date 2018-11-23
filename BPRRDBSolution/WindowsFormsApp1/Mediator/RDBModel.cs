@@ -13,9 +13,9 @@ namespace WindowsFormsApp1.Mediator
         Project getProject(int projectID);
         EProjectItemList getItems(int projectID, String month, String type);
         EProjectItemList getFilterItems(int projectID, String month, String field, String fieldValue);
-        EProjectItemList getRemovedItems(int projectID, String month);
-        EProjectItemList getWatchlistItems(int projectID, String month);
-        EProjectItemList getClosedItems(int projectID, String month);
+        EProjectItemList getRemovedItems(int projectID, String month, String type);
+        EProjectItemList getWatchlistItems(int projectID, String month, String type);
+        EProjectItemList getClosedItems(int projectID, String month, String type);
         //INSERTS
         void addItem(EProjectItem item, bool approval);
         //UPDATES
