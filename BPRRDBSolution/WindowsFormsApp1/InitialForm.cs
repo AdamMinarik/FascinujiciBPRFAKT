@@ -7,26 +7,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Mediator;
+using WindowsFormsApp1.Model;
+
 
 namespace WindowsFormsApp1
 {
     public partial class InitialForm : Form
     {
+        private ModelManager modelManager;
+        public ExecutionUser user;
+
         public InitialForm()
         {
             InitializeComponent();
+            modelManager = new ModelManager();
         }
 
         private void quitButton_Click(object sender, EventArgs e)
         {
             Close();
-            Console.WriteLine("Prcat");
         }
 
         private void execUser_Click(object sender, EventArgs e)
         {
-            executionForm execForm = new executionForm();
-            execForm.Show();
+            user = modelManager.getExecutionUser(Environment.UserName.ToString());
+            if (user != null)
+            {
+                executionForm execForm = new executionForm(user);
+                execForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("You do not have permission.");
+            }
         }
 
         private void salesUser_Click(object sender, EventArgs e)
@@ -42,6 +56,11 @@ namespace WindowsFormsApp1
         public void closeMe()
         {
             Close();
+        }
+
+        public  ExecutionUser getExecutionUser()
+        {
+            return user;
         }
     }
 }

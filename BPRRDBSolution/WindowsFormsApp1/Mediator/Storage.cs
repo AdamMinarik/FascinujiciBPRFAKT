@@ -28,6 +28,12 @@ namespace WindowsFormsApp1.Mediator
         //Other Uncertainties
         private DataTable dataSourceEOtherUncertainties;
         private SqlDataAdapter dataAdapterEOtherUncertainties;
+        //User
+        private DataTable dataSourceExecutionUser;
+        private SqlDataAdapter dataAdapterExecutionUser;
+
+
+
 
         private SqlConnection connection;
 
@@ -301,6 +307,34 @@ namespace WindowsFormsApp1.Mediator
                 EProjectItemList itemsList = new EProjectItemList();
                 return itemsList;
             }
+        }
+
+        public ExecutionUser getExecutionUser(string userName)
+        {
+            connection.Open();
+            string SQL = "SELECT * FROM rk_users WHERE UserName = '" + userName + "'";
+            
+            dataAdapterExecutionUser = new SqlDataAdapter(SQL, connection);
+            dataSourceExecutionUser = new DataTable();
+            dataAdapterExecutionUser.Fill(dataSourceExecutionUser);
+            foreach (DataRow row in dataSourceExecutionUser.Rows)
+            {
+                ExecutionUser user = new ExecutionUser(
+                                                      Convert.ToInt32(row["ID"].ToString()),
+                                                      Convert.ToInt32(row["IDRoles"].ToString()),
+                                                      row["userName"].ToString(),
+                                                      row["firstName"].ToString(),
+                                                      row["middleName"].ToString(),
+                                                      row["lastName"].ToString(),
+                                                      row["GID"].ToString(),
+                                                      row["email"].ToString()
+                                                     );
+                connection.Close();
+                return user;
+            }
+
+            connection.Close();
+            return null;
         }
 
         public EProjectItemList getFilterItems(int projectID, string month, string field, string fieldValue)

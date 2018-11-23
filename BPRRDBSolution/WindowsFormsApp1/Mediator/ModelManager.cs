@@ -9,6 +9,15 @@ namespace WindowsFormsApp1.Mediator
 {
     class ModelManager : RDBModel
     {
+        private Storage storage;
+
+
+        public ModelManager()
+        {
+            storage = new Storage();
+        }
+
+
         public void addItem(EProjectItem item, bool approval)
         {
             throw new NotImplementedException();
@@ -17,6 +26,11 @@ namespace WindowsFormsApp1.Mediator
         public EProjectItemList getClosedItems(int projectID, string month, string type)
         {
             throw new NotImplementedException();
+        }
+
+        public ExecutionUser getExecutionUser(string userName)
+        {
+              return storage.getExecutionUser(userName);
         }
 
         public EProjectItemList getFilterItems(int projectID, string month, string field, string fieldValue)

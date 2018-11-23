@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Model;
 
 namespace WindowsFormsApp1
 {
@@ -60,7 +61,7 @@ namespace WindowsFormsApp1
 
         public object ProjectsData { get; private set; }
 
-        public executionForm()
+        public executionForm(ExecutionUser user)
         {
             InitializeComponent();
 
@@ -81,6 +82,8 @@ namespace WindowsFormsApp1
             {
                 projectsData.Columns.Insert(0, uninstallButtonColumn);
             }
+
+            userLabel.Text = user.firstName + ' ' + user.lastName;
         }
 
         private void projectsButton_Click(object sender, EventArgs e)

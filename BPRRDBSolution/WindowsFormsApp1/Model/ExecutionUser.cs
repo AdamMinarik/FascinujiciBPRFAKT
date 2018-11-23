@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Model
 {
-    class ExecutionUser : Project
+    public class ExecutionUser
     {
         //INT
         public int userID { get; set; }
