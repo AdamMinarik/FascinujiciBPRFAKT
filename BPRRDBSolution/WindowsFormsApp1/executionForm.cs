@@ -74,9 +74,19 @@ namespace WindowsFormsApp1
 
             uninstallButtonColumn = new DataGridViewButtonColumn();
             uninstallButtonColumn.Name = "Open";
-            uninstallButtonColumn.Text = "Open";
+            uninstallButtonColumn.Text = "Open Project..";
             uninstallButtonColumn.UseColumnTextForButtonValue = true;
-
+            uninstallButtonColumn.HeaderText = "";
+            //uninstallButtonColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            
+            //uninstallButtonColumn..BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            /*uninstallButtonColumn..BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            uninstallButtonColumn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            uninstallButtonColumn.FlatAppearance.BorderSize = 0;
+            uninstallButtonColumn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(116)))), ((int)(((byte)(150)))));
+            uninstallButtonColumn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            
+            uninstallButtonColumn.Font = new System.Drawing.Font("Trebuchet MS", 12F);*/
 
             if (projectsData.Columns["Open"] == null)
             {
@@ -95,7 +105,8 @@ namespace WindowsFormsApp1
             tabController.SelectedIndex = 0;
 
             uninstallButtonColumn.Name = "Open";
-            uninstallButtonColumn.Text = "Open";
+            uninstallButtonColumn.Text = "Open Project..";
+            
             uninstallButtonColumn.UseColumnTextForButtonValue = true;
 
             if (projectsData.Columns["Open"] == null)
@@ -223,6 +234,7 @@ namespace WindowsFormsApp1
 
         private void entryCurButton_Click(object sender, EventArgs e)
         {
+            /*
             SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
             connection.Open();
             string SQL = "SELECT * FROM rk_CurrencyName ORDER BY Country";
@@ -231,7 +243,7 @@ namespace WindowsFormsApp1
             dsEntryCurr = new DataTable();
             daEntryCurr.Fill(dsEntryCurr);
             entryCurData.DataSource = dsEntryCurr;
-            connection.Close();
+            connection.Close();*/
 
             tabController.SelectedIndex = 3;
         }
@@ -273,7 +285,7 @@ namespace WindowsFormsApp1
         {
             SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
             connection.Open();
-            string SQL = "SELECT pname,rk_users.FirstName + ' ' + rk_users.LastName as FullName FROM rk_Project LEFT JOIN rk_users ON rk_Users.ID = rk_Project.IDuser order by Pname";
+            string SQL = "SELECT pname as 'Project Name',rk_users.FirstName + ' ' + rk_users.LastName as 'Full Name' FROM rk_Project LEFT JOIN rk_users ON rk_Users.ID = rk_Project.IDuser order by Pname";
 
             daProjOwner = new SqlDataAdapter(SQL, connection);
             dsProjOwner = new DataTable();
@@ -385,6 +397,10 @@ namespace WindowsFormsApp1
 
         private void executionForm_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.rk_NCC' table. You can move, or remove it, as needed.
+            this.rk_NCCTableAdapter.Fill(this.dataSet1.rk_NCC);
+            // TODO: This line of code loads data into the 'dataSet1.rk_DIcat' table. You can move, or remove it, as needed.
+            this.rk_DIcatTableAdapter.Fill(this.dataSet1.rk_DIcat);
             // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_UsersList_view'. Můžete jej přesunout nebo jej odstranit podle potřeby.
             this.rk_UsersList_viewTableAdapter.Fill(this.dataSet1.rk_UsersList_view);
             // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_users'. Můžete jej přesunout nebo jej odstranit podle potřeby.
@@ -539,11 +555,11 @@ namespace WindowsFormsApp1
             // Ignore clicks that are not in our 
             if (e.ColumnIndex == projectsData.Columns["Open"].Index && e.RowIndex >= 0)
             {
-                ExecRolog execROlogForm = new ExecRolog();
-                execROlogForm.Show();
+                    ExecRolog execROlogForm = new ExecRolog();
+                    execROlogForm.Show();
 
-                projectName = projectsData.Rows[e.RowIndex].Cells[1].Value.ToString();
-                execROlogForm.setLocationLabel(projectName.ToUpper());
+                    projectName = projectsData.Rows[e.RowIndex].Cells[1].Value.ToString();
+                    execROlogForm.setLocationLabel(projectName.ToUpper());
             }
         }
 
@@ -805,7 +821,7 @@ namespace WindowsFormsApp1
                         connection.Open();
                         Console.WriteLine(query);
                         command.ExecuteNonQuery();
-                        string SQL = "SELECT * FROM OriginatingList WHERE status = 1 order by Name";
+                        string SQL = "SELECT *  FROM OriginatingList WHERE status = 1 order by Name";
                         daOrgUnit = new SqlDataAdapter(SQL, connection);
                         dsOrgUnit = new DataTable();
                         daOrgUnit.Fill(dsOrgUnit);
@@ -829,7 +845,7 @@ namespace WindowsFormsApp1
                 DataTable changes = ((DataTable)orgUnitData.DataSource).GetChanges();
                 if (changes != null)
                 {
-                    daOrgUnit = new SqlDataAdapter("SELECT * FROM OriginatingList WHERE status = 1 order by Name; ", connectionString.ConnectionString);
+                    daOrgUnit = new SqlDataAdapter("SELECT * FROM OriginatingList WHERE status = 1; ", connectionString.ConnectionString);
                     SqlCommandBuilder mcb = new SqlCommandBuilder(daOrgUnit);
                     daOrgUnit.UpdateCommand = mcb.GetUpdateCommand();
                     daOrgUnit.Update(changes);
@@ -1132,6 +1148,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void orgUnitData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
-

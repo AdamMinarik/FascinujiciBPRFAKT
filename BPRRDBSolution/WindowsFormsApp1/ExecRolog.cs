@@ -72,7 +72,7 @@ namespace WindowsFormsApp1
 
         private void guideButton_Click(object sender, EventArgs e)
         {
-
+            System.Diagnostics.Process.Start("https://screenmessage.com/mehehehe");
         }
 
         private void MonValueLabel_Click(object sender, EventArgs e)

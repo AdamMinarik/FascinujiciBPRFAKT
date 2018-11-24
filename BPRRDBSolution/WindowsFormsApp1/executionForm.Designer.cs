@@ -33,6 +33,14 @@ namespace WindowsFormsApp1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(executionForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.locationPanel = new System.Windows.Forms.Panel();
             this.readPictureBox = new System.Windows.Forms.PictureBox();
             this.approvalPictureBox = new System.Windows.Forms.PictureBox();
@@ -60,14 +68,10 @@ namespace WindowsFormsApp1
             this.projectsPanel = new System.Windows.Forms.Panel();
             this.projectsData = new System.Windows.Forms.DataGridView();
             this.pnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.segmentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.owneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.scopeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.wtgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.owneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDuserDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDProjectTypeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.newprojectviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new WindowsFormsApp1.DataSet1();
             this.portfolioPanel = new System.Windows.Forms.Panel();
@@ -234,6 +238,21 @@ namespace WindowsFormsApp1
             this.transfSalesProjTab = new System.Windows.Forms.TabPage();
             this.label14 = new System.Windows.Forms.Label();
             this.rkCurrencyNameBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.countryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rkDIcatBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rk_DIcatTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_DIcatTableAdapter();
+            this.iDDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dInameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rkNCCBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rk_NCCTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_NCCTableAdapter();
+            this.iDDataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.statusDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.rkusersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.iDDataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDstatusDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -297,6 +316,9 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.userData)).BeginInit();
             this.transfSalesProjTab.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkDIcatBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkNCCBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkusersBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // locationPanel
@@ -797,23 +819,41 @@ namespace WindowsFormsApp1
             this.projectsData.AllowUserToAddRows = false;
             this.projectsData.AllowUserToDeleteRows = false;
             this.projectsData.AutoGenerateColumns = false;
-            this.projectsData.BackgroundColor = System.Drawing.Color.White;
+            this.projectsData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.projectsData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.projectsData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
+            this.projectsData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            this.projectsData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.projectsData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.projectsData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.projectsData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.pnameDataGridViewTextBoxColumn,
-            this.segmentIDDataGridViewTextBoxColumn,
+            this.owneDataGridViewTextBoxColumn,
             this.scopeDataGridViewTextBoxColumn,
             this.wtgDataGridViewTextBoxColumn,
-            this.owneDataGridViewTextBoxColumn,
-            this.sapDataGridViewTextBoxColumn,
-            this.iDDataGridViewTextBoxColumn,
-            this.iDuserDataGridViewTextBoxColumn,
-            this.iDProjectTypeDataGridViewTextBoxColumn});
+            this.iDDataGridViewTextBoxColumn});
             this.projectsData.DataSource = this.newprojectviewBindingSource;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.projectsData.DefaultCellStyle = dataGridViewCellStyle2;
             this.projectsData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projectsData.Location = new System.Drawing.Point(0, 0);
             this.projectsData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectsData.Name = "projectsData";
+            this.projectsData.RowHeadersVisible = false;
             this.projectsData.Size = new System.Drawing.Size(991, 708);
             this.projectsData.TabIndex = 0;
             this.projectsData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectsData_CellClick);
@@ -821,60 +861,42 @@ namespace WindowsFormsApp1
             // 
             // pnameDataGridViewTextBoxColumn
             // 
+            this.pnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.pnameDataGridViewTextBoxColumn.DataPropertyName = "pname";
-            this.pnameDataGridViewTextBoxColumn.HeaderText = "pname";
+            this.pnameDataGridViewTextBoxColumn.HeaderText = "Project Name";
             this.pnameDataGridViewTextBoxColumn.Name = "pnameDataGridViewTextBoxColumn";
-            // 
-            // segmentIDDataGridViewTextBoxColumn
-            // 
-            this.segmentIDDataGridViewTextBoxColumn.DataPropertyName = "segmentID";
-            this.segmentIDDataGridViewTextBoxColumn.HeaderText = "segmentID";
-            this.segmentIDDataGridViewTextBoxColumn.Name = "segmentIDDataGridViewTextBoxColumn";
-            // 
-            // scopeDataGridViewTextBoxColumn
-            // 
-            this.scopeDataGridViewTextBoxColumn.DataPropertyName = "scope";
-            this.scopeDataGridViewTextBoxColumn.HeaderText = "scope";
-            this.scopeDataGridViewTextBoxColumn.Name = "scopeDataGridViewTextBoxColumn";
-            this.scopeDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // wtgDataGridViewTextBoxColumn
-            // 
-            this.wtgDataGridViewTextBoxColumn.DataPropertyName = "wtg";
-            this.wtgDataGridViewTextBoxColumn.HeaderText = "wtg";
-            this.wtgDataGridViewTextBoxColumn.Name = "wtgDataGridViewTextBoxColumn";
-            this.wtgDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pnameDataGridViewTextBoxColumn.Width = 175;
             // 
             // owneDataGridViewTextBoxColumn
             // 
             this.owneDataGridViewTextBoxColumn.DataPropertyName = "owne";
-            this.owneDataGridViewTextBoxColumn.HeaderText = "owne";
+            this.owneDataGridViewTextBoxColumn.HeaderText = "Project Owner";
             this.owneDataGridViewTextBoxColumn.Name = "owneDataGridViewTextBoxColumn";
             this.owneDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // sapDataGridViewTextBoxColumn
+            // scopeDataGridViewTextBoxColumn
             // 
-            this.sapDataGridViewTextBoxColumn.DataPropertyName = "sap";
-            this.sapDataGridViewTextBoxColumn.HeaderText = "sap";
-            this.sapDataGridViewTextBoxColumn.Name = "sapDataGridViewTextBoxColumn";
+            this.scopeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.scopeDataGridViewTextBoxColumn.DataPropertyName = "scope";
+            this.scopeDataGridViewTextBoxColumn.HeaderText = "Scope";
+            this.scopeDataGridViewTextBoxColumn.Name = "scopeDataGridViewTextBoxColumn";
+            this.scopeDataGridViewTextBoxColumn.ReadOnly = true;
+            this.scopeDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // wtgDataGridViewTextBoxColumn
+            // 
+            this.wtgDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.wtgDataGridViewTextBoxColumn.DataPropertyName = "wtg";
+            this.wtgDataGridViewTextBoxColumn.HeaderText = "Wind Turbine";
+            this.wtgDataGridViewTextBoxColumn.Name = "wtgDataGridViewTextBoxColumn";
+            this.wtgDataGridViewTextBoxColumn.ReadOnly = true;
+            this.wtgDataGridViewTextBoxColumn.Width = 170;
             // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "Unique ID";
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            // 
-            // iDuserDataGridViewTextBoxColumn
-            // 
-            this.iDuserDataGridViewTextBoxColumn.DataPropertyName = "IDuser";
-            this.iDuserDataGridViewTextBoxColumn.HeaderText = "IDuser";
-            this.iDuserDataGridViewTextBoxColumn.Name = "iDuserDataGridViewTextBoxColumn";
-            // 
-            // iDProjectTypeDataGridViewTextBoxColumn
-            // 
-            this.iDProjectTypeDataGridViewTextBoxColumn.DataPropertyName = "IDProjectType";
-            this.iDProjectTypeDataGridViewTextBoxColumn.HeaderText = "IDProjectType";
-            this.iDProjectTypeDataGridViewTextBoxColumn.Name = "iDProjectTypeDataGridViewTextBoxColumn";
             // 
             // newprojectviewBindingSource
             // 
@@ -1907,8 +1929,26 @@ namespace WindowsFormsApp1
             this.entryCurData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.entryCurData.AutoGenerateColumns = false;
+            this.entryCurData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.entryCurData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.entryCurData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
+            this.entryCurData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.entryCurData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.entryCurData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.entryCurData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.countryDataGridViewTextBoxColumn,
+            this.codeDataGridViewTextBoxColumn});
+            this.entryCurData.DataSource = this.rkCurrencyNameBindingSource;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.entryCurData.DefaultCellStyle = dataGridViewCellStyle3;
             this.entryCurData.Location = new System.Drawing.Point(22, 11);
             this.entryCurData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.entryCurData.Name = "entryCurData";
@@ -2001,8 +2041,25 @@ namespace WindowsFormsApp1
             // 
             // DIcatData
             // 
+            this.DIcatData.AutoGenerateColumns = false;
+            this.DIcatData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DIcatData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.DIcatData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
+            this.DIcatData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DIcatData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DIcatData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn1,
+            this.dInameDataGridViewTextBoxColumn});
+            this.DIcatData.DataSource = this.rkDIcatBindingSource;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DIcatData.DefaultCellStyle = dataGridViewCellStyle4;
             this.DIcatData.Location = new System.Drawing.Point(20, 15);
             this.DIcatData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DIcatData.Name = "DIcatData";
@@ -2028,17 +2085,17 @@ namespace WindowsFormsApp1
             this.panel4.Controls.Add(this.nccText);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(518, 3);
+            this.panel4.Location = new System.Drawing.Point(609, 3);
             this.panel4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(475, 708);
+            this.panel4.Size = new System.Drawing.Size(384, 708);
             this.panel4.TabIndex = 3;
             // 
             // nccInsertBtn
             // 
             this.nccInsertBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.nccInsertBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
-            this.nccInsertBtn.Location = new System.Drawing.Point(136, 265);
+            this.nccInsertBtn.Location = new System.Drawing.Point(87, 267);
             this.nccInsertBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccInsertBtn.Name = "nccInsertBtn";
             this.nccInsertBtn.Size = new System.Drawing.Size(205, 45);
@@ -2050,7 +2107,7 @@ namespace WindowsFormsApp1
             // nccText
             // 
             this.nccText.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.nccText.Location = new System.Drawing.Point(117, 228);
+            this.nccText.Location = new System.Drawing.Point(68, 230);
             this.nccText.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccText.Name = "nccText";
             this.nccText.Size = new System.Drawing.Size(250, 31);
@@ -2060,7 +2117,7 @@ namespace WindowsFormsApp1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.label3.Location = new System.Drawing.Point(112, 199);
+            this.label3.Location = new System.Drawing.Point(63, 201);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 26);
@@ -2075,7 +2132,7 @@ namespace WindowsFormsApp1
             this.panel5.Location = new System.Drawing.Point(2, 3);
             this.panel5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(519, 708);
+            this.panel5.Size = new System.Drawing.Size(610, 708);
             this.panel5.TabIndex = 2;
             // 
             // nccUpdateBtn
@@ -2083,7 +2140,7 @@ namespace WindowsFormsApp1
             this.nccUpdateBtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.nccUpdateBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.nccUpdateBtn.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
-            this.nccUpdateBtn.Location = new System.Drawing.Point(165, 649);
+            this.nccUpdateBtn.Location = new System.Drawing.Point(210, 649);
             this.nccUpdateBtn.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccUpdateBtn.Name = "nccUpdateBtn";
             this.nccUpdateBtn.Size = new System.Drawing.Size(205, 45);
@@ -2094,12 +2151,29 @@ namespace WindowsFormsApp1
             // 
             // nccData
             // 
+            this.nccData.AutoGenerateColumns = false;
+            this.nccData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.nccData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.nccData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.nccData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.nccData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn2,
+            this.nameDataGridViewTextBoxColumn,
+            this.statusDataGridViewCheckBoxColumn});
+            this.nccData.DataSource = this.rkNCCBindingSource;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.nccData.DefaultCellStyle = dataGridViewCellStyle5;
             this.nccData.Location = new System.Drawing.Point(20, 15);
             this.nccData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccData.Name = "nccData";
-            this.nccData.Size = new System.Drawing.Size(474, 634);
+            this.nccData.Size = new System.Drawing.Size(572, 634);
             this.nccData.TabIndex = 0;
             // 
             // projectOwnershipTab
@@ -2196,8 +2270,20 @@ namespace WindowsFormsApp1
             // 
             // projOwnerData
             // 
+            this.projOwnerData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.projOwnerData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.projOwnerData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
+            this.projOwnerData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.projOwnerData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.projOwnerData.DefaultCellStyle = dataGridViewCellStyle6;
             this.projOwnerData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projOwnerData.Location = new System.Drawing.Point(0, 0);
             this.projOwnerData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -2290,13 +2376,26 @@ namespace WindowsFormsApp1
             // 
             // orgUnitData
             // 
+            this.orgUnitData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.orgUnitData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.orgUnitData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
+            this.orgUnitData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.orgUnitData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.orgUnitData.DefaultCellStyle = dataGridViewCellStyle7;
             this.orgUnitData.Location = new System.Drawing.Point(11, 14);
             this.orgUnitData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.orgUnitData.Name = "orgUnitData";
             this.orgUnitData.Size = new System.Drawing.Size(477, 635);
             this.orgUnitData.TabIndex = 0;
+            this.orgUnitData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.orgUnitData_CellContentClick);
             // 
             // wtgTypeTab
             // 
@@ -2383,8 +2482,25 @@ namespace WindowsFormsApp1
             // 
             // wtgData
             // 
+            this.wtgData.AutoGenerateColumns = false;
+            this.wtgData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.wtgData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.wtgData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.wtgData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.wtgData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn3,
+            this.nameDataGridViewTextBoxColumn1,
+            this.iDstatusDataGridViewCheckBoxColumn});
+            this.wtgData.DataSource = this.wTGtypeBindingSource;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.wtgData.DefaultCellStyle = dataGridViewCellStyle8;
             this.wtgData.Location = new System.Drawing.Point(11, 14);
             this.wtgData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgData.Name = "wtgData";
@@ -2770,6 +2886,94 @@ namespace WindowsFormsApp1
             this.rkCurrencyNameBindingSource1.DataMember = "rk_CurrencyName";
             this.rkCurrencyNameBindingSource1.DataSource = this.dataSet1;
             // 
+            // countryDataGridViewTextBoxColumn
+            // 
+            this.countryDataGridViewTextBoxColumn.DataPropertyName = "Country";
+            this.countryDataGridViewTextBoxColumn.HeaderText = "Country";
+            this.countryDataGridViewTextBoxColumn.Name = "countryDataGridViewTextBoxColumn";
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Currency Code";
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            // 
+            // rkDIcatBindingSource
+            // 
+            this.rkDIcatBindingSource.DataMember = "rk_DIcat";
+            this.rkDIcatBindingSource.DataSource = this.dataSet1BindingSource;
+            // 
+            // rk_DIcatTableAdapter
+            // 
+            this.rk_DIcatTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn1
+            // 
+            this.iDDataGridViewTextBoxColumn1.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn1.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn1.Name = "iDDataGridViewTextBoxColumn1";
+            // 
+            // dInameDataGridViewTextBoxColumn
+            // 
+            this.dInameDataGridViewTextBoxColumn.DataPropertyName = "DIname";
+            this.dInameDataGridViewTextBoxColumn.HeaderText = "Category";
+            this.dInameDataGridViewTextBoxColumn.Name = "dInameDataGridViewTextBoxColumn";
+            // 
+            // rkNCCBindingSource
+            // 
+            this.rkNCCBindingSource.DataMember = "rk_NCC";
+            this.rkNCCBindingSource.DataSource = this.dataSet1BindingSource;
+            // 
+            // rk_NCCTableAdapter
+            // 
+            this.rk_NCCTableAdapter.ClearBeforeFill = true;
+            // 
+            // iDDataGridViewTextBoxColumn2
+            // 
+            this.iDDataGridViewTextBoxColumn2.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn2.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn2.Name = "iDDataGridViewTextBoxColumn2";
+            this.iDDataGridViewTextBoxColumn2.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn2.Width = 68;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 102;
+            // 
+            // statusDataGridViewCheckBoxColumn
+            // 
+            this.statusDataGridViewCheckBoxColumn.DataPropertyName = "status";
+            this.statusDataGridViewCheckBoxColumn.HeaderText = "Status";
+            this.statusDataGridViewCheckBoxColumn.Name = "statusDataGridViewCheckBoxColumn";
+            this.statusDataGridViewCheckBoxColumn.Width = 76;
+            // 
+            // rkusersBindingSource1
+            // 
+            this.rkusersBindingSource1.DataMember = "rk_users";
+            this.rkusersBindingSource1.DataSource = this.dataSet1BindingSource;
+            // 
+            // iDDataGridViewTextBoxColumn3
+            // 
+            this.iDDataGridViewTextBoxColumn3.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn3.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn3.Name = "iDDataGridViewTextBoxColumn3";
+            this.iDDataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn1
+            // 
+            this.nameDataGridViewTextBoxColumn1.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn1.HeaderText = "Wind Turbine Type";
+            this.nameDataGridViewTextBoxColumn1.Name = "nameDataGridViewTextBoxColumn1";
+            // 
+            // iDstatusDataGridViewCheckBoxColumn
+            // 
+            this.iDstatusDataGridViewCheckBoxColumn.DataPropertyName = "IDstatus";
+            this.iDstatusDataGridViewCheckBoxColumn.HeaderText = "Status";
+            this.iDstatusDataGridViewCheckBoxColumn.Name = "iDstatusDataGridViewCheckBoxColumn";
+            // 
             // executionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 20F);
@@ -2860,6 +3064,9 @@ namespace WindowsFormsApp1
             this.transfSalesProjTab.ResumeLayout(false);
             this.transfSalesProjTab.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkDIcatBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkNCCBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkusersBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2949,15 +3156,6 @@ namespace WindowsFormsApp1
         private DataSet1 dataSet1;
         private System.Windows.Forms.BindingSource newprojectviewBindingSource;
         private DataSet1TableAdapters.new_project_viewTableAdapter new_project_viewTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn pnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn segmentIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn scopeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn wtgDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn owneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sapDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDuserDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn iDProjectTypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource rkscopeBindingSource;
         private DataSet1TableAdapters.rk_scopeTableAdapter rk_scopeTableAdapter;
         private System.Windows.Forms.BindingSource rkFoundationTypeBindingSource;
@@ -3069,6 +3267,25 @@ namespace WindowsFormsApp1
         private ComboBox userPermCombo;
         private Label label13;
         private Label label14;
-
+        private DataGridViewTextBoxColumn pnameDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn owneDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn scopeDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn wtgDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn countryDataGridViewTextBoxColumn;
+        private DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
+        private BindingSource rkDIcatBindingSource;
+        private DataSet1TableAdapters.rk_DIcatTableAdapter rk_DIcatTableAdapter;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dInameDataGridViewTextBoxColumn;
+        private BindingSource rkNCCBindingSource;
+        private DataSet1TableAdapters.rk_NCCTableAdapter rk_NCCTableAdapter;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private DataGridViewCheckBoxColumn statusDataGridViewCheckBoxColumn;
+        private BindingSource rkusersBindingSource1;
+        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
+        private DataGridViewCheckBoxColumn iDstatusDataGridViewCheckBoxColumn;
     }
 }
