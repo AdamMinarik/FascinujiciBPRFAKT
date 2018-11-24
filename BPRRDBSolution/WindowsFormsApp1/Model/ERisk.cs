@@ -41,6 +41,7 @@ namespace WindowsFormsApp1.Model
         public Boolean newChanges { get; set; }
         //Double
         public Double costRootCause { get; set; }
+        public Double costImpact { get; set; }
         public Double monetaryValueBefore { get; set; }
         public Double monetaryValueAfter { get; set; }
         public Double percentageBefore { get; set; }
@@ -60,7 +61,7 @@ namespace WindowsFormsApp1.Model
             int itemStatusID, int customerShareID, int categoryID, Double percentageBefore, int respStratRootCauseID, int actionOwnerRootCauseID, Double percentageAfter, int riskOwnerID, int phaseID, int wbsID, int daysImpactBefore,
             int respStratImpactID, int actionOwnerImpactID, int daysImpactAfter, int buRate, int nccID, int orgUnitID, Boolean removedItem, Boolean watchlist, Boolean newChanges,
             Boolean timeObjective, Boolean costObjective, Boolean customerSatisfObjective, Boolean safetyObjective, Boolean qualityObjective,
-            Double costRootCause, Double monetaryValueBefore, Double monetaryValueAfter,
+            Double costRootCause, Double costImpact, Double monetaryValueBefore, Double monetaryValueAfter,
             DateTime createDate, DateTime updateDate, DateTime ResponseRootCauseDate, DateTime ResponseImpactDate, DateTime impactStartDate, DateTime impactEndDate
             ) : base(itemID, excelID, itemName, riskDesc, itemStatusID, customerShareID, removedItem, watchlist, createDate, updateDate)
         {
@@ -95,6 +96,7 @@ namespace WindowsFormsApp1.Model
             this.safetyObjective = safetyObjective;
             this.qualityObjective = qualityObjective;
             this.costRootCause = costRootCause;
+            this.costImpact = costImpact;
             this.monetaryValueBefore = monetaryValueBefore;
             this.monetaryValueAfter = monetaryValueAfter;
             this.ResponseRootCauseDate = ResponseRootCauseDate;

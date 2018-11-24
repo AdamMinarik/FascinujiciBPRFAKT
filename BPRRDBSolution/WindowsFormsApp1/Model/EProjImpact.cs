@@ -13,6 +13,7 @@ namespace WindowsFormsApp1.Model
         public string formulaBefore { get; set; }
         public string formulaBeforeDesc { get; set; }
         public string actions { get; set; }
+        public string remarks { get; set; }
 
         //Int
         public int projImpactOwnerID { get; set; }
@@ -45,7 +46,7 @@ namespace WindowsFormsApp1.Model
         //Consturctor
         public EProjImpact
             (
-            long itemID, string excelID, string itemName, string projImpactDesc, int itemStatusID, int customerShareID, bool removedItem, bool watchlist, DateTime createDate, DateTime updateDate, string actions, int projImpactOwnerID, int daysImpactBefore,
+            long itemID, string excelID, string itemName, string projImpactDesc, int itemStatusID, int customerShareID, bool removedItem, bool watchlist, DateTime createDate, DateTime updateDate, string actions, string remarks, int projImpactOwnerID, int daysImpactBefore,
             int respStratImpactID, int actionOwnerImpactID, int buRate, int nccID, int orgUnitID, Boolean timeObjective, Boolean costObjective,
             Boolean customerSatisfObjective, Boolean safetyObjective, Boolean qualityObjective, Boolean newChanges, Double percentageBefore, Double percentageAfter, Double monetValueAfter,
             Double projImpactCost, DateTime ResponseDate, DateTime impactStartDate, DateTime impactEndDate
@@ -57,6 +58,7 @@ namespace WindowsFormsApp1.Model
             this.formulaBeforeDesc = formulaBeforeDesc;
             this.monetValueAfter = monetValueAfter;
             this.actions = actions;
+            this.remarks = remarks;
             this.projImpactOwnerID = projImpactOwnerID;
             this.daysImpactBefore = daysImpactBefore;
             this.respStratImpactID = respStratImpactID;

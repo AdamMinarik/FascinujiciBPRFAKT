@@ -63,7 +63,7 @@ namespace WindowsFormsApp1.Mediator
             throw new NotImplementedException();
         }
 
-        public void updateItem(EProjectItem item, bool projectOwner)
+        public void updateItem(EProjectItem item, bool projectOwner, String type)
         {
             throw new NotImplementedException();
         }
