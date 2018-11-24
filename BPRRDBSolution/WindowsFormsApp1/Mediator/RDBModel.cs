@@ -10,7 +10,7 @@ namespace WindowsFormsApp1.Mediator
     interface RDBModel
     {
         //GETS
-        Project getProject(int projectID);
+        ExecutionProject getExecutionProject(int projectID);
         EProjectItemList getItems(int projectID, String month, String type);
         EProjectItemList getFilterItems(int projectID, String month, String field, String fieldValue);
         EProjectItemList getRemovedItems(int projectID, String month, String type);

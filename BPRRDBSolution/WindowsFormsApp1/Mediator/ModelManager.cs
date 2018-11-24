@@ -40,12 +40,12 @@ namespace WindowsFormsApp1.Mediator
 
         public EProjectItemList getItems(int projectID, string month, string type)
         {
-            throw new NotImplementedException();
+            return storage.getItems(projectID, month, type);
         }
 
-        public Project getProject(int projectID)
+        public ExecutionProject getExecutionProject(int projectID)
         {
-            throw new NotImplementedException();
+            return storage.getExecutionProject(projectID);
         }
 
         public EProjectItemList getRemovedItems(int projectID, string month, string type)

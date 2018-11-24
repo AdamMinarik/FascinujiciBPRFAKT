@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WindowsFormsApp1.Mediator;
 using WindowsFormsApp1.Model;
 
 namespace WindowsFormsApp1
@@ -57,13 +58,39 @@ namespace WindowsFormsApp1
         private DataTable dsWTG;
         private DataTable dsOwner;
         private DataTable dsUser;
-        
+
+        private ModelManager modelManager;
+
+        private ExecutionUser user;
 
         public object ProjectsData { get; private set; }
 
         public executionForm(ExecutionUser user)
         {
             InitializeComponent();
+            modelManager = new ModelManager();
+            this.user = user;
+
+            if(user.roleID == 7)
+            {
+                editButton.Enabled = true;
+                adminPictureBox.Visible = true;
+                readPictureBox.Visible = false;
+                writePictureBox.Visible = false;
+                approvalPictureBox.Visible = false;
+            }
+            else
+            {
+                editButton.Enabled = false;
+                adminPictureBox.Visible = false;
+                readPictureBox.Visible = true;
+                writePictureBox.Visible = false;
+                approvalPictureBox.Visible = false;
+            }
+
+
+
+
 
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             builder.DataSource = "riskdbsserver.database.windows.net";
@@ -551,15 +578,20 @@ namespace WindowsFormsApp1
         private void projectsData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             string projectName = "";
+            int projectID;
+            ExecutionProject execProject;
 
             // Ignore clicks that are not in our 
             if (e.ColumnIndex == projectsData.Columns["Open"].Index && e.RowIndex >= 0)
             {
-                    ExecRolog execROlogForm = new ExecRolog();
+                    //get projectID from the list
+                    projectID = (int)projectsData.Rows[e.RowIndex].Cells[5].Value;
+                    //get project object from mediator
+                    execProject = modelManager.getExecutionProject(projectID);
+                    //create form ExecROlog and send userObject and projectObject
+                    ExecRolog execROlogForm = new ExecRolog(user,execProject);
+                    //show form
                     execROlogForm.Show();
-
-                    projectName = projectsData.Rows[e.RowIndex].Cells[1].Value.ToString();
-                    execROlogForm.setLocationLabel(projectName.ToUpper());
             }
         }
 
@@ -1058,11 +1090,6 @@ namespace WindowsFormsApp1
         }
 
         private void portfolioRepGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void projectsData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

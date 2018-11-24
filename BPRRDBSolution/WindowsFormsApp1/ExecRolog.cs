@@ -9,22 +9,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Model;
-
+using WindowsFormsApp1.Mediator;
 
 namespace WindowsFormsApp1
 {
     public partial class ExecRolog : Form
     {
-        
+        private ModelManager modelManager;
         private EProjectItemList itemsList;
 
 
-        public ExecRolog()
+        public ExecRolog(ExecutionUser user, ExecutionProject execProject)
         {
             InitializeComponent();
-            itemsList = new EProjectItemList();
- 
-            //MessageBox.Show(itemsList.noOfItems().ToString());
+            modelManager = new ModelManager();
+            itemsList = modelManager.getItems(execProject.projectID, DateTime.Today.ToString(), "risk");
+            userLabel.Text = user.firstName + ' ' + user.lastName;
+            locationLabel.Text = execProject.name;
         }
 
         public void setLocationLabel(String value)

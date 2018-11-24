@@ -33,6 +33,10 @@ namespace WindowsFormsApp1.Mediator
         //User
         private DataTable dataSourceExecutionUser;
         private SqlDataAdapter dataAdapterExecutionUser;
+        //Project
+        private DataTable dataSourceExecutionProject;
+        private SqlDataAdapter dataAdapterExecutionProject;
+
 
         //UPDATES,INSERTS
         private SqlCommand command;
@@ -407,7 +411,7 @@ namespace WindowsFormsApp1.Mediator
                                    Convert.ToDouble(row["CostMitiImpact"].ToString()),
                                    Convert.ToDouble(row["rkBef"].ToString()),
                                    Convert.ToDouble(row["valAfterMiti"].ToString()),
-                                   Convert.ToDateTime(row["creationdate"].ToString()),
+                                   Convert.ToDateTime(row["createdItem"].ToString()),
                                    Convert.ToDateTime(row["updateDate"].ToString()),
                                    Convert.ToDateTime(row["mitDate"].ToString()),
                                    Convert.ToDateTime(row["mitiActDate"].ToString()),
@@ -415,7 +419,6 @@ namespace WindowsFormsApp1.Mediator
                                    Convert.ToDateTime(row["ImpEndDate"].ToString())
                                    );
                     itemsList.add(riskItem);
-
                 }
                 return itemsList;
             }
@@ -607,9 +610,59 @@ namespace WindowsFormsApp1.Mediator
             }  
         }
 
-        public Project getProject(int projectID)
+        public ExecutionProject getExecutionProject(int projectID)
         {
-            throw new NotImplementedException();
+            connection.Open();
+            string SQL = "SELECT * FROM [rk_ProjectDetailView] WHERE ID =" + projectID;
+
+            dataAdapterExecutionProject = new SqlDataAdapter(SQL, connection);
+            dataSourceExecutionProject = new DataTable();
+            dataAdapterExecutionProject.Fill(dataSourceExecutionProject);
+            ExecutionProject execProject = null;
+
+            foreach (DataRow row in dataSourceExecutionProject.Rows)
+            {
+                execProject = new ExecutionProject(
+                                                   row["sap"].ToString(),
+                                                   row["loa"].ToString(),
+                                                   row["cpm"].ToString(),
+                                                   row["pm"].ToString(),
+                                                   row["prepBy"].ToString(),
+                                                   row["updateby"].ToString(),
+                                                   row["checkBy"].ToString(),
+                                                   row["pname"].ToString(),
+                                                   row["ownername"].ToString(),
+                                                   Convert.ToInt32(row["ID"].ToString()),
+                                                   Convert.ToInt32(row["IDUser"].ToString()),
+                                                   Convert.ToInt32(row["segmentID"].ToString()),
+                                                   Convert.ToInt32(row["scopeID"].ToString()),
+                                                   Convert.ToInt32(row["WTGType"].ToString()),
+                                                   Convert.ToInt32(row["noWTGs"].ToString()),
+                                                   Convert.ToInt32(row["IDEntryCur"].ToString()),
+                                                   Convert.ToInt32(row["FoundationTypeID"].ToString()),
+                                                   Convert.ToInt32(row["harbourID"].ToString()),
+                                                   Convert.ToDecimal(row["BUrate"].ToString()),
+                                                   Convert.ToDecimal(row["RUrate"].ToString()),
+                                                   Convert.ToDateTime(row["toc"].ToString()),
+                                                   Convert.ToDateTime(row["prep_date"].ToString()),
+                                                   Convert.ToDateTime(row["update_date"].ToString()),
+                                                   Convert.ToDateTime(row["check_date"].ToString()),
+                                                   Convert.ToDouble(row["BUcontract"].ToString()),
+                                                   Convert.ToDouble(row["RUcontract"].ToString())
+                                                  );
+                
+            }
+            connection.Close();
+
+            if (execProject == null)
+            {
+                MessageBox.Show("Something went wong. Sry.");
+                return null;
+            }
+            else { 
+                return execProject;
+            }
+
         }
 
         public EProjectItemList getRemovedItems(int projectID, string month, string type)
