@@ -95,11 +95,19 @@
             this.createRiskTab = new System.Windows.Forms.TabPage();
             this.summaryPanel = new System.Windows.Forms.Panel();
             this.impactPanel = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.individualRiskPanel = new System.Windows.Forms.Panel();
+            this.individualRiskTable = new System.Windows.Forms.TableLayoutPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.thereisRiskLabel = new System.Windows.Forms.Label();
+            this.riskOwnerLabel = new System.Windows.Forms.Label();
+            this.thereIsRiskTextBox = new System.Windows.Forms.TextBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.rootCausePanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.rootCauseResponsePanel = new System.Windows.Forms.TableLayoutPanel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.rootCausesARLabel = new System.Windows.Forms.Label();
             this.riskActionOwnerLabel = new System.Windows.Forms.Label();
             this.actionsLabel = new System.Windows.Forms.Label();
@@ -110,6 +118,9 @@
             this.responseImplementationDate = new System.Windows.Forms.DateTimePicker();
             this.strategyDropdown = new System.Windows.Forms.ComboBox();
             this.responseStrategyLabel = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.responseCostTextBox = new System.Windows.Forms.TextBox();
+            this.porbabilityARTextBox = new System.Windows.Forms.TextBox();
             this.rootCauseBRPanel = new System.Windows.Forms.Panel();
             this.rootCauseAssessTable = new System.Windows.Forms.TableLayoutPanel();
             this.probabilityBRLabel = new System.Windows.Forms.Label();
@@ -142,17 +153,27 @@
             this.permissionTab = new System.Windows.Forms.TabPage();
             this.approvalTab = new System.Windows.Forms.TabPage();
             this.infoTab = new System.Windows.Forms.TabPage();
-            this.responseCostTextBox = new System.Windows.Forms.TextBox();
-            this.porbabilityARTextBox = new System.Windows.Forms.TextBox();
-            this.individualRiskTable = new System.Windows.Forms.TableLayoutPanel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.thereisRiskLabel = new System.Windows.Forms.Label();
-            this.riskOwnerLabel = new System.Windows.Forms.Label();
-            this.thereIsRiskTextBox = new System.Windows.Forms.TextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.objectivesLabel = new System.Windows.Forms.Label();
+            this.phaseLabel = new System.Windows.Forms.Label();
+            this.wbsLabel = new System.Windows.Forms.Label();
+            this.impactDescLabel = new System.Windows.Forms.Label();
+            this.timeBeforeLabel = new System.Windows.Forms.Label();
+            this.formulaBefLabel = new System.Windows.Forms.Label();
+            this.monetValueBef = new System.Windows.Forms.Label();
+            this.calcDescBefLabel = new System.Windows.Forms.Label();
+            this.timeCheck = new System.Windows.Forms.CheckBox();
+            this.costCheck = new System.Windows.Forms.CheckBox();
+            this.custSatisfCheck = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -168,7 +189,10 @@
             this.chartSumPanel.SuspendLayout();
             this.createRiskTab.SuspendLayout();
             this.impactPanel.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.individualRiskPanel.SuspendLayout();
+            this.individualRiskTable.SuspendLayout();
             this.rootCausePanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.rootCauseResponsePanel.SuspendLayout();
@@ -176,8 +200,7 @@
             this.rootCauseAssessTable.SuspendLayout();
             this.riskIntroPanel.SuspendLayout();
             this.riskIntroTable.SuspendLayout();
-            this.individualRiskTable.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // locationPanel
@@ -296,7 +319,7 @@
             this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonPanel.Location = new System.Drawing.Point(0, 41);
             this.buttonPanel.Name = "buttonPanel";
-            this.buttonPanel.Size = new System.Drawing.Size(275, 649);
+            this.buttonPanel.Size = new System.Drawing.Size(275, 690);
             this.buttonPanel.TabIndex = 2;
             // 
             // approvalFuncButton
@@ -439,7 +462,7 @@
             this.quitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(116)))), ((int)(((byte)(150)))));
             this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.quitButton.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
-            this.quitButton.Location = new System.Drawing.Point(0, 601);
+            this.quitButton.Location = new System.Drawing.Point(0, 642);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(275, 46);
             this.quitButton.TabIndex = 6;
@@ -598,7 +621,7 @@
             this.execROlogTabControl.Location = new System.Drawing.Point(275, 41);
             this.execROlogTabControl.Name = "execROlogTabControl";
             this.execROlogTabControl.SelectedIndex = 0;
-            this.execROlogTabControl.Size = new System.Drawing.Size(900, 649);
+            this.execROlogTabControl.Size = new System.Drawing.Size(900, 690);
             this.execROlogTabControl.TabIndex = 2;
             // 
             // overviewTab
@@ -1137,7 +1160,7 @@
             this.createRiskTab.Location = new System.Drawing.Point(4, 22);
             this.createRiskTab.Name = "createRiskTab";
             this.createRiskTab.Padding = new System.Windows.Forms.Padding(3);
-            this.createRiskTab.Size = new System.Drawing.Size(892, 623);
+            this.createRiskTab.Size = new System.Drawing.Size(892, 664);
             this.createRiskTab.TabIndex = 1;
             this.createRiskTab.Text = "Create Risk";
             // 
@@ -1145,9 +1168,9 @@
             // 
             this.summaryPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.summaryPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.summaryPanel.Location = new System.Drawing.Point(3, 551);
+            this.summaryPanel.Location = new System.Drawing.Point(3, 577);
             this.summaryPanel.Name = "summaryPanel";
-            this.summaryPanel.Size = new System.Drawing.Size(886, 69);
+            this.summaryPanel.Size = new System.Drawing.Size(886, 84);
             this.summaryPanel.TabIndex = 4;
             // 
             // impactPanel
@@ -1158,8 +1181,62 @@
             this.impactPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.impactPanel.Location = new System.Drawing.Point(3, 337);
             this.impactPanel.Name = "impactPanel";
-            this.impactPanel.Size = new System.Drawing.Size(886, 214);
+            this.impactPanel.Size = new System.Drawing.Size(886, 240);
             this.impactPanel.TabIndex = 3;
+            // 
+            // panel4
+            // 
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(442, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(444, 240);
+            this.panel4.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.tableLayoutPanel2);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(442, 240);
+            this.panel3.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            this.tableLayoutPanel2.ColumnCount = 2;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49F));
+            this.tableLayoutPanel2.Controls.Add(this.textBox6, 1, 7);
+            this.tableLayoutPanel2.Controls.Add(this.textBox5, 1, 6);
+            this.tableLayoutPanel2.Controls.Add(this.textBox4, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.textBox3, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.textBox2, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.comboBox4, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.objectivesLabel, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.phaseLabel, 0, 1);
+            this.tableLayoutPanel2.Controls.Add(this.wbsLabel, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.impactDescLabel, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.timeBeforeLabel, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.formulaBefLabel, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.monetValueBef, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.calcDescBefLabel, 0, 7);
+            this.tableLayoutPanel2.Controls.Add(this.comboBox3, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 8;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.54098F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.06557F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.06557F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.06557F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.06557F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.06557F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.06557F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.06557F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(442, 240);
+            this.tableLayoutPanel2.TabIndex = 0;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint);
             // 
             // individualRiskPanel
             // 
@@ -1170,6 +1247,72 @@
             this.individualRiskPanel.Name = "individualRiskPanel";
             this.individualRiskPanel.Size = new System.Drawing.Size(886, 90);
             this.individualRiskPanel.TabIndex = 2;
+            // 
+            // individualRiskTable
+            // 
+            this.individualRiskTable.ColumnCount = 2;
+            this.individualRiskTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
+            this.individualRiskTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
+            this.individualRiskTable.Controls.Add(this.label1, 0, 0);
+            this.individualRiskTable.Controls.Add(this.thereisRiskLabel, 0, 1);
+            this.individualRiskTable.Controls.Add(this.riskOwnerLabel, 0, 2);
+            this.individualRiskTable.Controls.Add(this.thereIsRiskTextBox, 1, 1);
+            this.individualRiskTable.Controls.Add(this.comboBox2, 1, 2);
+            this.individualRiskTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.individualRiskTable.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
+            this.individualRiskTable.Location = new System.Drawing.Point(0, 0);
+            this.individualRiskTable.Name = "individualRiskTable";
+            this.individualRiskTable.RowCount = 3;
+            this.individualRiskTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.68627F));
+            this.individualRiskTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.96078F));
+            this.individualRiskTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.35294F));
+            this.individualRiskTable.Size = new System.Drawing.Size(886, 90);
+            this.individualRiskTable.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.label1.Location = new System.Drawing.Point(3, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(153, 14);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Root Causes Identification";
+            // 
+            // thereisRiskLabel
+            // 
+            this.thereisRiskLabel.AutoSize = true;
+            this.thereisRiskLabel.Location = new System.Drawing.Point(3, 14);
+            this.thereisRiskLabel.Name = "thereisRiskLabel";
+            this.thereisRiskLabel.Size = new System.Drawing.Size(88, 18);
+            this.thereisRiskLabel.TabIndex = 6;
+            this.thereisRiskLabel.Text = "There is a Risk";
+            // 
+            // riskOwnerLabel
+            // 
+            this.riskOwnerLabel.AutoSize = true;
+            this.riskOwnerLabel.Location = new System.Drawing.Point(3, 60);
+            this.riskOwnerLabel.Name = "riskOwnerLabel";
+            this.riskOwnerLabel.Size = new System.Drawing.Size(70, 18);
+            this.riskOwnerLabel.TabIndex = 7;
+            this.riskOwnerLabel.Text = "Risk Owner";
+            // 
+            // thereIsRiskTextBox
+            // 
+            this.thereIsRiskTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.thereIsRiskTextBox.Location = new System.Drawing.Point(256, 17);
+            this.thereIsRiskTextBox.Multiline = true;
+            this.thereIsRiskTextBox.Name = "thereIsRiskTextBox";
+            this.thereIsRiskTextBox.Size = new System.Drawing.Size(627, 40);
+            this.thereIsRiskTextBox.TabIndex = 8;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(256, 63);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(121, 24);
+            this.comboBox2.TabIndex = 9;
             // 
             // rootCausePanel
             // 
@@ -1224,15 +1367,6 @@
             this.rootCauseResponsePanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.32076F));
             this.rootCauseResponsePanel.Size = new System.Drawing.Size(444, 196);
             this.rootCauseResponsePanel.TabIndex = 1;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(194, 48);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(247, 24);
-            this.comboBox1.TabIndex = 15;
             // 
             // rootCausesARLabel
             // 
@@ -1323,6 +1457,31 @@
             this.responseStrategyLabel.Size = new System.Drawing.Size(110, 18);
             this.responseStrategyLabel.TabIndex = 6;
             this.responseStrategyLabel.Text = "Response Strategy";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(194, 48);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(247, 24);
+            this.comboBox1.TabIndex = 15;
+            // 
+            // responseCostTextBox
+            // 
+            this.responseCostTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.responseCostTextBox.Location = new System.Drawing.Point(194, 130);
+            this.responseCostTextBox.Name = "responseCostTextBox";
+            this.responseCostTextBox.Size = new System.Drawing.Size(247, 21);
+            this.responseCostTextBox.TabIndex = 16;
+            // 
+            // porbabilityARTextBox
+            // 
+            this.porbabilityARTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.porbabilityARTextBox.Location = new System.Drawing.Point(194, 174);
+            this.porbabilityARTextBox.Name = "porbabilityARTextBox";
+            this.porbabilityARTextBox.Size = new System.Drawing.Size(247, 21);
+            this.porbabilityARTextBox.TabIndex = 17;
             // 
             // rootCauseBRPanel
             // 
@@ -1666,130 +1825,231 @@
             this.infoTab.Text = "Project Info";
             this.infoTab.UseVisualStyleBackColor = true;
             // 
-            // responseCostTextBox
+            // objectivesLabel
             // 
-            this.responseCostTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.responseCostTextBox.Location = new System.Drawing.Point(194, 130);
-            this.responseCostTextBox.Name = "responseCostTextBox";
-            this.responseCostTextBox.Size = new System.Drawing.Size(247, 21);
-            this.responseCostTextBox.TabIndex = 16;
+            this.objectivesLabel.AutoSize = true;
+            this.objectivesLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
+            this.objectivesLabel.Location = new System.Drawing.Point(3, 0);
+            this.objectivesLabel.Name = "objectivesLabel";
+            this.objectivesLabel.Size = new System.Drawing.Size(123, 18);
+            this.objectivesLabel.TabIndex = 0;
+            this.objectivesLabel.Text = "Objetive(s) impacted";
             // 
-            // porbabilityARTextBox
+            // phaseLabel
             // 
-            this.porbabilityARTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.porbabilityARTextBox.Location = new System.Drawing.Point(194, 174);
-            this.porbabilityARTextBox.Name = "porbabilityARTextBox";
-            this.porbabilityARTextBox.Size = new System.Drawing.Size(247, 21);
-            this.porbabilityARTextBox.TabIndex = 17;
+            this.phaseLabel.AutoSize = true;
+            this.phaseLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
+            this.phaseLabel.Location = new System.Drawing.Point(3, 54);
+            this.phaseLabel.Name = "phaseLabel";
+            this.phaseLabel.Size = new System.Drawing.Size(39, 18);
+            this.phaseLabel.TabIndex = 1;
+            this.phaseLabel.Text = "Phase";
             // 
-            // individualRiskTable
+            // wbsLabel
             // 
-            this.individualRiskTable.ColumnCount = 2;
-            this.individualRiskTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 28.57143F));
-            this.individualRiskTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 71.42857F));
-            this.individualRiskTable.Controls.Add(this.label1, 0, 0);
-            this.individualRiskTable.Controls.Add(this.thereisRiskLabel, 0, 1);
-            this.individualRiskTable.Controls.Add(this.riskOwnerLabel, 0, 2);
-            this.individualRiskTable.Controls.Add(this.thereIsRiskTextBox, 1, 1);
-            this.individualRiskTable.Controls.Add(this.comboBox2, 1, 2);
-            this.individualRiskTable.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.individualRiskTable.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.individualRiskTable.Location = new System.Drawing.Point(0, 0);
-            this.individualRiskTable.Name = "individualRiskTable";
-            this.individualRiskTable.RowCount = 3;
-            this.individualRiskTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.68627F));
-            this.individualRiskTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 51.96078F));
-            this.individualRiskTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.35294F));
-            this.individualRiskTable.Size = new System.Drawing.Size(886, 90);
-            this.individualRiskTable.TabIndex = 0;
+            this.wbsLabel.AutoSize = true;
+            this.wbsLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
+            this.wbsLabel.Location = new System.Drawing.Point(3, 80);
+            this.wbsLabel.Name = "wbsLabel";
+            this.wbsLabel.Size = new System.Drawing.Size(31, 18);
+            this.wbsLabel.TabIndex = 2;
+            this.wbsLabel.Text = "WBS";
             // 
-            // label1
+            // impactDescLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(153, 14);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Root Causes Identification";
+            this.impactDescLabel.AutoSize = true;
+            this.impactDescLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
+            this.impactDescLabel.Location = new System.Drawing.Point(3, 106);
+            this.impactDescLabel.Name = "impactDescLabel";
+            this.impactDescLabel.Size = new System.Drawing.Size(112, 18);
+            this.impactDescLabel.TabIndex = 3;
+            this.impactDescLabel.Text = "Impact Description";
             // 
-            // thereisRiskLabel
+            // timeBeforeLabel
             // 
-            this.thereisRiskLabel.AutoSize = true;
-            this.thereisRiskLabel.Location = new System.Drawing.Point(3, 14);
-            this.thereisRiskLabel.Name = "thereisRiskLabel";
-            this.thereisRiskLabel.Size = new System.Drawing.Size(88, 18);
-            this.thereisRiskLabel.TabIndex = 6;
-            this.thereisRiskLabel.Text = "There is a Risk";
+            this.timeBeforeLabel.AutoSize = true;
+            this.timeBeforeLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
+            this.timeBeforeLabel.Location = new System.Drawing.Point(3, 132);
+            this.timeBeforeLabel.Name = "timeBeforeLabel";
+            this.timeBeforeLabel.Size = new System.Drawing.Size(219, 18);
+            this.timeBeforeLabel.TabIndex = 4;
+            this.timeBeforeLabel.Text = "Time impacts in days before Response";
             // 
-            // riskOwnerLabel
+            // formulaBefLabel
             // 
-            this.riskOwnerLabel.AutoSize = true;
-            this.riskOwnerLabel.Location = new System.Drawing.Point(3, 60);
-            this.riskOwnerLabel.Name = "riskOwnerLabel";
-            this.riskOwnerLabel.Size = new System.Drawing.Size(70, 18);
-            this.riskOwnerLabel.TabIndex = 7;
-            this.riskOwnerLabel.Text = "Risk Owner";
+            this.formulaBefLabel.AutoSize = true;
+            this.formulaBefLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
+            this.formulaBefLabel.Location = new System.Drawing.Point(3, 158);
+            this.formulaBefLabel.Name = "formulaBefLabel";
+            this.formulaBefLabel.Size = new System.Drawing.Size(213, 18);
+            this.formulaBefLabel.TabIndex = 5;
+            this.formulaBefLabel.Text = "Monetary Value (incl. Time) - formula";
             // 
-            // thereIsRiskTextBox
+            // monetValueBef
             // 
-            this.thereIsRiskTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.thereIsRiskTextBox.Location = new System.Drawing.Point(256, 17);
-            this.thereIsRiskTextBox.Multiline = true;
-            this.thereIsRiskTextBox.Name = "thereIsRiskTextBox";
-            this.thereIsRiskTextBox.Size = new System.Drawing.Size(627, 40);
-            this.thereIsRiskTextBox.TabIndex = 8;
+            this.monetValueBef.AutoSize = true;
+            this.monetValueBef.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
+            this.monetValueBef.Location = new System.Drawing.Point(3, 184);
+            this.monetValueBef.Name = "monetValueBef";
+            this.monetValueBef.Size = new System.Drawing.Size(160, 18);
+            this.monetValueBef.TabIndex = 6;
+            this.monetValueBef.Text = "Monetary Value (incl. Time)";
             // 
-            // comboBox2
+            // calcDescBefLabel
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(256, 63);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 9;
+            this.calcDescBefLabel.AutoSize = true;
+            this.calcDescBefLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
+            this.calcDescBefLabel.Location = new System.Drawing.Point(3, 210);
+            this.calcDescBefLabel.Name = "calcDescBefLabel";
+            this.calcDescBefLabel.Size = new System.Drawing.Size(136, 18);
+            this.calcDescBefLabel.TabIndex = 7;
+            this.calcDescBefLabel.Text = "Calculation description";
             // 
-            // panel3
+            // timeCheck
             // 
-            this.panel3.Controls.Add(this.tableLayoutPanel2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(442, 214);
-            this.panel3.TabIndex = 0;
+            this.timeCheck.AutoSize = true;
+            this.timeCheck.Font = new System.Drawing.Font("Trebuchet MS", 6F);
+            this.timeCheck.Location = new System.Drawing.Point(3, 6);
+            this.timeCheck.Name = "timeCheck";
+            this.timeCheck.Size = new System.Drawing.Size(44, 17);
+            this.timeCheck.TabIndex = 0;
+            this.timeCheck.Text = "Time";
+            this.timeCheck.UseVisualStyleBackColor = true;
             // 
-            // panel4
+            // costCheck
             // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(442, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(444, 214);
-            this.panel4.TabIndex = 1;
+            this.costCheck.AutoSize = true;
+            this.costCheck.Font = new System.Drawing.Font("Trebuchet MS", 6F);
+            this.costCheck.Location = new System.Drawing.Point(53, 6);
+            this.costCheck.Name = "costCheck";
+            this.costCheck.Size = new System.Drawing.Size(41, 17);
+            this.costCheck.TabIndex = 1;
+            this.costCheck.Text = "Cost";
+            this.costCheck.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel2
+            // custSatisfCheck
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 8;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(442, 214);
-            this.tableLayoutPanel2.TabIndex = 0;
+            this.custSatisfCheck.AutoSize = true;
+            this.custSatisfCheck.Font = new System.Drawing.Font("Trebuchet MS", 6F);
+            this.custSatisfCheck.Location = new System.Drawing.Point(100, -1);
+            this.custSatisfCheck.Name = "custSatisfCheck";
+            this.custSatisfCheck.Size = new System.Drawing.Size(66, 30);
+            this.custSatisfCheck.TabIndex = 2;
+            this.custSatisfCheck.Text = "Customer\r\nSatisfaction";
+            this.custSatisfCheck.UseVisualStyleBackColor = true;
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Checked = true;
+            this.checkBox4.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox4.Font = new System.Drawing.Font("Trebuchet MS", 6F);
+            this.checkBox4.Location = new System.Drawing.Point(3, 27);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(48, 17);
+            this.checkBox4.TabIndex = 3;
+            this.checkBox4.Text = "Safety";
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // checkBox5
+            // 
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Font = new System.Drawing.Font("Trebuchet MS", 6F);
+            this.checkBox5.Location = new System.Drawing.Point(53, 27);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(50, 17);
+            this.checkBox5.TabIndex = 4;
+            this.checkBox5.Text = "Quality";
+            this.checkBox5.UseVisualStyleBackColor = true;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox3.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(228, 57);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(211, 23);
+            this.comboBox3.TabIndex = 9;
+            // 
+            // comboBox4
+            // 
+            this.comboBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.comboBox4.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Location = new System.Drawing.Point(228, 83);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(211, 23);
+            this.comboBox4.TabIndex = 10;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox2.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.textBox2.Location = new System.Drawing.Point(228, 109);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(211, 20);
+            this.textBox2.TabIndex = 11;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox3.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.textBox3.Location = new System.Drawing.Point(228, 135);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(211, 20);
+            this.textBox3.TabIndex = 12;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox4.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.textBox4.Location = new System.Drawing.Point(228, 161);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(211, 20);
+            this.textBox4.TabIndex = 13;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox5.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.textBox5.Location = new System.Drawing.Point(228, 187);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(211, 20);
+            this.textBox5.TabIndex = 14;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox6.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.textBox6.Location = new System.Drawing.Point(228, 213);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(211, 24);
+            this.textBox6.TabIndex = 15;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.checkBox5);
+            this.panel5.Controls.Add(this.checkBox4);
+            this.panel5.Controls.Add(this.custSatisfCheck);
+            this.panel5.Controls.Add(this.timeCheck);
+            this.panel5.Controls.Add(this.costCheck);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(228, 3);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(211, 48);
+            this.panel5.TabIndex = 16;
             // 
             // ExecRolog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 690);
+            this.ClientSize = new System.Drawing.Size(1175, 731);
             this.Controls.Add(this.execROlogTabControl);
             this.Controls.Add(this.buttonPanel);
             this.Controls.Add(this.locationPanel);
@@ -1815,7 +2075,12 @@
             this.chartSumPanel.PerformLayout();
             this.createRiskTab.ResumeLayout(false);
             this.impactPanel.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
+            this.tableLayoutPanel2.PerformLayout();
             this.individualRiskPanel.ResumeLayout(false);
+            this.individualRiskTable.ResumeLayout(false);
+            this.individualRiskTable.PerformLayout();
             this.rootCausePanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.rootCauseResponsePanel.ResumeLayout(false);
@@ -1826,9 +2091,8 @@
             this.riskIntroPanel.ResumeLayout(false);
             this.riskIntroTable.ResumeLayout(false);
             this.riskIntroTable.PerformLayout();
-            this.individualRiskTable.ResumeLayout(false);
-            this.individualRiskTable.PerformLayout();
-            this.panel3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1959,5 +2223,26 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private System.Windows.Forms.Label objectivesLabel;
+        private System.Windows.Forms.Label phaseLabel;
+        private System.Windows.Forms.Label wbsLabel;
+        private System.Windows.Forms.Label impactDescLabel;
+        private System.Windows.Forms.Label timeBeforeLabel;
+        private System.Windows.Forms.Label formulaBefLabel;
+        private System.Windows.Forms.Label monetValueBef;
+        private System.Windows.Forms.Label calcDescBefLabel;
+        private System.Windows.Forms.CheckBox timeCheck;
+        private System.Windows.Forms.CheckBox costCheck;
+        private System.Windows.Forms.CheckBox custSatisfCheck;
+        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox5;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel panel5;
     }
 }

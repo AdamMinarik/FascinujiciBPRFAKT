@@ -155,6 +155,11 @@ namespace WindowsFormsApp1
         {
             execROlogTabControl.SelectedIndex = 5;
         }
+
+        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 
