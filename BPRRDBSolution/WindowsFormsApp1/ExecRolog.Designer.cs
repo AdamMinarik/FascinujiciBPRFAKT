@@ -53,6 +53,7 @@
             this.execROlogTabControl = new System.Windows.Forms.TabControl();
             this.overviewTab = new System.Windows.Forms.TabPage();
             this.infoSumPanel = new System.Windows.Forms.Panel();
+            this.itemTabSelector = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.totalOpportunityLabel = new System.Windows.Forms.Label();
             this.rUOpportunityLabel = new System.Windows.Forms.Label();
@@ -141,7 +142,6 @@
             this.projectOwnerLabel = new System.Windows.Forms.Label();
             this.projectOwnerComboBox = new System.Windows.Forms.ComboBox();
             this.tocTextBox = new System.Windows.Forms.DateTimePicker();
-            this.itemTabSelector = new System.Windows.Forms.ComboBox();
             this.createPITab = new System.Windows.Forms.TabPage();
             this.createOpportunityTab = new System.Windows.Forms.TabPage();
             this.createERiskTab = new System.Windows.Forms.TabPage();
@@ -252,6 +252,7 @@
             this.userLabel.Location = new System.Drawing.Point(1504, 15);
             this.userLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.userLabel.Name = "userLabel";
+            this.userLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.userLabel.Size = new System.Drawing.Size(193, 36);
             this.userLabel.TabIndex = 1;
             this.userLabel.Text = "Adam Minarik";
@@ -633,6 +634,26 @@
             this.infoSumPanel.Name = "infoSumPanel";
             this.infoSumPanel.Size = new System.Drawing.Size(806, 408);
             this.infoSumPanel.TabIndex = 0;
+            // 
+            // itemTabSelector
+            // 
+            this.itemTabSelector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
+            this.itemTabSelector.Font = new System.Drawing.Font("Trebuchet MS", 11F);
+            this.itemTabSelector.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.itemTabSelector.FormattingEnabled = true;
+            this.itemTabSelector.ItemHeight = 27;
+            this.itemTabSelector.Items.AddRange(new object[] {
+            "Individual Risks",
+            "Project Impacts",
+            "Individual Opportunities",
+            "Enterprise Risks",
+            "Other Uncertainties"});
+            this.itemTabSelector.Location = new System.Drawing.Point(16, 360);
+            this.itemTabSelector.Name = "itemTabSelector";
+            this.itemTabSelector.Size = new System.Drawing.Size(271, 35);
+            this.itemTabSelector.TabIndex = 11;
+            this.itemTabSelector.Text = "Individual Risks";
+            this.itemTabSelector.SelectedIndexChanged += new System.EventHandler(this.itemTabSelector_SelectedIndexChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -1033,7 +1054,7 @@
             this.projImpactsTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.projImpactsTab.Name = "projImpactsTab";
             this.projImpactsTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.projImpactsTab.Size = new System.Drawing.Size(1344, 521);
+            this.projImpactsTab.Size = new System.Drawing.Size(1344, 522);
             this.projImpactsTab.TabIndex = 1;
             this.projImpactsTab.Text = "Project Impacts";
             this.projImpactsTab.UseVisualStyleBackColor = true;
@@ -1044,7 +1065,7 @@
             this.oppTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.oppTab.Name = "oppTab";
             this.oppTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.oppTab.Size = new System.Drawing.Size(1344, 521);
+            this.oppTab.Size = new System.Drawing.Size(1344, 522);
             this.oppTab.TabIndex = 2;
             this.oppTab.Text = "Individual Opportunities";
             this.oppTab.UseVisualStyleBackColor = true;
@@ -1055,7 +1076,7 @@
             this.erTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.erTab.Name = "erTab";
             this.erTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.erTab.Size = new System.Drawing.Size(1344, 521);
+            this.erTab.Size = new System.Drawing.Size(1344, 522);
             this.erTab.TabIndex = 3;
             this.erTab.Text = "Enterprise Risks";
             this.erTab.UseVisualStyleBackColor = true;
@@ -1066,7 +1087,7 @@
             this.oUncTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.oUncTab.Name = "oUncTab";
             this.oUncTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.oUncTab.Size = new System.Drawing.Size(1344, 521);
+            this.oUncTab.Size = new System.Drawing.Size(1344, 522);
             this.oUncTab.TabIndex = 4;
             this.oUncTab.Text = "Other Uncertainties ";
             this.oUncTab.UseVisualStyleBackColor = true;
@@ -1732,26 +1753,6 @@
             this.tocTextBox.Name = "tocTextBox";
             this.tocTextBox.Size = new System.Drawing.Size(488, 30);
             this.tocTextBox.TabIndex = 28;
-            // 
-            // itemTabSelector
-            // 
-            this.itemTabSelector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
-            this.itemTabSelector.Font = new System.Drawing.Font("Trebuchet MS", 11F);
-            this.itemTabSelector.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.itemTabSelector.FormattingEnabled = true;
-            this.itemTabSelector.ItemHeight = 27;
-            this.itemTabSelector.Items.AddRange(new object[] {
-            "Individual Risks",
-            "Project Impacts",
-            "Individual Opportunities",
-            "Enterprise Risks",
-            "Other Uncertainties"});
-            this.itemTabSelector.Location = new System.Drawing.Point(16, 360);
-            this.itemTabSelector.Name = "itemTabSelector";
-            this.itemTabSelector.Size = new System.Drawing.Size(271, 35);
-            this.itemTabSelector.TabIndex = 11;
-            this.itemTabSelector.Text = "Individual Risks";
-            this.itemTabSelector.SelectedIndexChanged += new System.EventHandler(this.itemTabSelector_SelectedIndexChanged);
             // 
             // createPITab
             // 

@@ -33,23 +33,23 @@ namespace WindowsFormsApp1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(executionForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle29 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle30 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle73 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle74 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle75 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle76 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle77 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle78 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle79 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle80 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle81 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle82 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle83 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle84 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle85 = new System.Windows.Forms.DataGridViewCellStyle();
             this.locationPanel = new System.Windows.Forms.Panel();
             this.readPictureBox = new System.Windows.Forms.PictureBox();
             this.approvalPictureBox = new System.Windows.Forms.PictureBox();
@@ -277,6 +277,7 @@ namespace WindowsFormsApp1
             this.rk_DIcatTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_DIcatTableAdapter();
             this.rk_NCCTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_NCCTableAdapter();
             this.rkusersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bUCurrencySwitch = new System.Windows.Forms.CheckBox();
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -431,9 +432,11 @@ namespace WindowsFormsApp1
             this.userLabel.Location = new System.Drawing.Point(1109, 10);
             this.userLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.userLabel.Name = "userLabel";
+            this.userLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.userLabel.Size = new System.Drawing.Size(193, 36);
             this.userLabel.TabIndex = 1;
             this.userLabel.Text = "Adam Minarik";
+            this.userLabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.userLabel.Click += new System.EventHandler(this.userLabel_Click);
             // 
             // locationLabel
@@ -487,7 +490,7 @@ namespace WindowsFormsApp1
             this.transfSalesProjButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
             this.transfSalesProjButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.transfSalesProjButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.transfSalesProjButton.Location = new System.Drawing.Point(0, 503);
+            this.transfSalesProjButton.Location = new System.Drawing.Point(-1, 503);
             this.transfSalesProjButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.transfSalesProjButton.Name = "transfSalesProjButton";
             this.transfSalesProjButton.Size = new System.Drawing.Size(275, 30);
@@ -508,7 +511,7 @@ namespace WindowsFormsApp1
             this.usersButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
             this.usersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.usersButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.usersButton.Location = new System.Drawing.Point(0, 473);
+            this.usersButton.Location = new System.Drawing.Point(-1, 473);
             this.usersButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.usersButton.Name = "usersButton";
             this.usersButton.Size = new System.Drawing.Size(275, 30);
@@ -848,14 +851,14 @@ namespace WindowsFormsApp1
             this.projectsData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.projectsData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.projectsData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.projectsData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle69.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle69.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle69.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle69.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle69.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle69.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.projectsData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle69;
             this.projectsData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.projectsData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.pnameDataGridViewTextBoxColumn,
@@ -864,15 +867,15 @@ namespace WindowsFormsApp1
             this.wtgDataGridViewTextBoxColumn,
             this.iDDataGridViewTextBoxColumn});
             this.projectsData.DataSource = this.newprojectviewBindingSource;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.projectsData.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle70.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle70.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle70.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle70.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle70.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            dataGridViewCellStyle70.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle70.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle70.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.projectsData.DefaultCellStyle = dataGridViewCellStyle70;
             this.projectsData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projectsData.Location = new System.Drawing.Point(0, 0);
             this.projectsData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -961,14 +964,14 @@ namespace WindowsFormsApp1
             this.portfolioReportsData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.portfolioReportsData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.portfolioReportsData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle20.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.portfolioReportsData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle71.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle71.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle71.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle71.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle71.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle71.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle71.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.portfolioReportsData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle71;
             this.portfolioReportsData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.portfolioReportsData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -977,19 +980,19 @@ namespace WindowsFormsApp1
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.portfolioReportsData.DataSource = this.newprojectviewBindingSource;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.portfolioReportsData.DefaultCellStyle = dataGridViewCellStyle21;
-            this.portfolioReportsData.Location = new System.Drawing.Point(-2, -3);
+            dataGridViewCellStyle72.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle72.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle72.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle72.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle72.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            dataGridViewCellStyle72.SelectionBackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle72.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle72.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.portfolioReportsData.DefaultCellStyle = dataGridViewCellStyle72;
+            this.portfolioReportsData.Location = new System.Drawing.Point(2, 0);
             this.portfolioReportsData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.portfolioReportsData.Name = "portfolioReportsData";
-            this.portfolioReportsData.Size = new System.Drawing.Size(995, 648);
+            this.portfolioReportsData.Size = new System.Drawing.Size(989, 654);
             this.portfolioReportsData.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn1
@@ -1036,6 +1039,9 @@ namespace WindowsFormsApp1
             // 
             this.tableauButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.tableauButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.tableauButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(116)))), ((int)(((byte)(150)))));
+            this.tableauButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            this.tableauButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tableauButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.tableauButton.Location = new System.Drawing.Point(760, 660);
             this.tableauButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1049,6 +1055,9 @@ namespace WindowsFormsApp1
             // 
             this.riskContingencyButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.riskContingencyButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.riskContingencyButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(116)))), ((int)(((byte)(150)))));
+            this.riskContingencyButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            this.riskContingencyButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.riskContingencyButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.riskContingencyButton.Location = new System.Drawing.Point(508, 660);
             this.riskContingencyButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1062,6 +1071,9 @@ namespace WindowsFormsApp1
             // 
             this.rologButton.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.rologButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.rologButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(116)))), ((int)(((byte)(150)))));
+            this.rologButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            this.rologButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.rologButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.rologButton.Location = new System.Drawing.Point(258, 660);
             this.rologButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1075,6 +1087,9 @@ namespace WindowsFormsApp1
             // 
             this.top20Button.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.top20Button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.top20Button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(116)))), ((int)(((byte)(150)))));
+            this.top20Button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            this.top20Button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.top20Button.Font = new System.Drawing.Font("Trebuchet MS", 10F);
             this.top20Button.Location = new System.Drawing.Point(6, 660);
             this.top20Button.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -1155,6 +1170,7 @@ namespace WindowsFormsApp1
             this.newProjectTableLayout.Controls.Add(this.projectOwnerLabel, 3, 1);
             this.newProjectTableLayout.Controls.Add(this.projectOwnerComboBox, 3, 2);
             this.newProjectTableLayout.Controls.Add(this.tocTextBox, 1, 14);
+            this.newProjectTableLayout.Controls.Add(this.bUCurrencySwitch, 3, 23);
             this.newProjectTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.newProjectTableLayout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.newProjectTableLayout.Location = new System.Drawing.Point(0, 0);
@@ -1162,28 +1178,28 @@ namespace WindowsFormsApp1
             this.newProjectTableLayout.Name = "newProjectTableLayout";
             this.newProjectTableLayout.RowCount = 26;
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
-            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
             this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
@@ -1195,7 +1211,7 @@ namespace WindowsFormsApp1
             // 
             this.projectNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projectNameTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.projectNameTextBox.Location = new System.Drawing.Point(26, 58);
+            this.projectNameTextBox.Location = new System.Drawing.Point(26, 57);
             this.projectNameTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectNameTextBox.Multiline = true;
             this.projectNameTextBox.Name = "projectNameTextBox";
@@ -1205,10 +1221,10 @@ namespace WindowsFormsApp1
             // projectIDLabel
             // 
             this.projectIDLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.projectIDLabel.Location = new System.Drawing.Point(26, 85);
+            this.projectIDLabel.Location = new System.Drawing.Point(26, 84);
             this.projectIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectIDLabel.Name = "projectIDLabel";
-            this.projectIDLabel.Size = new System.Drawing.Size(130, 25);
+            this.projectIDLabel.Size = new System.Drawing.Size(130, 24);
             this.projectIDLabel.TabIndex = 1;
             this.projectIDLabel.Text = "Project ID";
             this.projectIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1217,7 +1233,7 @@ namespace WindowsFormsApp1
             // 
             this.projectIDTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projectIDTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.projectIDTextBox.Location = new System.Drawing.Point(26, 113);
+            this.projectIDTextBox.Location = new System.Drawing.Point(26, 111);
             this.projectIDTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectIDTextBox.Multiline = true;
             this.projectIDTextBox.Name = "projectIDTextBox";
@@ -1227,7 +1243,7 @@ namespace WindowsFormsApp1
             // pmLabel
             // 
             this.pmLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.pmLabel.Location = new System.Drawing.Point(26, 170);
+            this.pmLabel.Location = new System.Drawing.Point(26, 168);
             this.pmLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.pmLabel.Name = "pmLabel";
             this.pmLabel.Size = new System.Drawing.Size(130, 20);
@@ -1239,7 +1255,7 @@ namespace WindowsFormsApp1
             // 
             this.wtgNoTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wtgNoTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.wtgNoTextBox.Location = new System.Drawing.Point(26, 448);
+            this.wtgNoTextBox.Location = new System.Drawing.Point(26, 441);
             this.wtgNoTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgNoTextBox.Multiline = true;
             this.wtgNoTextBox.Name = "wtgNoTextBox";
@@ -1250,7 +1266,7 @@ namespace WindowsFormsApp1
             // 
             this.PMTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PMTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.PMTextBox.Location = new System.Drawing.Point(26, 198);
+            this.PMTextBox.Location = new System.Drawing.Point(26, 195);
             this.PMTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.PMTextBox.Multiline = true;
             this.PMTextBox.Name = "PMTextBox";
@@ -1260,10 +1276,10 @@ namespace WindowsFormsApp1
             // cpmLabel
             // 
             this.cpmLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.cpmLabel.Location = new System.Drawing.Point(26, 225);
+            this.cpmLabel.Location = new System.Drawing.Point(26, 222);
             this.cpmLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.cpmLabel.Name = "cpmLabel";
-            this.cpmLabel.Size = new System.Drawing.Size(186, 25);
+            this.cpmLabel.Size = new System.Drawing.Size(186, 24);
             this.cpmLabel.TabIndex = 3;
             this.cpmLabel.Text = "Commerctial Project Manager";
             this.cpmLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1272,7 +1288,7 @@ namespace WindowsFormsApp1
             // 
             this.CPMTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.CPMTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.CPMTextBox.Location = new System.Drawing.Point(26, 253);
+            this.CPMTextBox.Location = new System.Drawing.Point(26, 249);
             this.CPMTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CPMTextBox.Multiline = true;
             this.CPMTextBox.Name = "CPMTextBox";
@@ -1282,10 +1298,10 @@ namespace WindowsFormsApp1
             // wtgNoLabel
             // 
             this.wtgNoLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.wtgNoLabel.Location = new System.Drawing.Point(26, 420);
+            this.wtgNoLabel.Location = new System.Drawing.Point(26, 414);
             this.wtgNoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.wtgNoLabel.Name = "wtgNoLabel";
-            this.wtgNoLabel.Size = new System.Drawing.Size(130, 25);
+            this.wtgNoLabel.Size = new System.Drawing.Size(130, 24);
             this.wtgNoLabel.TabIndex = 9;
             this.wtgNoLabel.Text = "Number of WTGs";
             this.wtgNoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1293,10 +1309,10 @@ namespace WindowsFormsApp1
             // preparedByLabel
             // 
             this.preparedByLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.preparedByLabel.Location = new System.Drawing.Point(26, 280);
+            this.preparedByLabel.Location = new System.Drawing.Point(26, 276);
             this.preparedByLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.preparedByLabel.Name = "preparedByLabel";
-            this.preparedByLabel.Size = new System.Drawing.Size(130, 25);
+            this.preparedByLabel.Size = new System.Drawing.Size(130, 24);
             this.preparedByLabel.TabIndex = 5;
             this.preparedByLabel.Text = "Prepared by";
             this.preparedByLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1305,7 +1321,7 @@ namespace WindowsFormsApp1
             // 
             this.preparedByTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.preparedByTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.preparedByTextBox.Location = new System.Drawing.Point(26, 308);
+            this.preparedByTextBox.Location = new System.Drawing.Point(26, 303);
             this.preparedByTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.preparedByTextBox.Multiline = true;
             this.preparedByTextBox.Name = "preparedByTextBox";
@@ -1315,10 +1331,10 @@ namespace WindowsFormsApp1
             // TOCLabel
             // 
             this.TOCLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.TOCLabel.Location = new System.Drawing.Point(26, 365);
+            this.TOCLabel.Location = new System.Drawing.Point(26, 360);
             this.TOCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.TOCLabel.Name = "TOCLabel";
-            this.TOCLabel.Size = new System.Drawing.Size(130, 25);
+            this.TOCLabel.Size = new System.Drawing.Size(130, 24);
             this.TOCLabel.TabIndex = 6;
             this.TOCLabel.Text = "TOC Date";
             this.TOCLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1327,7 +1343,7 @@ namespace WindowsFormsApp1
             // 
             this.totalProjectCostsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.totalProjectCostsTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.totalProjectCostsTextBox.Location = new System.Drawing.Point(26, 643);
+            this.totalProjectCostsTextBox.Location = new System.Drawing.Point(26, 633);
             this.totalProjectCostsTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.totalProjectCostsTextBox.Multiline = true;
             this.totalProjectCostsTextBox.Name = "totalProjectCostsTextBox";
@@ -1338,10 +1354,10 @@ namespace WindowsFormsApp1
             // totalCostsLabel
             // 
             this.totalCostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.totalCostsLabel.Location = new System.Drawing.Point(26, 615);
+            this.totalCostsLabel.Location = new System.Drawing.Point(26, 606);
             this.totalCostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalCostsLabel.Name = "totalCostsLabel";
-            this.totalCostsLabel.Size = new System.Drawing.Size(130, 25);
+            this.totalCostsLabel.Size = new System.Drawing.Size(130, 24);
             this.totalCostsLabel.TabIndex = 15;
             this.totalCostsLabel.Text = "Total Project costs";
             this.totalCostsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1350,7 +1366,7 @@ namespace WindowsFormsApp1
             // 
             this.ruCostsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ruCostsTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.ruCostsTextBox.Location = new System.Drawing.Point(26, 588);
+            this.ruCostsTextBox.Location = new System.Drawing.Point(26, 579);
             this.ruCostsTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ruCostsTextBox.Multiline = true;
             this.ruCostsTextBox.Name = "ruCostsTextBox";
@@ -1361,10 +1377,10 @@ namespace WindowsFormsApp1
             // RUcostsLabel
             // 
             this.RUcostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.RUcostsLabel.Location = new System.Drawing.Point(26, 560);
+            this.RUcostsLabel.Location = new System.Drawing.Point(26, 552);
             this.RUcostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RUcostsLabel.Name = "RUcostsLabel";
-            this.RUcostsLabel.Size = new System.Drawing.Size(130, 25);
+            this.RUcostsLabel.Size = new System.Drawing.Size(130, 24);
             this.RUcostsLabel.TabIndex = 14;
             this.RUcostsLabel.Text = "Projects costs RU";
             this.RUcostsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1373,7 +1389,7 @@ namespace WindowsFormsApp1
             // 
             this.buCostsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buCostsTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.buCostsTextBox.Location = new System.Drawing.Point(26, 533);
+            this.buCostsTextBox.Location = new System.Drawing.Point(26, 525);
             this.buCostsTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buCostsTextBox.Multiline = true;
             this.buCostsTextBox.Name = "buCostsTextBox";
@@ -1384,10 +1400,10 @@ namespace WindowsFormsApp1
             // BUcostsLabel
             // 
             this.BUcostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.BUcostsLabel.Location = new System.Drawing.Point(26, 505);
+            this.BUcostsLabel.Location = new System.Drawing.Point(26, 498);
             this.BUcostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BUcostsLabel.Name = "BUcostsLabel";
-            this.BUcostsLabel.Size = new System.Drawing.Size(130, 25);
+            this.BUcostsLabel.Size = new System.Drawing.Size(130, 24);
             this.BUcostsLabel.TabIndex = 13;
             this.BUcostsLabel.Text = "Projects costs BU";
             this.BUcostsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1395,10 +1411,10 @@ namespace WindowsFormsApp1
             // BUCurLabel
             // 
             this.BUCurLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.BUCurLabel.Location = new System.Drawing.Point(441, 505);
+            this.BUCurLabel.Location = new System.Drawing.Point(441, 498);
             this.BUCurLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BUCurLabel.Name = "BUCurLabel";
-            this.BUCurLabel.Size = new System.Drawing.Size(130, 25);
+            this.BUCurLabel.Size = new System.Drawing.Size(130, 24);
             this.BUCurLabel.TabIndex = 16;
             this.BUCurLabel.Text = "BU currency";
             this.BUCurLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1410,7 +1426,7 @@ namespace WindowsFormsApp1
             this.buCurComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buCurComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.buCurComboBox.FormattingEnabled = true;
-            this.buCurComboBox.Location = new System.Drawing.Point(441, 533);
+            this.buCurComboBox.Location = new System.Drawing.Point(441, 525);
             this.buCurComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buCurComboBox.Name = "buCurComboBox";
             this.buCurComboBox.Size = new System.Drawing.Size(363, 32);
@@ -1430,7 +1446,7 @@ namespace WindowsFormsApp1
             this.ruCurComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ruCurComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.ruCurComboBox.FormattingEnabled = true;
-            this.ruCurComboBox.Location = new System.Drawing.Point(441, 588);
+            this.ruCurComboBox.Location = new System.Drawing.Point(441, 579);
             this.ruCurComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ruCurComboBox.Name = "ruCurComboBox";
             this.ruCurComboBox.Size = new System.Drawing.Size(363, 32);
@@ -1440,10 +1456,10 @@ namespace WindowsFormsApp1
             // RUcurLabel
             // 
             this.RUcurLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.RUcurLabel.Location = new System.Drawing.Point(441, 560);
+            this.RUcurLabel.Location = new System.Drawing.Point(441, 552);
             this.RUcurLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RUcurLabel.Name = "RUcurLabel";
-            this.RUcurLabel.Size = new System.Drawing.Size(130, 25);
+            this.RUcurLabel.Size = new System.Drawing.Size(130, 24);
             this.RUcurLabel.TabIndex = 17;
             this.RUcurLabel.Text = "RU currency";
             this.RUcurLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1451,7 +1467,7 @@ namespace WindowsFormsApp1
             // ruEurLabel
             // 
             this.ruEurLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.ruEurLabel.Location = new System.Drawing.Point(808, 585);
+            this.ruEurLabel.Location = new System.Drawing.Point(808, 576);
             this.ruEurLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ruEurLabel.Name = "ruEurLabel";
             this.ruEurLabel.Size = new System.Drawing.Size(40, 21);
@@ -1462,7 +1478,7 @@ namespace WindowsFormsApp1
             // buEurLabel
             // 
             this.buEurLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.buEurLabel.Location = new System.Drawing.Point(808, 530);
+            this.buEurLabel.Location = new System.Drawing.Point(808, 522);
             this.buEurLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.buEurLabel.Name = "buEurLabel";
             this.buEurLabel.Size = new System.Drawing.Size(40, 21);
@@ -1475,7 +1491,7 @@ namespace WindowsFormsApp1
             // 
             this.ruRateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ruRateTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.ruRateTextBox.Location = new System.Drawing.Point(869, 588);
+            this.ruRateTextBox.Location = new System.Drawing.Point(869, 579);
             this.ruRateTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ruRateTextBox.Multiline = true;
             this.ruRateTextBox.Name = "ruRateTextBox";
@@ -1486,7 +1502,7 @@ namespace WindowsFormsApp1
             // 
             this.buRateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.buRateTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.buRateTextBox.Location = new System.Drawing.Point(869, 533);
+            this.buRateTextBox.Location = new System.Drawing.Point(869, 525);
             this.buRateTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.buRateTextBox.Multiline = true;
             this.buRateTextBox.Name = "buRateTextBox";
@@ -1499,7 +1515,7 @@ namespace WindowsFormsApp1
             this.projectNameLabel.Location = new System.Drawing.Point(26, 30);
             this.projectNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectNameLabel.Name = "projectNameLabel";
-            this.projectNameLabel.Size = new System.Drawing.Size(130, 25);
+            this.projectNameLabel.Size = new System.Drawing.Size(130, 24);
             this.projectNameLabel.TabIndex = 0;
             this.projectNameLabel.Text = "Project Name";
             this.projectNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1507,10 +1523,10 @@ namespace WindowsFormsApp1
             // foundationLabel
             // 
             this.foundationLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.foundationLabel.Location = new System.Drawing.Point(441, 225);
+            this.foundationLabel.Location = new System.Drawing.Point(441, 222);
             this.foundationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.foundationLabel.Name = "foundationLabel";
-            this.foundationLabel.Size = new System.Drawing.Size(130, 25);
+            this.foundationLabel.Size = new System.Drawing.Size(130, 24);
             this.foundationLabel.TabIndex = 11;
             this.foundationLabel.Text = "Type of Foundation";
             this.foundationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1518,10 +1534,10 @@ namespace WindowsFormsApp1
             // preassemblyLabel
             // 
             this.preassemblyLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.preassemblyLabel.Location = new System.Drawing.Point(441, 280);
+            this.preassemblyLabel.Location = new System.Drawing.Point(441, 276);
             this.preassemblyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.preassemblyLabel.Name = "preassemblyLabel";
-            this.preassemblyLabel.Size = new System.Drawing.Size(130, 25);
+            this.preassemblyLabel.Size = new System.Drawing.Size(130, 24);
             this.preassemblyLabel.TabIndex = 12;
             this.preassemblyLabel.Text = "Port of Pre-assembly";
             this.preassemblyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1533,7 +1549,7 @@ namespace WindowsFormsApp1
             this.portComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.portComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.portComboBox.FormattingEnabled = true;
-            this.portComboBox.Location = new System.Drawing.Point(441, 308);
+            this.portComboBox.Location = new System.Drawing.Point(441, 303);
             this.portComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.portComboBox.Name = "portComboBox";
             this.portComboBox.Size = new System.Drawing.Size(363, 32);
@@ -1552,7 +1568,7 @@ namespace WindowsFormsApp1
             this.foundationComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.foundationComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.foundationComboBox.FormattingEnabled = true;
-            this.foundationComboBox.Location = new System.Drawing.Point(441, 253);
+            this.foundationComboBox.Location = new System.Drawing.Point(441, 249);
             this.foundationComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.foundationComboBox.Name = "foundationComboBox";
             this.foundationComboBox.Size = new System.Drawing.Size(363, 32);
@@ -1568,10 +1584,10 @@ namespace WindowsFormsApp1
             // segmentLabel
             // 
             this.segmentLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.segmentLabel.Location = new System.Drawing.Point(441, 365);
+            this.segmentLabel.Location = new System.Drawing.Point(441, 360);
             this.segmentLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.segmentLabel.Name = "segmentLabel";
-            this.segmentLabel.Size = new System.Drawing.Size(130, 25);
+            this.segmentLabel.Size = new System.Drawing.Size(130, 24);
             this.segmentLabel.TabIndex = 7;
             this.segmentLabel.Text = "Segment";
             this.segmentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1579,10 +1595,10 @@ namespace WindowsFormsApp1
             // scopeLabel
             // 
             this.scopeLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.scopeLabel.Location = new System.Drawing.Point(441, 170);
+            this.scopeLabel.Location = new System.Drawing.Point(441, 168);
             this.scopeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.scopeLabel.Name = "scopeLabel";
-            this.scopeLabel.Size = new System.Drawing.Size(130, 25);
+            this.scopeLabel.Size = new System.Drawing.Size(130, 24);
             this.scopeLabel.TabIndex = 10;
             this.scopeLabel.Text = "Scope";
             this.scopeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1594,7 +1610,7 @@ namespace WindowsFormsApp1
             this.segmentComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.segmentComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.segmentComboBox.FormattingEnabled = true;
-            this.segmentComboBox.Location = new System.Drawing.Point(441, 393);
+            this.segmentComboBox.Location = new System.Drawing.Point(441, 387);
             this.segmentComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.segmentComboBox.Name = "segmentComboBox";
             this.segmentComboBox.Size = new System.Drawing.Size(363, 32);
@@ -1613,7 +1629,7 @@ namespace WindowsFormsApp1
             this.scopeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.scopeComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.scopeComboBox.FormattingEnabled = true;
-            this.scopeComboBox.Location = new System.Drawing.Point(441, 198);
+            this.scopeComboBox.Location = new System.Drawing.Point(441, 195);
             this.scopeComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.scopeComboBox.Name = "scopeComboBox";
             this.scopeComboBox.Size = new System.Drawing.Size(363, 32);
@@ -1628,10 +1644,10 @@ namespace WindowsFormsApp1
             // wtgTypeLabel
             // 
             this.wtgTypeLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.wtgTypeLabel.Location = new System.Drawing.Point(441, 420);
+            this.wtgTypeLabel.Location = new System.Drawing.Point(441, 414);
             this.wtgTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.wtgTypeLabel.Name = "wtgTypeLabel";
-            this.wtgTypeLabel.Size = new System.Drawing.Size(130, 25);
+            this.wtgTypeLabel.Size = new System.Drawing.Size(130, 24);
             this.wtgTypeLabel.TabIndex = 8;
             this.wtgTypeLabel.Text = "Type of WTG";
             this.wtgTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1643,7 +1659,7 @@ namespace WindowsFormsApp1
             this.wtgTypeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wtgTypeComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.wtgTypeComboBox.FormattingEnabled = true;
-            this.wtgTypeComboBox.Location = new System.Drawing.Point(441, 448);
+            this.wtgTypeComboBox.Location = new System.Drawing.Point(441, 441);
             this.wtgTypeComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgTypeComboBox.Name = "wtgTypeComboBox";
             this.wtgTypeComboBox.Size = new System.Drawing.Size(363, 32);
@@ -1658,10 +1674,10 @@ namespace WindowsFormsApp1
             // LoAIDLabel
             // 
             this.LoAIDLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.LoAIDLabel.Location = new System.Drawing.Point(441, 85);
+            this.LoAIDLabel.Location = new System.Drawing.Point(441, 84);
             this.LoAIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LoAIDLabel.Name = "LoAIDLabel";
-            this.LoAIDLabel.Size = new System.Drawing.Size(130, 25);
+            this.LoAIDLabel.Size = new System.Drawing.Size(130, 24);
             this.LoAIDLabel.TabIndex = 2;
             this.LoAIDLabel.Text = "LoA ID";
             this.LoAIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1670,7 +1686,7 @@ namespace WindowsFormsApp1
             // 
             this.LoaIDTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LoaIDTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.LoaIDTextBox.Location = new System.Drawing.Point(441, 113);
+            this.LoaIDTextBox.Location = new System.Drawing.Point(441, 111);
             this.LoaIDTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.LoaIDTextBox.Multiline = true;
             this.LoaIDTextBox.Name = "LoaIDTextBox";
@@ -1696,7 +1712,7 @@ namespace WindowsFormsApp1
             this.projectPersonalDataLabel.AutoSize = true;
             this.projectPersonalDataLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectPersonalDataLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.projectPersonalDataLabel.Location = new System.Drawing.Point(26, 143);
+            this.projectPersonalDataLabel.Location = new System.Drawing.Point(26, 141);
             this.projectPersonalDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectPersonalDataLabel.Name = "projectPersonalDataLabel";
             this.projectPersonalDataLabel.Size = new System.Drawing.Size(194, 24);
@@ -1709,7 +1725,7 @@ namespace WindowsFormsApp1
             this.projectOrderDataLabel.AutoSize = true;
             this.projectOrderDataLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectOrderDataLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.projectOrderDataLabel.Location = new System.Drawing.Point(26, 338);
+            this.projectOrderDataLabel.Location = new System.Drawing.Point(26, 333);
             this.projectOrderDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectOrderDataLabel.Name = "projectOrderDataLabel";
             this.projectOrderDataLabel.Size = new System.Drawing.Size(171, 24);
@@ -1722,7 +1738,7 @@ namespace WindowsFormsApp1
             this.projectCostsLabel.AutoSize = true;
             this.projectCostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectCostsLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.projectCostsLabel.Location = new System.Drawing.Point(26, 478);
+            this.projectCostsLabel.Location = new System.Drawing.Point(26, 471);
             this.projectCostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectCostsLabel.Name = "projectCostsLabel";
             this.projectCostsLabel.Size = new System.Drawing.Size(122, 24);
@@ -1735,7 +1751,7 @@ namespace WindowsFormsApp1
             this.scopeLocationLabel.AutoSize = true;
             this.scopeLocationLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.scopeLocationLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.scopeLocationLabel.Location = new System.Drawing.Point(441, 143);
+            this.scopeLocationLabel.Location = new System.Drawing.Point(441, 141);
             this.scopeLocationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.scopeLocationLabel.Name = "scopeLocationLabel";
             this.scopeLocationLabel.Size = new System.Drawing.Size(157, 24);
@@ -1748,8 +1764,12 @@ namespace WindowsFormsApp1
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.insertProjectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.insertProjectButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.insertProjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(116)))), ((int)(((byte)(150)))));
+            this.insertProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            this.insertProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.insertProjectButton.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.insertProjectButton.Location = new System.Drawing.Point(869, 673);
+            this.insertProjectButton.Location = new System.Drawing.Point(869, 663);
             this.insertProjectButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.insertProjectButton.Name = "insertProjectButton";
             this.insertProjectButton.Size = new System.Drawing.Size(93, 44);
@@ -1764,7 +1784,7 @@ namespace WindowsFormsApp1
             this.projectOwnerLabel.Location = new System.Drawing.Point(441, 30);
             this.projectOwnerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.projectOwnerLabel.Name = "projectOwnerLabel";
-            this.projectOwnerLabel.Size = new System.Drawing.Size(130, 25);
+            this.projectOwnerLabel.Size = new System.Drawing.Size(130, 24);
             this.projectOwnerLabel.TabIndex = 48;
             this.projectOwnerLabel.Text = "Project Owner";
             this.projectOwnerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -1776,7 +1796,7 @@ namespace WindowsFormsApp1
             this.projectOwnerComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projectOwnerComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
             this.projectOwnerComboBox.FormattingEnabled = true;
-            this.projectOwnerComboBox.Location = new System.Drawing.Point(441, 58);
+            this.projectOwnerComboBox.Location = new System.Drawing.Point(441, 57);
             this.projectOwnerComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.projectOwnerComboBox.Name = "projectOwnerComboBox";
             this.projectOwnerComboBox.Size = new System.Drawing.Size(363, 32);
@@ -1792,7 +1812,7 @@ namespace WindowsFormsApp1
             // 
             this.tocTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tocTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
-            this.tocTextBox.Location = new System.Drawing.Point(26, 393);
+            this.tocTextBox.Location = new System.Drawing.Point(26, 387);
             this.tocTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tocTextBox.Name = "tocTextBox";
             this.tocTextBox.Size = new System.Drawing.Size(363, 30);
@@ -2030,28 +2050,28 @@ namespace WindowsFormsApp1
             this.entryCurData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.entryCurData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.entryCurData.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle22.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle22.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle22.SelectionForeColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle22.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.entryCurData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle73.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle73.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle73.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle73.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle73.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle73.SelectionForeColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle73.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.entryCurData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle73;
             this.entryCurData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.entryCurData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.countryDataGridViewTextBoxColumn,
             this.codeDataGridViewTextBoxColumn});
             this.entryCurData.DataSource = this.rkCurrencyNameBindingSource;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle23.Padding = new System.Windows.Forms.Padding(1, 2, 1, 2);
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.entryCurData.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle74.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle74.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle74.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle74.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle74.Padding = new System.Windows.Forms.Padding(1, 2, 1, 2);
+            dataGridViewCellStyle74.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle74.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle74.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.entryCurData.DefaultCellStyle = dataGridViewCellStyle74;
             this.entryCurData.Location = new System.Drawing.Point(22, 11);
             this.entryCurData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.entryCurData.Name = "entryCurData";
@@ -2167,15 +2187,15 @@ namespace WindowsFormsApp1
             this.iDDataGridViewTextBoxColumn1,
             this.dInameDataGridViewTextBoxColumn});
             this.DIcatData.DataSource = this.rkDIcatBindingSource;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle24.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DIcatData.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle75.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle75.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle75.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle75.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle75.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle75.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle75.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle75.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DIcatData.DefaultCellStyle = dataGridViewCellStyle75;
             this.DIcatData.Location = new System.Drawing.Point(20, 15);
             this.DIcatData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DIcatData.Name = "DIcatData";
@@ -2295,15 +2315,15 @@ namespace WindowsFormsApp1
             this.nameDataGridViewTextBoxColumn,
             this.statusDataGridViewCheckBoxColumn});
             this.nccData.DataSource = this.rkNCCBindingSource;
-            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle25.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle25.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle25.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
-            dataGridViewCellStyle25.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle25.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle25.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.nccData.DefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle76.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle76.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle76.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle76.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle76.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle76.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle76.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle76.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.nccData.DefaultCellStyle = dataGridViewCellStyle76;
             this.nccData.Location = new System.Drawing.Point(20, 15);
             this.nccData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.nccData.Name = "nccData";
@@ -2437,15 +2457,15 @@ namespace WindowsFormsApp1
             this.projOwnerData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.projOwnerData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.projOwnerData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle26.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle26.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle26.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
-            dataGridViewCellStyle26.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle26.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle26.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.projOwnerData.DefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle77.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle77.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle77.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle77.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle77.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle77.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle77.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle77.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.projOwnerData.DefaultCellStyle = dataGridViewCellStyle77;
             this.projOwnerData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.projOwnerData.Location = new System.Drawing.Point(0, 0);
             this.projOwnerData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -2544,15 +2564,15 @@ namespace WindowsFormsApp1
             this.orgUnitData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.orgUnitData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.orgUnitData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle27.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle27.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
-            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.orgUnitData.DefaultCellStyle = dataGridViewCellStyle27;
+            dataGridViewCellStyle78.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle78.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle78.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle78.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle78.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle78.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle78.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle78.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.orgUnitData.DefaultCellStyle = dataGridViewCellStyle78;
             this.orgUnitData.Location = new System.Drawing.Point(11, 14);
             this.orgUnitData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.orgUnitData.Name = "orgUnitData";
@@ -2651,29 +2671,29 @@ namespace WindowsFormsApp1
             this.wtgData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.wtgData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.wtgData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle28.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle28.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.wtgData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle28;
+            dataGridViewCellStyle79.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle79.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle79.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle79.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle79.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle79.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle79.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.wtgData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle79;
             this.wtgData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.wtgData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn3,
             this.nameDataGridViewTextBoxColumn1,
             this.iDstatusDataGridViewCheckBoxColumn});
             this.wtgData.DataSource = this.wTGtypeBindingSource;
-            dataGridViewCellStyle29.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle29.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle29.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle29.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle29.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
-            dataGridViewCellStyle29.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle29.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle29.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.wtgData.DefaultCellStyle = dataGridViewCellStyle29;
+            dataGridViewCellStyle80.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle80.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle80.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle80.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle80.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle80.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle80.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle80.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.wtgData.DefaultCellStyle = dataGridViewCellStyle80;
             this.wtgData.Location = new System.Drawing.Point(11, 14);
             this.wtgData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.wtgData.Name = "wtgData";
@@ -2817,35 +2837,35 @@ namespace WindowsFormsApp1
             this.ownerData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.ownerData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.ownerData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle30.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle30.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle30.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle30.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle30.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle30.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle30.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ownerData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle30;
+            dataGridViewCellStyle81.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle81.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle81.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle81.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle81.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle81.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle81.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ownerData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle81;
             this.ownerData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ownerData.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle82.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle82.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle82.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle82.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle82.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle82.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle82.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ownerData.DefaultCellStyle = dataGridViewCellStyle82;
             this.ownerData.Location = new System.Drawing.Point(10, 13);
             this.ownerData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.ownerData.Name = "ownerData";
-            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle32.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle32.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle32.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle32.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ownerData.RowHeadersDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle83.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle83.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle83.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle83.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle83.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle83.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle83.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle83.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ownerData.RowHeadersDefaultCellStyle = dataGridViewCellStyle83;
             this.ownerData.Size = new System.Drawing.Size(479, 626);
             this.ownerData.TabIndex = 0;
             // 
@@ -3077,14 +3097,14 @@ namespace WindowsFormsApp1
             this.userData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.userData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.userData.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.userData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle84.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle84.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle84.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle84.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle84.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle84.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle84.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.userData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle84;
             this.userData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.userData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.userNameDataGridViewTextBoxColumn,
@@ -3098,15 +3118,15 @@ namespace WindowsFormsApp1
             this.iDDataGridViewTextBoxColumn4,
             this.iDcatDataGridViewTextBoxColumn});
             this.userData.DataSource = this.rkusersBindingSource;
-            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle34.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle34.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle34.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle34.Padding = new System.Windows.Forms.Padding(1, 4, 1, 4);
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userData.DefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle85.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle85.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle85.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle85.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle85.Padding = new System.Windows.Forms.Padding(1, 4, 1, 4);
+            dataGridViewCellStyle85.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle85.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle85.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.userData.DefaultCellStyle = dataGridViewCellStyle85;
             this.userData.Location = new System.Drawing.Point(13, 12);
             this.userData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userData.Name = "userData";
@@ -3219,6 +3239,17 @@ namespace WindowsFormsApp1
             // 
             this.rkusersBindingSource1.DataMember = "rk_users";
             this.rkusersBindingSource1.DataSource = this.dataSet1BindingSource;
+            // 
+            // bUCurrencySwitch
+            // 
+            this.bUCurrencySwitch.AutoSize = true;
+            this.bUCurrencySwitch.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.bUCurrencySwitch.Location = new System.Drawing.Point(442, 633);
+            this.bUCurrencySwitch.Name = "bUCurrencySwitch";
+            this.bUCurrencySwitch.Size = new System.Drawing.Size(226, 24);
+            this.bUCurrencySwitch.TabIndex = 49;
+            this.bUCurrencySwitch.Text = "BU Currency is Default";
+            this.bUCurrencySwitch.UseVisualStyleBackColor = true;
             // 
             // executionForm
             // 
@@ -3548,5 +3579,6 @@ namespace WindowsFormsApp1
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private CheckBox bUCurrencySwitch;
     }
 }
