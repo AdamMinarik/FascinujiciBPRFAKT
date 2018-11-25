@@ -61,3 +61,7 @@ C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\Fas
 C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.application
 C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.manifest
 C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.application
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.manifest
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.application
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe.manifest
+F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.application
