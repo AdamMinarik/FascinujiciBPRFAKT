@@ -8,20 +8,20 @@
         <beforeApplicationStartup />
       </update>
     </subscription>
-    <deploymentProvider codebase="http://desktop-jvcbjhu/RiskDatabase/WindowsFormsApp1.application" />
+    <deploymentProvider codebase="http://dell-xps-denis/RiskDatabase/WindowsFormsApp1.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
     <framework targetVersion="4.6.1" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="WindowsFormsApp1.exe.manifest" size="3575">
+    <dependentAssembly dependencyType="install" codebase="WindowsFormsApp1.exe.manifest" size="3509">
       <assemblyIdentity name="WindowsFormsApp1.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>j9e7oHuM5mMMTlsg4fnrW8iTCbuXv9gSpR0WavDKjRU=</dsig:DigestValue>
+        <dsig:DigestValue>W44YYB5ybLv16kEiPRV2RbV0aosxx5naJZb2r4f4H7E=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
