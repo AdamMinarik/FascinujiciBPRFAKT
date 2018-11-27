@@ -17,6 +17,7 @@ namespace WindowsFormsApp1
     {
         private ModelManager modelManager;
         private EProjectItemList itemsList;
+        private DataGridViewButtonColumn riskDetailButton;
 
 
         public ExecRolog(ExecutionUser user, ExecutionProject execProject)
@@ -28,6 +29,16 @@ namespace WindowsFormsApp1
             locationLabel.Text = execProject.name;
 
             setROlogGridView(itemsList);
+            riskDetailButton = new DataGridViewButtonColumn();
+            riskDetailButton.Name = "Open";
+            riskDetailButton.Text = "Open Risk..";
+            riskDetailButton.UseColumnTextForButtonValue = true;
+
+            if (rologGridView.Columns["Open"] == null)
+            {
+                rologGridView.Columns.Insert(0, riskDetailButton);
+            }
+
         }
 
         public void setLocationLabel(String value)
@@ -163,18 +174,29 @@ namespace WindowsFormsApp1
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void rologGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            int riskID;
+            ERisk riskItem;
+            // Ignore clicks that are not in our 
+            if (e.ColumnIndex == rologGridView.Columns["Open"].Index && e.RowIndex >= 0)
+            {
+                //get projectID from the list
+                riskID = (int)rologGridView.Rows[e.RowIndex].Cells[1].Value;
+                //get project object from mediator
+                riskItem = (ERisk)itemsList.getItem(riskID);
+                execROlogTabControl.SelectedIndex = 2;
+                setRiskDetail(riskItem);
+            }
         }
 
-
-
+       // SETS GRIDVIEW WITH PROJECT RISKS
         private void setROlogGridView (EProjectItemList itemList)
         {
             DataTable dt = new DataTable();
 
-            dt.Columns.Add("ID", typeof(string));
+            dt.Columns.Add("ID", typeof(int));
+            dt.Columns.Add("ExcelID", typeof(string));
             dt.Columns.Add("Name", typeof(string));
             dt.Columns.Add("Status", typeof(string));
             dt.Columns.Add("Risk Owner", typeof(string));
@@ -189,20 +211,69 @@ namespace WindowsFormsApp1
             {
                 DataRow NewRow = dt.NewRow();
                 NewRow[0] = item.itemID;
-                NewRow[1] = item.itemName;
-                NewRow[2] = item.itemStatusID;
-                NewRow[3] = item.riskOwnerID;
-                NewRow[4] = item.monetaryValueBefore;
-                NewRow[5] = item.percentageBefore;
-                NewRow[6] = (item.monetaryValueBefore * item.percentageBefore) / 100;
-                NewRow[7] = item.monetaryValueAfter;
-                NewRow[8] = item.percentageAfter;
-                NewRow[9] = (item.monetaryValueAfter * item.percentageAfter) / 100;
+                NewRow[1] = item.excelID;
+                NewRow[2] = item.itemName;
+                NewRow[3] = item.itemStatusID;
+                NewRow[4] = item.riskOwnerID;
+                NewRow[5] = item.monetaryValueBefore;
+                NewRow[6] = item.percentageBefore;
+                NewRow[7] = (item.monetaryValueBefore * item.percentageBefore) / 100;
+                NewRow[8] = item.monetaryValueAfter;
+                NewRow[9] = item.percentageAfter;
+                NewRow[10] = (item.monetaryValueAfter * item.percentageAfter) / 100;
 
                 dt.Rows.Add(NewRow);
             }
 
             rologGridView.DataSource = dt;
+
+        }
+
+        private void riskNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void setRiskDetail(ERisk riskItem)
+        {
+            indivRiskIDLabel.Text = riskItem.excelID.ToString();
+            riskNameTextBox.Text = riskItem.itemName.ToString();
+            statusComboBox.SelectedIndex = riskItem.itemStatusID;
+            createdDateTimePicker.Text = riskItem.createDate.ToString();
+            updatedDateTimePicker.Text = riskItem.updateDate.ToString();
+            if (riskItem.customerShareID == 1)
+            {
+                canBeSharedCheckBox.Checked = true;
+            }
+            else
+            {
+                canBeSharedCheckBox.Checked = false;
+            };
+            mainRootCauseTextBox.Text = riskItem.mainRootCause.ToString();
+            otherRootCausesTextBox.Text = riskItem.otherRootCause.ToString();
+            categoryComboBox.Text = riskItem.categoryID.ToString();
+            probabilityBeforeResponseTextBox.Text = riskItem.percentageBefore.ToString();
+            responseStrategyComboBox.SelectedItem = riskItem.respStratRootCauseID;
+            riskActionOwnerComboBox.SelectedItem = riskItem.actionOwnerRootCauseID;
+            rootCauseActionsTextBox.Text = riskItem.actionsRootCause.ToString();
+            responseCostTextBox.Text = riskItem.costRootCause.ToString();
+            responsePlanDateTimePicker.Text = riskItem.ResponseRootCauseDate.ToString();
+            probabilityAfterResponseTextBox.Text = riskItem.percentageAfter.ToString();
+
+
+
+
+        }
+
+        private void ExecRolog_Load(object sender, EventArgs e)
+        {
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.ListOfOwners'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.listOfOwnersTableAdapter.Fill(this.dataSet1.ListOfOwners);
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_resp_Root'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.rk_resp_RootTableAdapter.Fill(this.dataSet1.rk_resp_Root);
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_statusOfRisk'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.rk_statusOfRiskTableAdapter.Fill(this.dataSet1.rk_statusOfRisk);
 
         }
     }

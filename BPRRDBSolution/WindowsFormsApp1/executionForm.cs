@@ -1180,5 +1180,11 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void projectsData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }

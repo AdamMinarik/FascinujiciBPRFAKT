@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExecRolog));
             this.locationPanel = new System.Windows.Forms.Panel();
             this.readPictureBox = new System.Windows.Forms.PictureBox();
@@ -229,34 +230,34 @@
             this.label57 = new System.Windows.Forms.Label();
             this.label58 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
-            this.textBox36 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker8 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.rootCauseActionsTextBox = new System.Windows.Forms.TextBox();
+            this.responsePlanDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.responseStrategyComboBox = new System.Windows.Forms.ComboBox();
             this.label60 = new System.Windows.Forms.Label();
-            this.comboBox12 = new System.Windows.Forms.ComboBox();
-            this.textBox37 = new System.Windows.Forms.TextBox();
-            this.textBox38 = new System.Windows.Forms.TextBox();
+            this.riskActionOwnerComboBox = new System.Windows.Forms.ComboBox();
+            this.rootCauseCostTextBox = new System.Windows.Forms.TextBox();
+            this.probabilityAfterResponseTextBox = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel9 = new System.Windows.Forms.TableLayoutPanel();
             this.label49 = new System.Windows.Forms.Label();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
-            this.textBox24 = new System.Windows.Forms.TextBox();
-            this.textBox25 = new System.Windows.Forms.TextBox();
-            this.comboBox10 = new System.Windows.Forms.ComboBox();
-            this.textBox35 = new System.Windows.Forms.TextBox();
+            this.rootCauseTextBox = new System.Windows.Forms.TextBox();
+            this.otherRootCausesTextBox = new System.Windows.Forms.TextBox();
+            this.categoryComboBox = new System.Windows.Forms.ComboBox();
+            this.probabilityBeforeResponseTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label61 = new System.Windows.Forms.Label();
             this.label62 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
-            this.textBox39 = new System.Windows.Forms.TextBox();
-            this.comboBox13 = new System.Windows.Forms.ComboBox();
+            this.riskDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.riskOwnerComboBox = new System.Windows.Forms.ComboBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox45 = new System.Windows.Forms.TextBox();
-            this.textBox46 = new System.Windows.Forms.TextBox();
+            this.calculationDescAfterTextBox = new System.Windows.Forms.TextBox();
+            this.monetaryValueAfterTextBox = new System.Windows.Forms.TextBox();
             this.label73 = new System.Windows.Forms.Label();
             this.label74 = new System.Windows.Forms.Label();
             this.label75 = new System.Windows.Forms.Label();
@@ -265,24 +266,24 @@
             this.label78 = new System.Windows.Forms.Label();
             this.label79 = new System.Windows.Forms.Label();
             this.label80 = new System.Windows.Forms.Label();
-            this.textBox47 = new System.Windows.Forms.TextBox();
-            this.dateTimePicker9 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox16 = new System.Windows.Forms.ComboBox();
+            this.impactActionsTextBox = new System.Windows.Forms.TextBox();
+            this.responsePlanImplementationDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.reStrategyImpactComboBox = new System.Windows.Forms.ComboBox();
             this.label81 = new System.Windows.Forms.Label();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
-            this.textBox48 = new System.Windows.Forms.TextBox();
-            this.textBox49 = new System.Windows.Forms.TextBox();
+            this.impactActionOwnerComboBox = new System.Windows.Forms.ComboBox();
+            this.responseCostEstimateTextBox = new System.Windows.Forms.TextBox();
+            this.daysAfterTextBox = new System.Windows.Forms.TextBox();
             this.label82 = new System.Windows.Forms.Label();
             this.label83 = new System.Windows.Forms.Label();
-            this.dateTimePicker10 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker11 = new System.Windows.Forms.DateTimePicker();
+            this.impactStartDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.impactEndDateDateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox40 = new System.Windows.Forms.TextBox();
-            this.textBox41 = new System.Windows.Forms.TextBox();
-            this.textBox42 = new System.Windows.Forms.TextBox();
-            this.textBox43 = new System.Windows.Forms.TextBox();
-            this.textBox44 = new System.Windows.Forms.TextBox();
-            this.comboBox14 = new System.Windows.Forms.ComboBox();
+            this.formulaBeforeDescTextBox = new System.Windows.Forms.TextBox();
+            this.monetaryValueBeforeTextBox = new System.Windows.Forms.TextBox();
+            this.monetaryValueFormulaTextBox = new System.Windows.Forms.TextBox();
+            this.timeImpactsInDaysBeforeTextBox = new System.Windows.Forms.TextBox();
+            this.impactDescriptionTextBox = new System.Windows.Forms.TextBox();
+            this.wbsComboBox = new System.Windows.Forms.ComboBox();
             this.label64 = new System.Windows.Forms.Label();
             this.label65 = new System.Windows.Forms.Label();
             this.label66 = new System.Windows.Forms.Label();
@@ -291,29 +292,29 @@
             this.label69 = new System.Windows.Forms.Label();
             this.label70 = new System.Windows.Forms.Label();
             this.label71 = new System.Windows.Forms.Label();
-            this.comboBox15 = new System.Windows.Forms.ComboBox();
+            this.phaseComboBox = new System.Windows.Forms.ComboBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
+            this.qualityCheckBox = new System.Windows.Forms.CheckBox();
+            this.safetyCheckBox = new System.Windows.Forms.CheckBox();
+            this.customerSatisfactionCheckBox = new System.Windows.Forms.CheckBox();
+            this.timeCheckBox = new System.Windows.Forms.CheckBox();
+            this.costCheckBox = new System.Windows.Forms.CheckBox();
             this.label72 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox30 = new System.Windows.Forms.TextBox();
-            this.textBox31 = new System.Windows.Forms.TextBox();
-            this.textBox32 = new System.Windows.Forms.TextBox();
+            this.remarksTextBox = new System.Windows.Forms.TextBox();
+            this.expectedTimeImpactInDaysAfterTextBox = new System.Windows.Forms.TextBox();
+            this.timeImpactInDaysAfterTextBox = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
             this.label47 = new System.Windows.Forms.Label();
-            this.textBox33 = new System.Windows.Forms.TextBox();
-            this.textBox34 = new System.Windows.Forms.TextBox();
+            this.aggregatedMonateryValueAfterTextBox = new System.Windows.Forms.TextBox();
+            this.expectedMonateryValueAfterTextBox = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
-            this.textBox26 = new System.Windows.Forms.TextBox();
-            this.textBox27 = new System.Windows.Forms.TextBox();
+            this.expectedTimeImpactInDaysBeforeTextBox = new System.Windows.Forms.TextBox();
+            this.timeImpactInDaysBeforeTextBox = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -323,23 +324,23 @@
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
-            this.textBox28 = new System.Windows.Forms.TextBox();
-            this.textBox29 = new System.Windows.Forms.TextBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.expectedMonetaryValueBeforeTextBox = new System.Windows.Forms.TextBox();
+            this.aggregatedMonateryValueBeforeTextBox = new System.Windows.Forms.TextBox();
+            this.nccComboBox = new System.Windows.Forms.ComboBox();
+            this.operatingUnitComboBox = new System.Windows.Forms.ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
+            this.indivRiskIDLabel = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.textBox23 = new System.Windows.Forms.TextBox();
+            this.statusComboBox = new System.Windows.Forms.ComboBox();
+            this.riskNameTextBox = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.dateTimePicker6 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker7 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.createdDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.updatedDateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.canBeSharedCheckBox = new System.Windows.Forms.CheckBox();
             this.createOpportunityTab = new System.Windows.Forms.TabPage();
             this.createERiskTab = new System.Windows.Forms.TabPage();
             this.createUncTab = new System.Windows.Forms.TabPage();
@@ -347,6 +348,13 @@
             this.permissionTab = new System.Windows.Forms.TabPage();
             this.approvalTab = new System.Windows.Forms.TabPage();
             this.infoTab = new System.Windows.Forms.TabPage();
+            this.dataSet1 = new WindowsFormsApp1.DataSet1();
+            this.rkstatusOfRiskBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rk_statusOfRiskTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_statusOfRiskTableAdapter();
+            this.rkrespRootBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rk_resp_RootTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_resp_RootTableAdapter();
+            this.listOfOwnersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.listOfOwnersTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.ListOfOwnersTableAdapter();
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -399,6 +407,10 @@
             this.tableLayoutPanel7.SuspendLayout();
             this.panel8.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkstatusOfRiskBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkrespRootBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listOfOwnersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // locationPanel
@@ -516,7 +528,7 @@
             this.buttonPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.buttonPanel.Location = new System.Drawing.Point(0, 41);
             this.buttonPanel.Name = "buttonPanel";
-            this.buttonPanel.Size = new System.Drawing.Size(275, 649);
+            this.buttonPanel.Size = new System.Drawing.Size(275, 908);
             this.buttonPanel.TabIndex = 2;
             // 
             // approvalFuncButton
@@ -659,7 +671,7 @@
             this.quitButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(116)))), ((int)(((byte)(150)))));
             this.quitButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.quitButton.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold);
-            this.quitButton.Location = new System.Drawing.Point(0, 601);
+            this.quitButton.Location = new System.Drawing.Point(0, 860);
             this.quitButton.Name = "quitButton";
             this.quitButton.Size = new System.Drawing.Size(275, 46);
             this.quitButton.TabIndex = 6;
@@ -818,7 +830,7 @@
             this.execROlogTabControl.Location = new System.Drawing.Point(275, 41);
             this.execROlogTabControl.Name = "execROlogTabControl";
             this.execROlogTabControl.SelectedIndex = 0;
-            this.execROlogTabControl.Size = new System.Drawing.Size(869, 649);
+            this.execROlogTabControl.Size = new System.Drawing.Size(869, 908);
             this.execROlogTabControl.TabIndex = 2;
             // 
             // overviewTab
@@ -1291,7 +1303,7 @@
             this.rologGridView.Name = "rologGridView";
             this.rologGridView.Size = new System.Drawing.Size(841, 321);
             this.rologGridView.TabIndex = 0;
-            this.rologGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.rologGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rologGridView_CellClick);
             // 
             // projImpactsTab
             // 
@@ -2757,7 +2769,7 @@
             this.createPITab.Margin = new System.Windows.Forms.Padding(2);
             this.createPITab.Name = "createPITab";
             this.createPITab.Padding = new System.Windows.Forms.Padding(2);
-            this.createPITab.Size = new System.Drawing.Size(861, 623);
+            this.createPITab.Size = new System.Drawing.Size(861, 882);
             this.createPITab.TabIndex = 2;
             this.createPITab.Text = "Create Project Impact";
             this.createPITab.UseVisualStyleBackColor = true;
@@ -2771,7 +2783,7 @@
             this.tabControlRisks.Location = new System.Drawing.Point(2, 61);
             this.tabControlRisks.Name = "tabControlRisks";
             this.tabControlRisks.SelectedIndex = 0;
-            this.tabControlRisks.Size = new System.Drawing.Size(857, 353);
+            this.tabControlRisks.Size = new System.Drawing.Size(857, 612);
             this.tabControlRisks.TabIndex = 0;
             // 
             // tabPage1
@@ -2781,7 +2793,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(849, 327);
+            this.tabPage1.Size = new System.Drawing.Size(849, 586);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Root Causes";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -2798,13 +2810,13 @@
             this.tableLayoutPanel10.Controls.Add(this.label57, 1, 4);
             this.tableLayoutPanel10.Controls.Add(this.label58, 1, 5);
             this.tableLayoutPanel10.Controls.Add(this.label59, 1, 6);
-            this.tableLayoutPanel10.Controls.Add(this.textBox36, 2, 3);
-            this.tableLayoutPanel10.Controls.Add(this.dateTimePicker8, 2, 5);
-            this.tableLayoutPanel10.Controls.Add(this.comboBox11, 2, 1);
+            this.tableLayoutPanel10.Controls.Add(this.rootCauseActionsTextBox, 2, 3);
+            this.tableLayoutPanel10.Controls.Add(this.responsePlanDateTimePicker, 2, 5);
+            this.tableLayoutPanel10.Controls.Add(this.responseStrategyComboBox, 2, 1);
             this.tableLayoutPanel10.Controls.Add(this.label60, 1, 1);
-            this.tableLayoutPanel10.Controls.Add(this.comboBox12, 2, 2);
-            this.tableLayoutPanel10.Controls.Add(this.textBox37, 2, 4);
-            this.tableLayoutPanel10.Controls.Add(this.textBox38, 2, 6);
+            this.tableLayoutPanel10.Controls.Add(this.riskActionOwnerComboBox, 2, 2);
+            this.tableLayoutPanel10.Controls.Add(this.rootCauseCostTextBox, 2, 4);
+            this.tableLayoutPanel10.Controls.Add(this.probabilityAfterResponseTextBox, 2, 6);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
             this.tableLayoutPanel10.Location = new System.Drawing.Point(445, 3);
@@ -2817,7 +2829,7 @@
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.19263F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.532663F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.28141F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(401, 321);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(401, 580);
             this.tableLayoutPanel10.TabIndex = 2;
             // 
             // label54
@@ -2826,23 +2838,23 @@
             this.label54.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label54.Location = new System.Drawing.Point(11, 0);
             this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(74, 10);
+            this.label54.Size = new System.Drawing.Size(74, 19);
             this.label54.TabIndex = 5;
             this.label54.Text = "Root Cause Response";
             // 
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(11, 25);
+            this.label55.Location = new System.Drawing.Point(11, 47);
             this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(109, 16);
+            this.label55.Size = new System.Drawing.Size(109, 18);
             this.label55.TabIndex = 7;
             this.label55.Text = "Risk Action Owner";
             // 
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(11, 41);
+            this.label56.Location = new System.Drawing.Point(11, 76);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(49, 18);
             this.label56.TabIndex = 8;
@@ -2851,89 +2863,95 @@
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(11, 102);
+            this.label57.Location = new System.Drawing.Point(11, 186);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(92, 16);
+            this.label57.Size = new System.Drawing.Size(92, 29);
             this.label57.TabIndex = 9;
             this.label57.Text = "Response Cost Estimate";
             // 
             // label58
             // 
             this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(11, 118);
+            this.label58.Location = new System.Drawing.Point(11, 215);
             this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(93, 20);
+            this.label58.Size = new System.Drawing.Size(93, 36);
             this.label58.TabIndex = 10;
             this.label58.Text = "Response Plan Implementation";
             // 
             // label59
             // 
             this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(11, 138);
+            this.label59.Location = new System.Drawing.Point(11, 252);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(101, 36);
             this.label59.TabIndex = 11;
             this.label59.Text = "Probability after Response";
             // 
-            // textBox36
+            // rootCauseActionsTextBox
             // 
-            this.textBox36.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox36.Location = new System.Drawing.Point(130, 44);
-            this.textBox36.Multiline = true;
-            this.textBox36.Name = "textBox36";
-            this.textBox36.Size = new System.Drawing.Size(268, 55);
-            this.textBox36.TabIndex = 12;
+            this.rootCauseActionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rootCauseActionsTextBox.Location = new System.Drawing.Point(130, 79);
+            this.rootCauseActionsTextBox.Multiline = true;
+            this.rootCauseActionsTextBox.Name = "rootCauseActionsTextBox";
+            this.rootCauseActionsTextBox.Size = new System.Drawing.Size(268, 104);
+            this.rootCauseActionsTextBox.TabIndex = 12;
             // 
-            // dateTimePicker8
+            // responsePlanDateTimePicker
             // 
-            this.dateTimePicker8.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker8.Location = new System.Drawing.Point(130, 121);
-            this.dateTimePicker8.Name = "dateTimePicker8";
-            this.dateTimePicker8.Size = new System.Drawing.Size(113, 21);
-            this.dateTimePicker8.TabIndex = 13;
+            this.responsePlanDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.responsePlanDateTimePicker.Location = new System.Drawing.Point(130, 218);
+            this.responsePlanDateTimePicker.Name = "responsePlanDateTimePicker";
+            this.responsePlanDateTimePicker.Size = new System.Drawing.Size(113, 21);
+            this.responsePlanDateTimePicker.TabIndex = 13;
             // 
-            // comboBox11
+            // responseStrategyComboBox
             // 
-            this.comboBox11.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox11.FormattingEnabled = true;
-            this.comboBox11.Location = new System.Drawing.Point(130, 13);
-            this.comboBox11.Name = "comboBox11";
-            this.comboBox11.Size = new System.Drawing.Size(268, 24);
-            this.comboBox11.TabIndex = 14;
+            this.responseStrategyComboBox.DataSource = this.rkrespRootBindingSource;
+            this.responseStrategyComboBox.DisplayMember = "Response";
+            this.responseStrategyComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.responseStrategyComboBox.FormattingEnabled = true;
+            this.responseStrategyComboBox.Location = new System.Drawing.Point(130, 22);
+            this.responseStrategyComboBox.Name = "responseStrategyComboBox";
+            this.responseStrategyComboBox.Size = new System.Drawing.Size(268, 24);
+            this.responseStrategyComboBox.TabIndex = 14;
+            this.responseStrategyComboBox.ValueMember = "ID";
             // 
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(11, 10);
+            this.label60.Location = new System.Drawing.Point(11, 19);
             this.label60.Name = "label60";
-            this.label60.Size = new System.Drawing.Size(110, 15);
+            this.label60.Size = new System.Drawing.Size(110, 18);
             this.label60.TabIndex = 6;
             this.label60.Text = "Response Strategy";
             // 
-            // comboBox12
+            // riskActionOwnerComboBox
             // 
-            this.comboBox12.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox12.FormattingEnabled = true;
-            this.comboBox12.Location = new System.Drawing.Point(130, 28);
-            this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(268, 24);
-            this.comboBox12.TabIndex = 15;
+            this.riskActionOwnerComboBox.DataSource = this.listOfOwnersBindingSource;
+            this.riskActionOwnerComboBox.DisplayMember = "code";
+            this.riskActionOwnerComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.riskActionOwnerComboBox.FormattingEnabled = true;
+            this.riskActionOwnerComboBox.Location = new System.Drawing.Point(130, 50);
+            this.riskActionOwnerComboBox.Name = "riskActionOwnerComboBox";
+            this.riskActionOwnerComboBox.Size = new System.Drawing.Size(268, 24);
+            this.riskActionOwnerComboBox.TabIndex = 15;
+            this.riskActionOwnerComboBox.ValueMember = "ID";
             // 
-            // textBox37
+            // rootCauseCostTextBox
             // 
-            this.textBox37.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox37.Location = new System.Drawing.Point(130, 105);
-            this.textBox37.Name = "textBox37";
-            this.textBox37.Size = new System.Drawing.Size(268, 21);
-            this.textBox37.TabIndex = 16;
+            this.rootCauseCostTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rootCauseCostTextBox.Location = new System.Drawing.Point(130, 189);
+            this.rootCauseCostTextBox.Name = "rootCauseCostTextBox";
+            this.rootCauseCostTextBox.Size = new System.Drawing.Size(268, 21);
+            this.rootCauseCostTextBox.TabIndex = 16;
             // 
-            // textBox38
+            // probabilityAfterResponseTextBox
             // 
-            this.textBox38.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox38.Location = new System.Drawing.Point(130, 141);
-            this.textBox38.Name = "textBox38";
-            this.textBox38.Size = new System.Drawing.Size(268, 21);
-            this.textBox38.TabIndex = 17;
+            this.probabilityAfterResponseTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.probabilityAfterResponseTextBox.Location = new System.Drawing.Point(130, 255);
+            this.probabilityAfterResponseTextBox.Name = "probabilityAfterResponseTextBox";
+            this.probabilityAfterResponseTextBox.Size = new System.Drawing.Size(268, 21);
+            this.probabilityAfterResponseTextBox.TabIndex = 17;
             // 
             // tableLayoutPanel9
             // 
@@ -2946,27 +2964,27 @@
             this.tableLayoutPanel9.Controls.Add(this.label51, 0, 2);
             this.tableLayoutPanel9.Controls.Add(this.label52, 0, 3);
             this.tableLayoutPanel9.Controls.Add(this.label53, 0, 0);
-            this.tableLayoutPanel9.Controls.Add(this.textBox24, 1, 1);
-            this.tableLayoutPanel9.Controls.Add(this.textBox25, 1, 2);
-            this.tableLayoutPanel9.Controls.Add(this.comboBox10, 1, 3);
-            this.tableLayoutPanel9.Controls.Add(this.textBox35, 1, 4);
+            this.tableLayoutPanel9.Controls.Add(this.rootCauseTextBox, 1, 1);
+            this.tableLayoutPanel9.Controls.Add(this.otherRootCausesTextBox, 1, 2);
+            this.tableLayoutPanel9.Controls.Add(this.categoryComboBox, 1, 3);
+            this.tableLayoutPanel9.Controls.Add(this.probabilityBeforeResponseTextBox, 1, 4);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel9.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 5;
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.18258F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.57789F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.232759F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.43966F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.57286F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.72027F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.44891F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(442, 321);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(442, 580);
             this.tableLayoutPanel9.TabIndex = 1;
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(3, 139);
+            this.label49.Location = new System.Drawing.Point(3, 249);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(163, 18);
             this.label49.TabIndex = 3;
@@ -2975,7 +2993,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(3, 10);
+            this.label50.Location = new System.Drawing.Point(3, 18);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(100, 18);
             this.label50.TabIndex = 0;
@@ -2984,7 +3002,7 @@
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(3, 59);
+            this.label51.Location = new System.Drawing.Point(3, 102);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(112, 18);
             this.label51.TabIndex = 1;
@@ -2993,7 +3011,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(3, 105);
+            this.label52.Location = new System.Drawing.Point(3, 187);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(57, 18);
             this.label52.TabIndex = 2;
@@ -3005,45 +3023,45 @@
             this.label53.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label53.Location = new System.Drawing.Point(3, 0);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(153, 10);
+            this.label53.Size = new System.Drawing.Size(153, 18);
             this.label53.TabIndex = 4;
             this.label53.Text = "Root Causes Identification";
             // 
-            // textBox24
+            // rootCauseTextBox
             // 
-            this.textBox24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox24.Location = new System.Drawing.Point(172, 13);
-            this.textBox24.Multiline = true;
-            this.textBox24.Name = "textBox24";
-            this.textBox24.Size = new System.Drawing.Size(257, 43);
-            this.textBox24.TabIndex = 5;
+            this.rootCauseTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rootCauseTextBox.Location = new System.Drawing.Point(172, 21);
+            this.rootCauseTextBox.Multiline = true;
+            this.rootCauseTextBox.Name = "rootCauseTextBox";
+            this.rootCauseTextBox.Size = new System.Drawing.Size(257, 78);
+            this.rootCauseTextBox.TabIndex = 5;
             // 
-            // textBox25
+            // otherRootCausesTextBox
             // 
-            this.textBox25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox25.Location = new System.Drawing.Point(172, 62);
-            this.textBox25.Multiline = true;
-            this.textBox25.Name = "textBox25";
-            this.textBox25.Size = new System.Drawing.Size(257, 40);
-            this.textBox25.TabIndex = 6;
+            this.otherRootCausesTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.otherRootCausesTextBox.Location = new System.Drawing.Point(172, 105);
+            this.otherRootCausesTextBox.Multiline = true;
+            this.otherRootCausesTextBox.Name = "otherRootCausesTextBox";
+            this.otherRootCausesTextBox.Size = new System.Drawing.Size(257, 79);
+            this.otherRootCausesTextBox.TabIndex = 6;
             // 
-            // comboBox10
+            // categoryComboBox
             // 
-            this.comboBox10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox10.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.comboBox10.FormattingEnabled = true;
-            this.comboBox10.Location = new System.Drawing.Point(172, 108);
-            this.comboBox10.Name = "comboBox10";
-            this.comboBox10.Size = new System.Drawing.Size(257, 24);
-            this.comboBox10.TabIndex = 7;
+            this.categoryComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.categoryComboBox.Font = new System.Drawing.Font("Trebuchet MS", 8F);
+            this.categoryComboBox.FormattingEnabled = true;
+            this.categoryComboBox.Location = new System.Drawing.Point(172, 190);
+            this.categoryComboBox.Name = "categoryComboBox";
+            this.categoryComboBox.Size = new System.Drawing.Size(257, 24);
+            this.categoryComboBox.TabIndex = 7;
             // 
-            // textBox35
+            // probabilityBeforeResponseTextBox
             // 
-            this.textBox35.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox35.Location = new System.Drawing.Point(172, 142);
-            this.textBox35.Name = "textBox35";
-            this.textBox35.Size = new System.Drawing.Size(257, 21);
-            this.textBox35.TabIndex = 8;
+            this.probabilityBeforeResponseTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.probabilityBeforeResponseTextBox.Location = new System.Drawing.Point(172, 252);
+            this.probabilityBeforeResponseTextBox.Name = "probabilityBeforeResponseTextBox";
+            this.probabilityBeforeResponseTextBox.Size = new System.Drawing.Size(257, 21);
+            this.probabilityBeforeResponseTextBox.TabIndex = 8;
             // 
             // tabPage2
             // 
@@ -3051,7 +3069,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(849, 327);
+            this.tabPage2.Size = new System.Drawing.Size(849, 586);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Individual Risk";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -3064,8 +3082,8 @@
             this.tableLayoutPanel11.Controls.Add(this.label61, 0, 0);
             this.tableLayoutPanel11.Controls.Add(this.label62, 0, 1);
             this.tableLayoutPanel11.Controls.Add(this.label63, 0, 2);
-            this.tableLayoutPanel11.Controls.Add(this.textBox39, 1, 1);
-            this.tableLayoutPanel11.Controls.Add(this.comboBox13, 1, 2);
+            this.tableLayoutPanel11.Controls.Add(this.riskDescriptionTextBox, 1, 1);
+            this.tableLayoutPanel11.Controls.Add(this.riskOwnerComboBox, 1, 2);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
             this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 3);
@@ -3074,7 +3092,7 @@
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.350084F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.57789F));
             this.tableLayoutPanel11.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 81.07203F));
-            this.tableLayoutPanel11.Size = new System.Drawing.Size(843, 321);
+            this.tableLayoutPanel11.Size = new System.Drawing.Size(843, 580);
             this.tableLayoutPanel11.TabIndex = 1;
             // 
             // label61
@@ -3083,14 +3101,14 @@
             this.label61.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.label61.Location = new System.Drawing.Point(3, 0);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(107, 10);
+            this.label61.Size = new System.Drawing.Size(107, 18);
             this.label61.TabIndex = 5;
             this.label61.Text = "Risk Identification";
             // 
             // label62
             // 
             this.label62.AutoSize = true;
-            this.label62.Location = new System.Drawing.Point(3, 10);
+            this.label62.Location = new System.Drawing.Point(3, 19);
             this.label62.Name = "label62";
             this.label62.Size = new System.Drawing.Size(88, 18);
             this.label62.TabIndex = 6;
@@ -3099,28 +3117,28 @@
             // label63
             // 
             this.label63.AutoSize = true;
-            this.label63.Location = new System.Drawing.Point(3, 60);
+            this.label63.Location = new System.Drawing.Point(3, 109);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(70, 18);
             this.label63.TabIndex = 7;
             this.label63.Text = "Risk Owner";
             // 
-            // textBox39
+            // riskDescriptionTextBox
             // 
-            this.textBox39.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox39.Location = new System.Drawing.Point(243, 13);
-            this.textBox39.Multiline = true;
-            this.textBox39.Name = "textBox39";
-            this.textBox39.Size = new System.Drawing.Size(597, 44);
-            this.textBox39.TabIndex = 8;
+            this.riskDescriptionTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.riskDescriptionTextBox.Location = new System.Drawing.Point(243, 22);
+            this.riskDescriptionTextBox.Multiline = true;
+            this.riskDescriptionTextBox.Name = "riskDescriptionTextBox";
+            this.riskDescriptionTextBox.Size = new System.Drawing.Size(597, 84);
+            this.riskDescriptionTextBox.TabIndex = 8;
             // 
-            // comboBox13
+            // riskOwnerComboBox
             // 
-            this.comboBox13.FormattingEnabled = true;
-            this.comboBox13.Location = new System.Drawing.Point(243, 63);
-            this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(121, 24);
-            this.comboBox13.TabIndex = 9;
+            this.riskOwnerComboBox.FormattingEnabled = true;
+            this.riskOwnerComboBox.Location = new System.Drawing.Point(243, 112);
+            this.riskOwnerComboBox.Name = "riskOwnerComboBox";
+            this.riskOwnerComboBox.Size = new System.Drawing.Size(121, 24);
+            this.riskOwnerComboBox.TabIndex = 9;
             // 
             // tabPage3
             // 
@@ -3129,7 +3147,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(849, 327);
+            this.tabPage3.Size = new System.Drawing.Size(849, 586);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Direct Impact(s)";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -3140,8 +3158,8 @@
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 1.988389F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.4554F));
             this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 48.55621F));
-            this.tableLayoutPanel13.Controls.Add(this.textBox45, 2, 10);
-            this.tableLayoutPanel13.Controls.Add(this.textBox46, 2, 9);
+            this.tableLayoutPanel13.Controls.Add(this.calculationDescAfterTextBox, 2, 10);
+            this.tableLayoutPanel13.Controls.Add(this.monetaryValueAfterTextBox, 2, 9);
             this.tableLayoutPanel13.Controls.Add(this.label73, 1, 0);
             this.tableLayoutPanel13.Controls.Add(this.label74, 1, 2);
             this.tableLayoutPanel13.Controls.Add(this.label75, 1, 10);
@@ -3150,17 +3168,17 @@
             this.tableLayoutPanel13.Controls.Add(this.label78, 1, 4);
             this.tableLayoutPanel13.Controls.Add(this.label79, 1, 5);
             this.tableLayoutPanel13.Controls.Add(this.label80, 1, 6);
-            this.tableLayoutPanel13.Controls.Add(this.textBox47, 2, 3);
-            this.tableLayoutPanel13.Controls.Add(this.dateTimePicker9, 2, 5);
-            this.tableLayoutPanel13.Controls.Add(this.comboBox16, 2, 1);
+            this.tableLayoutPanel13.Controls.Add(this.impactActionsTextBox, 2, 3);
+            this.tableLayoutPanel13.Controls.Add(this.responsePlanImplementationDateTimePicker, 2, 5);
+            this.tableLayoutPanel13.Controls.Add(this.reStrategyImpactComboBox, 2, 1);
             this.tableLayoutPanel13.Controls.Add(this.label81, 1, 1);
-            this.tableLayoutPanel13.Controls.Add(this.comboBox17, 2, 2);
-            this.tableLayoutPanel13.Controls.Add(this.textBox48, 2, 4);
-            this.tableLayoutPanel13.Controls.Add(this.textBox49, 2, 6);
+            this.tableLayoutPanel13.Controls.Add(this.impactActionOwnerComboBox, 2, 2);
+            this.tableLayoutPanel13.Controls.Add(this.responseCostEstimateTextBox, 2, 4);
+            this.tableLayoutPanel13.Controls.Add(this.daysAfterTextBox, 2, 6);
             this.tableLayoutPanel13.Controls.Add(this.label82, 1, 7);
             this.tableLayoutPanel13.Controls.Add(this.label83, 1, 8);
-            this.tableLayoutPanel13.Controls.Add(this.dateTimePicker10, 2, 7);
-            this.tableLayoutPanel13.Controls.Add(this.dateTimePicker11, 2, 8);
+            this.tableLayoutPanel13.Controls.Add(this.impactStartDateDateTimePicker, 2, 7);
+            this.tableLayoutPanel13.Controls.Add(this.impactEndDateDateTimePicker, 2, 8);
             this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel13.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
             this.tableLayoutPanel13.Location = new System.Drawing.Point(445, 3);
@@ -3178,25 +3196,25 @@
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.025997F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.29116F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel13.Size = new System.Drawing.Size(401, 321);
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(401, 580);
             this.tableLayoutPanel13.TabIndex = 3;
             // 
-            // textBox45
+            // calculationDescAfterTextBox
             // 
-            this.textBox45.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox45.Location = new System.Drawing.Point(208, 170);
-            this.textBox45.Multiline = true;
-            this.textBox45.Name = "textBox45";
-            this.textBox45.Size = new System.Drawing.Size(190, 43);
-            this.textBox45.TabIndex = 24;
+            this.calculationDescAfterTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.calculationDescAfterTextBox.Location = new System.Drawing.Point(208, 300);
+            this.calculationDescAfterTextBox.Multiline = true;
+            this.calculationDescAfterTextBox.Name = "calculationDescAfterTextBox";
+            this.calculationDescAfterTextBox.Size = new System.Drawing.Size(190, 85);
+            this.calculationDescAfterTextBox.TabIndex = 24;
             // 
-            // textBox46
+            // monetaryValueAfterTextBox
             // 
-            this.textBox46.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox46.Location = new System.Drawing.Point(208, 155);
-            this.textBox46.Name = "textBox46";
-            this.textBox46.Size = new System.Drawing.Size(190, 21);
-            this.textBox46.TabIndex = 25;
+            this.monetaryValueAfterTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.monetaryValueAfterTextBox.Location = new System.Drawing.Point(208, 272);
+            this.monetaryValueAfterTextBox.Name = "monetaryValueAfterTextBox";
+            this.monetaryValueAfterTextBox.Size = new System.Drawing.Size(190, 21);
+            this.monetaryValueAfterTextBox.TabIndex = 25;
             // 
             // label73
             // 
@@ -3211,16 +3229,16 @@
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(10, 34);
+            this.label74.Location = new System.Drawing.Point(10, 47);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(109, 14);
+            this.label74.Size = new System.Drawing.Size(109, 18);
             this.label74.TabIndex = 7;
             this.label74.Text = "Risk Action Owner";
             // 
             // label75
             // 
             this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(10, 167);
+            this.label75.Location = new System.Drawing.Point(10, 297);
             this.label75.Name = "label75";
             this.label75.Size = new System.Drawing.Size(136, 18);
             this.label75.TabIndex = 19;
@@ -3229,7 +3247,7 @@
             // label76
             // 
             this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(10, 48);
+            this.label76.Location = new System.Drawing.Point(10, 73);
             this.label76.Name = "label76";
             this.label76.Size = new System.Drawing.Size(49, 18);
             this.label76.TabIndex = 8;
@@ -3238,146 +3256,146 @@
             // label77
             // 
             this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(10, 152);
+            this.label77.Location = new System.Drawing.Point(10, 269);
             this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(164, 15);
+            this.label77.Size = new System.Drawing.Size(164, 18);
             this.label77.TabIndex = 18;
             this.label77.Text = "Monetary Value (incl. Time) ";
             // 
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(10, 82);
+            this.label78.Location = new System.Drawing.Point(10, 136);
             this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(138, 13);
+            this.label78.Size = new System.Drawing.Size(138, 18);
             this.label78.TabIndex = 9;
             this.label78.Text = "Response Cost Estimate";
             // 
             // label79
             // 
             this.label79.AutoSize = true;
-            this.label79.Location = new System.Drawing.Point(10, 95);
+            this.label79.Location = new System.Drawing.Point(10, 160);
             this.label79.Name = "label79";
-            this.label79.Size = new System.Drawing.Size(176, 14);
+            this.label79.Size = new System.Drawing.Size(176, 18);
             this.label79.TabIndex = 10;
             this.label79.Text = "Response Plan Implementation";
             // 
             // label80
             // 
             this.label80.AutoSize = true;
-            this.label80.Location = new System.Drawing.Point(10, 109);
+            this.label80.Location = new System.Drawing.Point(10, 187);
             this.label80.Name = "label80";
-            this.label80.Size = new System.Drawing.Size(152, 14);
+            this.label80.Size = new System.Drawing.Size(152, 27);
             this.label80.TabIndex = 11;
             this.label80.Text = "Time impact in days after Response";
             // 
-            // textBox47
+            // impactActionsTextBox
             // 
-            this.textBox47.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox47.Location = new System.Drawing.Point(208, 51);
-            this.textBox47.Multiline = true;
-            this.textBox47.Name = "textBox47";
-            this.textBox47.Size = new System.Drawing.Size(190, 28);
-            this.textBox47.TabIndex = 12;
+            this.impactActionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.impactActionsTextBox.Location = new System.Drawing.Point(208, 76);
+            this.impactActionsTextBox.Multiline = true;
+            this.impactActionsTextBox.Name = "impactActionsTextBox";
+            this.impactActionsTextBox.Size = new System.Drawing.Size(190, 57);
+            this.impactActionsTextBox.TabIndex = 12;
             // 
-            // dateTimePicker9
+            // responsePlanImplementationDateTimePicker
             // 
-            this.dateTimePicker9.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker9.Location = new System.Drawing.Point(208, 98);
-            this.dateTimePicker9.Name = "dateTimePicker9";
-            this.dateTimePicker9.Size = new System.Drawing.Size(113, 21);
-            this.dateTimePicker9.TabIndex = 13;
+            this.responsePlanImplementationDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.responsePlanImplementationDateTimePicker.Location = new System.Drawing.Point(208, 163);
+            this.responsePlanImplementationDateTimePicker.Name = "responsePlanImplementationDateTimePicker";
+            this.responsePlanImplementationDateTimePicker.Size = new System.Drawing.Size(113, 21);
+            this.responsePlanImplementationDateTimePicker.TabIndex = 13;
             // 
-            // comboBox16
+            // reStrategyImpactComboBox
             // 
-            this.comboBox16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox16.FormattingEnabled = true;
-            this.comboBox16.Location = new System.Drawing.Point(208, 23);
-            this.comboBox16.Name = "comboBox16";
-            this.comboBox16.Size = new System.Drawing.Size(190, 24);
-            this.comboBox16.TabIndex = 14;
+            this.reStrategyImpactComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reStrategyImpactComboBox.FormattingEnabled = true;
+            this.reStrategyImpactComboBox.Location = new System.Drawing.Point(208, 23);
+            this.reStrategyImpactComboBox.Name = "reStrategyImpactComboBox";
+            this.reStrategyImpactComboBox.Size = new System.Drawing.Size(190, 24);
+            this.reStrategyImpactComboBox.TabIndex = 14;
             // 
             // label81
             // 
             this.label81.AutoSize = true;
             this.label81.Location = new System.Drawing.Point(10, 20);
             this.label81.Name = "label81";
-            this.label81.Size = new System.Drawing.Size(110, 14);
+            this.label81.Size = new System.Drawing.Size(110, 18);
             this.label81.TabIndex = 6;
             this.label81.Text = "Response Strategy";
             // 
-            // comboBox17
+            // impactActionOwnerComboBox
             // 
-            this.comboBox17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Location = new System.Drawing.Point(208, 37);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(190, 24);
-            this.comboBox17.TabIndex = 15;
+            this.impactActionOwnerComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.impactActionOwnerComboBox.FormattingEnabled = true;
+            this.impactActionOwnerComboBox.Location = new System.Drawing.Point(208, 50);
+            this.impactActionOwnerComboBox.Name = "impactActionOwnerComboBox";
+            this.impactActionOwnerComboBox.Size = new System.Drawing.Size(190, 24);
+            this.impactActionOwnerComboBox.TabIndex = 15;
             // 
-            // textBox48
+            // responseCostEstimateTextBox
             // 
-            this.textBox48.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox48.Location = new System.Drawing.Point(208, 85);
-            this.textBox48.Multiline = true;
-            this.textBox48.Name = "textBox48";
-            this.textBox48.Size = new System.Drawing.Size(190, 7);
-            this.textBox48.TabIndex = 16;
+            this.responseCostEstimateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.responseCostEstimateTextBox.Location = new System.Drawing.Point(208, 139);
+            this.responseCostEstimateTextBox.Multiline = true;
+            this.responseCostEstimateTextBox.Name = "responseCostEstimateTextBox";
+            this.responseCostEstimateTextBox.Size = new System.Drawing.Size(190, 18);
+            this.responseCostEstimateTextBox.TabIndex = 16;
             // 
-            // textBox49
+            // daysAfterTextBox
             // 
-            this.textBox49.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox49.Location = new System.Drawing.Point(208, 112);
-            this.textBox49.Multiline = true;
-            this.textBox49.Name = "textBox49";
-            this.textBox49.Size = new System.Drawing.Size(190, 8);
-            this.textBox49.TabIndex = 17;
+            this.daysAfterTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.daysAfterTextBox.Location = new System.Drawing.Point(208, 190);
+            this.daysAfterTextBox.Multiline = true;
+            this.daysAfterTextBox.Name = "daysAfterTextBox";
+            this.daysAfterTextBox.Size = new System.Drawing.Size(190, 21);
+            this.daysAfterTextBox.TabIndex = 17;
             // 
             // label82
             // 
             this.label82.AutoSize = true;
-            this.label82.Location = new System.Drawing.Point(10, 123);
+            this.label82.Location = new System.Drawing.Point(10, 214);
             this.label82.Name = "label82";
-            this.label82.Size = new System.Drawing.Size(105, 14);
+            this.label82.Size = new System.Drawing.Size(105, 18);
             this.label82.TabIndex = 20;
             this.label82.Text = "Impact Start Date";
             // 
             // label83
             // 
             this.label83.AutoSize = true;
-            this.label83.Location = new System.Drawing.Point(10, 137);
+            this.label83.Location = new System.Drawing.Point(10, 241);
             this.label83.Name = "label83";
-            this.label83.Size = new System.Drawing.Size(98, 15);
+            this.label83.Size = new System.Drawing.Size(98, 18);
             this.label83.TabIndex = 21;
             this.label83.Text = "Impact End Date";
             // 
-            // dateTimePicker10
+            // impactStartDateDateTimePicker
             // 
-            this.dateTimePicker10.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker10.Location = new System.Drawing.Point(208, 126);
-            this.dateTimePicker10.Name = "dateTimePicker10";
-            this.dateTimePicker10.Size = new System.Drawing.Size(113, 21);
-            this.dateTimePicker10.TabIndex = 22;
+            this.impactStartDateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.impactStartDateDateTimePicker.Location = new System.Drawing.Point(208, 217);
+            this.impactStartDateDateTimePicker.Name = "impactStartDateDateTimePicker";
+            this.impactStartDateDateTimePicker.Size = new System.Drawing.Size(113, 21);
+            this.impactStartDateDateTimePicker.TabIndex = 22;
             // 
-            // dateTimePicker11
+            // impactEndDateDateTimePicker
             // 
-            this.dateTimePicker11.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker11.Location = new System.Drawing.Point(208, 140);
-            this.dateTimePicker11.Name = "dateTimePicker11";
-            this.dateTimePicker11.Size = new System.Drawing.Size(113, 21);
-            this.dateTimePicker11.TabIndex = 23;
+            this.impactEndDateDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.impactEndDateDateTimePicker.Location = new System.Drawing.Point(208, 244);
+            this.impactEndDateDateTimePicker.Name = "impactEndDateDateTimePicker";
+            this.impactEndDateDateTimePicker.Size = new System.Drawing.Size(113, 21);
+            this.impactEndDateDateTimePicker.TabIndex = 23;
             // 
             // tableLayoutPanel12
             // 
             this.tableLayoutPanel12.ColumnCount = 2;
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.67873F));
             this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.32127F));
-            this.tableLayoutPanel12.Controls.Add(this.textBox40, 1, 8);
-            this.tableLayoutPanel12.Controls.Add(this.textBox41, 1, 7);
-            this.tableLayoutPanel12.Controls.Add(this.textBox42, 1, 6);
-            this.tableLayoutPanel12.Controls.Add(this.textBox43, 1, 5);
-            this.tableLayoutPanel12.Controls.Add(this.textBox44, 1, 4);
-            this.tableLayoutPanel12.Controls.Add(this.comboBox14, 1, 3);
+            this.tableLayoutPanel12.Controls.Add(this.formulaBeforeDescTextBox, 1, 8);
+            this.tableLayoutPanel12.Controls.Add(this.monetaryValueBeforeTextBox, 1, 7);
+            this.tableLayoutPanel12.Controls.Add(this.monetaryValueFormulaTextBox, 1, 6);
+            this.tableLayoutPanel12.Controls.Add(this.timeImpactsInDaysBeforeTextBox, 1, 5);
+            this.tableLayoutPanel12.Controls.Add(this.impactDescriptionTextBox, 1, 4);
+            this.tableLayoutPanel12.Controls.Add(this.wbsComboBox, 1, 3);
             this.tableLayoutPanel12.Controls.Add(this.label64, 0, 1);
             this.tableLayoutPanel12.Controls.Add(this.label65, 0, 2);
             this.tableLayoutPanel12.Controls.Add(this.label66, 0, 3);
@@ -3386,7 +3404,7 @@
             this.tableLayoutPanel12.Controls.Add(this.label69, 0, 6);
             this.tableLayoutPanel12.Controls.Add(this.label70, 0, 7);
             this.tableLayoutPanel12.Controls.Add(this.label71, 0, 8);
-            this.tableLayoutPanel12.Controls.Add(this.comboBox15, 1, 2);
+            this.tableLayoutPanel12.Controls.Add(this.phaseComboBox, 1, 2);
             this.tableLayoutPanel12.Controls.Add(this.panel10, 1, 1);
             this.tableLayoutPanel12.Controls.Add(this.label72, 0, 0);
             this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Left;
@@ -3403,68 +3421,68 @@
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.391304F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.91304F));
-            this.tableLayoutPanel12.Size = new System.Drawing.Size(442, 321);
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(442, 580);
             this.tableLayoutPanel12.TabIndex = 1;
             // 
-            // textBox40
+            // formulaBeforeDescTextBox
             // 
-            this.textBox40.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox40.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.textBox40.Location = new System.Drawing.Point(226, 172);
-            this.textBox40.Multiline = true;
-            this.textBox40.Name = "textBox40";
-            this.textBox40.Size = new System.Drawing.Size(213, 41);
-            this.textBox40.TabIndex = 15;
+            this.formulaBeforeDescTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.formulaBeforeDescTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.formulaBeforeDescTextBox.Location = new System.Drawing.Point(226, 302);
+            this.formulaBeforeDescTextBox.Multiline = true;
+            this.formulaBeforeDescTextBox.Name = "formulaBeforeDescTextBox";
+            this.formulaBeforeDescTextBox.Size = new System.Drawing.Size(213, 83);
+            this.formulaBeforeDescTextBox.TabIndex = 15;
             // 
-            // textBox41
+            // monetaryValueBeforeTextBox
             // 
-            this.textBox41.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox41.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.textBox41.Location = new System.Drawing.Point(226, 156);
-            this.textBox41.Multiline = true;
-            this.textBox41.Name = "textBox41";
-            this.textBox41.Size = new System.Drawing.Size(213, 10);
-            this.textBox41.TabIndex = 14;
+            this.monetaryValueBeforeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.monetaryValueBeforeTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.monetaryValueBeforeTextBox.Location = new System.Drawing.Point(226, 272);
+            this.monetaryValueBeforeTextBox.Multiline = true;
+            this.monetaryValueBeforeTextBox.Name = "monetaryValueBeforeTextBox";
+            this.monetaryValueBeforeTextBox.Size = new System.Drawing.Size(213, 24);
+            this.monetaryValueBeforeTextBox.TabIndex = 14;
             // 
-            // textBox42
+            // monetaryValueFormulaTextBox
             // 
-            this.textBox42.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox42.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.textBox42.Location = new System.Drawing.Point(226, 138);
-            this.textBox42.Multiline = true;
-            this.textBox42.Name = "textBox42";
-            this.textBox42.Size = new System.Drawing.Size(213, 12);
-            this.textBox42.TabIndex = 13;
+            this.monetaryValueFormulaTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.monetaryValueFormulaTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.monetaryValueFormulaTextBox.Location = new System.Drawing.Point(226, 238);
+            this.monetaryValueFormulaTextBox.Multiline = true;
+            this.monetaryValueFormulaTextBox.Name = "monetaryValueFormulaTextBox";
+            this.monetaryValueFormulaTextBox.Size = new System.Drawing.Size(213, 28);
+            this.monetaryValueFormulaTextBox.TabIndex = 13;
             // 
-            // textBox43
+            // timeImpactsInDaysBeforeTextBox
             // 
-            this.textBox43.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox43.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.textBox43.Location = new System.Drawing.Point(226, 122);
-            this.textBox43.Multiline = true;
-            this.textBox43.Name = "textBox43";
-            this.textBox43.Size = new System.Drawing.Size(213, 10);
-            this.textBox43.TabIndex = 12;
+            this.timeImpactsInDaysBeforeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.timeImpactsInDaysBeforeTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.timeImpactsInDaysBeforeTextBox.Location = new System.Drawing.Point(226, 208);
+            this.timeImpactsInDaysBeforeTextBox.Multiline = true;
+            this.timeImpactsInDaysBeforeTextBox.Name = "timeImpactsInDaysBeforeTextBox";
+            this.timeImpactsInDaysBeforeTextBox.Size = new System.Drawing.Size(213, 24);
+            this.timeImpactsInDaysBeforeTextBox.TabIndex = 12;
             // 
-            // textBox44
+            // impactDescriptionTextBox
             // 
-            this.textBox44.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox44.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.textBox44.Location = new System.Drawing.Point(226, 80);
-            this.textBox44.Multiline = true;
-            this.textBox44.Name = "textBox44";
-            this.textBox44.Size = new System.Drawing.Size(213, 36);
-            this.textBox44.TabIndex = 11;
+            this.impactDescriptionTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.impactDescriptionTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.impactDescriptionTextBox.Location = new System.Drawing.Point(226, 130);
+            this.impactDescriptionTextBox.Multiline = true;
+            this.impactDescriptionTextBox.Name = "impactDescriptionTextBox";
+            this.impactDescriptionTextBox.Size = new System.Drawing.Size(213, 72);
+            this.impactDescriptionTextBox.TabIndex = 11;
             // 
-            // comboBox14
+            // wbsComboBox
             // 
-            this.comboBox14.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox14.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.comboBox14.FormattingEnabled = true;
-            this.comboBox14.Location = new System.Drawing.Point(226, 66);
-            this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(213, 23);
-            this.comboBox14.TabIndex = 10;
+            this.wbsComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wbsComboBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.wbsComboBox.FormattingEnabled = true;
+            this.wbsComboBox.Location = new System.Drawing.Point(226, 103);
+            this.wbsComboBox.Name = "wbsComboBox";
+            this.wbsComboBox.Size = new System.Drawing.Size(213, 23);
+            this.wbsComboBox.TabIndex = 10;
             // 
             // label64
             // 
@@ -3480,9 +3498,9 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label65.Location = new System.Drawing.Point(3, 49);
+            this.label65.Location = new System.Drawing.Point(3, 73);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(39, 14);
+            this.label65.Size = new System.Drawing.Size(39, 18);
             this.label65.TabIndex = 1;
             this.label65.Text = "Phase";
             // 
@@ -3490,9 +3508,9 @@
             // 
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label66.Location = new System.Drawing.Point(3, 63);
+            this.label66.Location = new System.Drawing.Point(3, 100);
             this.label66.Name = "label66";
-            this.label66.Size = new System.Drawing.Size(31, 14);
+            this.label66.Size = new System.Drawing.Size(31, 18);
             this.label66.TabIndex = 2;
             this.label66.Text = "WBS";
             // 
@@ -3500,7 +3518,7 @@
             // 
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label67.Location = new System.Drawing.Point(3, 77);
+            this.label67.Location = new System.Drawing.Point(3, 127);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(112, 18);
             this.label67.TabIndex = 3;
@@ -3510,9 +3528,9 @@
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label68.Location = new System.Drawing.Point(3, 119);
+            this.label68.Location = new System.Drawing.Point(3, 205);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(167, 16);
+            this.label68.Size = new System.Drawing.Size(167, 30);
             this.label68.TabIndex = 4;
             this.label68.Text = "Time impacts in days before Response";
             // 
@@ -3520,7 +3538,7 @@
             // 
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label69.Location = new System.Drawing.Point(3, 135);
+            this.label69.Location = new System.Drawing.Point(3, 235);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(213, 18);
             this.label69.TabIndex = 5;
@@ -3530,9 +3548,9 @@
             // 
             this.label70.AutoSize = true;
             this.label70.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label70.Location = new System.Drawing.Point(3, 153);
+            this.label70.Location = new System.Drawing.Point(3, 269);
             this.label70.Name = "label70";
-            this.label70.Size = new System.Drawing.Size(160, 16);
+            this.label70.Size = new System.Drawing.Size(160, 18);
             this.label70.TabIndex = 6;
             this.label70.Text = "Monetary Value (incl. Time)";
             // 
@@ -3540,91 +3558,91 @@
             // 
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label71.Location = new System.Drawing.Point(3, 169);
+            this.label71.Location = new System.Drawing.Point(3, 299);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(136, 18);
             this.label71.TabIndex = 7;
             this.label71.Text = "Calculation description";
             // 
-            // comboBox15
+            // phaseComboBox
             // 
-            this.comboBox15.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox15.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.comboBox15.FormattingEnabled = true;
-            this.comboBox15.Location = new System.Drawing.Point(226, 52);
-            this.comboBox15.Name = "comboBox15";
-            this.comboBox15.Size = new System.Drawing.Size(213, 23);
-            this.comboBox15.TabIndex = 9;
+            this.phaseComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.phaseComboBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.phaseComboBox.FormattingEnabled = true;
+            this.phaseComboBox.Location = new System.Drawing.Point(226, 76);
+            this.phaseComboBox.Name = "phaseComboBox";
+            this.phaseComboBox.Size = new System.Drawing.Size(213, 23);
+            this.phaseComboBox.TabIndex = 9;
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.checkBox2);
-            this.panel10.Controls.Add(this.checkBox3);
-            this.panel10.Controls.Add(this.checkBox6);
-            this.panel10.Controls.Add(this.checkBox7);
-            this.panel10.Controls.Add(this.checkBox8);
+            this.panel10.Controls.Add(this.qualityCheckBox);
+            this.panel10.Controls.Add(this.safetyCheckBox);
+            this.panel10.Controls.Add(this.customerSatisfactionCheckBox);
+            this.panel10.Controls.Add(this.timeCheckBox);
+            this.panel10.Controls.Add(this.costCheckBox);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(226, 25);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(213, 21);
+            this.panel10.Size = new System.Drawing.Size(213, 45);
             this.panel10.TabIndex = 16;
             // 
-            // checkBox2
+            // qualityCheckBox
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("Trebuchet MS", 6F);
-            this.checkBox2.Location = new System.Drawing.Point(53, 27);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(50, 17);
-            this.checkBox2.TabIndex = 4;
-            this.checkBox2.Text = "Quality";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.qualityCheckBox.AutoSize = true;
+            this.qualityCheckBox.Font = new System.Drawing.Font("Trebuchet MS", 6F);
+            this.qualityCheckBox.Location = new System.Drawing.Point(53, 27);
+            this.qualityCheckBox.Name = "qualityCheckBox";
+            this.qualityCheckBox.Size = new System.Drawing.Size(50, 17);
+            this.qualityCheckBox.TabIndex = 4;
+            this.qualityCheckBox.Text = "Quality";
+            this.qualityCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox3
+            // safetyCheckBox
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox3.Font = new System.Drawing.Font("Trebuchet MS", 6F);
-            this.checkBox3.Location = new System.Drawing.Point(3, 27);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(48, 17);
-            this.checkBox3.TabIndex = 3;
-            this.checkBox3.Text = "Safety";
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.safetyCheckBox.AutoSize = true;
+            this.safetyCheckBox.Checked = true;
+            this.safetyCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.safetyCheckBox.Font = new System.Drawing.Font("Trebuchet MS", 6F);
+            this.safetyCheckBox.Location = new System.Drawing.Point(3, 27);
+            this.safetyCheckBox.Name = "safetyCheckBox";
+            this.safetyCheckBox.Size = new System.Drawing.Size(48, 17);
+            this.safetyCheckBox.TabIndex = 3;
+            this.safetyCheckBox.Text = "Safety";
+            this.safetyCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox6
+            // customerSatisfactionCheckBox
             // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Trebuchet MS", 6F);
-            this.checkBox6.Location = new System.Drawing.Point(100, -1);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(66, 30);
-            this.checkBox6.TabIndex = 2;
-            this.checkBox6.Text = "Customer\r\nSatisfaction";
-            this.checkBox6.UseVisualStyleBackColor = true;
+            this.customerSatisfactionCheckBox.AutoSize = true;
+            this.customerSatisfactionCheckBox.Font = new System.Drawing.Font("Trebuchet MS", 6F);
+            this.customerSatisfactionCheckBox.Location = new System.Drawing.Point(100, -1);
+            this.customerSatisfactionCheckBox.Name = "customerSatisfactionCheckBox";
+            this.customerSatisfactionCheckBox.Size = new System.Drawing.Size(66, 30);
+            this.customerSatisfactionCheckBox.TabIndex = 2;
+            this.customerSatisfactionCheckBox.Text = "Customer\r\nSatisfaction";
+            this.customerSatisfactionCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
+            // timeCheckBox
             // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Font = new System.Drawing.Font("Trebuchet MS", 6F);
-            this.checkBox7.Location = new System.Drawing.Point(3, 6);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(44, 17);
-            this.checkBox7.TabIndex = 0;
-            this.checkBox7.Text = "Time";
-            this.checkBox7.UseVisualStyleBackColor = true;
+            this.timeCheckBox.AutoSize = true;
+            this.timeCheckBox.Font = new System.Drawing.Font("Trebuchet MS", 6F);
+            this.timeCheckBox.Location = new System.Drawing.Point(3, 6);
+            this.timeCheckBox.Name = "timeCheckBox";
+            this.timeCheckBox.Size = new System.Drawing.Size(44, 17);
+            this.timeCheckBox.TabIndex = 0;
+            this.timeCheckBox.Text = "Time";
+            this.timeCheckBox.UseVisualStyleBackColor = true;
             // 
-            // checkBox8
+            // costCheckBox
             // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.Font = new System.Drawing.Font("Trebuchet MS", 6F);
-            this.checkBox8.Location = new System.Drawing.Point(53, 6);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(41, 17);
-            this.checkBox8.TabIndex = 1;
-            this.checkBox8.Text = "Cost";
-            this.checkBox8.UseVisualStyleBackColor = true;
+            this.costCheckBox.AutoSize = true;
+            this.costCheckBox.Font = new System.Drawing.Font("Trebuchet MS", 6F);
+            this.costCheckBox.Location = new System.Drawing.Point(53, 6);
+            this.costCheckBox.Name = "costCheckBox";
+            this.costCheckBox.Size = new System.Drawing.Size(41, 17);
+            this.costCheckBox.TabIndex = 1;
+            this.costCheckBox.Text = "Cost";
+            this.costCheckBox.UseVisualStyleBackColor = true;
             // 
             // label72
             // 
@@ -3642,7 +3660,7 @@
             this.panel9.Controls.Add(this.tableLayoutPanel8);
             this.panel9.Controls.Add(this.tableLayoutPanel7);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(2, 414);
+            this.panel9.Location = new System.Drawing.Point(2, 673);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(857, 207);
             this.panel9.TabIndex = 3;
@@ -3652,15 +3670,15 @@
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49F));
-            this.tableLayoutPanel8.Controls.Add(this.textBox30, 1, 7);
-            this.tableLayoutPanel8.Controls.Add(this.textBox31, 1, 5);
-            this.tableLayoutPanel8.Controls.Add(this.textBox32, 1, 4);
+            this.tableLayoutPanel8.Controls.Add(this.remarksTextBox, 1, 7);
+            this.tableLayoutPanel8.Controls.Add(this.expectedTimeImpactInDaysAfterTextBox, 1, 5);
+            this.tableLayoutPanel8.Controls.Add(this.timeImpactInDaysAfterTextBox, 1, 4);
             this.tableLayoutPanel8.Controls.Add(this.label44, 0, 1);
             this.tableLayoutPanel8.Controls.Add(this.label45, 0, 2);
             this.tableLayoutPanel8.Controls.Add(this.label46, 0, 4);
             this.tableLayoutPanel8.Controls.Add(this.label47, 0, 5);
-            this.tableLayoutPanel8.Controls.Add(this.textBox33, 1, 1);
-            this.tableLayoutPanel8.Controls.Add(this.textBox34, 1, 2);
+            this.tableLayoutPanel8.Controls.Add(this.aggregatedMonateryValueAfterTextBox, 1, 1);
+            this.tableLayoutPanel8.Controls.Add(this.expectedMonateryValueAfterTextBox, 1, 2);
             this.tableLayoutPanel8.Controls.Add(this.label48, 0, 7);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(442, 0);
@@ -3678,35 +3696,35 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(415, 207);
             this.tableLayoutPanel8.TabIndex = 3;
             // 
-            // textBox30
+            // remarksTextBox
             // 
-            this.textBox30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox30.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.textBox30.Location = new System.Drawing.Point(214, 184);
-            this.textBox30.Multiline = true;
-            this.textBox30.Name = "textBox30";
-            this.textBox30.Size = new System.Drawing.Size(198, 20);
-            this.textBox30.TabIndex = 14;
+            this.remarksTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.remarksTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.remarksTextBox.Location = new System.Drawing.Point(214, 184);
+            this.remarksTextBox.Multiline = true;
+            this.remarksTextBox.Name = "remarksTextBox";
+            this.remarksTextBox.Size = new System.Drawing.Size(198, 20);
+            this.remarksTextBox.TabIndex = 14;
             // 
-            // textBox31
+            // expectedTimeImpactInDaysAfterTextBox
             // 
-            this.textBox31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox31.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.textBox31.Location = new System.Drawing.Point(214, 114);
-            this.textBox31.Multiline = true;
-            this.textBox31.Name = "textBox31";
-            this.textBox31.Size = new System.Drawing.Size(198, 42);
-            this.textBox31.TabIndex = 12;
+            this.expectedTimeImpactInDaysAfterTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.expectedTimeImpactInDaysAfterTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.expectedTimeImpactInDaysAfterTextBox.Location = new System.Drawing.Point(214, 114);
+            this.expectedTimeImpactInDaysAfterTextBox.Multiline = true;
+            this.expectedTimeImpactInDaysAfterTextBox.Name = "expectedTimeImpactInDaysAfterTextBox";
+            this.expectedTimeImpactInDaysAfterTextBox.Size = new System.Drawing.Size(198, 42);
+            this.expectedTimeImpactInDaysAfterTextBox.TabIndex = 12;
             // 
-            // textBox32
+            // timeImpactInDaysAfterTextBox
             // 
-            this.textBox32.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox32.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.textBox32.Location = new System.Drawing.Point(214, 87);
-            this.textBox32.Multiline = true;
-            this.textBox32.Name = "textBox32";
-            this.textBox32.Size = new System.Drawing.Size(198, 21);
-            this.textBox32.TabIndex = 11;
+            this.timeImpactInDaysAfterTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.timeImpactInDaysAfterTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.timeImpactInDaysAfterTextBox.Location = new System.Drawing.Point(214, 87);
+            this.timeImpactInDaysAfterTextBox.Multiline = true;
+            this.timeImpactInDaysAfterTextBox.Name = "timeImpactInDaysAfterTextBox";
+            this.timeImpactInDaysAfterTextBox.Size = new System.Drawing.Size(198, 21);
+            this.timeImpactInDaysAfterTextBox.TabIndex = 11;
             // 
             // label44
             // 
@@ -3748,21 +3766,21 @@
             this.label47.TabIndex = 4;
             this.label47.Text = "Expected time impact in days";
             // 
-            // textBox33
+            // aggregatedMonateryValueAfterTextBox
             // 
-            this.textBox33.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox33.Location = new System.Drawing.Point(214, 21);
-            this.textBox33.Name = "textBox33";
-            this.textBox33.Size = new System.Drawing.Size(198, 20);
-            this.textBox33.TabIndex = 15;
+            this.aggregatedMonateryValueAfterTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aggregatedMonateryValueAfterTextBox.Location = new System.Drawing.Point(214, 21);
+            this.aggregatedMonateryValueAfterTextBox.Name = "aggregatedMonateryValueAfterTextBox";
+            this.aggregatedMonateryValueAfterTextBox.Size = new System.Drawing.Size(198, 20);
+            this.aggregatedMonateryValueAfterTextBox.TabIndex = 15;
             // 
-            // textBox34
+            // expectedMonateryValueAfterTextBox
             // 
-            this.textBox34.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox34.Location = new System.Drawing.Point(214, 46);
-            this.textBox34.Name = "textBox34";
-            this.textBox34.Size = new System.Drawing.Size(198, 20);
-            this.textBox34.TabIndex = 16;
+            this.expectedMonateryValueAfterTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.expectedMonateryValueAfterTextBox.Location = new System.Drawing.Point(214, 46);
+            this.expectedMonateryValueAfterTextBox.Name = "expectedMonateryValueAfterTextBox";
+            this.expectedMonateryValueAfterTextBox.Size = new System.Drawing.Size(198, 20);
+            this.expectedMonateryValueAfterTextBox.TabIndex = 16;
             // 
             // label48
             // 
@@ -3779,8 +3797,8 @@
             this.tableLayoutPanel7.ColumnCount = 2;
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 51F));
             this.tableLayoutPanel7.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49F));
-            this.tableLayoutPanel7.Controls.Add(this.textBox26, 1, 5);
-            this.tableLayoutPanel7.Controls.Add(this.textBox27, 1, 4);
+            this.tableLayoutPanel7.Controls.Add(this.expectedTimeImpactInDaysBeforeTextBox, 1, 5);
+            this.tableLayoutPanel7.Controls.Add(this.timeImpactInDaysBeforeTextBox, 1, 4);
             this.tableLayoutPanel7.Controls.Add(this.label35, 0, 1);
             this.tableLayoutPanel7.Controls.Add(this.label36, 0, 2);
             this.tableLayoutPanel7.Controls.Add(this.label37, 0, 4);
@@ -3790,10 +3808,10 @@
             this.tableLayoutPanel7.Controls.Add(this.label41, 0, 0);
             this.tableLayoutPanel7.Controls.Add(this.label42, 0, 3);
             this.tableLayoutPanel7.Controls.Add(this.label43, 0, 6);
-            this.tableLayoutPanel7.Controls.Add(this.textBox28, 1, 2);
-            this.tableLayoutPanel7.Controls.Add(this.textBox29, 1, 1);
-            this.tableLayoutPanel7.Controls.Add(this.comboBox8, 1, 7);
-            this.tableLayoutPanel7.Controls.Add(this.comboBox9, 1, 8);
+            this.tableLayoutPanel7.Controls.Add(this.expectedMonetaryValueBeforeTextBox, 1, 2);
+            this.tableLayoutPanel7.Controls.Add(this.aggregatedMonateryValueBeforeTextBox, 1, 1);
+            this.tableLayoutPanel7.Controls.Add(this.nccComboBox, 1, 7);
+            this.tableLayoutPanel7.Controls.Add(this.operatingUnitComboBox, 1, 8);
             this.tableLayoutPanel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel7.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel7.Name = "tableLayoutPanel7";
@@ -3811,25 +3829,25 @@
             this.tableLayoutPanel7.Size = new System.Drawing.Size(442, 207);
             this.tableLayoutPanel7.TabIndex = 2;
             // 
-            // textBox26
+            // expectedTimeImpactInDaysBeforeTextBox
             // 
-            this.textBox26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox26.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.textBox26.Location = new System.Drawing.Point(228, 114);
-            this.textBox26.Multiline = true;
-            this.textBox26.Name = "textBox26";
-            this.textBox26.Size = new System.Drawing.Size(211, 20);
-            this.textBox26.TabIndex = 12;
+            this.expectedTimeImpactInDaysBeforeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.expectedTimeImpactInDaysBeforeTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.expectedTimeImpactInDaysBeforeTextBox.Location = new System.Drawing.Point(228, 114);
+            this.expectedTimeImpactInDaysBeforeTextBox.Multiline = true;
+            this.expectedTimeImpactInDaysBeforeTextBox.Name = "expectedTimeImpactInDaysBeforeTextBox";
+            this.expectedTimeImpactInDaysBeforeTextBox.Size = new System.Drawing.Size(211, 20);
+            this.expectedTimeImpactInDaysBeforeTextBox.TabIndex = 12;
             // 
-            // textBox27
+            // timeImpactInDaysBeforeTextBox
             // 
-            this.textBox27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox27.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.textBox27.Location = new System.Drawing.Point(228, 87);
-            this.textBox27.Multiline = true;
-            this.textBox27.Name = "textBox27";
-            this.textBox27.Size = new System.Drawing.Size(211, 21);
-            this.textBox27.TabIndex = 11;
+            this.timeImpactInDaysBeforeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.timeImpactInDaysBeforeTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
+            this.timeImpactInDaysBeforeTextBox.Location = new System.Drawing.Point(228, 87);
+            this.timeImpactInDaysBeforeTextBox.Multiline = true;
+            this.timeImpactInDaysBeforeTextBox.Name = "timeImpactInDaysBeforeTextBox";
+            this.timeImpactInDaysBeforeTextBox.Size = new System.Drawing.Size(211, 21);
+            this.timeImpactInDaysBeforeTextBox.TabIndex = 11;
             // 
             // label35
             // 
@@ -3924,39 +3942,39 @@
             this.label43.TabIndex = 19;
             this.label43.Text = "Others";
             // 
-            // textBox28
+            // expectedMonetaryValueBeforeTextBox
             // 
-            this.textBox28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox28.Location = new System.Drawing.Point(228, 45);
-            this.textBox28.Name = "textBox28";
-            this.textBox28.Size = new System.Drawing.Size(211, 20);
-            this.textBox28.TabIndex = 20;
+            this.expectedMonetaryValueBeforeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.expectedMonetaryValueBeforeTextBox.Location = new System.Drawing.Point(228, 45);
+            this.expectedMonetaryValueBeforeTextBox.Name = "expectedMonetaryValueBeforeTextBox";
+            this.expectedMonetaryValueBeforeTextBox.Size = new System.Drawing.Size(211, 20);
+            this.expectedMonetaryValueBeforeTextBox.TabIndex = 20;
             // 
-            // textBox29
+            // aggregatedMonateryValueBeforeTextBox
             // 
-            this.textBox29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textBox29.Location = new System.Drawing.Point(228, 21);
-            this.textBox29.Name = "textBox29";
-            this.textBox29.Size = new System.Drawing.Size(211, 20);
-            this.textBox29.TabIndex = 21;
+            this.aggregatedMonateryValueBeforeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aggregatedMonateryValueBeforeTextBox.Location = new System.Drawing.Point(228, 21);
+            this.aggregatedMonateryValueBeforeTextBox.Name = "aggregatedMonateryValueBeforeTextBox";
+            this.aggregatedMonateryValueBeforeTextBox.Size = new System.Drawing.Size(211, 20);
+            this.aggregatedMonateryValueBeforeTextBox.TabIndex = 21;
             // 
-            // comboBox8
+            // nccComboBox
             // 
-            this.comboBox8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(228, 160);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(211, 21);
-            this.comboBox8.TabIndex = 22;
+            this.nccComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.nccComboBox.FormattingEnabled = true;
+            this.nccComboBox.Location = new System.Drawing.Point(228, 160);
+            this.nccComboBox.Name = "nccComboBox";
+            this.nccComboBox.Size = new System.Drawing.Size(211, 21);
+            this.nccComboBox.TabIndex = 22;
             // 
-            // comboBox9
+            // operatingUnitComboBox
             // 
-            this.comboBox9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(228, 185);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(211, 21);
-            this.comboBox9.TabIndex = 23;
+            this.operatingUnitComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.operatingUnitComboBox.FormattingEnabled = true;
+            this.operatingUnitComboBox.Location = new System.Drawing.Point(228, 185);
+            this.operatingUnitComboBox.Name = "operatingUnitComboBox";
+            this.operatingUnitComboBox.Size = new System.Drawing.Size(211, 21);
+            this.operatingUnitComboBox.TabIndex = 23;
             // 
             // panel8
             // 
@@ -3980,16 +3998,16 @@
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10.73512F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.30338F));
             this.tableLayoutPanel6.Controls.Add(this.label29, 0, 0);
-            this.tableLayoutPanel6.Controls.Add(this.label30, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.indivRiskIDLabel, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.label31, 0, 1);
             this.tableLayoutPanel6.Controls.Add(this.label32, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.comboBox7, 3, 0);
-            this.tableLayoutPanel6.Controls.Add(this.textBox23, 1, 1);
+            this.tableLayoutPanel6.Controls.Add(this.statusComboBox, 3, 0);
+            this.tableLayoutPanel6.Controls.Add(this.riskNameTextBox, 1, 1);
             this.tableLayoutPanel6.Controls.Add(this.label33, 5, 0);
             this.tableLayoutPanel6.Controls.Add(this.label34, 7, 0);
-            this.tableLayoutPanel6.Controls.Add(this.dateTimePicker6, 6, 0);
-            this.tableLayoutPanel6.Controls.Add(this.dateTimePicker7, 8, 0);
-            this.tableLayoutPanel6.Controls.Add(this.checkBox1, 3, 1);
+            this.tableLayoutPanel6.Controls.Add(this.createdDateTimePicker, 6, 0);
+            this.tableLayoutPanel6.Controls.Add(this.updatedDateTimePicker, 8, 0);
+            this.tableLayoutPanel6.Controls.Add(this.canBeSharedCheckBox, 3, 1);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
             this.tableLayoutPanel6.Location = new System.Drawing.Point(0, 0);
@@ -4010,14 +4028,14 @@
             this.label29.TabIndex = 0;
             this.label29.Text = "Risk ID";
             // 
-            // label30
+            // indivRiskIDLabel
             // 
-            this.label30.AutoSize = true;
-            this.label30.Location = new System.Drawing.Point(87, 0);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(18, 18);
-            this.label30.TabIndex = 1;
-            this.label30.Text = "ID";
+            this.indivRiskIDLabel.AutoSize = true;
+            this.indivRiskIDLabel.Location = new System.Drawing.Point(87, 0);
+            this.indivRiskIDLabel.Name = "indivRiskIDLabel";
+            this.indivRiskIDLabel.Size = new System.Drawing.Size(18, 18);
+            this.indivRiskIDLabel.TabIndex = 1;
+            this.indivRiskIDLabel.Text = "ID";
             // 
             // label31
             // 
@@ -4037,22 +4055,26 @@
             this.label32.TabIndex = 7;
             this.label32.Text = "Status";
             // 
-            // comboBox7
+            // statusComboBox
             // 
-            this.comboBox7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(292, 3);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(116, 24);
-            this.comboBox7.TabIndex = 8;
+            this.statusComboBox.DataSource = this.rkstatusOfRiskBindingSource;
+            this.statusComboBox.DisplayMember = "Status";
+            this.statusComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.statusComboBox.FormattingEnabled = true;
+            this.statusComboBox.Location = new System.Drawing.Point(292, 3);
+            this.statusComboBox.Name = "statusComboBox";
+            this.statusComboBox.Size = new System.Drawing.Size(116, 24);
+            this.statusComboBox.TabIndex = 8;
+            this.statusComboBox.ValueMember = "ID";
             // 
-            // textBox23
+            // riskNameTextBox
             // 
-            this.textBox23.Dock = System.Windows.Forms.DockStyle.Top;
-            this.textBox23.Location = new System.Drawing.Point(87, 31);
-            this.textBox23.Name = "textBox23";
-            this.textBox23.Size = new System.Drawing.Size(150, 21);
-            this.textBox23.TabIndex = 9;
+            this.riskNameTextBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.riskNameTextBox.Location = new System.Drawing.Point(87, 31);
+            this.riskNameTextBox.Name = "riskNameTextBox";
+            this.riskNameTextBox.Size = new System.Drawing.Size(150, 21);
+            this.riskNameTextBox.TabIndex = 9;
+            this.riskNameTextBox.TextChanged += new System.EventHandler(this.riskNameTextBox_TextChanged);
             // 
             // label33
             // 
@@ -4073,32 +4095,32 @@
             this.label34.TabIndex = 6;
             this.label34.Text = "Last Updated";
             // 
-            // dateTimePicker6
+            // createdDateTimePicker
             // 
-            this.dateTimePicker6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dateTimePicker6.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker6.Location = new System.Drawing.Point(489, 3);
-            this.dateTimePicker6.Name = "dateTimePicker6";
-            this.dateTimePicker6.Size = new System.Drawing.Size(99, 21);
-            this.dateTimePicker6.TabIndex = 10;
+            this.createdDateTimePicker.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.createdDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.createdDateTimePicker.Location = new System.Drawing.Point(489, 3);
+            this.createdDateTimePicker.Name = "createdDateTimePicker";
+            this.createdDateTimePicker.Size = new System.Drawing.Size(99, 21);
+            this.createdDateTimePicker.TabIndex = 10;
             // 
-            // dateTimePicker7
+            // updatedDateTimePicker
             // 
-            this.dateTimePicker7.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker7.Location = new System.Drawing.Point(684, 3);
-            this.dateTimePicker7.Name = "dateTimePicker7";
-            this.dateTimePicker7.Size = new System.Drawing.Size(123, 21);
-            this.dateTimePicker7.TabIndex = 11;
+            this.updatedDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.updatedDateTimePicker.Location = new System.Drawing.Point(684, 3);
+            this.updatedDateTimePicker.Name = "updatedDateTimePicker";
+            this.updatedDateTimePicker.Size = new System.Drawing.Size(123, 21);
+            this.updatedDateTimePicker.TabIndex = 11;
             // 
-            // checkBox1
+            // canBeSharedCheckBox
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(292, 31);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(106, 22);
-            this.checkBox1.TabIndex = 12;
-            this.checkBox1.Text = "Can be shared";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.canBeSharedCheckBox.AutoSize = true;
+            this.canBeSharedCheckBox.Location = new System.Drawing.Point(292, 31);
+            this.canBeSharedCheckBox.Name = "canBeSharedCheckBox";
+            this.canBeSharedCheckBox.Size = new System.Drawing.Size(106, 22);
+            this.canBeSharedCheckBox.TabIndex = 12;
+            this.canBeSharedCheckBox.Text = "Can be shared";
+            this.canBeSharedCheckBox.UseVisualStyleBackColor = true;
             // 
             // createOpportunityTab
             // 
@@ -4170,11 +4192,43 @@
             this.infoTab.Text = "Project Info";
             this.infoTab.UseVisualStyleBackColor = true;
             // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // rkstatusOfRiskBindingSource
+            // 
+            this.rkstatusOfRiskBindingSource.DataMember = "rk_statusOfRisk";
+            this.rkstatusOfRiskBindingSource.DataSource = this.dataSet1;
+            // 
+            // rk_statusOfRiskTableAdapter
+            // 
+            this.rk_statusOfRiskTableAdapter.ClearBeforeFill = true;
+            // 
+            // rkrespRootBindingSource
+            // 
+            this.rkrespRootBindingSource.DataMember = "rk_resp_Root";
+            this.rkrespRootBindingSource.DataSource = this.dataSet1;
+            // 
+            // rk_resp_RootTableAdapter
+            // 
+            this.rk_resp_RootTableAdapter.ClearBeforeFill = true;
+            // 
+            // listOfOwnersBindingSource
+            // 
+            this.listOfOwnersBindingSource.DataMember = "ListOfOwners";
+            this.listOfOwnersBindingSource.DataSource = this.dataSet1;
+            // 
+            // listOfOwnersTableAdapter
+            // 
+            this.listOfOwnersTableAdapter.ClearBeforeFill = true;
+            // 
             // ExecRolog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1144, 690);
+            this.ClientSize = new System.Drawing.Size(1144, 949);
             this.Controls.Add(this.execROlogTabControl);
             this.Controls.Add(this.buttonPanel);
             this.Controls.Add(this.locationPanel);
@@ -4182,6 +4236,7 @@
             this.Name = "ExecRolog";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Project Overview";
+            this.Load += new System.EventHandler(this.ExecRolog_Load);
             this.locationPanel.ResumeLayout(false);
             this.locationPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).EndInit();
@@ -4255,6 +4310,10 @@
             this.panel8.ResumeLayout(false);
             this.tableLayoutPanel6.ResumeLayout(false);
             this.tableLayoutPanel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkstatusOfRiskBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkrespRootBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.listOfOwnersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -4461,19 +4520,19 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
         private System.Windows.Forms.Label label29;
-        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.Label indivRiskIDLabel;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
-        private System.Windows.Forms.ComboBox comboBox7;
-        private System.Windows.Forms.TextBox textBox23;
+        private System.Windows.Forms.ComboBox statusComboBox;
+        private System.Windows.Forms.TextBox riskNameTextBox;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.DateTimePicker dateTimePicker6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker7;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.DateTimePicker createdDateTimePicker;
+        private System.Windows.Forms.DateTimePicker updatedDateTimePicker;
+        private System.Windows.Forms.CheckBox canBeSharedCheckBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private System.Windows.Forms.TextBox textBox26;
-        private System.Windows.Forms.TextBox textBox27;
+        private System.Windows.Forms.TextBox expectedTimeImpactInDaysBeforeTextBox;
+        private System.Windows.Forms.TextBox timeImpactInDaysBeforeTextBox;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
@@ -4482,23 +4541,23 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox textBox28;
-        private System.Windows.Forms.TextBox textBox29;
+        private System.Windows.Forms.TextBox expectedMonetaryValueBeforeTextBox;
+        private System.Windows.Forms.TextBox aggregatedMonateryValueBeforeTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private System.Windows.Forms.TextBox textBox30;
-        private System.Windows.Forms.TextBox textBox31;
-        private System.Windows.Forms.TextBox textBox32;
+        private System.Windows.Forms.TextBox remarksTextBox;
+        private System.Windows.Forms.TextBox expectedTimeImpactInDaysAfterTextBox;
+        private System.Windows.Forms.TextBox timeImpactInDaysAfterTextBox;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox textBox33;
-        private System.Windows.Forms.TextBox textBox34;
+        private System.Windows.Forms.TextBox aggregatedMonateryValueAfterTextBox;
+        private System.Windows.Forms.TextBox expectedMonateryValueAfterTextBox;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.ComboBox comboBox8;
-        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.ComboBox nccComboBox;
+        private System.Windows.Forms.ComboBox operatingUnitComboBox;
         private System.Windows.Forms.TabControl tabControlRisks;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -4509,10 +4568,10 @@
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
-        private System.Windows.Forms.TextBox textBox24;
-        private System.Windows.Forms.TextBox textBox25;
-        private System.Windows.Forms.ComboBox comboBox10;
-        private System.Windows.Forms.TextBox textBox35;
+        private System.Windows.Forms.TextBox rootCauseTextBox;
+        private System.Windows.Forms.TextBox otherRootCausesTextBox;
+        private System.Windows.Forms.ComboBox categoryComboBox;
+        private System.Windows.Forms.TextBox probabilityBeforeResponseTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel10;
         private System.Windows.Forms.Label label54;
         private System.Windows.Forms.Label label55;
@@ -4520,26 +4579,26 @@
         private System.Windows.Forms.Label label57;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.TextBox textBox36;
-        private System.Windows.Forms.DateTimePicker dateTimePicker8;
-        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.TextBox rootCauseActionsTextBox;
+        private System.Windows.Forms.DateTimePicker responsePlanDateTimePicker;
+        private System.Windows.Forms.ComboBox responseStrategyComboBox;
         private System.Windows.Forms.Label label60;
-        private System.Windows.Forms.ComboBox comboBox12;
-        private System.Windows.Forms.TextBox textBox37;
-        private System.Windows.Forms.TextBox textBox38;
+        private System.Windows.Forms.ComboBox riskActionOwnerComboBox;
+        private System.Windows.Forms.TextBox rootCauseCostTextBox;
+        private System.Windows.Forms.TextBox probabilityAfterResponseTextBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.TextBox textBox39;
-        private System.Windows.Forms.ComboBox comboBox13;
+        private System.Windows.Forms.TextBox riskDescriptionTextBox;
+        private System.Windows.Forms.ComboBox riskOwnerComboBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
-        private System.Windows.Forms.TextBox textBox40;
-        private System.Windows.Forms.TextBox textBox41;
-        private System.Windows.Forms.TextBox textBox42;
-        private System.Windows.Forms.TextBox textBox43;
-        private System.Windows.Forms.TextBox textBox44;
-        private System.Windows.Forms.ComboBox comboBox14;
+        private System.Windows.Forms.TextBox formulaBeforeDescTextBox;
+        private System.Windows.Forms.TextBox monetaryValueBeforeTextBox;
+        private System.Windows.Forms.TextBox monetaryValueFormulaTextBox;
+        private System.Windows.Forms.TextBox timeImpactsInDaysBeforeTextBox;
+        private System.Windows.Forms.TextBox impactDescriptionTextBox;
+        private System.Windows.Forms.ComboBox wbsComboBox;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label66;
@@ -4548,17 +4607,17 @@
         private System.Windows.Forms.Label label69;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.Label label71;
-        private System.Windows.Forms.ComboBox comboBox15;
+        private System.Windows.Forms.ComboBox phaseComboBox;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox8;
+        private System.Windows.Forms.CheckBox qualityCheckBox;
+        private System.Windows.Forms.CheckBox safetyCheckBox;
+        private System.Windows.Forms.CheckBox customerSatisfactionCheckBox;
+        private System.Windows.Forms.CheckBox timeCheckBox;
+        private System.Windows.Forms.CheckBox costCheckBox;
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
-        private System.Windows.Forms.TextBox textBox45;
-        private System.Windows.Forms.TextBox textBox46;
+        private System.Windows.Forms.TextBox calculationDescAfterTextBox;
+        private System.Windows.Forms.TextBox monetaryValueAfterTextBox;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.Label label75;
@@ -4567,17 +4626,24 @@
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.Label label79;
         private System.Windows.Forms.Label label80;
-        private System.Windows.Forms.TextBox textBox47;
-        private System.Windows.Forms.DateTimePicker dateTimePicker9;
-        private System.Windows.Forms.ComboBox comboBox16;
+        private System.Windows.Forms.TextBox impactActionsTextBox;
+        private System.Windows.Forms.DateTimePicker responsePlanImplementationDateTimePicker;
+        private System.Windows.Forms.ComboBox reStrategyImpactComboBox;
         private System.Windows.Forms.Label label81;
-        private System.Windows.Forms.ComboBox comboBox17;
-        private System.Windows.Forms.TextBox textBox48;
-        private System.Windows.Forms.TextBox textBox49;
+        private System.Windows.Forms.ComboBox impactActionOwnerComboBox;
+        private System.Windows.Forms.TextBox responseCostEstimateTextBox;
+        private System.Windows.Forms.TextBox daysAfterTextBox;
         private System.Windows.Forms.Label label82;
         private System.Windows.Forms.Label label83;
-        private System.Windows.Forms.DateTimePicker dateTimePicker10;
-        private System.Windows.Forms.DateTimePicker dateTimePicker11;
+        private System.Windows.Forms.DateTimePicker impactStartDateDateTimePicker;
+        private System.Windows.Forms.DateTimePicker impactEndDateDateTimePicker;
         private System.Windows.Forms.DataGridView rologGridView;
+        private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource rkstatusOfRiskBindingSource;
+        private DataSet1TableAdapters.rk_statusOfRiskTableAdapter rk_statusOfRiskTableAdapter;
+        private System.Windows.Forms.BindingSource rkrespRootBindingSource;
+        private DataSet1TableAdapters.rk_resp_RootTableAdapter rk_resp_RootTableAdapter;
+        private System.Windows.Forms.BindingSource listOfOwnersBindingSource;
+        private DataSet1TableAdapters.ListOfOwnersTableAdapter listOfOwnersTableAdapter;
     }
 }
