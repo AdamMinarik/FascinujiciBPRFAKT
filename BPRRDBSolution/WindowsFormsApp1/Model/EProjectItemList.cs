@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Model
 {
-    class EProjectItemList
+    public class EProjectItemList
     {
-        private List<EProjectItem> itemList;
+        public List<EProjectItem> itemList { get; set; }
 
 
 

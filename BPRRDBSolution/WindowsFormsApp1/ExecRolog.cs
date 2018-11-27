@@ -26,6 +26,8 @@ namespace WindowsFormsApp1
             itemsList = modelManager.getItems(execProject.projectID, DateTime.Today.ToString(), "risk");
             userLabel.Text = user.firstName + ' ' + user.lastName;
             locationLabel.Text = execProject.name;
+
+            setROlogGridView(itemsList);
         }
 
         public void setLocationLabel(String value)
@@ -158,6 +160,49 @@ namespace WindowsFormsApp1
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+
+
+        private void setROlogGridView (EProjectItemList itemList)
+        {
+            DataTable dt = new DataTable();
+
+            dt.Columns.Add("ID", typeof(string));
+            dt.Columns.Add("Name", typeof(string));
+            dt.Columns.Add("Status", typeof(string));
+            dt.Columns.Add("Risk Owner", typeof(string));
+            dt.Columns.Add("Monetary Value Before", typeof(double));
+            dt.Columns.Add("Percentage Before", typeof(double));
+            dt.Columns.Add("Expected Monetary Value Before", typeof(double));
+            dt.Columns.Add("Monetary Value After", typeof(double));
+            dt.Columns.Add("Percentage After", typeof(double));
+            dt.Columns.Add("Expected Monetary Value After", typeof(double));
+       
+            foreach (ERisk item in itemList.itemList)
+            {
+                DataRow NewRow = dt.NewRow();
+                NewRow[0] = item.itemID;
+                NewRow[1] = item.itemName;
+                NewRow[2] = item.itemStatusID;
+                NewRow[3] = item.riskOwnerID;
+                NewRow[4] = item.monetaryValueBefore;
+                NewRow[5] = item.percentageBefore;
+                NewRow[6] = (item.monetaryValueBefore * item.percentageBefore) / 100;
+                NewRow[7] = item.monetaryValueAfter;
+                NewRow[8] = item.percentageAfter;
+                NewRow[9] = (item.monetaryValueAfter * item.percentageAfter) / 100;
+
+                dt.Rows.Add(NewRow);
+            }
+
+            rologGridView.DataSource = dt;
 
         }
     }

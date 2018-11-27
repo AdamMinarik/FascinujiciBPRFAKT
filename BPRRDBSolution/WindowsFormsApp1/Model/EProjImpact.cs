@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Model
 {
-    class EProjImpact : EProjectItem
+   class EProjImpact : EProjectItem
     {
         //String
         public string projImpactDesc { get; set; }

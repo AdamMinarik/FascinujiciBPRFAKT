@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WindowsFormsApp1.Model
 {
-    abstract class EProjectItem
+    public abstract class EProjectItem
     {
         public long itemID { get; set; }
         //String
