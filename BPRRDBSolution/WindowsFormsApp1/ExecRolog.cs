@@ -229,14 +229,11 @@ namespace WindowsFormsApp1
 
         }
 
-        private void riskNameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
 
         private void setRiskDetail(ERisk riskItem)
         {
+
             indivRiskIDLabel.Text = riskItem.excelID.ToString();
             riskNameTextBox.Text = riskItem.itemName.ToString();
             statusComboBox.SelectedIndex = riskItem.itemStatusID;
@@ -254,20 +251,64 @@ namespace WindowsFormsApp1
             otherRootCausesTextBox.Text = riskItem.otherRootCause.ToString();
             categoryComboBox.Text = riskItem.categoryID.ToString();
             probabilityBeforeResponseTextBox.Text = riskItem.percentageBefore.ToString();
-            responseStrategyComboBox.SelectedItem = riskItem.respStratRootCauseID;
-            riskActionOwnerComboBox.SelectedItem = riskItem.actionOwnerRootCauseID;
+            if (riskItem.respStratRootCauseID == 0) { responseStrategyComboBox.SelectedIndex = -1;} else { responseStrategyComboBox.SelectedIndex = riskItem.respStratRootCauseID;}
+            if (riskItem.actionOwnerRootCauseID == 0) { riskActionOwnerComboBox.SelectedIndex = -1; } else { riskActionOwnerComboBox.SelectedIndex = riskItem.actionOwnerRootCauseID;}
             rootCauseActionsTextBox.Text = riskItem.actionsRootCause.ToString();
             responseCostTextBox.Text = riskItem.costRootCause.ToString();
             responsePlanDateTimePicker.Text = riskItem.ResponseRootCauseDate.ToString();
             probabilityAfterResponseTextBox.Text = riskItem.percentageAfter.ToString();
 
+            aggregatedMonateryValueBeforeTextBox.Text = riskItem.monetaryValueBefore.ToString();
+            expectedMonetaryValueBeforeTextBox.Text = (riskItem.monetaryValueBefore * riskItem.percentageBefore).ToString();
 
+
+            aggregatedMonateryValueAfterTextBox.Text = riskItem.monetaryValueAfter.ToString();
+            expectedMonateryValueAfterTextBox.Text = (riskItem.monetaryValueAfter * riskItem.percentageAfter).ToString();
+
+            if (riskItem.nccID == 0) { nccComboBox.SelectedIndex = -1;}else{ nccComboBox.SelectedIndex = riskItem.nccID; }
+            if (riskItem.orgUnitID == 0) { operatingUnitComboBox.SelectedIndex = -1; } else { operatingUnitComboBox.SelectedIndex = riskItem.orgUnitID; }
+            remarksTextBox.Text = riskItem.remarks.ToString();
+            timeImpactInDaysBeforeTextBox.Text = riskItem.daysImpactBefore.ToString();
+            expectedTimeImpactInDaysBeforeTextBox.Text = (riskItem.daysImpactBefore * riskItem.percentageBefore).ToString();
+            timeImpactInDaysAfterTextBox.Text = riskItem.daysImpactAfter.ToString();
+            expectedTimeImpactInDaysAfterTextBox.Text = (riskItem.daysImpactAfter * riskItem.percentageAfter).ToString();
+            riskDescriptionTextBox.Text = riskItem.itemDescription.ToString();
+            riskOwnerComboBox.SelectedIndex = riskItem.riskOwnerID;
+            timeCheckBox.Checked = riskItem.timeObjective;
+            costCheckBox.Checked = riskItem.costObjective;
+            customerSatisfactionCheckBox.Checked = riskItem.customerSatisfObjective;
+            safetyCheckBox.Checked = riskItem.safetyObjective;
+            qualityCheckBox.Checked = riskItem.qualityObjective;
+            if (riskItem.phaseID == 0) { phaseComboBox.SelectedIndex = -1; } else { phaseComboBox.SelectedIndex = riskItem.phaseID; }
+            if (riskItem.wbsID == 0) { wbsComboBox.SelectedIndex = -1; } else { wbsComboBox.SelectedIndex = riskItem.wbsID; }
+            impactDescriptionTextBox.Text = riskItem.itemDescription.ToString();
+            timeImpactsInDaysBeforeTextBox.Text = riskItem.daysImpactBefore.ToString();
+            daysAfterTextBox.Text = riskItem.daysImpactAfter.ToString();
+            monetaryValueFormulaTextBox.Text = riskItem.formulaBefore.ToString();
+            monetaryValueBeforeTextBox.Text = riskItem.monetaryValueBefore.ToString();
+            formulaBeforeDescTextBox.Text = riskItem.formulaBeforeDesc.ToString();
+            if (riskItem.actionOwnerImpactID == 0) { reStrategyImpactComboBox.SelectedIndex = -1; } else { reStrategyImpactComboBox.SelectedIndex = riskItem.actionOwnerImpactID;}
+            if (riskItem.respStratImpactID == 0) { reStrategyImpactComboBox.SelectedIndex = -1;  } else { reStrategyImpactComboBox.SelectedIndex = riskItem.respStratImpactID; }
+            impactActionsTextBox.Text = riskItem.actionsImpact.ToString();
+            responseCostEstimateTextBox.Text = riskItem.costImpact.ToString();
+            responsePlanImplementationDateTimePicker.Text = riskItem.ResponseImpactDate.ToString();
+            daysAfterTextBox.Text = riskItem.daysImpactAfter.ToString();
+            impactStartDateDateTimePicker.Text = riskItem.impactStartDate.ToString();
+            impactEndDateDateTimePicker.Text = riskItem.impactEndDate.ToString();
+            monetaryValueAfterTextBox.Text = riskItem.monetaryValueAfter.ToString();
+            //calculationDescAfterTextBox.Text = riskItem
 
 
         }
 
         private void ExecRolog_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.rk_risk_packgs' table. You can move, or remove it, as needed.
+            this.rk_risk_packgsTableAdapter.Fill(this.dataSet1.rk_risk_packgs);
+            // TODO: This line of code loads data into the 'dataSet1.Originating_view' table. You can move, or remove it, as needed.
+            this.originating_viewTableAdapter.Fill(this.dataSet1.Originating_view);
+            // TODO: This line of code loads data into the 'dataSet1.rk_NCC' table. You can move, or remove it, as needed.
+            this.rk_NCCTableAdapter.Fill(this.dataSet1.rk_NCC);
             // TODO: Tento řádek načte data do tabulky 'dataSet1.ListOfOwners'. Můžete jej přesunout nebo jej odstranit podle potřeby.
             this.listOfOwnersTableAdapter.Fill(this.dataSet1.ListOfOwners);
             // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_resp_Root'. Můžete jej přesunout nebo jej odstranit podle potřeby.
