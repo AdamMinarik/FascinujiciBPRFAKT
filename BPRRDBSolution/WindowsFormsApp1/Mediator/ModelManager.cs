@@ -18,9 +18,9 @@ namespace WindowsFormsApp1.Mediator
         }
 
 
-        public void addItem(EProjectItem item, bool approval)
+        public void addItem(EProjectItem item, bool approval,String Type, int ProjectID)
         {
-            throw new NotImplementedException();
+            storage.addItem(item, approval, Type, ProjectID);
         }
 
         public EProjectItemList getClosedItems(int projectID, string month, string type)
@@ -65,7 +65,7 @@ namespace WindowsFormsApp1.Mediator
 
         public void updateItem(EProjectItem item, bool projectOwner, String type)
         {
-            throw new NotImplementedException();
+            storage.updateItem(item, projectOwner, type);
         }
 
         public void updateNewItem(EProjectItem item)

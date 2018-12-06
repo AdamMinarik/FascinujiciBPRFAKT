@@ -57,10 +57,152 @@ namespace WindowsFormsApp1.Mediator
             connection = new SqlConnection(connectionString.ConnectionString);
         }
            
-        public void addItem(EProjectItem item, bool approval)
+
+
+        public void addItem(EProjectItem item, bool approval, String Type, int ProjectID)
         {
-            throw new NotImplementedException();
+            //NOT A PROJECT OWNER
+            if(approval == true)
+            {
+
+            }
+            //PROJECT OWNER
+            else 
+            {
+                //ADDING RISK
+                if(Type == "risk")
+                {
+                    try
+                    {
+                        // Cast EprojectItem to ERisk
+                        ERisk riskItem = (ERisk)item;
+
+                        // Opening connection and executing Queries
+                        using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
+                        {
+                            connection.Open();
+
+                            MessageBox.Show("INSERT INTO[rk_ROlog]([Rname],[IDproj],[IDchap],[itemtype],[addItemType],[UpdatedBy],[ExcelID],[REF_ID]) Values('" + riskItem.itemName.ToString() + "', " + ProjectID.ToString() + ", 1, 1, 'Individual Risk', 1," + riskItem.excelID.ToString() + ",1)"); 
+                            
+                            command = new SqlCommand("INSERT INTO[rk_ROlog]([Rname],[IDproj],[IDchap],[itemtype],[addItemType],[UpdatedBy],[ExcelID],[REF_ID]) Values('" + riskItem.itemName.ToString() + "', " + ProjectID.ToString() + ", 1, 1, 'Individual Risk', 1," + riskItem.excelID.ToString() + ",1)", connection);
+                            command.ExecuteNonQuery();
+
+                            string queryString = "UPDATE [rk_ROlog] SET " +
+                                              "   [calcDescAfter] = '" + riskItem.monetaryValueAfterDesc.ToString() +
+                                              "', [expValueDaysAfter] = " + riskItem.daysImpactAfter.ToString() +
+                                              " , [ID_WBS] =" + riskItem.wbsID.ToString() +
+                                              " , [IDcat] =" + riskItem.categoryID.ToString() +
+                                              " , [RootCause]= '" + riskItem.mainRootCause.ToString() +
+                                              "', [OtherRootCause]= '" + riskItem.otherRootCause.ToString() +
+                                              "', [reStrategy]= " + riskItem.respStratRootCauseID.ToString() +
+                                              " , [ID_riskActionOwner] = " + riskItem.actionOwnerRootCauseID.ToString() +
+                                              " , [P] =" + riskItem.percentageBefore.ToString() +
+                                              " , [MitDesc] = '" + riskItem.actionsRootCause.ToString() +
+                                              "', [Mitdate] = '" + riskItem.ResponseRootCauseDate.ToString("yyyy-MM-dd") +
+                                              "', [Mitcost] = " + riskItem.costRootCause.ToString() +
+                                              " , [Pafter] =" + riskItem.percentageAfter.ToString() +
+                                              " , [IDowner] =" + riskItem.riskOwnerID.ToString() +
+                                              " , [RkDesc] ='" + riskItem.itemDescription.ToString() +
+                                              "', [Rname] ='" + riskItem.itemName.ToString() +
+                                              "', [ID_customerShare] =" + riskItem.customerShareID.ToString() +
+                                              " , [ExcelID] = " + riskItem.excelID.ToString() +
+                                              " , [Status]= " + riskItem.itemStatusID.ToString() +
+                                              " , [IDOwnerDirect] = " + riskItem.actionOwnerImpactID.ToString() +
+                                              " , [ValAfterMiti]= " + riskItem.monetaryValueAfter.ToString() +
+                                              " , [ExpValueDays]= " + riskItem.daysImpactBefore.ToString() +
+                                              " , [MitiActDate]= '" + riskItem.ResponseImpactDate.ToString("yyyy-MM-dd") +
+                                              "', [ImpEndDate]= '" + riskItem.impactEndDate.ToString("yyyy-MM-dd") +
+                                              "', [CostMitiImpact]= " + riskItem.costImpact.ToString() +
+                                              " , [Impact]= '" + riskItem.actionsImpact.ToString() +
+                                              "', [ImpactDirect]= '" + riskItem.impactDesc.ToString() +
+                                              "', [ID_resp]= " + riskItem.respStratImpactID.ToString() +
+                                              " , [ID_phase]= " + riskItem.phaseID.ToString() +
+                                              " , [DueDate]= '" + riskItem.impactStartDate.ToString("yyyy-MM-dd") +
+                                              "', [formula]= '" + riskItem.formulaBefore.ToString() +
+                                              "', [forDesc]= '" + riskItem.formulaBeforeDesc.ToString() +
+                                              "', [BU]= " + riskItem.buRate.ToString() +
+                                              " , [Rkbef]= " + riskItem.monetaryValueBefore.ToString() +
+                                              " , [Remarks]= '" + riskItem.remarks.ToString() +
+                                              "', [IDncc]= " + riskItem.nccID.ToString() +
+                                              " , [OriginatingID]= " + riskItem.orgUnitID.ToString() +
+                                              " , [timeObjective]= '" + riskItem.timeObjective.ToString() +
+                                              "', [costObjective]= '" + riskItem.costObjective.ToString() +
+                                              "', [qualityObjective]= '" + riskItem.qualityObjective.ToString() +
+                                              "', [safetyfObjective]= '" + riskItem.safetyObjective.ToString() +
+                                              "', [costSatisfObjective]= '" + riskItem.customerSatisfObjective.ToString() +
+                                              "'   WHERE ID = (SELECT MAX(ID) FROM rk_ROlog WHERE IDproj =" + ProjectID.ToString() + ")";
+                            MessageBox.Show(queryString);
+                            command = new SqlCommand(queryString, connection);
+                            command.ExecuteNonQuery();
+
+
+                            command = new SqlCommand("UPDATE [rk_ROlog] SET updatedBy = 0 WHERE ID = " + riskItem.itemID.ToString(), connection);
+                            command.ExecuteNonQuery();
+                            connection.Close();
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Something went wront, when trying to update risk. Error Message: " + ex.Message);
+                    }
+
+
+
+
+
+                }
+            }
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public EProjectItemList getClosedItems(int projectID, string month, string type)
         {
@@ -359,7 +501,7 @@ namespace WindowsFormsApp1.Mediator
             if (type.ToLower() == "risk")
             {
                 connection.Open();
-                string SQL = "SELECT * FROM rk_ROlog";
+                string SQL = "SELECT * FROM rk_ROlog WHERE IDproj =" + projectID;
 
                 dataAdapterERisk = new SqlDataAdapter(SQL, connection);
                 dataSourceERisk = new DataTable();
@@ -1191,7 +1333,6 @@ namespace WindowsFormsApp1.Mediator
             // IF USER IS PROJECT OWNER
             if (projectOwner == true)
             {
-
                 // RISKS PROJECT OWNER UPDATE ///////////////////////////////////////////////////////////////////////////////////
                 if (type.ToLower() == "risk")
                 { 
@@ -1207,6 +1348,7 @@ namespace WindowsFormsApp1.Mediator
                             command = new SqlCommand("UPDATE [rk_ROlog] SET updatedBy = 1 WHERE ID = " + riskItem.itemID.ToString(), connection);
                             command.ExecuteNonQuery();
 
+
                             string queryString = "UPDATE [rk_ROlog] SET " +
                                               "   [calcDescAfter] = '" +            riskItem.monetaryValueAfterDesc.ToString() +
                                               "', [expValueDaysAfter] = " +         riskItem.daysImpactAfter.ToString() +
@@ -1218,8 +1360,8 @@ namespace WindowsFormsApp1.Mediator
                                               " , [ID_riskActionOwner] = " +        riskItem.actionOwnerRootCauseID.ToString() +
                                               " , [P] =" +                          riskItem.percentageBefore.ToString() +
                                               " , [MitDesc] = '" +                  riskItem.actionsRootCause.ToString() +
-                                              "', [Mitdate] = " +                   riskItem.ResponseRootCauseDate.ToString() +
-                                              " , [Mitcost] = " +                   riskItem.costRootCause.ToString() +
+                                              "', [Mitdate] = '" +                   riskItem.ResponseRootCauseDate.ToString("yyyy-MM-dd") +
+                                              "', [Mitcost] = " +                   riskItem.costRootCause.ToString() +
                                               " , [Pafter] =" +                     riskItem.percentageAfter.ToString() +
                                               " , [IDowner] =" +                    riskItem.riskOwnerID.ToString() +
                                               " , [RkDesc] ='" +                    riskItem.itemDescription.ToString() +
@@ -1230,27 +1372,28 @@ namespace WindowsFormsApp1.Mediator
                                               " , [IDOwnerDirect] = " +             riskItem.actionOwnerImpactID.ToString()  +
                                               " , [ValAfterMiti]= " +               riskItem.monetaryValueAfter.ToString()  +
                                               " , [ExpValueDays]= " +               riskItem.daysImpactBefore.ToString()  +
-                                              " , [MitiActDate]= " +                riskItem.ResponseImpactDate.ToString() +
-                                              " , [ImpEndDate]= " +                 riskItem.impactEndDate.ToString() +
-                                              " , [CostMitiImpact]= " +             riskItem.costImpact.ToString() +
+                                              " , [MitiActDate]= '" +                riskItem.ResponseImpactDate.ToString("yyyy-MM-dd") +
+                                              "', [ImpEndDate]= '" +                 riskItem.impactEndDate.ToString("yyyy-MM-dd") +
+                                              "', [CostMitiImpact]= " +             riskItem.costImpact.ToString() +
                                               " , [Impact]= '" +                    riskItem.actionsImpact.ToString() +
                                               "', [ImpactDirect]= '" +              riskItem.impactDesc.ToString()  +
                                               "', [ID_resp]= " +                    riskItem.respStratImpactID.ToString() +
                                               " , [ID_phase]= " +                   riskItem.phaseID.ToString() +
-                                              " , [DueDate]= " +                    riskItem.impactStartDate.ToString() +
-                                              " , [formula]= '" +                   riskItem.formulaBefore.ToString()  +
+                                              " , [DueDate]= '" +                    riskItem.impactStartDate.ToString("yyyy-MM-dd") +
+                                              "', [formula]= '" +                   riskItem.formulaBefore.ToString()  +
                                               "', [forDesc]= '" +                   riskItem.formulaBeforeDesc.ToString()  +
                                               "', [BU]= " +                         riskItem.buRate.ToString()  +
                                               " , [Rkbef]= " +                      riskItem.monetaryValueBefore.ToString() +
                                               " , [Remarks]= '" +                   riskItem.remarks.ToString() +
                                               "', [IDncc]= " +                      riskItem.nccID.ToString() +
                                               " , [OriginatingID]= " +              riskItem.orgUnitID.ToString() +
-                                              " , [timeObjective]= " +              riskItem.timeObjective.ToString() +
-                                              " , [costObjective]= " +              riskItem.costObjective.ToString() +
-                                              " , [qualityObjective]= " +           riskItem.qualityObjective.ToString() +
-                                              " , [safetyfObjective]= " +           riskItem.safetyObjective.ToString()  +
-                                              " , [costSatisfObjective]= " +        riskItem.customerSatisfObjective.ToString() +
-                                              "   WHERE ID =" +                     riskItem.itemID.ToString();
+                                              " , [timeObjective]= '" +              riskItem.timeObjective.ToString() +
+                                              "', [costObjective]= '" +              riskItem.costObjective.ToString() +
+                                              "', [qualityObjective]= '" +           riskItem.qualityObjective.ToString() +
+                                              "', [safetyfObjective]= '" +           riskItem.safetyObjective.ToString()  +
+                                              "', [costSatisfObjective]= '" +        riskItem.customerSatisfObjective.ToString() +
+                                              "'   WHERE ID =" +                     riskItem.itemID.ToString();
+                            MessageBox.Show(queryString);
                             command = new SqlCommand(queryString, connection);
                             command.ExecuteNonQuery();
 
@@ -1262,14 +1405,11 @@ namespace WindowsFormsApp1.Mediator
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Something went wront. Error Message: " + ex.Message);
+                        MessageBox.Show("Something went wront, when trying to update risk. Error Message: " + ex.Message);
                     }
                 }
-
-
-
                 // OPPORTUNITY PROJECT OWNER UPDATE ///////////////////////////////////////////////////////////////////////////////////
-                if (type.ToLower() == "opportunity")
+                else if (type.ToLower() == "opportunity")
                 {
                     try
                     {
@@ -1329,12 +1469,12 @@ namespace WindowsFormsApp1.Mediator
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Something went wront. Error Message: " + ex.Message);
+                        MessageBox.Show("Something went wront, when trying to update Opportunity. Error Message: " + ex.Message);
                     }
                 }
 
                 // PROJECT IMPACT PROJECT OWNER UPDATE ///////////////////////////////////////////////////////////////////////////////////
-                if (type.ToLower() == "projectimpact")
+                else if (type.ToLower() == "projectimpact")
                 {
                     try
                     {
@@ -1392,13 +1532,13 @@ namespace WindowsFormsApp1.Mediator
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Something went wront. Error Message: " + ex.Message);
+                        MessageBox.Show("Something went wront, when trying to update Project Impact. Error Message: " + ex.Message);
                     }
                 }
 
 
                 // ENTERPRISE RISK PROJECT OWNER UPDATE ///////////////////////////////////////////////////////////////////////////////////
-                if (type.ToLower() == "enterpriserisk")
+                else if (type.ToLower() == "enterpriserisk")
                 {
                     try
                     {
@@ -1431,12 +1571,12 @@ namespace WindowsFormsApp1.Mediator
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Something went wront. Error Message: " + ex.Message);
+                        MessageBox.Show("Something went wront, when trying to save Enterprise Risk. Error Message: " + ex.Message);
                     }
                 }
 
                 // ENTERPRISE RISK PROJECT OWNER UPDATE ///////////////////////////////////////////////////////////////////////////////////
-                if (type.ToLower() == "otheruncertainty")
+                else if (type.ToLower() == "otheruncertainty")
                 {
                     try
                     {
@@ -1469,13 +1609,13 @@ namespace WindowsFormsApp1.Mediator
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Something went wront. Error Message: " + ex.Message);
+                        MessageBox.Show("Something went wront, when trying to update Other Uncertainty. Error Message: " + ex.Message);
                     }
                 }
-
                 // IF USER IS NOT PROJECT OWNER ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-                else
+            else
             {
+                    MessageBox.Show("EH");
                     // RISKS NOT PROJECT OWNER UPDATE
                     if (type.ToLower() == "risk")
                     {
@@ -1541,7 +1681,7 @@ namespace WindowsFormsApp1.Mediator
                         }
                     }
                     // OPPORTUNITY PROJECT NOT OWNER UPDATE///////////////////////////////////////////////////////////////////////////////////
-                    if (type.ToLower() == "opportunity")
+                    else if (type.ToLower() == "opportunity")
                     {
                         try
                         {
@@ -1602,7 +1742,7 @@ namespace WindowsFormsApp1.Mediator
                     }
 
                     // PROJECT IMPACT NOT PROJECT OWNER UPDATE ///////////////////////////////////////////////////////////////////////////////////
-                    if (type.ToLower() == "projectimpact")
+                    else if (type.ToLower() == "projectimpact")
                     {
                         try
                         {
@@ -1662,7 +1802,7 @@ namespace WindowsFormsApp1.Mediator
 
 
                     // ENTERPRISE RISK NOT PROJECT OWNER UPDATE ///////////////////////////////////////////////////////////////////////////////////
-                    if (type.ToLower() == "enterpriserisk")
+                    else if (type.ToLower() == "enterpriserisk")
                     {
                         try
                         {
@@ -1700,7 +1840,7 @@ namespace WindowsFormsApp1.Mediator
                     }
 
                     // ENTERPRISE RISK NOT PROJECT OWNER UPDATE ///////////////////////////////////////////////////////////////////////////////////
-                    if (type.ToLower() == "otheruncertainty")
+                    else if (type.ToLower() == "otheruncertainty")
                     {
                         try
                         {

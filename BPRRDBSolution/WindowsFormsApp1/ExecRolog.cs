@@ -10,6 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Model;
 using WindowsFormsApp1.Mediator;
+using OfficeOpenXml;
+using System.IO;
 
 namespace WindowsFormsApp1
 {
@@ -18,11 +20,14 @@ namespace WindowsFormsApp1
         private ModelManager modelManager;
         private EProjectItemList itemsList;
         private DataGridViewButtonColumn riskDetailButton;
+        private ERisk riskItemDetail;
+        private int ProjectID;
 
 
-        public ExecRolog(ExecutionUser user, ExecutionProject execProject)
+        public ExecRolog(ExecutionUser user, ExecutionProject execProject, int ProjectID)
         {
             InitializeComponent();
+            this.ProjectID = ProjectID;
             modelManager = new ModelManager();
             itemsList = modelManager.getItems(execProject.projectID, DateTime.Today.ToString(), "risk");
             userLabel.Text = user.firstName + ' ' + user.lastName;
@@ -146,7 +151,9 @@ namespace WindowsFormsApp1
 
         private void createRiskButton_Click(object sender, EventArgs e)
         {
-            execROlogTabControl.SelectedIndex = 1;
+            setRiskDetailEmpty();
+            execROlogTabControl.SelectedIndex = 2;
+            
         }
 
         private void createPIButton_Click(object sender, EventArgs e)
@@ -177,16 +184,16 @@ namespace WindowsFormsApp1
         private void rologGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int riskID;
-            ERisk riskItem;
+            
             // Ignore clicks that are not in our 
             if (e.ColumnIndex == rologGridView.Columns["Open"].Index && e.RowIndex >= 0)
             {
                 //get projectID from the list
                 riskID = (int)rologGridView.Rows[e.RowIndex].Cells[1].Value;
                 //get project object from mediator
-                riskItem = (ERisk)itemsList.getItem(riskID);
+                riskItemDetail = (ERisk)itemsList.getItem(riskID);
                 execROlogTabControl.SelectedIndex = 2;
-                setRiskDetail(riskItem);
+                setRiskDetail(riskItemDetail);
             }
         }
 
@@ -233,76 +240,145 @@ namespace WindowsFormsApp1
 
         private void setRiskDetail(ERisk riskItem)
         {
-
             indivRiskIDLabel.Text = riskItem.excelID.ToString();
             riskNameTextBox.Text = riskItem.itemName.ToString();
-            statusComboBox.SelectedIndex = riskItem.itemStatusID;
-            createdDateTimePicker.Text = riskItem.createDate.ToString();
-            updatedDateTimePicker.Text = riskItem.updateDate.ToString();
-            if (riskItem.customerShareID == 1)
-            {
-                canBeSharedCheckBox.Checked = true;
-            }
-            else
-            {
-                canBeSharedCheckBox.Checked = false;
-            };
-            mainRootCauseTextBox.Text = riskItem.mainRootCause.ToString();
+            statusComboBox.SelectedIndex = riskItem.itemStatusID - 1;
+            if(riskItem.createDate.Year < 2000) { createdDateTimePicker.CustomFormat = " "; createdDateTimePicker.Format = DateTimePickerFormat.Custom; } else {createdDateTimePicker.Text = riskItem.createDate.ToString();}
+            if (riskItem.updateDate.Year < 2000) { updatedDateTimePicker.CustomFormat = " "; updatedDateTimePicker.Format = DateTimePickerFormat.Custom; } else {updatedDateTimePicker.Text = riskItem.updateDate.ToString();}
+            if (riskItem.customerShareID == 1){canBeSharedCheckBox.Checked = true;}else{canBeSharedCheckBox.Checked = false;};
+            rootCauseTextBox.Text = riskItem.mainRootCause.ToString();
             otherRootCausesTextBox.Text = riskItem.otherRootCause.ToString();
-            categoryComboBox.Text = riskItem.categoryID.ToString();
+            if (riskItem.categoryID == 0) { categoryComboBox.SelectedIndex = -1; } else { categoryComboBox.SelectedIndex = riskItem.categoryID - 1; }
             probabilityBeforeResponseTextBox.Text = riskItem.percentageBefore.ToString();
-            if (riskItem.respStratRootCauseID == 0) { responseStrategyComboBox.SelectedIndex = -1;} else { responseStrategyComboBox.SelectedIndex = riskItem.respStratRootCauseID;}
-            if (riskItem.actionOwnerRootCauseID == 0) { riskActionOwnerComboBox.SelectedIndex = -1; } else { riskActionOwnerComboBox.SelectedIndex = riskItem.actionOwnerRootCauseID;}
+            if (riskItem.respStratRootCauseID == 0) { responseStrategyComboBox.SelectedIndex = -1; } else { responseStrategyComboBox.SelectedIndex = riskItem.respStratRootCauseID - 1; }
+            if (riskItem.actionOwnerRootCauseID == 0) { riskActionOwnerComboBox.SelectedIndex = -1; } else { riskActionOwnerComboBox.SelectedIndex = riskItem.actionOwnerRootCauseID - 1; }
             rootCauseActionsTextBox.Text = riskItem.actionsRootCause.ToString();
-            responseCostTextBox.Text = riskItem.costRootCause.ToString();
-            responsePlanDateTimePicker.Text = riskItem.ResponseRootCauseDate.ToString();
+            rootCauseCostTextBox.Text = riskItem.costRootCause.ToString();
+            if (riskItem.ResponseRootCauseDate.Year < 2000) { responsePlanDateTimePicker.CustomFormat = " "; responsePlanDateTimePicker.Format = DateTimePickerFormat.Custom; } else { responsePlanDateTimePicker.Text = riskItem.ResponseRootCauseDate.ToString();}
             probabilityAfterResponseTextBox.Text = riskItem.percentageAfter.ToString();
-
             aggregatedMonateryValueBeforeTextBox.Text = riskItem.monetaryValueBefore.ToString();
             expectedMonetaryValueBeforeTextBox.Text = (riskItem.monetaryValueBefore * riskItem.percentageBefore).ToString();
-
-
             aggregatedMonateryValueAfterTextBox.Text = riskItem.monetaryValueAfter.ToString();
             expectedMonateryValueAfterTextBox.Text = (riskItem.monetaryValueAfter * riskItem.percentageAfter).ToString();
-
-            if (riskItem.nccID == 0) { nccComboBox.SelectedIndex = -1;}else{ nccComboBox.SelectedIndex = riskItem.nccID; }
-            if (riskItem.orgUnitID == 0) { operatingUnitComboBox.SelectedIndex = -1; } else { operatingUnitComboBox.SelectedIndex = riskItem.orgUnitID; }
+            if (riskItem.nccID == 0) { nccComboBox.SelectedIndex = -1; } else { nccComboBox.SelectedIndex = riskItem.nccID - 1; }
+            if (riskItem.orgUnitID == 0) { operatingUnitComboBox.SelectedIndex = -1; } else { operatingUnitComboBox.SelectedIndex = riskItem.orgUnitID - 1; }
             remarksTextBox.Text = riskItem.remarks.ToString();
             timeImpactInDaysBeforeTextBox.Text = riskItem.daysImpactBefore.ToString();
-            expectedTimeImpactInDaysBeforeTextBox.Text = (riskItem.daysImpactBefore * riskItem.percentageBefore).ToString();
+            expectedTimeImpactInDaysBeforeTextBox.Text = ((riskItem.daysImpactBefore * riskItem.percentageBefore) / 100).ToString();
             timeImpactInDaysAfterTextBox.Text = riskItem.daysImpactAfter.ToString();
-            expectedTimeImpactInDaysAfterTextBox.Text = (riskItem.daysImpactAfter * riskItem.percentageAfter).ToString();
+            expectedTimeImpactInDaysAfterTextBox.Text = ((riskItem.daysImpactAfter * riskItem.percentageAfter) / 100).ToString();
             riskDescriptionTextBox.Text = riskItem.itemDescription.ToString();
-            riskOwnerComboBox.SelectedIndex = riskItem.riskOwnerID;
+            if (riskItem.riskOwnerID == 0) { riskOwnerComboBox.SelectedIndex = -1; } else { riskOwnerComboBox.SelectedIndex = riskItem.riskOwnerID - 1; }
             timeCheckBox.Checked = riskItem.timeObjective;
             costCheckBox.Checked = riskItem.costObjective;
             customerSatisfactionCheckBox.Checked = riskItem.customerSatisfObjective;
             safetyCheckBox.Checked = riskItem.safetyObjective;
             qualityCheckBox.Checked = riskItem.qualityObjective;
-            if (riskItem.phaseID == 0) { phaseComboBox.SelectedIndex = -1; } else { phaseComboBox.SelectedIndex = riskItem.phaseID; }
-            if (riskItem.wbsID == 0) { wbsComboBox.SelectedIndex = -1; } else { wbsComboBox.SelectedIndex = riskItem.wbsID; }
+            if (riskItem.phaseID == 0) { phaseComboBox.SelectedIndex = -1; } else { phaseComboBox.SelectedIndex = riskItem.phaseID - 1; }
+            if (riskItem.wbsID == 0) { wbsComboBox.SelectedIndex = -1; } else { wbsComboBox.SelectedIndex = riskItem.wbsID - 1; }
             impactDescriptionTextBox.Text = riskItem.itemDescription.ToString();
             timeImpactsInDaysBeforeTextBox.Text = riskItem.daysImpactBefore.ToString();
             daysAfterTextBox.Text = riskItem.daysImpactAfter.ToString();
             monetaryValueFormulaTextBox.Text = riskItem.formulaBefore.ToString();
             monetaryValueBeforeTextBox.Text = riskItem.monetaryValueBefore.ToString();
             formulaBeforeDescTextBox.Text = riskItem.formulaBeforeDesc.ToString();
-            if (riskItem.actionOwnerImpactID == 0) { reStrategyImpactComboBox.SelectedIndex = -1; } else { reStrategyImpactComboBox.SelectedIndex = riskItem.actionOwnerImpactID;}
-            if (riskItem.respStratImpactID == 0) { reStrategyImpactComboBox.SelectedIndex = -1;  } else { reStrategyImpactComboBox.SelectedIndex = riskItem.respStratImpactID; }
+            if (riskItem.actionOwnerImpactID == 0) { impactActionOwnerComboBox.SelectedIndex = -1; } else { impactActionOwnerComboBox.SelectedIndex = riskItem.actionOwnerImpactID - 1; }
+            if (riskItem.respStratImpactID == 0) { reStrategyImpactComboBox.SelectedIndex = -1;  } else { reStrategyImpactComboBox.SelectedIndex = riskItem.respStratImpactID - 1; }
             impactActionsTextBox.Text = riskItem.actionsImpact.ToString();
             responseCostEstimateTextBox.Text = riskItem.costImpact.ToString();
-            responsePlanImplementationDateTimePicker.Text = riskItem.ResponseImpactDate.ToString();
+            if (riskItem.ResponseImpactDate.Year < 2000) { responsePlanImplementationDateTimePicker.CustomFormat = " "; responsePlanImplementationDateTimePicker.Format = DateTimePickerFormat.Custom; } else { responsePlanImplementationDateTimePicker.Text = riskItem.ResponseImpactDate.ToString(); }
             daysAfterTextBox.Text = riskItem.daysImpactAfter.ToString();
-            impactStartDateDateTimePicker.Text = riskItem.impactStartDate.ToString();
-            impactEndDateDateTimePicker.Text = riskItem.impactEndDate.ToString();
+
+            if (riskItem.impactStartDate.Year < 2000) { impactStartDateDateTimePicker.CustomFormat = " "; impactStartDateDateTimePicker.Format = DateTimePickerFormat.Custom; } else { impactStartDateDateTimePicker.Text = riskItem.impactStartDate.ToString(); }
+            if (riskItem.impactEndDate.Year < 2000) { impactEndDateDateTimePicker.CustomFormat = " "; impactEndDateDateTimePicker.Format = DateTimePickerFormat.Custom; } else { impactEndDateDateTimePicker.Text = riskItem.impactEndDate.ToString(); }
             monetaryValueAfterTextBox.Text = riskItem.monetaryValueAfter.ToString();
-            //calculationDescAfterTextBox.Text = riskItem
-
-
         }
+
+        private void setRiskDetailEmpty()
+        {
+            indivRiskIDLabel.Text = (int.Parse(itemsList.getHighestExcelID()) + 1).ToString();
+            riskNameTextBox.Text = null;
+            statusComboBox.SelectedIndex = 0;
+            createdDateTimePicker.Text = null;
+            updatedDateTimePicker.Text = null;
+            canBeSharedCheckBox.Checked = false; 
+            rootCauseTextBox.Text = null;
+            otherRootCausesTextBox.Text = null;
+            categoryComboBox.SelectedIndex = -1;
+            probabilityBeforeResponseTextBox.Text = "0";
+            responseStrategyComboBox.SelectedIndex = -1; 
+            riskActionOwnerComboBox.SelectedIndex = -1; 
+            rootCauseActionsTextBox.Text = null;
+            rootCauseCostTextBox.Text = "0";
+
+            responsePlanDateTimePicker.CustomFormat = " ";
+            responsePlanDateTimePicker.Format = DateTimePickerFormat.Custom;
+
+            probabilityAfterResponseTextBox.Text = "0";
+            aggregatedMonateryValueBeforeTextBox.Text = "0";
+            expectedMonetaryValueBeforeTextBox.Text = "0";
+            aggregatedMonateryValueAfterTextBox.Text = "0";
+            expectedMonateryValueAfterTextBox.Text = "0";
+            nccComboBox.SelectedIndex = -1;
+            operatingUnitComboBox.SelectedIndex = -1;
+            remarksTextBox.Text = null;
+
+            timeImpactInDaysBeforeTextBox.Text = "0";
+            expectedTimeImpactInDaysBeforeTextBox.Text = "0";
+            timeImpactInDaysAfterTextBox.Text = "0";
+            expectedTimeImpactInDaysAfterTextBox.Text = "0";
+
+            riskDescriptionTextBox.Text = null;
+            riskOwnerComboBox.SelectedIndex = -1;
+            timeCheckBox.Checked = false;
+            costCheckBox.Checked = false;
+            customerSatisfactionCheckBox.Checked = false;
+            safetyCheckBox.Checked =  false;
+            qualityCheckBox.Checked =  false;
+            phaseComboBox.SelectedIndex = -1;
+            wbsComboBox.SelectedIndex = -1;
+            impactDescriptionTextBox.Text = null;
+            timeImpactsInDaysBeforeTextBox.Text = "0";
+            daysAfterTextBox.Text = "0";
+            monetaryValueFormulaTextBox.Text = "0";
+            monetaryValueBeforeTextBox.Text = "0";
+            formulaBeforeDescTextBox.Text = null;
+            impactActionOwnerComboBox.SelectedIndex = -1; 
+            reStrategyImpactComboBox.SelectedIndex = -1;
+            impactActionsTextBox.Text = null;
+            responseCostEstimateTextBox.Text = "0";
+
+            responsePlanImplementationDateTimePicker.CustomFormat = " ";
+            responsePlanImplementationDateTimePicker.Format = DateTimePickerFormat.Custom;
+
+            daysAfterTextBox.Text = "0";
+
+            impactStartDateDateTimePicker.CustomFormat = " ";
+            impactStartDateDateTimePicker.Format = DateTimePickerFormat.Custom;
+
+            impactEndDateDateTimePicker.CustomFormat = " ";
+            impactEndDateDateTimePicker.Format = DateTimePickerFormat.Custom;
+
+            monetaryValueAfterTextBox.Text = "0";
+        }
+
+
+
+
+
+
+
 
         private void ExecRolog_Load(object sender, EventArgs e)
         {
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_WBS'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.rk_WBSTableAdapter.Fill(this.dataSet1.rk_WBS);
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_response'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.rk_responseTableAdapter.Fill(this.dataSet1.rk_response);
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_phases'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.rk_phasesTableAdapter.Fill(this.dataSet1.rk_phases);
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_risk_cat'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.rk_risk_catTableAdapter.Fill(this.dataSet1.rk_risk_cat);
             // TODO: This line of code loads data into the 'dataSet1.rk_risk_packgs' table. You can move, or remove it, as needed.
             this.rk_risk_packgsTableAdapter.Fill(this.dataSet1.rk_risk_packgs);
             // TODO: This line of code loads data into the 'dataSet1.Originating_view' table. You can move, or remove it, as needed.
@@ -316,6 +392,171 @@ namespace WindowsFormsApp1
             // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_statusOfRisk'. Můžete jej přesunout nebo jej odstranit podle potřeby.
             this.rk_statusOfRiskTableAdapter.Fill(this.dataSet1.rk_statusOfRisk);
 
+        }
+
+        private void updateRiskBtn_Click(object sender, EventArgs e)
+        {
+            riskItemDetail.excelID = indivRiskIDLabel.Text;
+            riskItemDetail.itemName = riskNameTextBox.Text;
+            riskItemDetail.itemStatusID = statusComboBox.SelectedIndex;
+            riskItemDetail.createDate = createdDateTimePicker.Value;
+            riskItemDetail.updateDate = updatedDateTimePicker.Value;
+            if (canBeSharedCheckBox.Checked == true){riskItemDetail.customerShareID = 1;} else {riskItemDetail.customerShareID = 0;};
+            riskItemDetail.mainRootCause = rootCauseTextBox.Text;
+            riskItemDetail.otherRootCause = otherRootCausesTextBox.Text;
+            riskItemDetail.categoryID = categoryComboBox.SelectedIndex;
+            riskItemDetail.percentageBefore = double.Parse(probabilityBeforeResponseTextBox.Text);
+            riskItemDetail.respStratRootCauseID = responseStrategyComboBox.SelectedIndex;
+            riskItemDetail.actionOwnerRootCauseID = riskActionOwnerComboBox.SelectedIndex;
+            riskItemDetail.actionsRootCause = rootCauseActionsTextBox.Text;
+            riskItemDetail.costRootCause = double.Parse(rootCauseCostTextBox.Text);
+            riskItemDetail.ResponseRootCauseDate = responsePlanDateTimePicker.Value;
+            riskItemDetail.percentageAfter = double.Parse(probabilityAfterResponseTextBox.Text);
+            riskItemDetail.monetaryValueBefore = double.Parse(aggregatedMonateryValueBeforeTextBox.Text);
+            riskItemDetail.monetaryValueAfter = double.Parse(aggregatedMonateryValueAfterTextBox.Text);
+            riskItemDetail.nccID = nccComboBox.SelectedIndex;
+            riskItemDetail.orgUnitID = operatingUnitComboBox.SelectedIndex;
+            riskItemDetail.remarks = remarksTextBox.Text;
+            riskItemDetail.daysImpactBefore = int.Parse(timeImpactInDaysBeforeTextBox.Text);
+            riskItemDetail.daysImpactAfter = int.Parse(timeImpactInDaysAfterTextBox.Text);
+            riskItemDetail.itemDescription = riskDescriptionTextBox.Text;
+            riskItemDetail.riskOwnerID = riskOwnerComboBox.SelectedIndex;
+            riskItemDetail.timeObjective = timeCheckBox.Checked;
+            riskItemDetail.costObjective = costCheckBox.Checked;
+            riskItemDetail.customerSatisfObjective = customerSatisfactionCheckBox.Checked;
+            riskItemDetail.safetyObjective = safetyCheckBox.Checked;
+            riskItemDetail.qualityObjective = qualityCheckBox.Checked;
+            riskItemDetail.phaseID = phaseComboBox.SelectedIndex;
+            riskItemDetail.wbsID = wbsComboBox.SelectedIndex;
+            riskItemDetail.itemDescription = impactDescriptionTextBox.Text;
+            riskItemDetail.daysImpactBefore = int.Parse(timeImpactsInDaysBeforeTextBox.Text);
+            riskItemDetail.daysImpactAfter = int.Parse(daysAfterTextBox.Text);
+            riskItemDetail.formulaBefore = monetaryValueFormulaTextBox.Text;
+            riskItemDetail.monetaryValueBefore = double.Parse(monetaryValueBeforeTextBox.Text);
+            riskItemDetail.formulaBeforeDesc = formulaBeforeDescTextBox.Text;
+            riskItemDetail.actionOwnerImpactID = reStrategyImpactComboBox.SelectedIndex;
+            riskItemDetail.respStratImpactID = reStrategyImpactComboBox.SelectedIndex;
+            riskItemDetail.actionsImpact = impactActionsTextBox.Text;
+            riskItemDetail.costImpact = double.Parse(responseCostEstimateTextBox.Text);
+            riskItemDetail.ResponseImpactDate = responsePlanImplementationDateTimePicker.Value;
+            riskItemDetail.daysImpactAfter = int.Parse(daysAfterTextBox.Text);
+            riskItemDetail.impactStartDate = impactStartDateDateTimePicker.Value;
+            riskItemDetail.impactEndDate = impactEndDateDateTimePicker.Value;
+            riskItemDetail.monetaryValueAfter = double.Parse(monetaryValueAfterTextBox.Text);
+
+            modelManager.updateItem(riskItemDetail, true, "risk");
+        }
+
+        private void impactStartDateDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            impactStartDateDateTimePicker.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void impactEndDateDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            impactEndDateDateTimePicker.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void responsePlanImplementationDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            responsePlanImplementationDateTimePicker.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void responsePlanDateTimePicker_ValueChanged(object sender, EventArgs e)
+        {
+            responsePlanDateTimePicker.CustomFormat = "dd/MM/yyyy";
+        }
+
+        private void insertRiskBtn_Click(object sender, EventArgs e)
+        {
+            riskItemDetail = new ERisk(0,"","","","","","","","","","","","",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,false,false,false,false,false,false, false,0,0,0,0,
+                new DateTime(1900, 1,1), new DateTime(1900, 1, 1), new DateTime(1900, 1, 1), new DateTime(1900, 1, 1), new DateTime(1900, 1, 1), new DateTime(1900, 1, 1));
+
+
+            riskItemDetail.excelID = indivRiskIDLabel.Text;
+            riskItemDetail.itemName = riskNameTextBox.Text;
+            riskItemDetail.itemStatusID = statusComboBox.SelectedIndex + 1;
+            riskItemDetail.createDate = createdDateTimePicker.Value;
+            riskItemDetail.updateDate = updatedDateTimePicker.Value;
+            if (canBeSharedCheckBox.Checked == true) { riskItemDetail.customerShareID = 1; } else { riskItemDetail.customerShareID = 0; };
+            riskItemDetail.mainRootCause = rootCauseTextBox.Text;
+            riskItemDetail.otherRootCause = otherRootCausesTextBox.Text;
+            riskItemDetail.categoryID = categoryComboBox.SelectedIndex + 1;
+            riskItemDetail.percentageBefore = double.Parse(probabilityBeforeResponseTextBox.Text);
+            riskItemDetail.respStratRootCauseID = responseStrategyComboBox.SelectedIndex + 1;
+            riskItemDetail.actionOwnerRootCauseID = riskActionOwnerComboBox.SelectedIndex + 1;
+            riskItemDetail.actionsRootCause = rootCauseActionsTextBox.Text;
+            riskItemDetail.costRootCause = double.Parse(rootCauseCostTextBox.Text);
+            riskItemDetail.ResponseRootCauseDate = responsePlanDateTimePicker.Value;
+            riskItemDetail.percentageAfter = double.Parse(probabilityAfterResponseTextBox.Text);
+            riskItemDetail.monetaryValueBefore = double.Parse(aggregatedMonateryValueBeforeTextBox.Text);
+            riskItemDetail.monetaryValueAfter = double.Parse(aggregatedMonateryValueAfterTextBox.Text);
+            riskItemDetail.nccID = nccComboBox.SelectedIndex + 1;
+            riskItemDetail.orgUnitID = operatingUnitComboBox.SelectedIndex + 1;
+            riskItemDetail.remarks = remarksTextBox.Text;
+            riskItemDetail.daysImpactBefore = int.Parse(timeImpactInDaysBeforeTextBox.Text);
+            riskItemDetail.daysImpactAfter = int.Parse(timeImpactInDaysAfterTextBox.Text);
+            riskItemDetail.itemDescription = riskDescriptionTextBox.Text;
+            riskItemDetail.riskOwnerID = riskOwnerComboBox.SelectedIndex + 1;
+            riskItemDetail.timeObjective = timeCheckBox.Checked;
+            riskItemDetail.costObjective = costCheckBox.Checked;
+            riskItemDetail.customerSatisfObjective = customerSatisfactionCheckBox.Checked;
+            riskItemDetail.safetyObjective = safetyCheckBox.Checked;
+            riskItemDetail.qualityObjective = qualityCheckBox.Checked;
+            riskItemDetail.phaseID = phaseComboBox.SelectedIndex + 1;
+            riskItemDetail.wbsID = wbsComboBox.SelectedIndex + 1;
+            riskItemDetail.itemDescription = impactDescriptionTextBox.Text;
+            riskItemDetail.daysImpactBefore = int.Parse(timeImpactsInDaysBeforeTextBox.Text);
+            riskItemDetail.daysImpactAfter = int.Parse(daysAfterTextBox.Text);
+            riskItemDetail.formulaBefore = monetaryValueFormulaTextBox.Text;
+            riskItemDetail.monetaryValueBefore = double.Parse(monetaryValueBeforeTextBox.Text);
+            riskItemDetail.formulaBeforeDesc = formulaBeforeDescTextBox.Text;
+            riskItemDetail.actionOwnerImpactID = reStrategyImpactComboBox.SelectedIndex + 1;
+            riskItemDetail.respStratImpactID = reStrategyImpactComboBox.SelectedIndex + 1;
+            riskItemDetail.actionsImpact = impactActionsTextBox.Text;
+            riskItemDetail.costImpact = double.Parse(responseCostEstimateTextBox.Text);
+            riskItemDetail.ResponseImpactDate = responsePlanImplementationDateTimePicker.Value;
+            riskItemDetail.daysImpactAfter = int.Parse(daysAfterTextBox.Text);
+            riskItemDetail.impactStartDate = impactStartDateDateTimePicker.Value;
+            riskItemDetail.impactEndDate = impactEndDateDateTimePicker.Value;
+            riskItemDetail.monetaryValueAfter = double.Parse(monetaryValueAfterTextBox.Text);
+
+            modelManager.addItem(riskItemDetail, false, "risk", ProjectID);
+        }
+
+        private void roLogReportBtn_Click(object sender, EventArgs e)
+        {
+            ExportROlogToExcel();
+        }
+
+
+
+        public void ExportROlogToExcel()
+        {
+            using (ExcelPackage excel = new ExcelPackage())
+            {
+                excel.Workbook.Worksheets.Add("Project Information");
+                excel.Workbook.Worksheets.Add("ROlog");
+
+                var headerRow = new List<string[]>()
+                {
+                new string[] { "Risk ID", "Risk Name", "Risk Description", "etc." }
+                };
+
+                // Determine the header range (e.g. A1:D1)
+                string headerRange = "A1:" + Char.ConvertFromUtf32(headerRow[0].Length + 64) + "1";
+                // Target a worksheet
+                var worksheet = excel.Workbook.Worksheets["ROlog"];
+                // Popular header row data
+                worksheet.Cells[headerRange].LoadFromArrays(headerRow);
+
+
+                FileInfo excelFile = new FileInfo(@"C:\Users\Asparagus\Desktop\test.xlsx");
+                excel.SaveAs(excelFile);
+
+
+
+            }
         }
     }
 }

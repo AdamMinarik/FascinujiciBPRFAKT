@@ -32,6 +32,11 @@ namespace WindowsFormsApp1.Model
             return itemList.Find(x => x.getItemID() == ID);
         }
 
+        public string getHighestExcelID()
+        {
+            return itemList.Max(x => x.excelID);
+        }
+
         public List<EProjectItem> getWatchlist()
         {
             List<EProjectItem> watchList = new List<EProjectItem>();

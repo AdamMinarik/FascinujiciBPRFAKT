@@ -589,7 +589,7 @@ namespace WindowsFormsApp1
                     //get project object from mediator
                     execProject = modelManager.getExecutionProject(projectID);
                     //create form ExecROlog and send userObject and projectObject
-                    ExecRolog execROlogForm = new ExecRolog(user,execProject);
+                    ExecRolog execROlogForm = new ExecRolog(user,execProject,projectID);
                     //show form
                     execROlogForm.Show();
             }
