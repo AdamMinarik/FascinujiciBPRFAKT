@@ -28,6 +28,8 @@ namespace WindowsFormsApp1.Model
         public int entryCurID { get; set; }
         public int foundationID { get; set; }
         public int harbourID { get; set; }
+        public int BUCurID { get; set; }
+        public int RUCurID { get; set; }
 
         public decimal BUrate { get; set; }
         public decimal RUrate { get; set; }
@@ -43,7 +45,7 @@ namespace WindowsFormsApp1.Model
         public ExecutionProject(
                                  string sap, string loa, string cpm, string pm, string prepBy, string updatedBy, string checkBy,
                                  string name, string ownerName, int projectID, int ownerID, int segmentID, int scopeID, int wtgID, int numberWtgs, int entryCurID,
-                                 int foundationID, int harbourID, decimal BUrate, decimal RUrate, DateTime toc, DateTime prepDate,
+                                 int foundationID, int harbourID, int BUCurID, int RUCurID, decimal BUrate, decimal RUrate, DateTime toc, DateTime prepDate,
                                  DateTime updateDate, DateTime checkDate, double BUcontract, double RUcontract
                                )
         {
@@ -65,6 +67,8 @@ namespace WindowsFormsApp1.Model
             this.entryCurID = entryCurID;
             this.foundationID = foundationID;
             this.harbourID = harbourID;
+            this.BUCurID = BUCurID;
+            this.RUCurID = RUCurID;
             this.BUrate = BUrate;
             this.RUrate = RUrate;
             this.toc = toc;

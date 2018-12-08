@@ -32,6 +32,7 @@ namespace WindowsFormsApp1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExecRolog));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.locationPanel = new System.Windows.Forms.Panel();
             this.readPictureBox = new System.Windows.Forms.PictureBox();
             this.approvalPictureBox = new System.Windows.Forms.PictureBox();
@@ -56,7 +57,6 @@ namespace WindowsFormsApp1
             this.execROlogTabControl = new System.Windows.Forms.TabControl();
             this.overviewTab = new System.Windows.Forms.TabPage();
             this.infoSumPanel = new System.Windows.Forms.Panel();
-            this.itemTabSelector = new System.Windows.Forms.ComboBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.totalOpportunityLabel = new System.Windows.Forms.Label();
             this.rUOpportunityLabel = new System.Windows.Forms.Label();
@@ -363,8 +363,74 @@ namespace WindowsFormsApp1
             this.panel11 = new System.Windows.Forms.Panel();
             this.roLogReportBtn = new System.Windows.Forms.Button();
             this.permissionTab = new System.Windows.Forms.TabPage();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.userPermissionData = new System.Windows.Forms.DataGridView();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.delPermissionBtn = new System.Windows.Forms.Button();
+            this.writeGrantBtn = new System.Windows.Forms.Button();
+            this.userPermissionComboBox = new System.Windows.Forms.ComboBox();
+            this.userPermissionLabel = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
             this.approvalTab = new System.Windows.Forms.TabPage();
             this.infoTab = new System.Windows.Forms.TabPage();
+            this.newProjectTableLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.projectNameTextBox = new System.Windows.Forms.TextBox();
+            this.projectIDLabel = new System.Windows.Forms.Label();
+            this.projectIDTextBox = new System.Windows.Forms.TextBox();
+            this.pmLabel = new System.Windows.Forms.Label();
+            this.wtgNoTextBox = new System.Windows.Forms.TextBox();
+            this.PMTextBox = new System.Windows.Forms.TextBox();
+            this.cpmLabel = new System.Windows.Forms.Label();
+            this.CPMTextBox = new System.Windows.Forms.TextBox();
+            this.wtgNoLabel = new System.Windows.Forms.Label();
+            this.preparedByLabel = new System.Windows.Forms.Label();
+            this.preparedByTextBox = new System.Windows.Forms.TextBox();
+            this.TOCLabel = new System.Windows.Forms.Label();
+            this.totalProjectCostsTextBox = new System.Windows.Forms.TextBox();
+            this.totalCostsLabel = new System.Windows.Forms.Label();
+            this.ruCostsTextBox = new System.Windows.Forms.TextBox();
+            this.RUcostsLabel = new System.Windows.Forms.Label();
+            this.buCostsTextBox = new System.Windows.Forms.TextBox();
+            this.BUcostsLabel = new System.Windows.Forms.Label();
+            this.BUCurLabel = new System.Windows.Forms.Label();
+            this.buCurComboBox = new System.Windows.Forms.ComboBox();
+            this.rkCurrencyNameBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ruCurComboBox = new System.Windows.Forms.ComboBox();
+            this.rkCurrencyNameBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.RUcurLabel = new System.Windows.Forms.Label();
+            this.ruEurLabel = new System.Windows.Forms.Label();
+            this.buEurLabel = new System.Windows.Forms.Label();
+            this.ruRateTextBox = new System.Windows.Forms.TextBox();
+            this.buRateTextBox = new System.Windows.Forms.TextBox();
+            this.projectNameLabel = new System.Windows.Forms.Label();
+            this.foundationLabel = new System.Windows.Forms.Label();
+            this.preassemblyLabel = new System.Windows.Forms.Label();
+            this.portComboBox = new System.Windows.Forms.ComboBox();
+            this.rkPreAssemblyHarbourBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.foundationComboBox = new System.Windows.Forms.ComboBox();
+            this.rkFoundationTypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.segmentLabel = new System.Windows.Forms.Label();
+            this.scopeLabel = new System.Windows.Forms.Label();
+            this.segmentComboBox = new System.Windows.Forms.ComboBox();
+            this.rkSegmentBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.scopeComboBox = new System.Windows.Forms.ComboBox();
+            this.rkscopeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.wtgTypeLabel = new System.Windows.Forms.Label();
+            this.wtgTypeComboBox = new System.Windows.Forms.ComboBox();
+            this.wTGtypeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.LoAIDLabel = new System.Windows.Forms.Label();
+            this.LoaIDTextBox = new System.Windows.Forms.TextBox();
+            this.projectSpecificDataLabel = new System.Windows.Forms.Label();
+            this.projectPersonalDataLabel = new System.Windows.Forms.Label();
+            this.projectOrderDataLabel = new System.Windows.Forms.Label();
+            this.projectCostsLabel = new System.Windows.Forms.Label();
+            this.scopeLocationLabel = new System.Windows.Forms.Label();
+            this.updateProjectButton = new System.Windows.Forms.Button();
+            this.projectOwnerLabel = new System.Windows.Forms.Label();
+            this.projectOwnerComboBox = new System.Windows.Forms.ComboBox();
+            this.rkUsersListviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tocTextBox = new System.Windows.Forms.DateTimePicker();
+            this.bUCurrencySwitch = new System.Windows.Forms.CheckBox();
             this.rkstatusOfRiskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rk_statusOfRiskTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_statusOfRiskTableAdapter();
             this.rk_resp_RootTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_resp_RootTableAdapter();
@@ -376,6 +442,13 @@ namespace WindowsFormsApp1
             this.rk_phasesTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_phasesTableAdapter();
             this.rk_responseTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_responseTableAdapter();
             this.rk_WBSTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_WBSTableAdapter();
+            this.rk_UsersList_viewTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_UsersList_viewTableAdapter();
+            this.rk_scopeTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_scopeTableAdapter();
+            this.rk_FoundationTypeTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_FoundationTypeTableAdapter();
+            this.rk_PreAssemblyHarbourTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_PreAssemblyHarbourTableAdapter();
+            this.rk_SegmentTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_SegmentTableAdapter();
+            this.wTGtypeTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.WTGtypeTableAdapter();
+            this.rk_CurrencyNameTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_CurrencyNameTableAdapter();
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -442,6 +515,20 @@ namespace WindowsFormsApp1
             this.reportingTab.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.permissionTab.SuspendLayout();
+            this.panel15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.userPermissionData)).BeginInit();
+            this.panel14.SuspendLayout();
+            this.infoTab.SuspendLayout();
+            this.newProjectTableLayout.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkPreAssemblyHarbourBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkFoundationTypeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkSegmentBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkscopeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wTGtypeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkUsersListviewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rkstatusOfRiskBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -877,37 +964,16 @@ namespace WindowsFormsApp1
             this.overviewTab.TabIndex = 0;
             this.overviewTab.Text = "Overview";
             this.overviewTab.UseVisualStyleBackColor = true;
+            this.overviewTab.Click += new System.EventHandler(this.overviewTab_Click);
             // 
             // infoSumPanel
             // 
             this.infoSumPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
-            this.infoSumPanel.Controls.Add(this.itemTabSelector);
             this.infoSumPanel.Controls.Add(this.tableLayoutPanel1);
             this.infoSumPanel.Location = new System.Drawing.Point(0, 0);
             this.infoSumPanel.Name = "infoSumPanel";
             this.infoSumPanel.Size = new System.Drawing.Size(537, 265);
             this.infoSumPanel.TabIndex = 0;
-            // 
-            // itemTabSelector
-            // 
-            this.itemTabSelector.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
-            this.itemTabSelector.Font = new System.Drawing.Font("Trebuchet MS", 11F);
-            this.itemTabSelector.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.itemTabSelector.FormattingEnabled = true;
-            this.itemTabSelector.ItemHeight = 20;
-            this.itemTabSelector.Items.AddRange(new object[] {
-            "Individual Risks",
-            "Project Impacts",
-            "Individual Opportunities",
-            "Enterprise Risks",
-            "Other Uncertainties"});
-            this.itemTabSelector.Location = new System.Drawing.Point(11, 234);
-            this.itemTabSelector.Margin = new System.Windows.Forms.Padding(2);
-            this.itemTabSelector.Name = "itemTabSelector";
-            this.itemTabSelector.Size = new System.Drawing.Size(182, 28);
-            this.itemTabSelector.TabIndex = 11;
-            this.itemTabSelector.Text = "Individual Risks";
-            this.itemTabSelector.SelectedIndexChanged += new System.EventHandler(this.itemTabSelector_SelectedIndexChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -1297,9 +1363,9 @@ namespace WindowsFormsApp1
             // 
             this.panel1.Controls.Add(this.projectItemsTabControl);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(3, 574);
+            this.panel1.Location = new System.Drawing.Point(3, 267);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(855, 353);
+            this.panel1.Size = new System.Drawing.Size(855, 660);
             this.panel1.TabIndex = 3;
             // 
             // projectItemsTabControl
@@ -1313,7 +1379,7 @@ namespace WindowsFormsApp1
             this.projectItemsTabControl.Location = new System.Drawing.Point(0, 0);
             this.projectItemsTabControl.Name = "projectItemsTabControl";
             this.projectItemsTabControl.SelectedIndex = 0;
-            this.projectItemsTabControl.Size = new System.Drawing.Size(855, 353);
+            this.projectItemsTabControl.Size = new System.Drawing.Size(855, 660);
             this.projectItemsTabControl.TabIndex = 0;
             // 
             // risksTab
@@ -1322,7 +1388,7 @@ namespace WindowsFormsApp1
             this.risksTab.Location = new System.Drawing.Point(4, 22);
             this.risksTab.Name = "risksTab";
             this.risksTab.Padding = new System.Windows.Forms.Padding(3);
-            this.risksTab.Size = new System.Drawing.Size(847, 327);
+            this.risksTab.Size = new System.Drawing.Size(847, 634);
             this.risksTab.TabIndex = 0;
             this.risksTab.Text = "Individual Risks";
             this.risksTab.UseVisualStyleBackColor = true;
@@ -1333,7 +1399,7 @@ namespace WindowsFormsApp1
             this.rologGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rologGridView.Location = new System.Drawing.Point(3, 3);
             this.rologGridView.Name = "rologGridView";
-            this.rologGridView.Size = new System.Drawing.Size(841, 321);
+            this.rologGridView.Size = new System.Drawing.Size(841, 628);
             this.rologGridView.TabIndex = 0;
             this.rologGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rologGridView_CellClick);
             // 
@@ -1342,7 +1408,7 @@ namespace WindowsFormsApp1
             this.projImpactsTab.Location = new System.Drawing.Point(4, 22);
             this.projImpactsTab.Name = "projImpactsTab";
             this.projImpactsTab.Padding = new System.Windows.Forms.Padding(3);
-            this.projImpactsTab.Size = new System.Drawing.Size(847, 327);
+            this.projImpactsTab.Size = new System.Drawing.Size(847, 634);
             this.projImpactsTab.TabIndex = 1;
             this.projImpactsTab.Text = "Project Impacts";
             this.projImpactsTab.UseVisualStyleBackColor = true;
@@ -1352,7 +1418,7 @@ namespace WindowsFormsApp1
             this.oppTab.Location = new System.Drawing.Point(4, 22);
             this.oppTab.Name = "oppTab";
             this.oppTab.Padding = new System.Windows.Forms.Padding(3);
-            this.oppTab.Size = new System.Drawing.Size(847, 327);
+            this.oppTab.Size = new System.Drawing.Size(847, 634);
             this.oppTab.TabIndex = 2;
             this.oppTab.Text = "Individual Opportunities";
             this.oppTab.UseVisualStyleBackColor = true;
@@ -1362,7 +1428,7 @@ namespace WindowsFormsApp1
             this.erTab.Location = new System.Drawing.Point(4, 22);
             this.erTab.Name = "erTab";
             this.erTab.Padding = new System.Windows.Forms.Padding(3);
-            this.erTab.Size = new System.Drawing.Size(847, 327);
+            this.erTab.Size = new System.Drawing.Size(847, 634);
             this.erTab.TabIndex = 3;
             this.erTab.Text = "Enterprise Risks";
             this.erTab.UseVisualStyleBackColor = true;
@@ -1372,7 +1438,7 @@ namespace WindowsFormsApp1
             this.oUncTab.Location = new System.Drawing.Point(4, 22);
             this.oUncTab.Name = "oUncTab";
             this.oUncTab.Padding = new System.Windows.Forms.Padding(3);
-            this.oUncTab.Size = new System.Drawing.Size(847, 327);
+            this.oUncTab.Size = new System.Drawing.Size(847, 634);
             this.oUncTab.TabIndex = 4;
             this.oUncTab.Text = "Other Uncertainties ";
             this.oUncTab.UseVisualStyleBackColor = true;
@@ -2992,6 +3058,7 @@ namespace WindowsFormsApp1
             this.rootCauseCostTextBox.Name = "rootCauseCostTextBox";
             this.rootCauseCostTextBox.Size = new System.Drawing.Size(268, 21);
             this.rootCauseCostTextBox.TabIndex = 16;
+            this.rootCauseCostTextBox.Leave += new System.EventHandler(this.rootCauseCostTextBox_Leave);
             // 
             // probabilityAfterResponseTextBox
             // 
@@ -3000,6 +3067,7 @@ namespace WindowsFormsApp1
             this.probabilityAfterResponseTextBox.Name = "probabilityAfterResponseTextBox";
             this.probabilityAfterResponseTextBox.Size = new System.Drawing.Size(268, 21);
             this.probabilityAfterResponseTextBox.TabIndex = 17;
+            this.probabilityAfterResponseTextBox.Leave += new System.EventHandler(this.probabilityAfterResponseTextBox_Leave);
             // 
             // tableLayoutPanel9
             // 
@@ -3118,6 +3186,7 @@ namespace WindowsFormsApp1
             this.probabilityBeforeResponseTextBox.Name = "probabilityBeforeResponseTextBox";
             this.probabilityBeforeResponseTextBox.Size = new System.Drawing.Size(257, 21);
             this.probabilityBeforeResponseTextBox.TabIndex = 8;
+            this.probabilityBeforeResponseTextBox.Leave += new System.EventHandler(this.probabilityBeforeResponseTextBox_Leave);
             // 
             // tabPage2
             // 
@@ -3249,8 +3318,8 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.852686F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.679376F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.26516F));
-            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.332756F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.01974F));
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.44079F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.852686F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.852686F));
             this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.852686F));
@@ -3268,6 +3337,7 @@ namespace WindowsFormsApp1
             this.monetaryValueAfterTextBox.Name = "monetaryValueAfterTextBox";
             this.monetaryValueAfterTextBox.Size = new System.Drawing.Size(190, 21);
             this.monetaryValueAfterTextBox.TabIndex = 25;
+            this.monetaryValueAfterTextBox.Leave += new System.EventHandler(this.monetaryValueAfterTextBox_Leave);
             // 
             // label73
             // 
@@ -3309,7 +3379,7 @@ namespace WindowsFormsApp1
             // label78
             // 
             this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(10, 145);
+            this.label78.Location = new System.Drawing.Point(10, 144);
             this.label78.Name = "label78";
             this.label78.Size = new System.Drawing.Size(138, 18);
             this.label78.TabIndex = 9;
@@ -3339,7 +3409,7 @@ namespace WindowsFormsApp1
             this.impactActionsTextBox.Location = new System.Drawing.Point(208, 80);
             this.impactActionsTextBox.Multiline = true;
             this.impactActionsTextBox.Name = "impactActionsTextBox";
-            this.impactActionsTextBox.Size = new System.Drawing.Size(190, 62);
+            this.impactActionsTextBox.Size = new System.Drawing.Size(190, 61);
             this.impactActionsTextBox.TabIndex = 12;
             // 
             // responsePlanImplementationDateTimePicker
@@ -3392,11 +3462,12 @@ namespace WindowsFormsApp1
             // responseCostEstimateTextBox
             // 
             this.responseCostEstimateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.responseCostEstimateTextBox.Location = new System.Drawing.Point(208, 148);
+            this.responseCostEstimateTextBox.Location = new System.Drawing.Point(208, 147);
             this.responseCostEstimateTextBox.Multiline = true;
             this.responseCostEstimateTextBox.Name = "responseCostEstimateTextBox";
-            this.responseCostEstimateTextBox.Size = new System.Drawing.Size(190, 20);
+            this.responseCostEstimateTextBox.Size = new System.Drawing.Size(190, 21);
             this.responseCostEstimateTextBox.TabIndex = 16;
+            this.responseCostEstimateTextBox.Leave += new System.EventHandler(this.responseCostEstimateTextBox_Leave);
             // 
             // daysAfterTextBox
             // 
@@ -3406,6 +3477,7 @@ namespace WindowsFormsApp1
             this.daysAfterTextBox.Name = "daysAfterTextBox";
             this.daysAfterTextBox.Size = new System.Drawing.Size(190, 23);
             this.daysAfterTextBox.TabIndex = 17;
+            this.daysAfterTextBox.Leave += new System.EventHandler(this.daysAfterTextBox_Leave);
             // 
             // label82
             // 
@@ -3473,11 +3545,11 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.217391F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.869565F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.869565F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.08696F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.391304F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.086957F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.391304F));
-            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.56106F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.620462F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.90099F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.785479F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.83168F));
             this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.91304F));
             this.tableLayoutPanel12.Size = new System.Drawing.Size(442, 628);
             this.tableLayoutPanel12.TabIndex = 1;
@@ -3486,10 +3558,10 @@ namespace WindowsFormsApp1
             // 
             this.formulaBeforeDescTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.formulaBeforeDescTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.formulaBeforeDescTextBox.Location = new System.Drawing.Point(226, 323);
+            this.formulaBeforeDescTextBox.Location = new System.Drawing.Point(226, 320);
             this.formulaBeforeDescTextBox.Multiline = true;
             this.formulaBeforeDescTextBox.Name = "formulaBeforeDescTextBox";
-            this.formulaBeforeDescTextBox.Size = new System.Drawing.Size(213, 91);
+            this.formulaBeforeDescTextBox.Size = new System.Drawing.Size(213, 96);
             this.formulaBeforeDescTextBox.TabIndex = 15;
             // 
             // monetaryValueBeforeTextBox
@@ -3499,37 +3571,39 @@ namespace WindowsFormsApp1
             this.monetaryValueBeforeTextBox.Location = new System.Drawing.Point(226, 291);
             this.monetaryValueBeforeTextBox.Multiline = true;
             this.monetaryValueBeforeTextBox.Name = "monetaryValueBeforeTextBox";
-            this.monetaryValueBeforeTextBox.Size = new System.Drawing.Size(213, 26);
+            this.monetaryValueBeforeTextBox.Size = new System.Drawing.Size(213, 23);
             this.monetaryValueBeforeTextBox.TabIndex = 14;
             // 
             // monetaryValueFormulaTextBox
             // 
             this.monetaryValueFormulaTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.monetaryValueFormulaTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.monetaryValueFormulaTextBox.Location = new System.Drawing.Point(226, 255);
+            this.monetaryValueFormulaTextBox.Location = new System.Drawing.Point(226, 231);
             this.monetaryValueFormulaTextBox.Multiline = true;
             this.monetaryValueFormulaTextBox.Name = "monetaryValueFormulaTextBox";
-            this.monetaryValueFormulaTextBox.Size = new System.Drawing.Size(213, 30);
+            this.monetaryValueFormulaTextBox.Size = new System.Drawing.Size(213, 54);
             this.monetaryValueFormulaTextBox.TabIndex = 13;
+            this.monetaryValueFormulaTextBox.Leave += new System.EventHandler(this.monetaryValueFormulaTextBox_Leave);
             // 
             // timeImpactsInDaysBeforeTextBox
             // 
             this.timeImpactsInDaysBeforeTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.timeImpactsInDaysBeforeTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.timeImpactsInDaysBeforeTextBox.Location = new System.Drawing.Point(226, 223);
+            this.timeImpactsInDaysBeforeTextBox.Location = new System.Drawing.Point(226, 203);
             this.timeImpactsInDaysBeforeTextBox.Multiline = true;
             this.timeImpactsInDaysBeforeTextBox.Name = "timeImpactsInDaysBeforeTextBox";
-            this.timeImpactsInDaysBeforeTextBox.Size = new System.Drawing.Size(213, 26);
+            this.timeImpactsInDaysBeforeTextBox.Size = new System.Drawing.Size(213, 22);
             this.timeImpactsInDaysBeforeTextBox.TabIndex = 12;
+            this.timeImpactsInDaysBeforeTextBox.Leave += new System.EventHandler(this.timeImpactsInDaysBeforeTextBox_Leave);
             // 
             // impactDescriptionTextBox
             // 
             this.impactDescriptionTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.impactDescriptionTextBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
-            this.impactDescriptionTextBox.Location = new System.Drawing.Point(226, 138);
+            this.impactDescriptionTextBox.Location = new System.Drawing.Point(226, 139);
             this.impactDescriptionTextBox.Multiline = true;
             this.impactDescriptionTextBox.Name = "impactDescriptionTextBox";
-            this.impactDescriptionTextBox.Size = new System.Drawing.Size(213, 79);
+            this.impactDescriptionTextBox.Size = new System.Drawing.Size(213, 58);
             this.impactDescriptionTextBox.TabIndex = 11;
             // 
             // wbsComboBox
@@ -3539,7 +3613,7 @@ namespace WindowsFormsApp1
             this.wbsComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.wbsComboBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
             this.wbsComboBox.FormattingEnabled = true;
-            this.wbsComboBox.Location = new System.Drawing.Point(226, 109);
+            this.wbsComboBox.Location = new System.Drawing.Point(226, 110);
             this.wbsComboBox.Name = "wbsComboBox";
             this.wbsComboBox.Size = new System.Drawing.Size(213, 23);
             this.wbsComboBox.TabIndex = 10;
@@ -3564,7 +3638,7 @@ namespace WindowsFormsApp1
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label65.Location = new System.Drawing.Point(3, 77);
+            this.label65.Location = new System.Drawing.Point(3, 78);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(39, 18);
             this.label65.TabIndex = 1;
@@ -3574,7 +3648,7 @@ namespace WindowsFormsApp1
             // 
             this.label66.AutoSize = true;
             this.label66.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label66.Location = new System.Drawing.Point(3, 106);
+            this.label66.Location = new System.Drawing.Point(3, 107);
             this.label66.Name = "label66";
             this.label66.Size = new System.Drawing.Size(31, 18);
             this.label66.TabIndex = 2;
@@ -3584,7 +3658,7 @@ namespace WindowsFormsApp1
             // 
             this.label67.AutoSize = true;
             this.label67.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label67.Location = new System.Drawing.Point(3, 135);
+            this.label67.Location = new System.Drawing.Point(3, 136);
             this.label67.Name = "label67";
             this.label67.Size = new System.Drawing.Size(112, 18);
             this.label67.TabIndex = 3;
@@ -3594,9 +3668,9 @@ namespace WindowsFormsApp1
             // 
             this.label68.AutoSize = true;
             this.label68.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label68.Location = new System.Drawing.Point(3, 220);
+            this.label68.Location = new System.Drawing.Point(3, 200);
             this.label68.Name = "label68";
-            this.label68.Size = new System.Drawing.Size(167, 32);
+            this.label68.Size = new System.Drawing.Size(167, 28);
             this.label68.TabIndex = 4;
             this.label68.Text = "Time impacts in days before Response";
             // 
@@ -3604,7 +3678,7 @@ namespace WindowsFormsApp1
             // 
             this.label69.AutoSize = true;
             this.label69.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label69.Location = new System.Drawing.Point(3, 252);
+            this.label69.Location = new System.Drawing.Point(3, 228);
             this.label69.Name = "label69";
             this.label69.Size = new System.Drawing.Size(213, 18);
             this.label69.TabIndex = 5;
@@ -3624,7 +3698,7 @@ namespace WindowsFormsApp1
             // 
             this.label71.AutoSize = true;
             this.label71.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.label71.Location = new System.Drawing.Point(3, 320);
+            this.label71.Location = new System.Drawing.Point(3, 317);
             this.label71.Name = "label71";
             this.label71.Size = new System.Drawing.Size(136, 18);
             this.label71.TabIndex = 7;
@@ -3637,7 +3711,7 @@ namespace WindowsFormsApp1
             this.phaseComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.phaseComboBox.Font = new System.Drawing.Font("Trebuchet MS", 7.5F);
             this.phaseComboBox.FormattingEnabled = true;
-            this.phaseComboBox.Location = new System.Drawing.Point(226, 80);
+            this.phaseComboBox.Location = new System.Drawing.Point(226, 81);
             this.phaseComboBox.Name = "phaseComboBox";
             this.phaseComboBox.Size = new System.Drawing.Size(213, 23);
             this.phaseComboBox.TabIndex = 9;
@@ -3658,7 +3732,7 @@ namespace WindowsFormsApp1
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(226, 25);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(213, 49);
+            this.panel10.Size = new System.Drawing.Size(213, 50);
             this.panel10.TabIndex = 16;
             // 
             // qualityCheckBox
@@ -4320,12 +4394,106 @@ namespace WindowsFormsApp1
             // 
             // permissionTab
             // 
+            this.permissionTab.Controls.Add(this.panel15);
+            this.permissionTab.Controls.Add(this.panel14);
+            this.permissionTab.Controls.Add(this.panel13);
             this.permissionTab.Location = new System.Drawing.Point(4, 22);
             this.permissionTab.Margin = new System.Windows.Forms.Padding(2);
             this.permissionTab.Name = "permissionTab";
             this.permissionTab.Size = new System.Drawing.Size(861, 930);
             this.permissionTab.TabIndex = 7;
             this.permissionTab.Text = "Permissions";
+            // 
+            // panel15
+            // 
+            this.panel15.Controls.Add(this.userPermissionData);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(0, 87);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(861, 671);
+            this.panel15.TabIndex = 2;
+            // 
+            // userPermissionData
+            // 
+            this.userPermissionData.AllowUserToAddRows = false;
+            this.userPermissionData.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.userPermissionData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.userPermissionData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.userPermissionData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
+            this.userPermissionData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.userPermissionData.DefaultCellStyle = dataGridViewCellStyle8;
+            this.userPermissionData.Location = new System.Drawing.Point(141, 6);
+            this.userPermissionData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.userPermissionData.Name = "userPermissionData";
+            this.userPermissionData.Size = new System.Drawing.Size(590, 634);
+            this.userPermissionData.TabIndex = 1;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.delPermissionBtn);
+            this.panel14.Controls.Add(this.writeGrantBtn);
+            this.panel14.Controls.Add(this.userPermissionComboBox);
+            this.panel14.Controls.Add(this.userPermissionLabel);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(861, 87);
+            this.panel14.TabIndex = 1;
+            // 
+            // delPermissionBtn
+            // 
+            this.delPermissionBtn.Location = new System.Drawing.Point(717, 30);
+            this.delPermissionBtn.Name = "delPermissionBtn";
+            this.delPermissionBtn.Size = new System.Drawing.Size(135, 23);
+            this.delPermissionBtn.TabIndex = 4;
+            this.delPermissionBtn.Text = "DELETE PERMISSION";
+            this.delPermissionBtn.UseVisualStyleBackColor = true;
+            this.delPermissionBtn.Click += new System.EventHandler(this.delPermissionBtn_Click);
+            // 
+            // writeGrantBtn
+            // 
+            this.writeGrantBtn.Location = new System.Drawing.Point(596, 30);
+            this.writeGrantBtn.Name = "writeGrantBtn";
+            this.writeGrantBtn.Size = new System.Drawing.Size(115, 23);
+            this.writeGrantBtn.TabIndex = 3;
+            this.writeGrantBtn.Text = "GRANT WRITE";
+            this.writeGrantBtn.UseVisualStyleBackColor = true;
+            this.writeGrantBtn.Click += new System.EventHandler(this.writeGrantBtn_Click);
+            // 
+            // userPermissionComboBox
+            // 
+            this.userPermissionComboBox.FormattingEnabled = true;
+            this.userPermissionComboBox.Location = new System.Drawing.Point(102, 30);
+            this.userPermissionComboBox.Name = "userPermissionComboBox";
+            this.userPermissionComboBox.Size = new System.Drawing.Size(475, 21);
+            this.userPermissionComboBox.TabIndex = 1;
+            // 
+            // userPermissionLabel
+            // 
+            this.userPermissionLabel.AutoSize = true;
+            this.userPermissionLabel.Location = new System.Drawing.Point(34, 33);
+            this.userPermissionLabel.Name = "userPermissionLabel";
+            this.userPermissionLabel.Size = new System.Drawing.Size(62, 13);
+            this.userPermissionLabel.TabIndex = 0;
+            this.userPermissionLabel.Text = "Select User";
+            // 
+            // panel13
+            // 
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel13.Location = new System.Drawing.Point(0, 758);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(861, 172);
+            this.panel13.TabIndex = 0;
             // 
             // approvalTab
             // 
@@ -4339,6 +4507,7 @@ namespace WindowsFormsApp1
             // 
             // infoTab
             // 
+            this.infoTab.Controls.Add(this.newProjectTableLayout);
             this.infoTab.Location = new System.Drawing.Point(4, 22);
             this.infoTab.Margin = new System.Windows.Forms.Padding(2);
             this.infoTab.Name = "infoTab";
@@ -4347,6 +4516,725 @@ namespace WindowsFormsApp1
             this.infoTab.TabIndex = 9;
             this.infoTab.Text = "Project Info";
             this.infoTab.UseVisualStyleBackColor = true;
+            // 
+            // newProjectTableLayout
+            // 
+            this.newProjectTableLayout.AutoSize = true;
+            this.newProjectTableLayout.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.newProjectTableLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
+            this.newProjectTableLayout.ColumnCount = 7;
+            this.newProjectTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.469074F));
+            this.newProjectTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.03613F));
+            this.newProjectTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 4.938149F));
+            this.newProjectTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.03613F));
+            this.newProjectTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 6.175157F));
+            this.newProjectTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 9.876299F));
+            this.newProjectTableLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.469074F));
+            this.newProjectTableLayout.Controls.Add(this.projectNameTextBox, 1, 2);
+            this.newProjectTableLayout.Controls.Add(this.projectIDLabel, 1, 3);
+            this.newProjectTableLayout.Controls.Add(this.projectIDTextBox, 1, 4);
+            this.newProjectTableLayout.Controls.Add(this.pmLabel, 1, 6);
+            this.newProjectTableLayout.Controls.Add(this.wtgNoTextBox, 1, 16);
+            this.newProjectTableLayout.Controls.Add(this.PMTextBox, 1, 7);
+            this.newProjectTableLayout.Controls.Add(this.cpmLabel, 1, 8);
+            this.newProjectTableLayout.Controls.Add(this.CPMTextBox, 1, 9);
+            this.newProjectTableLayout.Controls.Add(this.wtgNoLabel, 1, 15);
+            this.newProjectTableLayout.Controls.Add(this.preparedByLabel, 1, 10);
+            this.newProjectTableLayout.Controls.Add(this.preparedByTextBox, 1, 11);
+            this.newProjectTableLayout.Controls.Add(this.TOCLabel, 1, 13);
+            this.newProjectTableLayout.Controls.Add(this.totalProjectCostsTextBox, 1, 23);
+            this.newProjectTableLayout.Controls.Add(this.totalCostsLabel, 1, 22);
+            this.newProjectTableLayout.Controls.Add(this.ruCostsTextBox, 1, 21);
+            this.newProjectTableLayout.Controls.Add(this.RUcostsLabel, 1, 20);
+            this.newProjectTableLayout.Controls.Add(this.buCostsTextBox, 1, 19);
+            this.newProjectTableLayout.Controls.Add(this.BUcostsLabel, 1, 18);
+            this.newProjectTableLayout.Controls.Add(this.BUCurLabel, 3, 18);
+            this.newProjectTableLayout.Controls.Add(this.buCurComboBox, 3, 19);
+            this.newProjectTableLayout.Controls.Add(this.ruCurComboBox, 3, 21);
+            this.newProjectTableLayout.Controls.Add(this.RUcurLabel, 3, 20);
+            this.newProjectTableLayout.Controls.Add(this.ruEurLabel, 4, 21);
+            this.newProjectTableLayout.Controls.Add(this.buEurLabel, 4, 19);
+            this.newProjectTableLayout.Controls.Add(this.ruRateTextBox, 5, 21);
+            this.newProjectTableLayout.Controls.Add(this.buRateTextBox, 5, 19);
+            this.newProjectTableLayout.Controls.Add(this.projectNameLabel, 1, 1);
+            this.newProjectTableLayout.Controls.Add(this.foundationLabel, 3, 8);
+            this.newProjectTableLayout.Controls.Add(this.preassemblyLabel, 3, 10);
+            this.newProjectTableLayout.Controls.Add(this.portComboBox, 3, 11);
+            this.newProjectTableLayout.Controls.Add(this.foundationComboBox, 3, 9);
+            this.newProjectTableLayout.Controls.Add(this.segmentLabel, 3, 13);
+            this.newProjectTableLayout.Controls.Add(this.scopeLabel, 3, 6);
+            this.newProjectTableLayout.Controls.Add(this.segmentComboBox, 3, 14);
+            this.newProjectTableLayout.Controls.Add(this.scopeComboBox, 3, 7);
+            this.newProjectTableLayout.Controls.Add(this.wtgTypeLabel, 3, 15);
+            this.newProjectTableLayout.Controls.Add(this.wtgTypeComboBox, 3, 16);
+            this.newProjectTableLayout.Controls.Add(this.LoAIDLabel, 3, 3);
+            this.newProjectTableLayout.Controls.Add(this.LoaIDTextBox, 3, 4);
+            this.newProjectTableLayout.Controls.Add(this.projectSpecificDataLabel, 1, 0);
+            this.newProjectTableLayout.Controls.Add(this.projectPersonalDataLabel, 1, 5);
+            this.newProjectTableLayout.Controls.Add(this.projectOrderDataLabel, 1, 12);
+            this.newProjectTableLayout.Controls.Add(this.projectCostsLabel, 1, 17);
+            this.newProjectTableLayout.Controls.Add(this.scopeLocationLabel, 3, 5);
+            this.newProjectTableLayout.Controls.Add(this.updateProjectButton, 5, 24);
+            this.newProjectTableLayout.Controls.Add(this.projectOwnerLabel, 3, 1);
+            this.newProjectTableLayout.Controls.Add(this.projectOwnerComboBox, 3, 2);
+            this.newProjectTableLayout.Controls.Add(this.tocTextBox, 1, 14);
+            this.newProjectTableLayout.Controls.Add(this.bUCurrencySwitch, 3, 23);
+            this.newProjectTableLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newProjectTableLayout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.newProjectTableLayout.Location = new System.Drawing.Point(2, 2);
+            this.newProjectTableLayout.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.newProjectTableLayout.Name = "newProjectTableLayout";
+            this.newProjectTableLayout.RowCount = 26;
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.newProjectTableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.newProjectTableLayout.Size = new System.Drawing.Size(857, 926);
+            this.newProjectTableLayout.TabIndex = 43;
+            // 
+            // projectNameTextBox
+            // 
+            this.projectNameTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.projectNameTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.projectNameTextBox.Location = new System.Drawing.Point(23, 57);
+            this.projectNameTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.projectNameTextBox.Multiline = true;
+            this.projectNameTextBox.Name = "projectNameTextBox";
+            this.projectNameTextBox.Size = new System.Drawing.Size(313, 24);
+            this.projectNameTextBox.TabIndex = 18;
+            // 
+            // projectIDLabel
+            // 
+            this.projectIDLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.projectIDLabel.Location = new System.Drawing.Point(23, 84);
+            this.projectIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.projectIDLabel.Name = "projectIDLabel";
+            this.projectIDLabel.Size = new System.Drawing.Size(130, 24);
+            this.projectIDLabel.TabIndex = 1;
+            this.projectIDLabel.Text = "Project ID";
+            this.projectIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // projectIDTextBox
+            // 
+            this.projectIDTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.projectIDTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.projectIDTextBox.Location = new System.Drawing.Point(23, 111);
+            this.projectIDTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.projectIDTextBox.Multiline = true;
+            this.projectIDTextBox.Name = "projectIDTextBox";
+            this.projectIDTextBox.Size = new System.Drawing.Size(313, 24);
+            this.projectIDTextBox.TabIndex = 20;
+            // 
+            // pmLabel
+            // 
+            this.pmLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.pmLabel.Location = new System.Drawing.Point(23, 168);
+            this.pmLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.pmLabel.Name = "pmLabel";
+            this.pmLabel.Size = new System.Drawing.Size(130, 20);
+            this.pmLabel.TabIndex = 4;
+            this.pmLabel.Text = "Project Manager";
+            this.pmLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // wtgNoTextBox
+            // 
+            this.wtgNoTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wtgNoTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.wtgNoTextBox.Location = new System.Drawing.Point(23, 441);
+            this.wtgNoTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.wtgNoTextBox.Multiline = true;
+            this.wtgNoTextBox.Name = "wtgNoTextBox";
+            this.wtgNoTextBox.Size = new System.Drawing.Size(313, 24);
+            this.wtgNoTextBox.TabIndex = 30;
+            // 
+            // PMTextBox
+            // 
+            this.PMTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PMTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.PMTextBox.Location = new System.Drawing.Point(23, 195);
+            this.PMTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.PMTextBox.Multiline = true;
+            this.PMTextBox.Name = "PMTextBox";
+            this.PMTextBox.Size = new System.Drawing.Size(313, 24);
+            this.PMTextBox.TabIndex = 22;
+            // 
+            // cpmLabel
+            // 
+            this.cpmLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.cpmLabel.Location = new System.Drawing.Point(23, 222);
+            this.cpmLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.cpmLabel.Name = "cpmLabel";
+            this.cpmLabel.Size = new System.Drawing.Size(186, 24);
+            this.cpmLabel.TabIndex = 3;
+            this.cpmLabel.Text = "Commerctial Project Manager";
+            this.cpmLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // CPMTextBox
+            // 
+            this.CPMTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.CPMTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.CPMTextBox.Location = new System.Drawing.Point(23, 249);
+            this.CPMTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.CPMTextBox.Multiline = true;
+            this.CPMTextBox.Name = "CPMTextBox";
+            this.CPMTextBox.Size = new System.Drawing.Size(313, 24);
+            this.CPMTextBox.TabIndex = 23;
+            // 
+            // wtgNoLabel
+            // 
+            this.wtgNoLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.wtgNoLabel.Location = new System.Drawing.Point(23, 414);
+            this.wtgNoLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.wtgNoLabel.Name = "wtgNoLabel";
+            this.wtgNoLabel.Size = new System.Drawing.Size(130, 24);
+            this.wtgNoLabel.TabIndex = 9;
+            this.wtgNoLabel.Text = "Number of WTGs";
+            this.wtgNoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // preparedByLabel
+            // 
+            this.preparedByLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.preparedByLabel.Location = new System.Drawing.Point(23, 276);
+            this.preparedByLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.preparedByLabel.Name = "preparedByLabel";
+            this.preparedByLabel.Size = new System.Drawing.Size(130, 24);
+            this.preparedByLabel.TabIndex = 5;
+            this.preparedByLabel.Text = "Prepared by";
+            this.preparedByLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // preparedByTextBox
+            // 
+            this.preparedByTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.preparedByTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.preparedByTextBox.Location = new System.Drawing.Point(23, 303);
+            this.preparedByTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.preparedByTextBox.Multiline = true;
+            this.preparedByTextBox.Name = "preparedByTextBox";
+            this.preparedByTextBox.Size = new System.Drawing.Size(313, 24);
+            this.preparedByTextBox.TabIndex = 24;
+            // 
+            // TOCLabel
+            // 
+            this.TOCLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.TOCLabel.Location = new System.Drawing.Point(23, 360);
+            this.TOCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TOCLabel.Name = "TOCLabel";
+            this.TOCLabel.Size = new System.Drawing.Size(130, 24);
+            this.TOCLabel.TabIndex = 6;
+            this.TOCLabel.Text = "TOC Date";
+            this.TOCLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // totalProjectCostsTextBox
+            // 
+            this.totalProjectCostsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.totalProjectCostsTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.totalProjectCostsTextBox.Location = new System.Drawing.Point(23, 633);
+            this.totalProjectCostsTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.totalProjectCostsTextBox.Multiline = true;
+            this.totalProjectCostsTextBox.Name = "totalProjectCostsTextBox";
+            this.totalProjectCostsTextBox.ReadOnly = true;
+            this.totalProjectCostsTextBox.Size = new System.Drawing.Size(313, 24);
+            this.totalProjectCostsTextBox.TabIndex = 38;
+            // 
+            // totalCostsLabel
+            // 
+            this.totalCostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.totalCostsLabel.Location = new System.Drawing.Point(23, 606);
+            this.totalCostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.totalCostsLabel.Name = "totalCostsLabel";
+            this.totalCostsLabel.Size = new System.Drawing.Size(130, 24);
+            this.totalCostsLabel.TabIndex = 15;
+            this.totalCostsLabel.Text = "Total Project costs";
+            this.totalCostsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ruCostsTextBox
+            // 
+            this.ruCostsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ruCostsTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.ruCostsTextBox.Location = new System.Drawing.Point(23, 579);
+            this.ruCostsTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ruCostsTextBox.Multiline = true;
+            this.ruCostsTextBox.Name = "ruCostsTextBox";
+            this.ruCostsTextBox.Size = new System.Drawing.Size(313, 24);
+            this.ruCostsTextBox.TabIndex = 35;
+            // 
+            // RUcostsLabel
+            // 
+            this.RUcostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.RUcostsLabel.Location = new System.Drawing.Point(23, 552);
+            this.RUcostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RUcostsLabel.Name = "RUcostsLabel";
+            this.RUcostsLabel.Size = new System.Drawing.Size(130, 24);
+            this.RUcostsLabel.TabIndex = 14;
+            this.RUcostsLabel.Text = "Projects costs RU";
+            this.RUcostsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // buCostsTextBox
+            // 
+            this.buCostsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buCostsTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.buCostsTextBox.Location = new System.Drawing.Point(23, 525);
+            this.buCostsTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buCostsTextBox.Multiline = true;
+            this.buCostsTextBox.Name = "buCostsTextBox";
+            this.buCostsTextBox.Size = new System.Drawing.Size(313, 24);
+            this.buCostsTextBox.TabIndex = 32;
+            // 
+            // BUcostsLabel
+            // 
+            this.BUcostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.BUcostsLabel.Location = new System.Drawing.Point(23, 498);
+            this.BUcostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BUcostsLabel.Name = "BUcostsLabel";
+            this.BUcostsLabel.Size = new System.Drawing.Size(130, 24);
+            this.BUcostsLabel.TabIndex = 13;
+            this.BUcostsLabel.Text = "Projects costs BU";
+            this.BUcostsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // BUCurLabel
+            // 
+            this.BUCurLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.BUCurLabel.Location = new System.Drawing.Point(382, 498);
+            this.BUCurLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.BUCurLabel.Name = "BUCurLabel";
+            this.BUCurLabel.Size = new System.Drawing.Size(130, 24);
+            this.BUCurLabel.TabIndex = 16;
+            this.BUCurLabel.Text = "BU currency";
+            this.BUCurLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // buCurComboBox
+            // 
+            this.buCurComboBox.DataSource = this.rkCurrencyNameBindingSource;
+            this.buCurComboBox.DisplayMember = "Code";
+            this.buCurComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buCurComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.buCurComboBox.FormattingEnabled = true;
+            this.buCurComboBox.Location = new System.Drawing.Point(382, 525);
+            this.buCurComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buCurComboBox.Name = "buCurComboBox";
+            this.buCurComboBox.Size = new System.Drawing.Size(313, 26);
+            this.buCurComboBox.TabIndex = 33;
+            this.buCurComboBox.ValueMember = "ID";
+            // 
+            // rkCurrencyNameBindingSource
+            // 
+            this.rkCurrencyNameBindingSource.DataMember = "rk_CurrencyName";
+            this.rkCurrencyNameBindingSource.DataSource = this.dataSet1;
+            // 
+            // ruCurComboBox
+            // 
+            this.ruCurComboBox.DataSource = this.rkCurrencyNameBindingSource1;
+            this.ruCurComboBox.DisplayMember = "Code";
+            this.ruCurComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ruCurComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.ruCurComboBox.FormattingEnabled = true;
+            this.ruCurComboBox.Location = new System.Drawing.Point(382, 579);
+            this.ruCurComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ruCurComboBox.Name = "ruCurComboBox";
+            this.ruCurComboBox.Size = new System.Drawing.Size(313, 26);
+            this.ruCurComboBox.TabIndex = 36;
+            this.ruCurComboBox.ValueMember = "ID";
+            // 
+            // rkCurrencyNameBindingSource1
+            // 
+            this.rkCurrencyNameBindingSource1.DataMember = "rk_CurrencyName";
+            this.rkCurrencyNameBindingSource1.DataSource = this.dataSet1;
+            // 
+            // RUcurLabel
+            // 
+            this.RUcurLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.RUcurLabel.Location = new System.Drawing.Point(382, 552);
+            this.RUcurLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RUcurLabel.Name = "RUcurLabel";
+            this.RUcurLabel.Size = new System.Drawing.Size(130, 24);
+            this.RUcurLabel.TabIndex = 17;
+            this.RUcurLabel.Text = "RU currency";
+            this.RUcurLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ruEurLabel
+            // 
+            this.ruEurLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.ruEurLabel.Location = new System.Drawing.Point(699, 576);
+            this.ruEurLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ruEurLabel.Name = "ruEurLabel";
+            this.ruEurLabel.Size = new System.Drawing.Size(40, 21);
+            this.ruEurLabel.TabIndex = 38;
+            this.ruEurLabel.Text = "/EUR";
+            this.ruEurLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // buEurLabel
+            // 
+            this.buEurLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.buEurLabel.Location = new System.Drawing.Point(699, 522);
+            this.buEurLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.buEurLabel.Name = "buEurLabel";
+            this.buEurLabel.Size = new System.Drawing.Size(40, 21);
+            this.buEurLabel.TabIndex = 39;
+            this.buEurLabel.Text = "/EUR";
+            this.buEurLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ruRateTextBox
+            // 
+            this.ruRateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ruRateTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.ruRateTextBox.Location = new System.Drawing.Point(751, 579);
+            this.ruRateTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ruRateTextBox.Multiline = true;
+            this.ruRateTextBox.Name = "ruRateTextBox";
+            this.ruRateTextBox.Size = new System.Drawing.Size(80, 24);
+            this.ruRateTextBox.TabIndex = 37;
+            // 
+            // buRateTextBox
+            // 
+            this.buRateTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.buRateTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.buRateTextBox.Location = new System.Drawing.Point(751, 525);
+            this.buRateTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.buRateTextBox.Multiline = true;
+            this.buRateTextBox.Name = "buRateTextBox";
+            this.buRateTextBox.Size = new System.Drawing.Size(80, 24);
+            this.buRateTextBox.TabIndex = 34;
+            // 
+            // projectNameLabel
+            // 
+            this.projectNameLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.projectNameLabel.Location = new System.Drawing.Point(23, 30);
+            this.projectNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.projectNameLabel.Name = "projectNameLabel";
+            this.projectNameLabel.Size = new System.Drawing.Size(130, 24);
+            this.projectNameLabel.TabIndex = 0;
+            this.projectNameLabel.Text = "Project Name";
+            this.projectNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // foundationLabel
+            // 
+            this.foundationLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.foundationLabel.Location = new System.Drawing.Point(382, 222);
+            this.foundationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.foundationLabel.Name = "foundationLabel";
+            this.foundationLabel.Size = new System.Drawing.Size(130, 24);
+            this.foundationLabel.TabIndex = 11;
+            this.foundationLabel.Text = "Type of Foundation";
+            this.foundationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // preassemblyLabel
+            // 
+            this.preassemblyLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.preassemblyLabel.Location = new System.Drawing.Point(382, 276);
+            this.preassemblyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.preassemblyLabel.Name = "preassemblyLabel";
+            this.preassemblyLabel.Size = new System.Drawing.Size(130, 24);
+            this.preassemblyLabel.TabIndex = 12;
+            this.preassemblyLabel.Text = "Port of Pre-assembly";
+            this.preassemblyLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // portComboBox
+            // 
+            this.portComboBox.DataSource = this.rkPreAssemblyHarbourBindingSource;
+            this.portComboBox.DisplayMember = "Code";
+            this.portComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.portComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.portComboBox.FormattingEnabled = true;
+            this.portComboBox.Location = new System.Drawing.Point(382, 303);
+            this.portComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.portComboBox.Name = "portComboBox";
+            this.portComboBox.Size = new System.Drawing.Size(313, 26);
+            this.portComboBox.TabIndex = 27;
+            this.portComboBox.ValueMember = "ID";
+            // 
+            // rkPreAssemblyHarbourBindingSource
+            // 
+            this.rkPreAssemblyHarbourBindingSource.DataMember = "rk_PreAssemblyHarbour";
+            this.rkPreAssemblyHarbourBindingSource.DataSource = this.dataSet1;
+            // 
+            // foundationComboBox
+            // 
+            this.foundationComboBox.DataSource = this.rkFoundationTypeBindingSource;
+            this.foundationComboBox.DisplayMember = "Code";
+            this.foundationComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.foundationComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.foundationComboBox.FormattingEnabled = true;
+            this.foundationComboBox.Location = new System.Drawing.Point(382, 249);
+            this.foundationComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.foundationComboBox.Name = "foundationComboBox";
+            this.foundationComboBox.Size = new System.Drawing.Size(313, 26);
+            this.foundationComboBox.TabIndex = 26;
+            this.foundationComboBox.ValueMember = "ID";
+            // 
+            // rkFoundationTypeBindingSource
+            // 
+            this.rkFoundationTypeBindingSource.DataMember = "rk_FoundationType";
+            this.rkFoundationTypeBindingSource.DataSource = this.dataSet1;
+            // 
+            // segmentLabel
+            // 
+            this.segmentLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.segmentLabel.Location = new System.Drawing.Point(382, 360);
+            this.segmentLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.segmentLabel.Name = "segmentLabel";
+            this.segmentLabel.Size = new System.Drawing.Size(130, 24);
+            this.segmentLabel.TabIndex = 7;
+            this.segmentLabel.Text = "Segment";
+            this.segmentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // scopeLabel
+            // 
+            this.scopeLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.scopeLabel.Location = new System.Drawing.Point(382, 168);
+            this.scopeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.scopeLabel.Name = "scopeLabel";
+            this.scopeLabel.Size = new System.Drawing.Size(130, 24);
+            this.scopeLabel.TabIndex = 10;
+            this.scopeLabel.Text = "Scope";
+            this.scopeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // segmentComboBox
+            // 
+            this.segmentComboBox.DataSource = this.rkSegmentBindingSource;
+            this.segmentComboBox.DisplayMember = "Segment";
+            this.segmentComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.segmentComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.segmentComboBox.FormattingEnabled = true;
+            this.segmentComboBox.Location = new System.Drawing.Point(382, 387);
+            this.segmentComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.segmentComboBox.Name = "segmentComboBox";
+            this.segmentComboBox.Size = new System.Drawing.Size(313, 26);
+            this.segmentComboBox.TabIndex = 29;
+            this.segmentComboBox.ValueMember = "ID";
+            // 
+            // rkSegmentBindingSource
+            // 
+            this.rkSegmentBindingSource.DataMember = "rk_Segment";
+            this.rkSegmentBindingSource.DataSource = this.dataSet1;
+            // 
+            // scopeComboBox
+            // 
+            this.scopeComboBox.DataSource = this.rkscopeBindingSource;
+            this.scopeComboBox.DisplayMember = "scope";
+            this.scopeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.scopeComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.scopeComboBox.FormattingEnabled = true;
+            this.scopeComboBox.Location = new System.Drawing.Point(382, 195);
+            this.scopeComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.scopeComboBox.Name = "scopeComboBox";
+            this.scopeComboBox.Size = new System.Drawing.Size(313, 26);
+            this.scopeComboBox.TabIndex = 25;
+            this.scopeComboBox.ValueMember = "ID";
+            // 
+            // rkscopeBindingSource
+            // 
+            this.rkscopeBindingSource.DataMember = "rk_scope";
+            this.rkscopeBindingSource.DataSource = this.dataSet1;
+            // 
+            // wtgTypeLabel
+            // 
+            this.wtgTypeLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.wtgTypeLabel.Location = new System.Drawing.Point(382, 414);
+            this.wtgTypeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.wtgTypeLabel.Name = "wtgTypeLabel";
+            this.wtgTypeLabel.Size = new System.Drawing.Size(130, 24);
+            this.wtgTypeLabel.TabIndex = 8;
+            this.wtgTypeLabel.Text = "Type of WTG";
+            this.wtgTypeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // wtgTypeComboBox
+            // 
+            this.wtgTypeComboBox.DataSource = this.wTGtypeBindingSource;
+            this.wtgTypeComboBox.DisplayMember = "Name";
+            this.wtgTypeComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.wtgTypeComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.wtgTypeComboBox.FormattingEnabled = true;
+            this.wtgTypeComboBox.Location = new System.Drawing.Point(382, 441);
+            this.wtgTypeComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.wtgTypeComboBox.Name = "wtgTypeComboBox";
+            this.wtgTypeComboBox.Size = new System.Drawing.Size(313, 26);
+            this.wtgTypeComboBox.TabIndex = 31;
+            this.wtgTypeComboBox.ValueMember = "ID";
+            // 
+            // wTGtypeBindingSource
+            // 
+            this.wTGtypeBindingSource.DataMember = "WTGtype";
+            this.wTGtypeBindingSource.DataSource = this.dataSet1;
+            // 
+            // LoAIDLabel
+            // 
+            this.LoAIDLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.LoAIDLabel.Location = new System.Drawing.Point(382, 84);
+            this.LoAIDLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.LoAIDLabel.Name = "LoAIDLabel";
+            this.LoAIDLabel.Size = new System.Drawing.Size(130, 24);
+            this.LoAIDLabel.TabIndex = 2;
+            this.LoAIDLabel.Text = "LoA ID";
+            this.LoAIDLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // LoaIDTextBox
+            // 
+            this.LoaIDTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LoaIDTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.LoaIDTextBox.Location = new System.Drawing.Point(382, 111);
+            this.LoaIDTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.LoaIDTextBox.Multiline = true;
+            this.LoaIDTextBox.Name = "LoaIDTextBox";
+            this.LoaIDTextBox.Size = new System.Drawing.Size(313, 24);
+            this.LoaIDTextBox.TabIndex = 21;
+            // 
+            // projectSpecificDataLabel
+            // 
+            this.projectSpecificDataLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.projectSpecificDataLabel.AutoSize = true;
+            this.projectSpecificDataLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.projectSpecificDataLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.projectSpecificDataLabel.Location = new System.Drawing.Point(23, 6);
+            this.projectSpecificDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.projectSpecificDataLabel.Name = "projectSpecificDataLabel";
+            this.projectSpecificDataLabel.Size = new System.Drawing.Size(130, 18);
+            this.projectSpecificDataLabel.TabIndex = 42;
+            this.projectSpecificDataLabel.Text = "Project Specific Data";
+            // 
+            // projectPersonalDataLabel
+            // 
+            this.projectPersonalDataLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.projectPersonalDataLabel.AutoSize = true;
+            this.projectPersonalDataLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.projectPersonalDataLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.projectPersonalDataLabel.Location = new System.Drawing.Point(23, 144);
+            this.projectPersonalDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.projectPersonalDataLabel.Name = "projectPersonalDataLabel";
+            this.projectPersonalDataLabel.Size = new System.Drawing.Size(132, 18);
+            this.projectPersonalDataLabel.TabIndex = 43;
+            this.projectPersonalDataLabel.Text = "Project Personal Data";
+            // 
+            // projectOrderDataLabel
+            // 
+            this.projectOrderDataLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.projectOrderDataLabel.AutoSize = true;
+            this.projectOrderDataLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.projectOrderDataLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.projectOrderDataLabel.Location = new System.Drawing.Point(23, 336);
+            this.projectOrderDataLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.projectOrderDataLabel.Name = "projectOrderDataLabel";
+            this.projectOrderDataLabel.Size = new System.Drawing.Size(117, 18);
+            this.projectOrderDataLabel.TabIndex = 44;
+            this.projectOrderDataLabel.Text = "Project Order Data";
+            // 
+            // projectCostsLabel
+            // 
+            this.projectCostsLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.projectCostsLabel.AutoSize = true;
+            this.projectCostsLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.projectCostsLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.projectCostsLabel.Location = new System.Drawing.Point(23, 474);
+            this.projectCostsLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.projectCostsLabel.Name = "projectCostsLabel";
+            this.projectCostsLabel.Size = new System.Drawing.Size(85, 18);
+            this.projectCostsLabel.TabIndex = 45;
+            this.projectCostsLabel.Text = "Project Costs";
+            // 
+            // scopeLocationLabel
+            // 
+            this.scopeLocationLabel.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.scopeLocationLabel.AutoSize = true;
+            this.scopeLocationLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.scopeLocationLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
+            this.scopeLocationLabel.Location = new System.Drawing.Point(382, 144);
+            this.scopeLocationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.scopeLocationLabel.Name = "scopeLocationLabel";
+            this.scopeLocationLabel.Size = new System.Drawing.Size(109, 18);
+            this.scopeLocationLabel.TabIndex = 46;
+            this.scopeLocationLabel.Text = "Scope && Location";
+            // 
+            // updateProjectButton
+            // 
+            this.updateProjectButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.updateProjectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.updateProjectButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.updateProjectButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(116)))), ((int)(((byte)(150)))));
+            this.updateProjectButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            this.updateProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateProjectButton.Font = new System.Drawing.Font("Trebuchet MS", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateProjectButton.Location = new System.Drawing.Point(751, 663);
+            this.updateProjectButton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.updateProjectButton.Name = "updateProjectButton";
+            this.updateProjectButton.Size = new System.Drawing.Size(80, 44);
+            this.updateProjectButton.TabIndex = 47;
+            this.updateProjectButton.Text = "UPDATE";
+            this.updateProjectButton.UseVisualStyleBackColor = false;
+            this.updateProjectButton.Click += new System.EventHandler(this.updateProjectButton_Click);
+            // 
+            // projectOwnerLabel
+            // 
+            this.projectOwnerLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.projectOwnerLabel.Location = new System.Drawing.Point(382, 30);
+            this.projectOwnerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.projectOwnerLabel.Name = "projectOwnerLabel";
+            this.projectOwnerLabel.Size = new System.Drawing.Size(130, 24);
+            this.projectOwnerLabel.TabIndex = 48;
+            this.projectOwnerLabel.Text = "Project Owner";
+            this.projectOwnerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // projectOwnerComboBox
+            // 
+            this.projectOwnerComboBox.DataSource = this.rkUsersListviewBindingSource;
+            this.projectOwnerComboBox.DisplayMember = "LastName";
+            this.projectOwnerComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.projectOwnerComboBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.projectOwnerComboBox.FormattingEnabled = true;
+            this.projectOwnerComboBox.Location = new System.Drawing.Point(382, 57);
+            this.projectOwnerComboBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.projectOwnerComboBox.Name = "projectOwnerComboBox";
+            this.projectOwnerComboBox.Size = new System.Drawing.Size(313, 26);
+            this.projectOwnerComboBox.TabIndex = 19;
+            this.projectOwnerComboBox.ValueMember = "ID";
+            // 
+            // rkUsersListviewBindingSource
+            // 
+            this.rkUsersListviewBindingSource.DataMember = "rk_UsersList_view";
+            this.rkUsersListviewBindingSource.DataSource = this.dataSet1;
+            // 
+            // tocTextBox
+            // 
+            this.tocTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tocTextBox.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.tocTextBox.Location = new System.Drawing.Point(23, 387);
+            this.tocTextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.tocTextBox.Name = "tocTextBox";
+            this.tocTextBox.Size = new System.Drawing.Size(313, 22);
+            this.tocTextBox.TabIndex = 28;
+            // 
+            // bUCurrencySwitch
+            // 
+            this.bUCurrencySwitch.AutoSize = true;
+            this.bUCurrencySwitch.Font = new System.Drawing.Font("Trebuchet MS", 9.5F);
+            this.bUCurrencySwitch.Location = new System.Drawing.Point(383, 633);
+            this.bUCurrencySwitch.Name = "bUCurrencySwitch";
+            this.bUCurrencySwitch.Size = new System.Drawing.Size(157, 22);
+            this.bUCurrencySwitch.TabIndex = 49;
+            this.bUCurrencySwitch.Text = "BU Currency is Default";
+            this.bUCurrencySwitch.UseVisualStyleBackColor = true;
             // 
             // rkstatusOfRiskBindingSource
             // 
@@ -4392,6 +5280,34 @@ namespace WindowsFormsApp1
             // rk_WBSTableAdapter
             // 
             this.rk_WBSTableAdapter.ClearBeforeFill = true;
+            // 
+            // rk_UsersList_viewTableAdapter
+            // 
+            this.rk_UsersList_viewTableAdapter.ClearBeforeFill = true;
+            // 
+            // rk_scopeTableAdapter
+            // 
+            this.rk_scopeTableAdapter.ClearBeforeFill = true;
+            // 
+            // rk_FoundationTypeTableAdapter
+            // 
+            this.rk_FoundationTypeTableAdapter.ClearBeforeFill = true;
+            // 
+            // rk_PreAssemblyHarbourTableAdapter
+            // 
+            this.rk_PreAssemblyHarbourTableAdapter.ClearBeforeFill = true;
+            // 
+            // rk_SegmentTableAdapter
+            // 
+            this.rk_SegmentTableAdapter.ClearBeforeFill = true;
+            // 
+            // wTGtypeTableAdapter
+            // 
+            this.wTGtypeTableAdapter.ClearBeforeFill = true;
+            // 
+            // rk_CurrencyNameTableAdapter
+            // 
+            this.rk_CurrencyNameTableAdapter.ClearBeforeFill = true;
             // 
             // ExecRolog
             // 
@@ -4493,6 +5409,23 @@ namespace WindowsFormsApp1
             this.reportingTab.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            this.permissionTab.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.userPermissionData)).EndInit();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.infoTab.ResumeLayout(false);
+            this.infoTab.PerformLayout();
+            this.newProjectTableLayout.ResumeLayout(false);
+            this.newProjectTableLayout.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkPreAssemblyHarbourBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkFoundationTypeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkSegmentBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkscopeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.wTGtypeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rkUsersListviewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rkstatusOfRiskBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -4564,7 +5497,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel chartSumPanel;
         private System.Windows.Forms.Label pieChartLabel;
         private System.Windows.Forms.TabPage createRiskTab;
-        private System.Windows.Forms.ComboBox itemTabSelector;
         private System.Windows.Forms.TabPage createPITab;
         private System.Windows.Forms.TabPage createOpportunityTab;
         private System.Windows.Forms.TabPage createERiskTab;
@@ -4845,5 +5777,78 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.WebBrowser tableauWebBrowser;
         private System.Windows.Forms.Button roLogReportBtn;
+        private System.Windows.Forms.TableLayoutPanel newProjectTableLayout;
+        private System.Windows.Forms.TextBox projectNameTextBox;
+        private System.Windows.Forms.Label projectIDLabel;
+        private System.Windows.Forms.TextBox projectIDTextBox;
+        private System.Windows.Forms.Label pmLabel;
+        private System.Windows.Forms.TextBox wtgNoTextBox;
+        private System.Windows.Forms.TextBox PMTextBox;
+        private System.Windows.Forms.Label cpmLabel;
+        private System.Windows.Forms.TextBox CPMTextBox;
+        private System.Windows.Forms.Label wtgNoLabel;
+        private System.Windows.Forms.Label preparedByLabel;
+        private System.Windows.Forms.TextBox preparedByTextBox;
+        private System.Windows.Forms.Label TOCLabel;
+        private System.Windows.Forms.TextBox totalProjectCostsTextBox;
+        private System.Windows.Forms.Label totalCostsLabel;
+        private System.Windows.Forms.TextBox ruCostsTextBox;
+        private System.Windows.Forms.Label RUcostsLabel;
+        private System.Windows.Forms.TextBox buCostsTextBox;
+        private System.Windows.Forms.Label BUcostsLabel;
+        private System.Windows.Forms.Label BUCurLabel;
+        private System.Windows.Forms.ComboBox buCurComboBox;
+        private System.Windows.Forms.ComboBox ruCurComboBox;
+        private System.Windows.Forms.Label RUcurLabel;
+        private System.Windows.Forms.Label ruEurLabel;
+        private System.Windows.Forms.Label buEurLabel;
+        private System.Windows.Forms.TextBox ruRateTextBox;
+        private System.Windows.Forms.TextBox buRateTextBox;
+        private System.Windows.Forms.Label projectNameLabel;
+        private System.Windows.Forms.Label foundationLabel;
+        private System.Windows.Forms.Label preassemblyLabel;
+        private System.Windows.Forms.ComboBox portComboBox;
+        private System.Windows.Forms.ComboBox foundationComboBox;
+        private System.Windows.Forms.Label segmentLabel;
+        private System.Windows.Forms.Label scopeLabel;
+        private System.Windows.Forms.ComboBox segmentComboBox;
+        private System.Windows.Forms.ComboBox scopeComboBox;
+        private System.Windows.Forms.Label wtgTypeLabel;
+        private System.Windows.Forms.ComboBox wtgTypeComboBox;
+        private System.Windows.Forms.Label LoAIDLabel;
+        private System.Windows.Forms.TextBox LoaIDTextBox;
+        private System.Windows.Forms.Label projectSpecificDataLabel;
+        private System.Windows.Forms.Label projectPersonalDataLabel;
+        private System.Windows.Forms.Label projectOrderDataLabel;
+        private System.Windows.Forms.Label projectCostsLabel;
+        private System.Windows.Forms.Label scopeLocationLabel;
+        private System.Windows.Forms.Button updateProjectButton;
+        private System.Windows.Forms.Label projectOwnerLabel;
+        private System.Windows.Forms.ComboBox projectOwnerComboBox;
+        private System.Windows.Forms.DateTimePicker tocTextBox;
+        private System.Windows.Forms.CheckBox bUCurrencySwitch;
+        private System.Windows.Forms.BindingSource rkUsersListviewBindingSource;
+        private DataSet1TableAdapters.rk_UsersList_viewTableAdapter rk_UsersList_viewTableAdapter;
+        private System.Windows.Forms.BindingSource rkscopeBindingSource;
+        private DataSet1TableAdapters.rk_scopeTableAdapter rk_scopeTableAdapter;
+        private System.Windows.Forms.BindingSource rkFoundationTypeBindingSource;
+        private DataSet1TableAdapters.rk_FoundationTypeTableAdapter rk_FoundationTypeTableAdapter;
+        private System.Windows.Forms.BindingSource rkPreAssemblyHarbourBindingSource;
+        private DataSet1TableAdapters.rk_PreAssemblyHarbourTableAdapter rk_PreAssemblyHarbourTableAdapter;
+        private System.Windows.Forms.BindingSource rkSegmentBindingSource;
+        private DataSet1TableAdapters.rk_SegmentTableAdapter rk_SegmentTableAdapter;
+        private System.Windows.Forms.BindingSource wTGtypeBindingSource;
+        private DataSet1TableAdapters.WTGtypeTableAdapter wTGtypeTableAdapter;
+        private System.Windows.Forms.BindingSource rkCurrencyNameBindingSource;
+        private DataSet1TableAdapters.rk_CurrencyNameTableAdapter rk_CurrencyNameTableAdapter;
+        private System.Windows.Forms.BindingSource rkCurrencyNameBindingSource1;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.ComboBox userPermissionComboBox;
+        private System.Windows.Forms.Label userPermissionLabel;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.DataGridView userPermissionData;
+        private System.Windows.Forms.Button writeGrantBtn;
+        private System.Windows.Forms.Button delPermissionBtn;
     }
 }

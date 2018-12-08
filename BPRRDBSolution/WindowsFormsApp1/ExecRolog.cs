@@ -22,28 +22,43 @@ namespace WindowsFormsApp1
         private DataGridViewButtonColumn riskDetailButton;
         private ERisk riskItemDetail;
         private int ProjectID;
+        private ExecutionProject execProject;
+        private executionForm executionForm;
+        private String sqlConnectionString;
+        SqlDataAdapter dataAdapter;
+        DataTable dataTable;
 
 
-        public ExecRolog(ExecutionUser user, ExecutionProject execProject, int ProjectID)
+        public ExecRolog(ExecutionUser user, ExecutionProject execProject, executionForm executionForm)
         {
             InitializeComponent();
-            this.ProjectID = ProjectID;
-            modelManager = new ModelManager();
+            this.execProject = execProject;
+            this.ProjectID = execProject.projectID;
+            this.modelManager = new ModelManager();
+            this.executionForm = executionForm;
+
+            SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+            builder.DataSource = "riskdbsserver.database.windows.net";
+            builder.UserID = "superuser@riskdbsserver";
+            builder.Password = "Greenpear@1";
+            builder.InitialCatalog = "[EW_Risk_Test]";
+            this.sqlConnectionString = builder.ConnectionString;
+
+            //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
             itemsList = modelManager.getItems(execProject.projectID, DateTime.Today.ToString(), "risk");
+            //SET USER NAME LABEL
             userLabel.Text = user.firstName + ' ' + user.lastName;
+            //SET PROJECT NAME LABEL
             locationLabel.Text = execProject.name;
-
+            //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
             setROlogGridView(itemsList);
-            riskDetailButton = new DataGridViewButtonColumn();
-            riskDetailButton.Name = "Open";
-            riskDetailButton.Text = "Open Risk..";
-            riskDetailButton.UseColumnTextForButtonValue = true;
 
-            if (rologGridView.Columns["Open"] == null)
-            {
-                rologGridView.Columns.Insert(0, riskDetailButton);
-            }
+        }
 
+        public void refreshROlogItems()
+        {
+            itemsList = modelManager.getItems(execProject.projectID, DateTime.Today.ToString(), "risk");
+            setROlogGridView(itemsList);
         }
 
         public void setLocationLabel(String value)
@@ -104,31 +119,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void itemTabSelector_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (itemTabSelector.SelectedIndex == 0)
-            {
-                projectItemsTabControl.SelectedIndex = 0;
-            }
-            else if (itemTabSelector.SelectedIndex == 1)
-            {
-                projectItemsTabControl.SelectedIndex = 1;
-            }
-            else if (itemTabSelector.SelectedIndex == 2)
-            {
-                projectItemsTabControl.SelectedIndex = 2;
-            }
-            else if (itemTabSelector.SelectedIndex == 3)
-            {
-                projectItemsTabControl.SelectedIndex = 3;
-            }
-            else if (itemTabSelector.SelectedIndex == 4)
-            {
-                projectItemsTabControl.SelectedIndex = 4;
-            }
-            else MessageBox.Show("What the hell?");
-        }
-
         private void reportsButtons_Click(object sender, EventArgs e)
         {
             execROlogTabControl.SelectedIndex = 6;
@@ -136,11 +126,34 @@ namespace WindowsFormsApp1
 
         private void projectInfoButton_Click(object sender, EventArgs e)
         {
+            //SET PROJECT INFORMATION FIELDS
+            if (projectNameTextBox.Text == "")
+            {
+                setProjectInformation();
+            }
+
             execROlogTabControl.SelectedIndex = 9;
         }
 
         private void permissionsButton_Click(object sender, EventArgs e)
         {
+
+            //FILL DATAGRIDVIEW WITH SET PERMISSIONS
+            refreshPermissionUsersData();
+
+            //FILL USER COMBOBOX WITH USERS PERMISSION LEVEL 5
+            SqlConnection connection = new SqlConnection(sqlConnectionString);
+            connection.Open();
+            string SQL = "SELECT ID, FirstName +' ' + LastName + ' ｜ Username = ' + UserName as FullName FROM rk_UsersList_view WHERE role = 5;";
+            dataAdapter = new SqlDataAdapter(SQL, connection);
+            dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+
+            userPermissionComboBox.DataSource = dataTable;
+            userPermissionComboBox.DisplayMember = "FullName";
+            userPermissionComboBox.ValueMember = "ID";
+            connection.Close();
+
             execROlogTabControl.SelectedIndex = 7;
         }
 
@@ -153,7 +166,7 @@ namespace WindowsFormsApp1
         {
             setRiskDetailEmpty();
             execROlogTabControl.SelectedIndex = 2;
-            
+
         }
 
         private void createPIButton_Click(object sender, EventArgs e)
@@ -184,7 +197,7 @@ namespace WindowsFormsApp1
         private void rologGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int riskID;
-            
+
             // Ignore clicks that are not in our 
             if (e.ColumnIndex == rologGridView.Columns["Open"].Index && e.RowIndex >= 0)
             {
@@ -194,11 +207,12 @@ namespace WindowsFormsApp1
                 riskItemDetail = (ERisk)itemsList.getItem(riskID);
                 execROlogTabControl.SelectedIndex = 2;
                 setRiskDetail(riskItemDetail);
+                recalculateBottomValues();
             }
         }
 
-       // SETS GRIDVIEW WITH PROJECT RISKS
-        private void setROlogGridView (EProjectItemList itemList)
+        // SETS GRIDVIEW WITH PROJECT RISKS
+        private void setROlogGridView(EProjectItemList itemList)
         {
             DataTable dt = new DataTable();
 
@@ -213,7 +227,7 @@ namespace WindowsFormsApp1
             dt.Columns.Add("Monetary Value After", typeof(double));
             dt.Columns.Add("Percentage After", typeof(double));
             dt.Columns.Add("Expected Monetary Value After", typeof(double));
-       
+
             foreach (ERisk item in itemList.itemList)
             {
                 DataRow NewRow = dt.NewRow();
@@ -234,6 +248,13 @@ namespace WindowsFormsApp1
 
             rologGridView.DataSource = dt;
 
+            //ADD OPEN BUTTON TO ROLOG DATA GRID VIEW
+            riskDetailButton = new DataGridViewButtonColumn();
+            riskDetailButton.Name = "Open";
+            riskDetailButton.Text = "Open Risk..";
+            riskDetailButton.UseColumnTextForButtonValue = true;
+            if (rologGridView.Columns["Open"] == null) { rologGridView.Columns.Insert(0, riskDetailButton); }
+
         }
 
 
@@ -243,9 +264,9 @@ namespace WindowsFormsApp1
             indivRiskIDLabel.Text = riskItem.excelID.ToString();
             riskNameTextBox.Text = riskItem.itemName.ToString();
             statusComboBox.SelectedIndex = riskItem.itemStatusID - 1;
-            if(riskItem.createDate.Year < 2000) { createdDateTimePicker.CustomFormat = " "; createdDateTimePicker.Format = DateTimePickerFormat.Custom; } else {createdDateTimePicker.Text = riskItem.createDate.ToString();}
-            if (riskItem.updateDate.Year < 2000) { updatedDateTimePicker.CustomFormat = " "; updatedDateTimePicker.Format = DateTimePickerFormat.Custom; } else {updatedDateTimePicker.Text = riskItem.updateDate.ToString();}
-            if (riskItem.customerShareID == 1){canBeSharedCheckBox.Checked = true;}else{canBeSharedCheckBox.Checked = false;};
+            if (riskItem.createDate.Year < 2000) { createdDateTimePicker.CustomFormat = " "; createdDateTimePicker.Format = DateTimePickerFormat.Custom; } else { createdDateTimePicker.Text = riskItem.createDate.ToString(); }
+            if (riskItem.updateDate.Year < 2000) { updatedDateTimePicker.CustomFormat = " "; updatedDateTimePicker.Format = DateTimePickerFormat.Custom; } else { updatedDateTimePicker.Text = riskItem.updateDate.ToString(); }
+            if (riskItem.customerShareID == 1) { canBeSharedCheckBox.Checked = true; } else { canBeSharedCheckBox.Checked = false; };
             rootCauseTextBox.Text = riskItem.mainRootCause.ToString();
             otherRootCausesTextBox.Text = riskItem.otherRootCause.ToString();
             if (riskItem.categoryID == 0) { categoryComboBox.SelectedIndex = -1; } else { categoryComboBox.SelectedIndex = riskItem.categoryID - 1; }
@@ -254,7 +275,7 @@ namespace WindowsFormsApp1
             if (riskItem.actionOwnerRootCauseID == 0) { riskActionOwnerComboBox.SelectedIndex = -1; } else { riskActionOwnerComboBox.SelectedIndex = riskItem.actionOwnerRootCauseID - 1; }
             rootCauseActionsTextBox.Text = riskItem.actionsRootCause.ToString();
             rootCauseCostTextBox.Text = riskItem.costRootCause.ToString();
-            if (riskItem.ResponseRootCauseDate.Year < 2000) { responsePlanDateTimePicker.CustomFormat = " "; responsePlanDateTimePicker.Format = DateTimePickerFormat.Custom; } else { responsePlanDateTimePicker.Text = riskItem.ResponseRootCauseDate.ToString();}
+            if (riskItem.ResponseRootCauseDate.Year < 2000) { responsePlanDateTimePicker.CustomFormat = " "; responsePlanDateTimePicker.Format = DateTimePickerFormat.Custom; } else { responsePlanDateTimePicker.Text = riskItem.ResponseRootCauseDate.ToString(); }
             probabilityAfterResponseTextBox.Text = riskItem.percentageAfter.ToString();
             aggregatedMonateryValueBeforeTextBox.Text = riskItem.monetaryValueBefore.ToString();
             expectedMonetaryValueBeforeTextBox.Text = (riskItem.monetaryValueBefore * riskItem.percentageBefore).ToString();
@@ -283,7 +304,7 @@ namespace WindowsFormsApp1
             monetaryValueBeforeTextBox.Text = riskItem.monetaryValueBefore.ToString();
             formulaBeforeDescTextBox.Text = riskItem.formulaBeforeDesc.ToString();
             if (riskItem.actionOwnerImpactID == 0) { impactActionOwnerComboBox.SelectedIndex = -1; } else { impactActionOwnerComboBox.SelectedIndex = riskItem.actionOwnerImpactID - 1; }
-            if (riskItem.respStratImpactID == 0) { reStrategyImpactComboBox.SelectedIndex = -1;  } else { reStrategyImpactComboBox.SelectedIndex = riskItem.respStratImpactID - 1; }
+            if (riskItem.respStratImpactID == 0) { reStrategyImpactComboBox.SelectedIndex = -1; } else { reStrategyImpactComboBox.SelectedIndex = riskItem.respStratImpactID - 1; }
             impactActionsTextBox.Text = riskItem.actionsImpact.ToString();
             responseCostEstimateTextBox.Text = riskItem.costImpact.ToString();
             if (riskItem.ResponseImpactDate.Year < 2000) { responsePlanImplementationDateTimePicker.CustomFormat = " "; responsePlanImplementationDateTimePicker.Format = DateTimePickerFormat.Custom; } else { responsePlanImplementationDateTimePicker.Text = riskItem.ResponseImpactDate.ToString(); }
@@ -301,13 +322,13 @@ namespace WindowsFormsApp1
             statusComboBox.SelectedIndex = 0;
             createdDateTimePicker.Text = null;
             updatedDateTimePicker.Text = null;
-            canBeSharedCheckBox.Checked = false; 
+            canBeSharedCheckBox.Checked = false;
             rootCauseTextBox.Text = null;
             otherRootCausesTextBox.Text = null;
             categoryComboBox.SelectedIndex = -1;
             probabilityBeforeResponseTextBox.Text = "0";
-            responseStrategyComboBox.SelectedIndex = -1; 
-            riskActionOwnerComboBox.SelectedIndex = -1; 
+            responseStrategyComboBox.SelectedIndex = -1;
+            riskActionOwnerComboBox.SelectedIndex = -1;
             rootCauseActionsTextBox.Text = null;
             rootCauseCostTextBox.Text = "0";
 
@@ -333,8 +354,8 @@ namespace WindowsFormsApp1
             timeCheckBox.Checked = false;
             costCheckBox.Checked = false;
             customerSatisfactionCheckBox.Checked = false;
-            safetyCheckBox.Checked =  false;
-            qualityCheckBox.Checked =  false;
+            safetyCheckBox.Checked = false;
+            qualityCheckBox.Checked = false;
             phaseComboBox.SelectedIndex = -1;
             wbsComboBox.SelectedIndex = -1;
             impactDescriptionTextBox.Text = null;
@@ -343,7 +364,7 @@ namespace WindowsFormsApp1
             monetaryValueFormulaTextBox.Text = "0";
             monetaryValueBeforeTextBox.Text = "0";
             formulaBeforeDescTextBox.Text = null;
-            impactActionOwnerComboBox.SelectedIndex = -1; 
+            impactActionOwnerComboBox.SelectedIndex = -1;
             reStrategyImpactComboBox.SelectedIndex = -1;
             impactActionsTextBox.Text = null;
             responseCostEstimateTextBox.Text = "0";
@@ -362,15 +383,22 @@ namespace WindowsFormsApp1
             monetaryValueAfterTextBox.Text = "0";
         }
 
-
-
-
-
-
-
-
         private void ExecRolog_Load(object sender, EventArgs e)
         {
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_CurrencyName'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.rk_CurrencyNameTableAdapter.Fill(this.dataSet1.rk_CurrencyName);
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.WTGtype'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.wTGtypeTableAdapter.Fill(this.dataSet1.WTGtype);
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_Segment'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.rk_SegmentTableAdapter.Fill(this.dataSet1.rk_Segment);
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_PreAssemblyHarbour'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.rk_PreAssemblyHarbourTableAdapter.Fill(this.dataSet1.rk_PreAssemblyHarbour);
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_FoundationType'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.rk_FoundationTypeTableAdapter.Fill(this.dataSet1.rk_FoundationType);
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_scope'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.rk_scopeTableAdapter.Fill(this.dataSet1.rk_scope);
+            // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_UsersList_view'. Můžete jej přesunout nebo jej odstranit podle potřeby.
+            this.rk_UsersList_viewTableAdapter.Fill(this.dataSet1.rk_UsersList_view);
             // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_WBS'. Můžete jej přesunout nebo jej odstranit podle potřeby.
             this.rk_WBSTableAdapter.Fill(this.dataSet1.rk_WBS);
             // TODO: Tento řádek načte data do tabulky 'dataSet1.rk_response'. Můžete jej přesunout nebo jej odstranit podle potřeby.
@@ -396,46 +424,48 @@ namespace WindowsFormsApp1
 
         private void updateRiskBtn_Click(object sender, EventArgs e)
         {
+
+            //UPDATE OBJECT WITH CAPTURED DATA
             riskItemDetail.excelID = indivRiskIDLabel.Text;
             riskItemDetail.itemName = riskNameTextBox.Text;
-            riskItemDetail.itemStatusID = statusComboBox.SelectedIndex;
+            riskItemDetail.itemStatusID = statusComboBox.SelectedIndex + 1;
             riskItemDetail.createDate = createdDateTimePicker.Value;
             riskItemDetail.updateDate = updatedDateTimePicker.Value;
-            if (canBeSharedCheckBox.Checked == true){riskItemDetail.customerShareID = 1;} else {riskItemDetail.customerShareID = 0;};
+            if (canBeSharedCheckBox.Checked == true) { riskItemDetail.customerShareID = 1; } else { riskItemDetail.customerShareID = 0; };
             riskItemDetail.mainRootCause = rootCauseTextBox.Text;
             riskItemDetail.otherRootCause = otherRootCausesTextBox.Text;
-            riskItemDetail.categoryID = categoryComboBox.SelectedIndex;
+            riskItemDetail.categoryID = categoryComboBox.SelectedIndex + 1;
             riskItemDetail.percentageBefore = double.Parse(probabilityBeforeResponseTextBox.Text);
-            riskItemDetail.respStratRootCauseID = responseStrategyComboBox.SelectedIndex;
-            riskItemDetail.actionOwnerRootCauseID = riskActionOwnerComboBox.SelectedIndex;
+            riskItemDetail.respStratRootCauseID = responseStrategyComboBox.SelectedIndex + 1;
+            riskItemDetail.actionOwnerRootCauseID = riskActionOwnerComboBox.SelectedIndex + 1;
             riskItemDetail.actionsRootCause = rootCauseActionsTextBox.Text;
             riskItemDetail.costRootCause = double.Parse(rootCauseCostTextBox.Text);
             riskItemDetail.ResponseRootCauseDate = responsePlanDateTimePicker.Value;
             riskItemDetail.percentageAfter = double.Parse(probabilityAfterResponseTextBox.Text);
             riskItemDetail.monetaryValueBefore = double.Parse(aggregatedMonateryValueBeforeTextBox.Text);
-            riskItemDetail.monetaryValueAfter = double.Parse(aggregatedMonateryValueAfterTextBox.Text);
-            riskItemDetail.nccID = nccComboBox.SelectedIndex;
-            riskItemDetail.orgUnitID = operatingUnitComboBox.SelectedIndex;
+            riskItemDetail.monetaryValueAfter = double.Parse(aggregatedMonateryValueAfterTextBox.Text.Replace(",", "."));
+            riskItemDetail.nccID = nccComboBox.SelectedIndex + 1;
+            riskItemDetail.orgUnitID = operatingUnitComboBox.SelectedIndex + 1;
             riskItemDetail.remarks = remarksTextBox.Text;
             riskItemDetail.daysImpactBefore = int.Parse(timeImpactInDaysBeforeTextBox.Text);
             riskItemDetail.daysImpactAfter = int.Parse(timeImpactInDaysAfterTextBox.Text);
             riskItemDetail.itemDescription = riskDescriptionTextBox.Text;
-            riskItemDetail.riskOwnerID = riskOwnerComboBox.SelectedIndex;
+            riskItemDetail.riskOwnerID = riskOwnerComboBox.SelectedIndex + 1;
             riskItemDetail.timeObjective = timeCheckBox.Checked;
             riskItemDetail.costObjective = costCheckBox.Checked;
             riskItemDetail.customerSatisfObjective = customerSatisfactionCheckBox.Checked;
             riskItemDetail.safetyObjective = safetyCheckBox.Checked;
             riskItemDetail.qualityObjective = qualityCheckBox.Checked;
-            riskItemDetail.phaseID = phaseComboBox.SelectedIndex;
-            riskItemDetail.wbsID = wbsComboBox.SelectedIndex;
+            riskItemDetail.phaseID = phaseComboBox.SelectedIndex + 1;
+            riskItemDetail.wbsID = wbsComboBox.SelectedIndex + 1;
             riskItemDetail.itemDescription = impactDescriptionTextBox.Text;
             riskItemDetail.daysImpactBefore = int.Parse(timeImpactsInDaysBeforeTextBox.Text);
             riskItemDetail.daysImpactAfter = int.Parse(daysAfterTextBox.Text);
             riskItemDetail.formulaBefore = monetaryValueFormulaTextBox.Text;
             riskItemDetail.monetaryValueBefore = double.Parse(monetaryValueBeforeTextBox.Text);
             riskItemDetail.formulaBeforeDesc = formulaBeforeDescTextBox.Text;
-            riskItemDetail.actionOwnerImpactID = reStrategyImpactComboBox.SelectedIndex;
-            riskItemDetail.respStratImpactID = reStrategyImpactComboBox.SelectedIndex;
+            riskItemDetail.actionOwnerImpactID = reStrategyImpactComboBox.SelectedIndex + 1;
+            riskItemDetail.respStratImpactID = reStrategyImpactComboBox.SelectedIndex + 1;
             riskItemDetail.actionsImpact = impactActionsTextBox.Text;
             riskItemDetail.costImpact = double.Parse(responseCostEstimateTextBox.Text);
             riskItemDetail.ResponseImpactDate = responsePlanImplementationDateTimePicker.Value;
@@ -444,7 +474,12 @@ namespace WindowsFormsApp1
             riskItemDetail.impactEndDate = impactEndDateDateTimePicker.Value;
             riskItemDetail.monetaryValueAfter = double.Parse(monetaryValueAfterTextBox.Text);
 
+            //CALL METHOD FROM MODEL MANAGER TO UPDATE DATABASE
             modelManager.updateItem(riskItemDetail, true, "risk");
+            //REFRESH LIST OF ITEMS WITH UPDATED DATA
+            refreshROlogItems();
+            //RETURN TO OVERVIEW
+            execROlogTabControl.SelectedIndex = 0;
         }
 
         private void impactStartDateDateTimePicker_ValueChanged(object sender, EventArgs e)
@@ -469,8 +504,8 @@ namespace WindowsFormsApp1
 
         private void insertRiskBtn_Click(object sender, EventArgs e)
         {
-            riskItemDetail = new ERisk(0,"","","","","","","","","","","","",0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,false,false,false,false,false,false,false, false,0,0,0,0,
-                new DateTime(1900, 1,1), new DateTime(1900, 1, 1), new DateTime(1900, 1, 1), new DateTime(1900, 1, 1), new DateTime(1900, 1, 1), new DateTime(1900, 1, 1));
+            riskItemDetail = new ERisk(0, "", "", "", "", "", "", "", "", "", "", "", "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, false, false, false, false, false, false, false, false, 0, 0, 0, 0,
+                new DateTime(1900, 1, 1), new DateTime(1900, 1, 1), new DateTime(1900, 1, 1), new DateTime(1900, 1, 1), new DateTime(1900, 1, 1), new DateTime(1900, 1, 1));
 
 
             riskItemDetail.excelID = indivRiskIDLabel.Text;
@@ -522,41 +557,411 @@ namespace WindowsFormsApp1
             riskItemDetail.monetaryValueAfter = double.Parse(monetaryValueAfterTextBox.Text);
 
             modelManager.addItem(riskItemDetail, false, "risk", ProjectID);
+
+            //REFRESH LIST OF ITEMS WITH UPDATED DATA
+            refreshROlogItems();
+            //RETURN TO OVERVIEW
+            execROlogTabControl.SelectedIndex = 0;
         }
 
         private void roLogReportBtn_Click(object sender, EventArgs e)
         {
-            ExportROlogToExcel();
+            ExportROlogToExcel(itemsList.getRisks());
         }
 
-
-
-        public void ExportROlogToExcel()
+        public void ExportROlogToExcel(EProjectItemList listOfItems)
         {
             using (ExcelPackage excel = new ExcelPackage())
             {
+                List<EProjectItem> itemList = listOfItems.itemList;
                 excel.Workbook.Worksheets.Add("Project Information");
                 excel.Workbook.Worksheets.Add("ROlog");
 
+                // Target a worksheet
+                var worksheet = excel.Workbook.Worksheets["ROlog"];
+
                 var headerRow = new List<string[]>()
                 {
-                new string[] { "Risk ID", "Risk Name", "Risk Description", "etc." }
+                new string[] { "Risk ID", "Risk Type", "Status", "Creation date", "Last modification date", "Risk name", "BU%", "RU%", "Root Causes", "Category", "Risk Description",
+                               "Risk Owner", "Direct Impact", "Objectives Impacted", "Phase", "WBS","Impact Start Date", "Impact End Date", "Root Cause Probability before Response",
+                               "Direct Impact before response", "Time Impact before response (Days)", "Expected Monetary Value before Response", "Response strategy to Root Cause",
+                               "Response plan to ROot Cause", "Risk Actions Owner", "Cost Estimate for Response plan to be implemented","Earliest Date for response plan to be implemented",
+                               "Response Strategy to Impact", "Risk Actions Owner",
+                               "Cost Estimate for Response plan implementation", "Earliest Date for Response plan to be implemented", "Root Cause Propbability after Response",
+                               "Direct Impact after Response", "Time Impact after response (days)", "Expected Monetary Value afte response (Risk Contingency)", "Response Exposure",
+                               "Can be shared with Customer?",  "NCC", "Originating Unit", "Remarks"
+                              }
                 };
 
                 // Determine the header range (e.g. A1:D1)
                 string headerRange = "A1:" + Char.ConvertFromUtf32(headerRow[0].Length + 64) + "1";
-                // Target a worksheet
-                var worksheet = excel.Workbook.Worksheets["ROlog"];
                 // Popular header row data
                 worksheet.Cells[headerRange].LoadFromArrays(headerRow);
 
+                for (int i = 0; i < itemList.Count; i++)
+                {
+                    //Risks
+                    if (itemList[i].GetType() == typeof(ERisk))
+                    {
+
+                        ERisk riskItem = (ERisk)itemList[i];
+
+                        headerRow = new List<string[]>()
+                       {
+                       new string[] { riskItem.excelID.ToString(), "Individual Risk", riskItem.itemStatusID.ToString(), riskItem.createDate.ToString(), riskItem.updateDate.ToString(),
+                                      riskItem.itemName.ToString(), riskItem.buRate.ToString(), (100-riskItem.buRate).ToString(), riskItem.mainRootCause + " " + riskItem.otherRootCause,
+                                      riskItem.categoryID.ToString(), riskItem.itemDescription, riskItem.riskOwnerID.ToString(), riskItem.impactDesc, "OBJECTIVES TODO",
+                                      riskItem.phaseID.ToString(),riskItem.wbsID.ToString(),riskItem.impactStartDate.ToString(), riskItem.impactEndDate.ToString(),
+                                      riskItem.percentageBefore.ToString(), riskItem.monetaryValueBefore.ToString(), riskItem.daysImpactBefore.ToString(),
+                                      (riskItem.monetaryValueBefore * riskItem.percentageBefore / 100).ToString(), riskItem.respStratRootCauseID.ToString(),
+                                      riskItem.actionsRootCause, riskItem.actionOwnerRootCauseID.ToString(), riskItem.costRootCause.ToString(), riskItem.ResponseRootCauseDate.ToString(),
+                                      riskItem.respStratImpactID.ToString(), riskItem.actionOwnerImpactID.ToString(), riskItem.costImpact.ToString(),
+                                      riskItem.ResponseImpactDate.ToString(), riskItem.percentageAfter.ToString(), riskItem.monetaryValueAfter.ToString(),
+                                      riskItem.daysImpactAfter.ToString(), (riskItem.monetaryValueAfter * riskItem.percentageAfter / 100).ToString(),
+                                      ((riskItem.monetaryValueAfter * riskItem.percentageAfter / 100) - (riskItem.monetaryValueBefore * riskItem.percentageBefore / 100)).ToString(),
+                                      riskItem.customerShareID.ToString(),  riskItem.nccID.ToString(), riskItem.orgUnitID.ToString(), riskItem.remarks
+                                    }
+                       };
+                        MessageBox.Show(i.ToString());
+                        // Determine the header range (e.g. A1:D1)
+                        headerRange = "A" + (i + 2) + ":" + Char.ConvertFromUtf32(headerRow[0].Length + 64) + "" + (i + 2);
+                        // Popular header row data
+                        worksheet.Cells[headerRange].LoadFromArrays(headerRow);
+
+                    }
+                }
 
                 FileInfo excelFile = new FileInfo(@"C:\Users\Asparagus\Desktop\test.xlsx");
                 excel.SaveAs(excelFile);
 
-
-
             }
+        }
+
+
+        public void setProjectInformation()
+        {
+            projectNameTextBox.Text = execProject.name;
+            projectOwnerComboBox.SelectedItem = execProject.ownerID - 1;
+            projectIDTextBox.Text = execProject.sap;
+            LoaIDTextBox.Text = execProject.loa;
+            PMTextBox.Text = execProject.pm;
+            scopeComboBox.SelectedItem = execProject.scopeID - 1;
+            CPMTextBox.Text = execProject.cpm;
+            preparedByTextBox.Text = execProject.prepBy;
+            tocTextBox.Text = execProject.toc.ToString();
+            wtgNoTextBox.Text = execProject.numberWtgs.ToString();
+            buCostsTextBox.Text = execProject.BUcontract.ToString();
+            ruCostsTextBox.Text = execProject.RUcontract.ToString();
+            totalProjectCostsTextBox.Text = (execProject.BUcontract + execProject.RUcontract).ToString();
+            buCurComboBox.SelectedItem = execProject.BUCurID;
+            ruCurComboBox.SelectedItem = execProject.RUCurID;
+            buRateTextBox.Text = execProject.BUrate.ToString();
+            ruRateTextBox.Text = execProject.RUrate.ToString();
+            foundationComboBox.SelectedItem = execProject.foundationID;
+            portComboBox.SelectedItem = execProject.harbourID;
+            segmentComboBox.SelectedItem = execProject.segmentID;
+            wtgTypeComboBox.SelectedItem = execProject.wtgID;
+
+        }
+
+        private void updateProjectButton_Click(object sender, EventArgs e)
+        {
+            //UPDATE PROJECT OBJECT
+            execProject.name = projectNameTextBox.Text;
+            execProject.ownerID = int.Parse(projectOwnerComboBox.SelectedValue.ToString());
+            execProject.sap = projectIDTextBox.Text;
+            execProject.loa = LoaIDTextBox.Text;
+            execProject.pm = PMTextBox.Text;
+            execProject.scopeID = (int)scopeComboBox.SelectedValue;
+            execProject.cpm = CPMTextBox.Text;
+            execProject.prepBy = preparedByTextBox.Text;
+            execProject.toc = tocTextBox.Value;
+            execProject.numberWtgs = int.Parse(wtgNoTextBox.Text);
+            execProject.BUcontract = double.Parse(buCostsTextBox.Text);
+            execProject.RUcontract = double.Parse(ruCostsTextBox.Text);
+            execProject.BUCurID = (int)buCurComboBox.SelectedValue;
+            execProject.RUCurID = (int)ruCurComboBox.SelectedValue;
+            execProject.BUrate = decimal.Parse(buRateTextBox.Text);
+            execProject.RUrate = decimal.Parse(ruRateTextBox.Text);
+            execProject.foundationID = (int)foundationComboBox.SelectedValue;
+            execProject.harbourID = (int)portComboBox.SelectedValue;
+            execProject.segmentID = (int)segmentComboBox.SelectedValue;
+            execProject.wtgID = (int)wtgTypeComboBox.SelectedValue;
+            //UPDATE DATABASE PROJECT TABLE
+            modelManager.updateProject(execProject);
+            //CHANGE PROJECT NAME LABEL
+            locationLabel.Text = execProject.name;
+            //REFRESH PROJECTS DATA GRID VIEW IN EXECUTION FORM
+            this.executionForm.refreshProjects();
+            //GO TO OVERVIEW TAB
+            execROlogTabControl.SelectedIndex = 0;
+        }
+
+
+
+        private void refreshPermissionUsersData()
+        {
+            //FILL DATAGRIDVIEW WITH SET PERMISSIONS
+            SqlConnection connection = new SqlConnection(sqlConnectionString);
+            connection.Open();
+            string SQL = "SELECT FirstName,LastName,UserName,  CASE WHEN WriteID = 1 THEN 'No' ELSE 'Yes' END AS WritePermission FROM rk_pro_permission_view WHERE rk_pro_permission_view.projID = " + execProject.projectID.ToString() + " ORDER BY LastName ASC, FirstName ASC";
+
+            dataAdapter = new SqlDataAdapter(SQL, connection);
+            dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            userPermissionData.DataSource = dataTable;
+            connection.Close();
+        }
+
+        private void writeGrantBtn_Click(object sender, EventArgs e)
+        {
+            string SQL = "INSERT INTO rk_pro_permission(userID,projId,readID,writeID) VALUES ( " + userPermissionComboBox.SelectedValue.ToString() + "," + execProject.projectID.ToString() + ",1,2)";
+            string SQL_ = "DELETE FROM rk_pro_permission WHERE userID =" + userPermissionComboBox.SelectedValue.ToString() + " AND projID =" + execProject.projectID.ToString();
+
+            using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+            using (SqlCommand command = new SqlCommand(SQL_, connection))
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+            using (SqlCommand command = new SqlCommand(SQL, connection))
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            refreshPermissionUsersData();
+        }
+
+        private void delPermissionBtn_Click(object sender, EventArgs e)
+        {
+            string SQL_ = "DELETE FROM rk_pro_permission WHERE userID =" + userPermissionComboBox.SelectedValue.ToString() + " AND projID =" + execProject.projectID.ToString();
+
+            using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+            using (SqlCommand command = new SqlCommand(SQL_, connection))
+            {
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+
+            refreshPermissionUsersData();
+        }
+
+        private void overviewTab_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void monetaryValueFormulaTextBox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double result = Convert.ToDouble(new DataTable().Compute(monetaryValueFormulaTextBox.Text, null));
+
+
+                if (Math.Abs(double.Parse(monetaryValueAfterTextBox.Text)) > Math.Abs(result))
+                {
+                    MessageBox.Show("Monetary value after response needs to be lower then or equals to monetary value before response");
+                    monetaryValueAfterTextBox.Focus();
+                }
+                else if (result < 0)
+                {
+                    monetaryValueBeforeTextBox.Text = result.ToString();
+                    recalculateBottomValues();
+                }
+                else
+                {
+                    MessageBox.Show("Monetary value after response needs to be negative");
+                    monetaryValueFormulaTextBox.Focus();
+                }
+                
+            }
+            catch
+            {
+                MessageBox.Show("Invalid Formula");
+                monetaryValueFormulaTextBox.Focus();
+            }
+        }
+
+        private void probabilityBeforeResponseTextBox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                int p = int.Parse(probabilityBeforeResponseTextBox.Text);
+                if (p < 0 || p > 100)
+                {
+                    MessageBox.Show("Probability needs to be number between 0 and 100");
+                    probabilityBeforeResponseTextBox.Focus();
+                }
+                else if (int.Parse(probabilityAfterResponseTextBox.Text) > int.Parse(probabilityBeforeResponseTextBox.Text))
+                {
+                    MessageBox.Show("Probability after response needs to be lower then or equals to probability before response");
+                    probabilityBeforeResponseTextBox.Focus();
+                }
+                recalculateBottomValues();
+            }
+            catch
+            {
+                MessageBox.Show("Probability needs to be number between 0 and 100");
+                probabilityBeforeResponseTextBox.Focus();
+            }
+        }
+
+        private void probabilityAfterResponseTextBox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                int p = int.Parse(probabilityAfterResponseTextBox.Text);
+                if (p < 0 || p > 100)
+                {
+                    MessageBox.Show("Probability needs to be number between 0 and 100");
+                    probabilityAfterResponseTextBox.Focus();
+                }
+                else if(int.Parse(probabilityAfterResponseTextBox.Text) > int.Parse(probabilityBeforeResponseTextBox.Text))
+                {
+                    MessageBox.Show("Probability after response needs to be lower then or equals to probability before response");
+                    probabilityAfterResponseTextBox.Focus();
+                }
+                recalculateBottomValues();
+            }
+            catch
+            {
+                MessageBox.Show("Probability needs to be number between 0 and 100");
+                probabilityAfterResponseTextBox.Focus();
+            }
+        }
+
+        private void rootCauseCostTextBox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (double.Parse(rootCauseCostTextBox.Text) > 0)
+                {
+                    MessageBox.Show("Root cause response cost needs to be a negative number");
+                    rootCauseCostTextBox.Focus();
+                }
+            }   
+            catch
+            {
+                MessageBox.Show("Root cause response cost needs to be a negative number");
+                rootCauseCostTextBox.Focus();
+            }
+        }
+
+        private void responseCostEstimateTextBox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (double.Parse(rootCauseCostTextBox.Text) > 0)
+                {
+                    MessageBox.Show("Root cause response cost needs to be a negative number");
+                    rootCauseCostTextBox.Focus();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Root cause response cost needs to be a negative number");
+                rootCauseCostTextBox.Focus();
+            }
+        }
+
+        private void monetaryValueAfterTextBox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                double result = Convert.ToDouble(new DataTable().Compute(monetaryValueFormulaTextBox.Text, null));
+
+                if (double.Parse(monetaryValueAfterTextBox.Text) > 0)
+                {
+                    MessageBox.Show("Monetary value after response needs to be a negative number");
+                    monetaryValueAfterTextBox.Focus();
+                }
+                else if(Math.Abs(double.Parse(monetaryValueAfterTextBox.Text)) > Math.Abs(result))
+                {
+                    MessageBox.Show("Monetary value after response needs to be lower then or equals to monetary value before response");
+                    monetaryValueAfterTextBox.Focus();
+                }
+                recalculateBottomValues();
+            }
+            catch
+            {
+                MessageBox.Show("Monetary value after response needs to be a negative number");
+                monetaryValueAfterTextBox.Focus();
+            }
+        }
+
+        private void timeImpactsInDaysBeforeTextBox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if(decimal.Parse(timeImpactsInDaysBeforeTextBox.Text) < 0)
+                {
+                    MessageBox.Show("Time impact needs to be a positive number");
+                    timeImpactsInDaysBeforeTextBox.Focus();
+                }
+                else if(decimal.Parse(timeImpactsInDaysBeforeTextBox.Text) < decimal.Parse(daysAfterTextBox.Text))
+                {
+                    MessageBox.Show("Time after response needs to be lower then or equals to time before response");
+                    timeImpactsInDaysBeforeTextBox.Focus();
+                }
+
+                recalculateBottomValues();
+            }
+            catch
+            {
+                MessageBox.Show("Time impact needs to be a positive number");
+                timeImpactsInDaysBeforeTextBox.Focus();
+            }
+        }
+
+        private void daysAfterTextBox_Leave(object sender, EventArgs e)
+        {
+            try
+            {
+                if (decimal.Parse(daysAfterTextBox.Text) < 0)
+                {
+                    MessageBox.Show("Time impact needs to be a positive number");
+                    daysAfterTextBox.Focus();
+                }
+                else if (decimal.Parse(timeImpactsInDaysBeforeTextBox.Text) < decimal.Parse(daysAfterTextBox.Text))
+                {
+                    MessageBox.Show("Time after response needs to be lower then or equals to time before response");
+                    daysAfterTextBox.Focus();
+                }
+                recalculateBottomValues();
+            }
+            catch
+            {
+                MessageBox.Show("Time impact needs to be a positive number");
+                daysAfterTextBox.Focus();
+            }
+        }
+
+        public void recalculateBottomValues()
+        {
+            decimal result = Convert.ToDecimal(new DataTable().Compute(monetaryValueFormulaTextBox.Text, null));
+            monetaryValueBeforeTextBox.Text = result.ToString();
+
+            //LEFT MONET VALUES
+            aggregatedMonateryValueBeforeTextBox.Text = result.ToString();
+            expectedMonetaryValueBeforeTextBox.Text = (result * decimal.Parse(probabilityBeforeResponseTextBox.Text) / 100).ToString();
+            //RIGHT MONET VALUES
+            aggregatedMonateryValueAfterTextBox.Text = decimal.Parse(monetaryValueAfterTextBox.Text).ToString();
+            expectedMonateryValueAfterTextBox.Text = (decimal.Parse(monetaryValueAfterTextBox.Text) * decimal.Parse(probabilityAfterResponseTextBox.Text) / 100).ToString();
+
+            //LEFT DAY VALUES
+            timeImpactInDaysBeforeTextBox.Text = decimal.Parse(timeImpactsInDaysBeforeTextBox.Text).ToString();
+            expectedTimeImpactInDaysBeforeTextBox.Text = (decimal.Parse(timeImpactsInDaysBeforeTextBox.Text) * decimal.Parse(probabilityBeforeResponseTextBox.Text) / 100).ToString();
+            //RIGHT DAY VALUES
+            timeImpactInDaysAfterTextBox.Text = decimal.Parse(daysAfterTextBox.Text).ToString();
+            expectedTimeImpactInDaysAfterTextBox.Text = (decimal.Parse(daysAfterTextBox.Text) * decimal.Parse(probabilityAfterResponseTextBox.Text) / 100).ToString();
         }
     }
 }

@@ -562,6 +562,7 @@ namespace WindowsFormsApp1.Mediator
                                    );
                     itemsList.add(riskItem);
                 }
+                connection.Close();
                 return itemsList;
             }
             //OPPORTUNITIES
@@ -783,6 +784,8 @@ namespace WindowsFormsApp1.Mediator
                                                    Convert.ToInt32(row["IDEntryCur"].ToString()),
                                                    Convert.ToInt32(row["FoundationTypeID"].ToString()),
                                                    Convert.ToInt32(row["harbourID"].ToString()),
+                                                   Convert.ToInt32(row["BUIDCur"].ToString()),
+                                                   Convert.ToInt32(row["RUIDCur"].ToString()),
                                                    Convert.ToDecimal(row["BUrate"].ToString()),
                                                    Convert.ToDecimal(row["RUrate"].ToString()),
                                                    Convert.ToDateTime(row["toc"].ToString()),
@@ -1886,9 +1889,47 @@ namespace WindowsFormsApp1.Mediator
             throw new NotImplementedException();
         }
 
-        public void updateProject(Project project)
+        public void updateProject(ExecutionProject project)
         {
-            throw new NotImplementedException();
+            try
+            {
+                // Opening connection and executing Queries
+                using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
+                {
+                    string queryString = "UPDATE rk_Project SET " +
+                                                               " sap = '" + project.sap + "'," +
+                                                               " loa = '" + project.loa + "'," +
+                                                               " cpm = '" + project.cpm + "'," +
+                                                               " pm = '" + project.pm + "'," +
+                                                               " prepby = '" + project.prepBy + "'," +
+                                                               " toc = '" + project.toc.ToString() + "'," +
+                                                               " IDuser = " + project.ownerID.ToString() + "," +
+                                                               " BUcontract = " + project.BUcontract.ToString() + "," +
+                                                               " RUcontract = " + project.RUcontract.ToString() + "," +
+                                                               " segmentID = " + project.segmentID.ToString() + "," +
+                                                               " scopeID = " + project.scopeID.ToString() + "," +
+                                                               " pname = '" + project.name + "'," +
+                                                               " BUIDcur = " + project.BUCurID.ToString() + "," +
+                                                               " RUIDcur = " + project.RUCurID.ToString() + "," +
+                                                               " BUrate = " + project.BUrate.ToString().Replace(",",".") + "," +
+                                                               " RUrate = " + project.RUrate.ToString().Replace(",", ".") + "," +
+                                                               " WTGtype = " + project.wtgID.ToString() + "," +
+                                                               " noWTGs = " + project.numberWtgs.ToString() + "," +
+                                                               " IDEntryCur = " + project.entryCurID.ToString() + "," +
+                                                               " FoundationTypeID = " + project.foundationID.ToString() + "," +
+                                                               " HarbourID = " + project.harbourID.ToString() +
+                                        "WHERE ID = " + project.projectID ;
+                    MessageBox.Show(queryString);
+                    command = new SqlCommand(queryString, connection);
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Something went wront. Error Message: " + ex.Message);
+            }
         }
     }
 }

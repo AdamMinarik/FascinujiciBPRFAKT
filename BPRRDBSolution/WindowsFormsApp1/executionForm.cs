@@ -88,10 +88,6 @@ namespace WindowsFormsApp1
                 approvalPictureBox.Visible = false;
             }
 
-
-
-
-
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             builder.DataSource = "riskdbsserver.database.windows.net";
             builder.UserID = "superuser@riskdbsserver";
@@ -104,16 +100,6 @@ namespace WindowsFormsApp1
             uninstallButtonColumn.Text = "Open Project..";
             uninstallButtonColumn.UseColumnTextForButtonValue = true;
             uninstallButtonColumn.HeaderText = "";
-            //uninstallButtonColumn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            
-            //uninstallButtonColumn..BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
-            /*uninstallButtonColumn..BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
-            uninstallButtonColumn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            uninstallButtonColumn.FlatAppearance.BorderSize = 0;
-            uninstallButtonColumn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(116)))), ((int)(((byte)(150)))));
-            uninstallButtonColumn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            
-            uninstallButtonColumn.Font = new System.Drawing.Font("Trebuchet MS", 12F);*/
 
             if (projectsData.Columns["Open"] == null)
             {
@@ -589,7 +575,7 @@ namespace WindowsFormsApp1
                     //get project object from mediator
                     execProject = modelManager.getExecutionProject(projectID);
                     //create form ExecROlog and send userObject and projectObject
-                    ExecRolog execROlogForm = new ExecRolog(user,execProject,projectID);
+                    ExecRolog execROlogForm = new ExecRolog(user,execProject,this);
                     //show form
                     execROlogForm.Show();
             }
@@ -1053,12 +1039,10 @@ namespace WindowsFormsApp1
                 if (continueBool == true)
                 {
                     string query = "INSERT INTO rk_users (Username,FirstName,MiddleName,LastName,IDroles,GID,email) VALUES ('" + this.userNameTxt.Text + "','" + this.userFirstNameTxt.Text + "','" + this.userMidNameTxt.Text + "','" + this.userLastNameTxt.Text + "'," + this.userPermCombo.SelectedValue + ",'" + this.userGIDTxt.Text + "','" + this.userEmailTxt.Text + "')";
-                    MessageBox.Show(query);
                     using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
                     using (SqlCommand command = new SqlCommand(query, connection))
                     {
                         connection.Open();
-                        Console.WriteLine(query);
                         command.ExecuteNonQuery();
                         string SQL = "SELECT * FROM rk_users ORDER BY Lastname, FirstName;";
                         daUser = new SqlDataAdapter(SQL, connection);
@@ -1184,6 +1168,19 @@ namespace WindowsFormsApp1
         private void projectsData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        public void refreshProjects()
+        {
+            SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
+            connection.Open();
+            string SQL = "SELECT * FROM new_project_view";
+
+            daDIcat = new SqlDataAdapter(SQL, connection);
+            dsDIcat = new DataTable();
+            daDIcat.Fill(dsDIcat);
+            projectsData.DataSource = dsDIcat;
+            connection.Close();
         }
 
     }

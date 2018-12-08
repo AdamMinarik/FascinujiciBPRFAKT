@@ -73,9 +73,9 @@ namespace WindowsFormsApp1.Mediator
             throw new NotImplementedException();
         }
 
-        public void updateProject(Project project)
+        public void updateProject(ExecutionProject project)
         {
-            throw new NotImplementedException();
+            storage.updateProject(project);
         }
     }
 }

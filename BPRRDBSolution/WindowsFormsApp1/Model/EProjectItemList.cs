@@ -42,7 +42,7 @@ namespace WindowsFormsApp1.Model
             List<EProjectItem> watchList = new List<EProjectItem>();
 
             foreach (var item in itemList)
-            { 
+            {
                 if (item.watchlist == true)
                 {
                     watchList.Add(item);
@@ -106,6 +106,21 @@ namespace WindowsFormsApp1.Model
             }
 
             return newChangesList;
+        }
+
+
+        public EProjectItemList getRisks()
+        {
+            EProjectItemList risksList = new EProjectItemList();
+            for (int i = 0; i < this.itemList.Count; i++)
+            {
+                //Risks
+                if (itemList[i].GetType() == typeof(ERisk))
+                {
+                    risksList.add(itemList[i]);
+                }
+            }
+            return risksList;
         }
 
     }
