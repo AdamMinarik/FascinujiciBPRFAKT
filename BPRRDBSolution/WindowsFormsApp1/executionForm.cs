@@ -1195,19 +1195,19 @@ namespace WindowsFormsApp1
 
             if (user.roleID == 3)
             {
-                SQL = "SELECT pname,sap,scope,wtg,owne,ID, 'read' as projectrights FROM new_project_view WHERE segmentID = 2 ORDER BY pname ASC";
+                SQL = "SELECT pname as 'Project Name' ,sap as 'Unique ID',scope as 'Scope',wtg as 'Wind Turbine Type',owne as 'Project Owner',ID, 'Read' as 'Project Permissions' FROM new_project_view WHERE segmentID = 2 ORDER BY pname ASC";
             }
             else if (user.roleID == 5)
             {
-                SQL = "SELECT pname,sap,scope,wtg,owne,ID, CASE WHEN IDuser = " + user.userID + " then 'write' when b.prights = 'read' then 'read'when b.prights = 'write' then 'write'else 'no access' end as projectrights FROM new_project_view as a left join (select case when WriteID = 2 then 'read' else 'write' end as prights,* from rk_pro_permission where userID = " + user.userID + ")as b on a.ID = b.projID WHERE segmentID = 2 order by projectrights desc, pname ASC;";
+                SQL = "SELECT pname as 'Project Name' ,sap as 'Unique ID',scope as 'Scope',wtg as 'Wind Turbine Type',owne as 'Project Owner',ID, CASE WHEN IDuser = " + user.userID + " then 'write' when b.prights = 'read' then 'Read'when b.prights = 'write' then 'Write'else 'No Access' end as 'Project Permission' FROM new_project_view as a left join (select case when WriteID = 2 then 'read' else 'write' end as prights,* from rk_pro_permission where userID = " + user.userID + ")as b on a.ID = b.projID WHERE segmentID = 2 order by projectrights desc, pname ASC;";
             }
             else if(user.roleID == 7)
             {
-                SQL = "SELECT pname,sap,scope,wtg,owne,ID,'write' as projectrights FROM new_project_view ORDER BY pname ASC;";
+                SQL = "SELECT pname as 'Project Name' ,sap as 'Unique ID',scope as 'Scope',wtg as 'Wind Turbine Type',owne as 'Project Owner',ID,'Write' as 'Project Permission' FROM new_project_view ORDER BY pname ASC;";
             }
             else
             {
-                SQL = "SELECT pname,sap,scope,wtg,owne,ID,'no access' as projectrights FROM new_project_view ORDER BY pname ASC;";
+                SQL = "SELECT pname as 'Project Name' ,sap as 'Unique ID',scope as 'Scope',wtg as 'Wind Turbine Type',owne as 'Project Owner',ID,'No access' as 'Project Permission' FROM new_project_view ORDER BY pname ASC;";
             }
 
             MessageBox.Show(SQL);
@@ -1218,6 +1218,9 @@ namespace WindowsFormsApp1
             dsDIcat = new DataTable();
             daDIcat.Fill(dsDIcat);
             projectsData.DataSource = dsDIcat;
+            projectsData.Columns["ID"].Visible = false;
+            projectsData.AutoResizeColumns();
+            projectsData.AutoResizeRows();
             connection.Close();
         }
 
