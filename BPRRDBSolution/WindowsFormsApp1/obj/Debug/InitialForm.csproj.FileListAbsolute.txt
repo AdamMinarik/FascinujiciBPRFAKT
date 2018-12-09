@@ -84,3 +84,5 @@ C:\Users\Adam\Documents\GitHub\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp
 F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\EPPlus.dll
 F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\EPPlus.xml
 F:\GitKraken\FascinujiciBPR\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\obj\Debug\InitialForm.csproj.CopyComplete
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\EPPlus.dll
+C:\Users\denis\OneDrive\Documents\Visual Studio 2015\Projects\FascinujiciBPR\FascinujiciBPRFAKT\BPRRDBSolution\WindowsFormsApp1\bin\Debug\EPPlus.xml
