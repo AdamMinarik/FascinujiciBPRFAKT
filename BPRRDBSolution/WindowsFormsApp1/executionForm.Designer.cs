@@ -76,11 +76,6 @@ namespace WindowsFormsApp1
             this.projectsButton = new System.Windows.Forms.Button();
             this.projectsPanel = new System.Windows.Forms.Panel();
             this.projectsData = new System.Windows.Forms.DataGridView();
-            this.pnameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.owneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.scopeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wtgDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.newprojectviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new WindowsFormsApp1.DataSet1();
             this.portfolioPanel = new System.Windows.Forms.Panel();
@@ -843,7 +838,6 @@ namespace WindowsFormsApp1
             // 
             this.projectsData.AllowUserToAddRows = false;
             this.projectsData.AllowUserToDeleteRows = false;
-            this.projectsData.AutoGenerateColumns = false;
             this.projectsData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.projectsData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.projectsData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
@@ -858,13 +852,6 @@ namespace WindowsFormsApp1
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.projectsData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.projectsData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.projectsData.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.pnameDataGridViewTextBoxColumn,
-            this.owneDataGridViewTextBoxColumn,
-            this.scopeDataGridViewTextBoxColumn,
-            this.wtgDataGridViewTextBoxColumn,
-            this.iDDataGridViewTextBoxColumn});
-            this.projectsData.DataSource = this.newprojectviewBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 10F);
@@ -883,46 +870,6 @@ namespace WindowsFormsApp1
             this.projectsData.TabIndex = 0;
             this.projectsData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectsData_CellClick);
             this.projectsData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.projectsData_CellContentClick);
-            // 
-            // pnameDataGridViewTextBoxColumn
-            // 
-            this.pnameDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.pnameDataGridViewTextBoxColumn.DataPropertyName = "pname";
-            this.pnameDataGridViewTextBoxColumn.HeaderText = "Project Name";
-            this.pnameDataGridViewTextBoxColumn.Name = "pnameDataGridViewTextBoxColumn";
-            this.pnameDataGridViewTextBoxColumn.Width = 122;
-            // 
-            // owneDataGridViewTextBoxColumn
-            // 
-            this.owneDataGridViewTextBoxColumn.DataPropertyName = "owne";
-            this.owneDataGridViewTextBoxColumn.HeaderText = "Project Owner";
-            this.owneDataGridViewTextBoxColumn.Name = "owneDataGridViewTextBoxColumn";
-            this.owneDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // scopeDataGridViewTextBoxColumn
-            // 
-            this.scopeDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.scopeDataGridViewTextBoxColumn.DataPropertyName = "scope";
-            this.scopeDataGridViewTextBoxColumn.HeaderText = "Scope";
-            this.scopeDataGridViewTextBoxColumn.Name = "scopeDataGridViewTextBoxColumn";
-            this.scopeDataGridViewTextBoxColumn.ReadOnly = true;
-            this.scopeDataGridViewTextBoxColumn.Width = 75;
-            // 
-            // wtgDataGridViewTextBoxColumn
-            // 
-            this.wtgDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.wtgDataGridViewTextBoxColumn.DataPropertyName = "wtg";
-            this.wtgDataGridViewTextBoxColumn.HeaderText = "Wind Turbine";
-            this.wtgDataGridViewTextBoxColumn.Name = "wtgDataGridViewTextBoxColumn";
-            this.wtgDataGridViewTextBoxColumn.ReadOnly = true;
-            this.wtgDataGridViewTextBoxColumn.Width = 120;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "Unique ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.Visible = false;
             // 
             // newprojectviewBindingSource
             // 
@@ -2146,7 +2093,6 @@ namespace WindowsFormsApp1
             this.DIcatText.Name = "DIcatText";
             this.DIcatText.Size = new System.Drawing.Size(250, 23);
             this.DIcatText.TabIndex = 2;
-            this.DIcatText.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // DICatInsertLbl
             // 
@@ -3564,11 +3510,6 @@ namespace WindowsFormsApp1
         private DataGridViewTextBoxColumn gIDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn4;
         private DataGridViewTextBoxColumn iDcatDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn pnameDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn owneDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn scopeDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn wtgDataGridViewTextBoxColumn;
-        private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
         private DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn3;
         private DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn1;
         private DataGridViewCheckBoxColumn iDstatusDataGridViewCheckBoxColumn;

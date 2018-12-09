@@ -18,9 +18,9 @@ namespace WindowsFormsApp1.Mediator
         }
 
 
-        public void addItem(EProjectItem item, bool approval,String Type, int ProjectID)
+        public void addItem(EProjectItem item, bool approval,String Type, int ProjectID, String userName)
         {
-            storage.addItem(item, approval, Type, ProjectID);
+            storage.addItem(item, approval, Type, ProjectID, userName);
         }
 
         public EProjectItemList getClosedItems(int projectID, string month, string type)

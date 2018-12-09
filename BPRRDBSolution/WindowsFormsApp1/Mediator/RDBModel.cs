@@ -19,7 +19,7 @@ namespace WindowsFormsApp1.Mediator
         ExecutionUser getExecutionUser(string userName);
         
         //INSERTS
-        void addItem(EProjectItem item, bool approval, String Type, int ProjectID);
+        void addItem(EProjectItem item, bool approval, String Type, int ProjectID, String userName);
         //UPDATES
         void updateProject(ExecutionProject project);
         void updateItem(EProjectItem item, bool projectOwner, String type);

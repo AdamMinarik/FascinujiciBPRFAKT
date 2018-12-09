@@ -27,15 +27,20 @@ namespace WindowsFormsApp1
         private String sqlConnectionString;
         SqlDataAdapter dataAdapter;
         DataTable dataTable;
+        private string permission;
+        private ExecutionUser user;
 
 
-        public ExecRolog(ExecutionUser user, ExecutionProject execProject, executionForm executionForm)
+        public ExecRolog(ExecutionUser user, ExecutionProject execProject, executionForm executionForm, string permission)
         {
             InitializeComponent();
             this.execProject = execProject;
             this.ProjectID = execProject.projectID;
             this.modelManager = new ModelManager();
             this.executionForm = executionForm;
+            this.permission = permission;
+            this.user = user;
+            MessageBox.Show(permission);
 
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             builder.DataSource = "riskdbsserver.database.windows.net";
@@ -159,6 +164,41 @@ namespace WindowsFormsApp1
 
         private void approvalFuncButton_Click(object sender, EventArgs e)
         {
+            //SET NEW RISKS DATAGRIDVIEW
+            DataGridViewButtonColumn approveButtonColumn;
+            DataGridViewButtonColumn declineButtonColumn;
+
+            SqlConnection connection = new SqlConnection(sqlConnectionString);
+            connection.Open();
+            string SQL = "SELECT ID, ExcelCode, addItemType, Rname, updatedate, FirstName, LastName FROM newItemsViewApproval WHERE IDproj = " + execProject.projectID.ToString() + " order by updateDate;";
+            dataAdapter = new SqlDataAdapter(SQL, connection);
+            dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            newItemsApprovalData.DataSource = dataTable;
+
+            approveButtonColumn = new DataGridViewButtonColumn();
+            approveButtonColumn.Name = "Approve";
+            approveButtonColumn.Text = "Approve";
+            approveButtonColumn.UseColumnTextForButtonValue = true;
+            approveButtonColumn.HeaderText = "";
+            if (newItemsApprovalData.Columns["Approve"] == null)
+            {
+                newItemsApprovalData.Columns.Insert(7, approveButtonColumn);
+            }
+
+            declineButtonColumn = new DataGridViewButtonColumn();
+            declineButtonColumn.Name = "Decline";
+            declineButtonColumn.Text = "Decline";
+            declineButtonColumn.UseColumnTextForButtonValue = true;
+            declineButtonColumn.HeaderText = "";
+            if (newItemsApprovalData.Columns["Decline"] == null)
+            {
+                newItemsApprovalData.Columns.Insert(8, declineButtonColumn);
+            }
+
+
+
+            //SELECT APPROVAL FUNCTION TAB
             execROlogTabControl.SelectedIndex = 8;
         }
 
@@ -474,8 +514,17 @@ namespace WindowsFormsApp1
             riskItemDetail.impactEndDate = impactEndDateDateTimePicker.Value;
             riskItemDetail.monetaryValueAfter = double.Parse(monetaryValueAfterTextBox.Text);
 
+
             //CALL METHOD FROM MODEL MANAGER TO UPDATE DATABASE
-            modelManager.updateItem(riskItemDetail, true, "risk");
+            if (permission == "owner")
+            {
+                modelManager.updateItem(riskItemDetail, true, "risk");
+            }
+            else
+            {
+                modelManager.updateItem(riskItemDetail, false, "risk");
+            }
+            
             //REFRESH LIST OF ITEMS WITH UPDATED DATA
             refreshROlogItems();
             //RETURN TO OVERVIEW
@@ -556,8 +605,14 @@ namespace WindowsFormsApp1
             riskItemDetail.impactEndDate = impactEndDateDateTimePicker.Value;
             riskItemDetail.monetaryValueAfter = double.Parse(monetaryValueAfterTextBox.Text);
 
-            modelManager.addItem(riskItemDetail, false, "risk", ProjectID);
-
+            if(permission == "owner")
+            { 
+                modelManager.addItem(riskItemDetail, false, "risk", ProjectID, user.userName);
+            }
+            else
+            {
+                modelManager.addItem(riskItemDetail, true, "risk", ProjectID, user.userName);
+            }
             //REFRESH LIST OF ITEMS WITH UPDATED DATA
             refreshROlogItems();
             //RETURN TO OVERVIEW
@@ -692,7 +747,7 @@ namespace WindowsFormsApp1
             //CHANGE PROJECT NAME LABEL
             locationLabel.Text = execProject.name;
             //REFRESH PROJECTS DATA GRID VIEW IN EXECUTION FORM
-            this.executionForm.refreshProjects();
+            this.executionForm.setProjectsData();
             //GO TO OVERVIEW TAB
             execROlogTabControl.SelectedIndex = 0;
         }

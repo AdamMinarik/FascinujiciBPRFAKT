@@ -95,6 +95,9 @@ namespace WindowsFormsApp1
             builder.InitialCatalog = "[EW_Risk_Test]";
             connectionString = builder;
 
+
+            setProjectsData();
+
             uninstallButtonColumn = new DataGridViewButtonColumn();
             uninstallButtonColumn.Name = "Open";
             uninstallButtonColumn.Text = "Open Project..";
@@ -117,9 +120,10 @@ namespace WindowsFormsApp1
             createProjectPanel.Visible = false;
             tabController.SelectedIndex = 0;
 
+            setProjectsData();
+
             uninstallButtonColumn.Name = "Open";
             uninstallButtonColumn.Text = "Open Project..";
-            
             uninstallButtonColumn.UseColumnTextForButtonValue = true;
 
             if (projectsData.Columns["Open"] == null)
@@ -563,21 +567,36 @@ namespace WindowsFormsApp1
 
         private void projectsData_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            string projectName = "";
             int projectID;
+            string permission;
             ExecutionProject execProject;
 
             // Ignore clicks that are not in our 
             if (e.ColumnIndex == projectsData.Columns["Open"].Index && e.RowIndex >= 0)
             {
-                    //get projectID from the list
-                    projectID = (int)projectsData.Rows[e.RowIndex].Cells[5].Value;
-                    //get project object from mediator
-                    execProject = modelManager.getExecutionProject(projectID);
-                    //create form ExecROlog and send userObject and projectObject
-                    ExecRolog execROlogForm = new ExecRolog(user,execProject,this);
-                    //show form
-                    execROlogForm.Show();
+                //get projectID from the list
+                projectID = (int)projectsData.Rows[e.RowIndex].Cells[6].Value;
+                //get project object from mediator
+                execProject = modelManager.getExecutionProject(projectID);
+
+                //GET USER PERMISSION IN OPENED PROJECT
+                if (execProject.ownerID == user.userID)
+                {
+                    permission = "owner";
+                }
+                else if (user.roleID == 7)
+                {
+                    permission = "admin";
+                }
+                else
+                {
+                    permission = projectsData.Rows[e.RowIndex].Cells[7].Value.ToString();
+                }
+
+                //create form ExecROlog and send userObject and projectObject
+                ExecRolog execROlogForm = new ExecRolog(user,execProject,this, permission);
+                //show form
+                execROlogForm.Show();
             }
         }
 
@@ -652,10 +671,7 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private void DIcatUpdateBtn_Click(object sender, EventArgs e)
         {
@@ -1170,12 +1186,34 @@ namespace WindowsFormsApp1
 
         }
 
-        public void refreshProjects()
+
+
+
+        public void setProjectsData()
         {
+            string SQL;
+
+            if (user.roleID == 3)
+            {
+                SQL = "SELECT pname,sap,scope,wtg,owne,ID, 'read' as projectrights FROM new_project_view WHERE segmentID = 2 ORDER BY pname ASC";
+            }
+            else if (user.roleID == 5)
+            {
+                SQL = "SELECT pname,sap,scope,wtg,owne,ID, CASE WHEN IDuser = " + user.userID + " then 'write' when b.prights = 'read' then 'read'when b.prights = 'write' then 'write'else 'no access' end as projectrights FROM new_project_view as a left join (select case when WriteID = 2 then 'read' else 'write' end as prights,* from rk_pro_permission where userID = " + user.userID + ")as b on a.ID = b.projID WHERE segmentID = 2 order by projectrights desc, pname ASC;";
+            }
+            else if(user.roleID == 7)
+            {
+                SQL = "SELECT pname,sap,scope,wtg,owne,ID,'write' as projectrights FROM new_project_view ORDER BY pname ASC;";
+            }
+            else
+            {
+                SQL = "SELECT pname,sap,scope,wtg,owne,ID,'no access' as projectrights FROM new_project_view ORDER BY pname ASC;";
+            }
+
+            MessageBox.Show(SQL);
+
             SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
             connection.Open();
-            string SQL = "SELECT * FROM new_project_view";
-
             daDIcat = new SqlDataAdapter(SQL, connection);
             dsDIcat = new DataTable();
             daDIcat.Fill(dsDIcat);
