@@ -29,6 +29,7 @@ namespace WindowsFormsApp1
         DataTable dataTable;
         private string permission;
         private ExecutionUser user;
+        private DateTime selectedDate;
 
 
         public ExecRolog(ExecutionUser user, ExecutionProject execProject, executionForm executionForm, string permission)
@@ -40,6 +41,7 @@ namespace WindowsFormsApp1
             this.executionForm = executionForm;
             this.permission = permission;
             this.user = user;
+            this.selectedDate = DateTime.Today;
             MessageBox.Show(permission);
 
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
@@ -50,13 +52,14 @@ namespace WindowsFormsApp1
             this.sqlConnectionString = builder.ConnectionString;
 
             //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
-            itemsList = modelManager.getItems(execProject.projectID, DateTime.Today.ToString(), "risk");
+            itemsList = modelManager.getItems(execProject.projectID, selectedDate.ToString(), "risk");
+            //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
+            setROlogGridView(itemsList);
             //SET USER NAME LABEL
             userLabel.Text = user.firstName + ' ' + user.lastName;
             //SET PROJECT NAME LABEL
             locationLabel.Text = execProject.name;
-            //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
-            setROlogGridView(itemsList);
+            
 
         }
 
@@ -164,39 +167,7 @@ namespace WindowsFormsApp1
 
         private void approvalFuncButton_Click(object sender, EventArgs e)
         {
-            //SET NEW RISKS DATAGRIDVIEW
-            DataGridViewButtonColumn approveButtonColumn;
-            DataGridViewButtonColumn declineButtonColumn;
-
-            SqlConnection connection = new SqlConnection(sqlConnectionString);
-            connection.Open();
-            string SQL = "SELECT ID, ExcelCode, addItemType, Rname, updatedate, FirstName, LastName FROM newItemsViewApproval WHERE IDproj = " + execProject.projectID.ToString() + " order by updateDate;";
-            dataAdapter = new SqlDataAdapter(SQL, connection);
-            dataTable = new DataTable();
-            dataAdapter.Fill(dataTable);
-            newItemsApprovalData.DataSource = dataTable;
-
-            approveButtonColumn = new DataGridViewButtonColumn();
-            approveButtonColumn.Name = "Approve";
-            approveButtonColumn.Text = "Approve";
-            approveButtonColumn.UseColumnTextForButtonValue = true;
-            approveButtonColumn.HeaderText = "";
-            if (newItemsApprovalData.Columns["Approve"] == null)
-            {
-                newItemsApprovalData.Columns.Insert(7, approveButtonColumn);
-            }
-
-            declineButtonColumn = new DataGridViewButtonColumn();
-            declineButtonColumn.Name = "Decline";
-            declineButtonColumn.Text = "Decline";
-            declineButtonColumn.UseColumnTextForButtonValue = true;
-            declineButtonColumn.HeaderText = "";
-            if (newItemsApprovalData.Columns["Decline"] == null)
-            {
-                newItemsApprovalData.Columns.Insert(8, declineButtonColumn);
-            }
-
-
+            setNewItemsApprovalView();
 
             //SELECT APPROVAL FUNCTION TAB
             execROlogTabControl.SelectedIndex = 8;
@@ -1017,6 +988,66 @@ namespace WindowsFormsApp1
             //RIGHT DAY VALUES
             timeImpactInDaysAfterTextBox.Text = decimal.Parse(daysAfterTextBox.Text).ToString();
             expectedTimeImpactInDaysAfterTextBox.Text = (decimal.Parse(daysAfterTextBox.Text) * decimal.Parse(probabilityAfterResponseTextBox.Text) / 100).ToString();
+        }
+
+        private void newItemsApprovalData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int newRiskID = int.Parse(newItemsApprovalData.Rows[e.RowIndex].Cells[2].Value.ToString());
+
+            // Ignore clicks that are not in our 
+            if (e.ColumnIndex == newItemsApprovalData.Columns["Approve"].Index && e.RowIndex >= 0)
+            {
+                //APPROVE NEW ITEM
+                modelManager.approveNewItem(execProject.projectID, newRiskID);
+                //REFRESH NEW ITEMS APPROVAL DATA GRID VIEW
+                setNewItemsApprovalView();
+                //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
+                itemsList = modelManager.getItems(execProject.projectID, selectedDate.ToString(), "risk");
+                //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
+                setROlogGridView(itemsList);
+            }
+            else if(e.ColumnIndex == newItemsApprovalData.Columns["Decline"].Index && e.RowIndex >= 0)
+            {
+                //DECLINE NEW ITEM
+                modelManager.declineNewItem(execProject.projectID, newRiskID);
+                //REFRESH NEW ITEMS APPROVAL DATA GRID VIEW
+                setNewItemsApprovalView();
+            }
+        }
+
+        public void setNewItemsApprovalView()
+        {
+            //SET NEW RISKS DATAGRIDVIEW
+            DataGridViewButtonColumn approveButtonColumn;
+            DataGridViewButtonColumn declineButtonColumn;
+
+            SqlConnection connection = new SqlConnection(sqlConnectionString);
+            connection.Open();
+            string SQL = "SELECT ID, ExcelCode, addItemType, Rname, updatedate, FirstName, LastName FROM newItemsViewApproval WHERE IDproj = " + execProject.projectID.ToString() + " order by updateDate;";
+            dataAdapter = new SqlDataAdapter(SQL, connection);
+            dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            newItemsApprovalData.DataSource = dataTable;
+
+            approveButtonColumn = new DataGridViewButtonColumn();
+            approveButtonColumn.Name = "Approve";
+            approveButtonColumn.Text = "Approve";
+            approveButtonColumn.UseColumnTextForButtonValue = true;
+            approveButtonColumn.HeaderText = "";
+            if (newItemsApprovalData.Columns["Approve"] == null)
+            {
+                newItemsApprovalData.Columns.Insert(7, approveButtonColumn);
+            }
+
+            declineButtonColumn = new DataGridViewButtonColumn();
+            declineButtonColumn.Name = "Decline";
+            declineButtonColumn.Text = "Decline";
+            declineButtonColumn.UseColumnTextForButtonValue = true;
+            declineButtonColumn.HeaderText = "";
+            if (newItemsApprovalData.Columns["Decline"] == null)
+            {
+                newItemsApprovalData.Columns.Insert(8, declineButtonColumn);
+            }
         }
     }
 }

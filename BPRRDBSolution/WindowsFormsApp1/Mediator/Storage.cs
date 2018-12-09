@@ -2008,5 +2008,55 @@ namespace WindowsFormsApp1.Mediator
                 MessageBox.Show("Something went wront. Error Message: " + ex.Message);
             }
         }
+
+        public void approveNewItem(int projectID, int newItemID)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
+            {
+                string queryString = "INSERT INTO [rk_ROlog] ([IDproj],[Rname],[RkDesc],[BU],[Rkbef],[P],[IDdicat],[DueDate],[formula],[forDesc],[MitDesc],[Mitdate],[Mitcost],[Pafter],[Remarks],[IDstatus],[IDcat],[IDchap] " 
+                                    + ",[REF_ID],[createdItem],[IDncc],[Status],[OriginatingID],[IDowner],[owne],[watchlist],[RootCause],[Impact],[reStrategy],[ID_resp],[ID_phase],[ID_customerShare],[OtherRootCause],[ImpactDirect],[ExpValueDays] " 
+                                    + ",[MitiActDate],[ImpEndDate],[ValAfterMiti],[CostMitiImpact],[newChanges],[ID_riskActionOwner],[conseqBoolean],[conseqValueInDays],[conseqMonetValue],[conseqComment],[ID_conseqRespStrategy] ,[ID_conseqRiskActionOwner],[conseqActions],[conseqMitiToBeTaken],[conseqValueAfterMiti],[conseqMitiActionsDate],[conseqRiskDesc],[IDOwnerDirect],[PMpackage],[CPMpackage],[WPAMpackage],[CNPMpackage],[FPAMpackage],[CAMPpackage], [OSPAMpackage],[timeObjective], [costObjective], [qualityObjective], [safetyfObjective], [costSatisfObjective],[ExcelID]) " 
+                                    + "Values" 
+                                    + "( (SELECT IDproj FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ),(SELECT Rname FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT RkDesc FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ) " 
+                                    + ", (SELECT BU FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT Rkbef FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT P FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT IDdicat FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ) " 
+                                    + ", (SELECT DueDate FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT formula FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT forDesc FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ) " 
+                                    + ", (SELECT MitDesc FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT Mitdate FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT Mitcost FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ) " 
+                                    + ", (SELECT Pafter FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT Remarks FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " )" 
+                                    + ", 1 , (SELECT IDcat FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ) " 
+                                    + ", 1, (SELECT REF_ID FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ) " + ", (SELECT createdItem FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT IDncc FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT Status FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ) " 
+                                    + ", (SELECT OriginatingID FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT IDowner FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT owne FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ") ,0, (SELECT RootCause FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ) " 
+                                    + ", (SELECT Impact FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT reStrategy FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ) " 
+                                    + ", (SELECT ID_resp FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT ID_phase FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ) " 
+                                    + ", (SELECT ID_customerShare FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ) " 
+                                    + ", (SELECT OtherRootCause FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT ImpactDirect FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ),(SELECT ExpValueDays FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + "" 
+                                    + ", (SELECT MitiActDate FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT ImpEndDate FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT ValAfterMiti FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT CostMitiImpact FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + ", 0,(SELECT ID_riskActionOwner FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT conseqBoolean FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" 
+                                    + ", (SELECT conseqValueInDays FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT conseqMonetValue FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT conseqComment FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT ID_conseqRespStrategy FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + ", (SELECT ID_conseqRiskActionOwner FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ),(SELECT conseqActions FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ),(SELECT conseqMitiToBeTaken FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT conseqValueAfterMiti FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + " ), (SELECT conseqMitiActionsDate FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + "," 
+                                    + "  (SELECT conseqRiskDesc FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + "), " + "  (SELECT [IDOwnerDirect] FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")"
+                                    + " ,(SELECT PMpackage FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + " , (SELECT CPMpackage FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + " , (SELECT WPAMpackage FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + " , (SELECT CNPMpackage FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + " , (SELECT FPAMpackage FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + " , (SELECT CAMPpackage FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + " , (SELECT OSPAMpackage FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + " , (SELECT timeObjective FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + " , (SELECT costObjective FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + " , (SELECT qualityObjective FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + " , (SELECT safetyfObjective FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")" + " , (SELECT costSatisfObjective FROM [rk_NewRisk_Indiv] WHERE  ID = " + newItemID + ")," 
+                                    + "(SELECT ISNULL(MAX(ExcelID)+1,5000) as ExcelID FROM rk_ROlog WHERE IDPROJ =" + projectID + "AND MONTH(createDate) = Month(getDate()) AND YEAR(getDate()) = Year(getDate()))" + ")";
+                command = new SqlCommand(queryString, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                queryString = "DELETE FROM rk_NewRisk_Indiv WHERE ID =" + newItemID;
+                command = new SqlCommand(queryString, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+        public void declineNewItem(int projectID, int newItemID)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
+            {
+                string queryString = "DELETE FROM rk_NewRisk_Indiv WHERE ID =" + newItemID;
+                command = new SqlCommand(queryString, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
     }
 }

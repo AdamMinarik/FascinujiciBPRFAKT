@@ -25,6 +25,7 @@ namespace WindowsFormsApp1.Mediator
         void updateItem(EProjectItem item, bool projectOwner, String type);
         void updateNewItem(EProjectItem item);
         void updateChangedItem(EProjectItem item);
-
+        void approveNewItem(int projectID, int newItemID);
+        void declineNewItem(int projectID, int newItemID);
     }
 }

@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExecRolog));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.locationPanel = new System.Windows.Forms.Panel();
             this.readPictureBox = new System.Windows.Forms.PictureBox();
             this.approvalPictureBox = new System.Windows.Forms.PictureBox();
@@ -372,6 +372,14 @@ namespace WindowsFormsApp1
             this.userPermissionLabel = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.approvalTab = new System.Windows.Forms.TabPage();
+            this.changesApprovalDataPanel = new System.Windows.Forms.Panel();
+            this.changesApprovalData = new System.Windows.Forms.DataGridView();
+            this.changesApprovalTopPanel = new System.Windows.Forms.Panel();
+            this.changesApprovalLabel = new System.Windows.Forms.Label();
+            this.newItemsApprovalDataPanel = new System.Windows.Forms.Panel();
+            this.newItemsApprovalData = new System.Windows.Forms.DataGridView();
+            this.newItemsApprovalTopPanel = new System.Windows.Forms.Panel();
+            this.newItemsApprovalLabel = new System.Windows.Forms.Label();
             this.infoTab = new System.Windows.Forms.TabPage();
             this.newProjectTableLayout = new System.Windows.Forms.TableLayoutPanel();
             this.projectNameTextBox = new System.Windows.Forms.TextBox();
@@ -449,14 +457,6 @@ namespace WindowsFormsApp1
             this.rk_SegmentTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_SegmentTableAdapter();
             this.wTGtypeTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.WTGtypeTableAdapter();
             this.rk_CurrencyNameTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_CurrencyNameTableAdapter();
-            this.newItemsApprovalTopPanel = new System.Windows.Forms.Panel();
-            this.newItemsApprovalDataPanel = new System.Windows.Forms.Panel();
-            this.changesApprovalTopPanel = new System.Windows.Forms.Panel();
-            this.changesApprovalDataPanel = new System.Windows.Forms.Panel();
-            this.newItemsApprovalLabel = new System.Windows.Forms.Label();
-            this.changesApprovalLabel = new System.Windows.Forms.Label();
-            this.newItemsApprovalData = new System.Windows.Forms.DataGridView();
-            this.changesApprovalData = new System.Windows.Forms.DataGridView();
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -528,6 +528,12 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.userPermissionData)).BeginInit();
             this.panel14.SuspendLayout();
             this.approvalTab.SuspendLayout();
+            this.changesApprovalDataPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.changesApprovalData)).BeginInit();
+            this.changesApprovalTopPanel.SuspendLayout();
+            this.newItemsApprovalDataPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.newItemsApprovalData)).BeginInit();
+            this.newItemsApprovalTopPanel.SuspendLayout();
             this.infoTab.SuspendLayout();
             this.newProjectTableLayout.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rkCurrencyNameBindingSource)).BeginInit();
@@ -539,12 +545,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.wTGtypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rkUsersListviewBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rkstatusOfRiskBindingSource)).BeginInit();
-            this.newItemsApprovalTopPanel.SuspendLayout();
-            this.newItemsApprovalDataPanel.SuspendLayout();
-            this.changesApprovalTopPanel.SuspendLayout();
-            this.changesApprovalDataPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.newItemsApprovalData)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.changesApprovalData)).BeginInit();
             this.SuspendLayout();
             // 
             // locationPanel
@@ -4440,15 +4440,15 @@ namespace WindowsFormsApp1
             this.userPermissionData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.userPermissionData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.userPermissionData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userPermissionData.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.userPermissionData.DefaultCellStyle = dataGridViewCellStyle1;
             this.userPermissionData.Location = new System.Drawing.Point(141, 6);
             this.userPermissionData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userPermissionData.Name = "userPermissionData";
@@ -4525,6 +4525,83 @@ namespace WindowsFormsApp1
             this.approvalTab.TabIndex = 8;
             this.approvalTab.Text = "Approvals";
             this.approvalTab.UseVisualStyleBackColor = true;
+            // 
+            // changesApprovalDataPanel
+            // 
+            this.changesApprovalDataPanel.Controls.Add(this.changesApprovalData);
+            this.changesApprovalDataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.changesApprovalDataPanel.Location = new System.Drawing.Point(0, 515);
+            this.changesApprovalDataPanel.Name = "changesApprovalDataPanel";
+            this.changesApprovalDataPanel.Size = new System.Drawing.Size(861, 415);
+            this.changesApprovalDataPanel.TabIndex = 4;
+            // 
+            // changesApprovalData
+            // 
+            this.changesApprovalData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.changesApprovalData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.changesApprovalData.Location = new System.Drawing.Point(0, 0);
+            this.changesApprovalData.Name = "changesApprovalData";
+            this.changesApprovalData.Size = new System.Drawing.Size(861, 415);
+            this.changesApprovalData.TabIndex = 0;
+            // 
+            // changesApprovalTopPanel
+            // 
+            this.changesApprovalTopPanel.Controls.Add(this.changesApprovalLabel);
+            this.changesApprovalTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.changesApprovalTopPanel.Location = new System.Drawing.Point(0, 465);
+            this.changesApprovalTopPanel.Name = "changesApprovalTopPanel";
+            this.changesApprovalTopPanel.Size = new System.Drawing.Size(861, 50);
+            this.changesApprovalTopPanel.TabIndex = 3;
+            // 
+            // changesApprovalLabel
+            // 
+            this.changesApprovalLabel.AutoSize = true;
+            this.changesApprovalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.changesApprovalLabel.Location = new System.Drawing.Point(3, 12);
+            this.changesApprovalLabel.Name = "changesApprovalLabel";
+            this.changesApprovalLabel.Size = new System.Drawing.Size(250, 25);
+            this.changesApprovalLabel.TabIndex = 1;
+            this.changesApprovalLabel.Text = "Changes pending Approval";
+            // 
+            // newItemsApprovalDataPanel
+            // 
+            this.newItemsApprovalDataPanel.Controls.Add(this.newItemsApprovalData);
+            this.newItemsApprovalDataPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.newItemsApprovalDataPanel.Location = new System.Drawing.Point(0, 50);
+            this.newItemsApprovalDataPanel.Name = "newItemsApprovalDataPanel";
+            this.newItemsApprovalDataPanel.Size = new System.Drawing.Size(861, 415);
+            this.newItemsApprovalDataPanel.TabIndex = 2;
+            // 
+            // newItemsApprovalData
+            // 
+            this.newItemsApprovalData.AllowUserToAddRows = false;
+            this.newItemsApprovalData.AllowUserToDeleteRows = false;
+            this.newItemsApprovalData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.newItemsApprovalData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.newItemsApprovalData.Location = new System.Drawing.Point(0, 0);
+            this.newItemsApprovalData.Name = "newItemsApprovalData";
+            this.newItemsApprovalData.Size = new System.Drawing.Size(861, 415);
+            this.newItemsApprovalData.TabIndex = 0;
+            this.newItemsApprovalData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.newItemsApprovalData_CellContentClick);
+            // 
+            // newItemsApprovalTopPanel
+            // 
+            this.newItemsApprovalTopPanel.Controls.Add(this.newItemsApprovalLabel);
+            this.newItemsApprovalTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.newItemsApprovalTopPanel.Location = new System.Drawing.Point(0, 0);
+            this.newItemsApprovalTopPanel.Name = "newItemsApprovalTopPanel";
+            this.newItemsApprovalTopPanel.Size = new System.Drawing.Size(861, 50);
+            this.newItemsApprovalTopPanel.TabIndex = 0;
+            // 
+            // newItemsApprovalLabel
+            // 
+            this.newItemsApprovalLabel.AutoSize = true;
+            this.newItemsApprovalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.newItemsApprovalLabel.Location = new System.Drawing.Point(3, 12);
+            this.newItemsApprovalLabel.Name = "newItemsApprovalLabel";
+            this.newItemsApprovalLabel.Size = new System.Drawing.Size(261, 25);
+            this.newItemsApprovalLabel.TabIndex = 0;
+            this.newItemsApprovalLabel.Text = "New Items pending Approval";
             // 
             // infoTab
             // 
@@ -5330,82 +5407,6 @@ namespace WindowsFormsApp1
             // 
             this.rk_CurrencyNameTableAdapter.ClearBeforeFill = true;
             // 
-            // newItemsApprovalTopPanel
-            // 
-            this.newItemsApprovalTopPanel.Controls.Add(this.newItemsApprovalLabel);
-            this.newItemsApprovalTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.newItemsApprovalTopPanel.Location = new System.Drawing.Point(0, 0);
-            this.newItemsApprovalTopPanel.Name = "newItemsApprovalTopPanel";
-            this.newItemsApprovalTopPanel.Size = new System.Drawing.Size(861, 50);
-            this.newItemsApprovalTopPanel.TabIndex = 0;
-            // 
-            // newItemsApprovalDataPanel
-            // 
-            this.newItemsApprovalDataPanel.Controls.Add(this.newItemsApprovalData);
-            this.newItemsApprovalDataPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.newItemsApprovalDataPanel.Location = new System.Drawing.Point(0, 50);
-            this.newItemsApprovalDataPanel.Name = "newItemsApprovalDataPanel";
-            this.newItemsApprovalDataPanel.Size = new System.Drawing.Size(861, 415);
-            this.newItemsApprovalDataPanel.TabIndex = 2;
-            // 
-            // changesApprovalTopPanel
-            // 
-            this.changesApprovalTopPanel.Controls.Add(this.changesApprovalLabel);
-            this.changesApprovalTopPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.changesApprovalTopPanel.Location = new System.Drawing.Point(0, 465);
-            this.changesApprovalTopPanel.Name = "changesApprovalTopPanel";
-            this.changesApprovalTopPanel.Size = new System.Drawing.Size(861, 50);
-            this.changesApprovalTopPanel.TabIndex = 3;
-            // 
-            // changesApprovalDataPanel
-            // 
-            this.changesApprovalDataPanel.Controls.Add(this.changesApprovalData);
-            this.changesApprovalDataPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.changesApprovalDataPanel.Location = new System.Drawing.Point(0, 515);
-            this.changesApprovalDataPanel.Name = "changesApprovalDataPanel";
-            this.changesApprovalDataPanel.Size = new System.Drawing.Size(861, 415);
-            this.changesApprovalDataPanel.TabIndex = 4;
-            // 
-            // newItemsApprovalLabel
-            // 
-            this.newItemsApprovalLabel.AutoSize = true;
-            this.newItemsApprovalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.newItemsApprovalLabel.Location = new System.Drawing.Point(3, 12);
-            this.newItemsApprovalLabel.Name = "newItemsApprovalLabel";
-            this.newItemsApprovalLabel.Size = new System.Drawing.Size(261, 25);
-            this.newItemsApprovalLabel.TabIndex = 0;
-            this.newItemsApprovalLabel.Text = "New Items pending Approval";
-            // 
-            // changesApprovalLabel
-            // 
-            this.changesApprovalLabel.AutoSize = true;
-            this.changesApprovalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.changesApprovalLabel.Location = new System.Drawing.Point(3, 12);
-            this.changesApprovalLabel.Name = "changesApprovalLabel";
-            this.changesApprovalLabel.Size = new System.Drawing.Size(250, 25);
-            this.changesApprovalLabel.TabIndex = 1;
-            this.changesApprovalLabel.Text = "Changes pending Approval";
-            // 
-            // newItemsApprovalData
-            // 
-            this.newItemsApprovalData.AllowUserToAddRows = false;
-            this.newItemsApprovalData.AllowUserToDeleteRows = false;
-            this.newItemsApprovalData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.newItemsApprovalData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.newItemsApprovalData.Location = new System.Drawing.Point(0, 0);
-            this.newItemsApprovalData.Name = "newItemsApprovalData";
-            this.newItemsApprovalData.Size = new System.Drawing.Size(861, 415);
-            this.newItemsApprovalData.TabIndex = 0;
-            // 
-            // changesApprovalData
-            // 
-            this.changesApprovalData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.changesApprovalData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.changesApprovalData.Location = new System.Drawing.Point(0, 0);
-            this.changesApprovalData.Name = "changesApprovalData";
-            this.changesApprovalData.Size = new System.Drawing.Size(861, 415);
-            this.changesApprovalData.TabIndex = 0;
-            // 
             // ExecRolog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5512,6 +5513,14 @@ namespace WindowsFormsApp1
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
             this.approvalTab.ResumeLayout(false);
+            this.changesApprovalDataPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.changesApprovalData)).EndInit();
+            this.changesApprovalTopPanel.ResumeLayout(false);
+            this.changesApprovalTopPanel.PerformLayout();
+            this.newItemsApprovalDataPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.newItemsApprovalData)).EndInit();
+            this.newItemsApprovalTopPanel.ResumeLayout(false);
+            this.newItemsApprovalTopPanel.PerformLayout();
             this.infoTab.ResumeLayout(false);
             this.infoTab.PerformLayout();
             this.newProjectTableLayout.ResumeLayout(false);
@@ -5525,14 +5534,6 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.wTGtypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rkUsersListviewBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rkstatusOfRiskBindingSource)).EndInit();
-            this.newItemsApprovalTopPanel.ResumeLayout(false);
-            this.newItemsApprovalTopPanel.PerformLayout();
-            this.newItemsApprovalDataPanel.ResumeLayout(false);
-            this.changesApprovalTopPanel.ResumeLayout(false);
-            this.changesApprovalTopPanel.PerformLayout();
-            this.changesApprovalDataPanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.newItemsApprovalData)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.changesApprovalData)).EndInit();
             this.ResumeLayout(false);
 
         }

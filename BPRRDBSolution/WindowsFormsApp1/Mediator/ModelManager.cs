@@ -77,5 +77,15 @@ namespace WindowsFormsApp1.Mediator
         {
             storage.updateProject(project);
         }
+
+        public void approveNewItem(int projectID, int newItemID)
+        {
+            storage.approveNewItem(projectID, newItemID);
+        }
+
+        public void declineNewItem(int projectID, int newItemID)
+        {
+            storage.declineNewItem(projectID, newItemID);
+        }
     }
 }
