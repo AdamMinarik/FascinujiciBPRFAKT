@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExecRolog));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.locationPanel = new System.Windows.Forms.Panel();
             this.readPictureBox = new System.Windows.Forms.PictureBox();
             this.approvalPictureBox = new System.Windows.Forms.PictureBox();
@@ -59,9 +59,6 @@ namespace WindowsFormsApp1
             this.overviewTab = new System.Windows.Forms.TabPage();
             this.infoSumPanel = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.totalOpportunityLabel = new System.Windows.Forms.Label();
-            this.rUOpportunityLabel = new System.Windows.Forms.Label();
-            this.bUOpportunityLabel = new System.Windows.Forms.Label();
             this.totalRCLabel = new System.Windows.Forms.Label();
             this.rURCLabel = new System.Windows.Forms.Label();
             this.bURCLabel = new System.Windows.Forms.Label();
@@ -83,7 +80,6 @@ namespace WindowsFormsApp1
             this.bUCostLabel = new System.Windows.Forms.Label();
             this.responseExposureLabel = new System.Windows.Forms.Label();
             this.monValueToRCLabel = new System.Windows.Forms.Label();
-            this.opportunityLabel = new System.Windows.Forms.Label();
             this.riskContingencyLabel = new System.Windows.Forms.Label();
             this.monValueLabel = new System.Windows.Forms.Label();
             this.bUMValLabel = new System.Windows.Forms.Label();
@@ -484,6 +480,10 @@ namespace WindowsFormsApp1
             this.rk_SegmentTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_SegmentTableAdapter();
             this.wTGtypeTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.WTGtypeTableAdapter();
             this.rk_CurrencyNameTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_CurrencyNameTableAdapter();
+            this.buScopeLbl = new System.Windows.Forms.Label();
+            this.ruScopeLbl = new System.Windows.Forms.Label();
+            this.BUScopeTxt = new System.Windows.Forms.TextBox();
+            this.RUScopeTxt = new System.Windows.Forms.TextBox();
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -1060,9 +1060,6 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16F));
-            this.tableLayoutPanel1.Controls.Add(this.totalOpportunityLabel, 3, 6);
-            this.tableLayoutPanel1.Controls.Add(this.rUOpportunityLabel, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.bUOpportunityLabel, 1, 6);
             this.tableLayoutPanel1.Controls.Add(this.totalRCLabel, 3, 5);
             this.tableLayoutPanel1.Controls.Add(this.rURCLabel, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.bURCLabel, 1, 5);
@@ -1084,67 +1081,29 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.Controls.Add(this.bUCostLabel, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.responseExposureLabel, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.monValueToRCLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.opportunityLabel, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.riskContingencyLabel, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.monValueLabel, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.bUMValLabel, 1, 1);
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 0);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(6, 23);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 7;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.58333F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.41667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.41667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.41667F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.91667F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(573, 210);
             this.tableLayoutPanel1.TabIndex = 10;
-            // 
-            // totalOpportunityLabel
-            // 
-            this.totalOpportunityLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.totalOpportunityLabel.AutoSize = true;
-            this.totalOpportunityLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalOpportunityLabel.Location = new System.Drawing.Point(519, 184);
-            this.totalOpportunityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.totalOpportunityLabel.Name = "totalOpportunityLabel";
-            this.totalOpportunityLabel.Size = new System.Drawing.Size(14, 16);
-            this.totalOpportunityLabel.TabIndex = 27;
-            this.totalOpportunityLabel.Text = "0";
-            // 
-            // rUOpportunityLabel
-            // 
-            this.rUOpportunityLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.rUOpportunityLabel.AutoSize = true;
-            this.rUOpportunityLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.rUOpportunityLabel.Location = new System.Drawing.Point(426, 184);
-            this.rUOpportunityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.rUOpportunityLabel.Name = "rUOpportunityLabel";
-            this.rUOpportunityLabel.Size = new System.Drawing.Size(14, 16);
-            this.rUOpportunityLabel.TabIndex = 26;
-            this.rUOpportunityLabel.Text = "0";
-            // 
-            // bUOpportunityLabel
-            // 
-            this.bUOpportunityLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.bUOpportunityLabel.AutoSize = true;
-            this.bUOpportunityLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bUOpportunityLabel.Location = new System.Drawing.Point(335, 184);
-            this.bUOpportunityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.bUOpportunityLabel.Name = "bUOpportunityLabel";
-            this.bUOpportunityLabel.Size = new System.Drawing.Size(14, 16);
-            this.bUOpportunityLabel.TabIndex = 25;
-            this.bUOpportunityLabel.Text = "0";
             // 
             // totalRCLabel
             // 
             this.totalRCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalRCLabel.AutoSize = true;
             this.totalRCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalRCLabel.Location = new System.Drawing.Point(519, 138);
+            this.totalRCLabel.Location = new System.Drawing.Point(519, 158);
             this.totalRCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalRCLabel.Name = "totalRCLabel";
             this.totalRCLabel.Size = new System.Drawing.Size(14, 16);
@@ -1156,7 +1115,7 @@ namespace WindowsFormsApp1
             this.rURCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rURCLabel.AutoSize = true;
             this.rURCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.rURCLabel.Location = new System.Drawing.Point(426, 138);
+            this.rURCLabel.Location = new System.Drawing.Point(426, 158);
             this.rURCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rURCLabel.Name = "rURCLabel";
             this.rURCLabel.Size = new System.Drawing.Size(14, 16);
@@ -1168,7 +1127,7 @@ namespace WindowsFormsApp1
             this.bURCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bURCLabel.AutoSize = true;
             this.bURCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bURCLabel.Location = new System.Drawing.Point(335, 138);
+            this.bURCLabel.Location = new System.Drawing.Point(335, 158);
             this.bURCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bURCLabel.Name = "bURCLabel";
             this.bURCLabel.Size = new System.Drawing.Size(14, 16);
@@ -1180,7 +1139,7 @@ namespace WindowsFormsApp1
             this.totalRELabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalRELabel.AutoSize = true;
             this.totalRELabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalRELabel.Location = new System.Drawing.Point(519, 117);
+            this.totalRELabel.Location = new System.Drawing.Point(519, 137);
             this.totalRELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalRELabel.Name = "totalRELabel";
             this.totalRELabel.Size = new System.Drawing.Size(14, 16);
@@ -1192,7 +1151,7 @@ namespace WindowsFormsApp1
             this.rURELabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rURELabel.AutoSize = true;
             this.rURELabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.rURELabel.Location = new System.Drawing.Point(426, 117);
+            this.rURELabel.Location = new System.Drawing.Point(426, 137);
             this.rURELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rURELabel.Name = "rURELabel";
             this.rURELabel.Size = new System.Drawing.Size(14, 16);
@@ -1204,7 +1163,7 @@ namespace WindowsFormsApp1
             this.bURELabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bURELabel.AutoSize = true;
             this.bURELabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bURELabel.Location = new System.Drawing.Point(335, 117);
+            this.bURELabel.Location = new System.Drawing.Point(335, 137);
             this.bURELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bURELabel.Name = "bURELabel";
             this.bURELabel.Size = new System.Drawing.Size(14, 16);
@@ -1216,7 +1175,7 @@ namespace WindowsFormsApp1
             this.totalEMVAfterLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalEMVAfterLabel.AutoSize = true;
             this.totalEMVAfterLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalEMVAfterLabel.Location = new System.Drawing.Point(519, 71);
+            this.totalEMVAfterLabel.Location = new System.Drawing.Point(519, 72);
             this.totalEMVAfterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalEMVAfterLabel.Name = "totalEMVAfterLabel";
             this.totalEMVAfterLabel.Size = new System.Drawing.Size(14, 16);
@@ -1228,7 +1187,7 @@ namespace WindowsFormsApp1
             this.rUEMVAfterLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rUEMVAfterLabel.AutoSize = true;
             this.rUEMVAfterLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.rUEMVAfterLabel.Location = new System.Drawing.Point(426, 71);
+            this.rUEMVAfterLabel.Location = new System.Drawing.Point(426, 72);
             this.rUEMVAfterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rUEMVAfterLabel.Name = "rUEMVAfterLabel";
             this.rUEMVAfterLabel.Size = new System.Drawing.Size(14, 16);
@@ -1240,7 +1199,7 @@ namespace WindowsFormsApp1
             this.bUEMVAfterLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bUEMVAfterLabel.AutoSize = true;
             this.bUEMVAfterLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bUEMVAfterLabel.Location = new System.Drawing.Point(335, 71);
+            this.bUEMVAfterLabel.Location = new System.Drawing.Point(335, 72);
             this.bUEMVAfterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bUEMVAfterLabel.Name = "bUEMVAfterLabel";
             this.bUEMVAfterLabel.Size = new System.Drawing.Size(14, 16);
@@ -1252,7 +1211,7 @@ namespace WindowsFormsApp1
             this.totalEMVBeforeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalEMVBeforeLabel.AutoSize = true;
             this.totalEMVBeforeLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalEMVBeforeLabel.Location = new System.Drawing.Point(519, 50);
+            this.totalEMVBeforeLabel.Location = new System.Drawing.Point(519, 51);
             this.totalEMVBeforeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalEMVBeforeLabel.Name = "totalEMVBeforeLabel";
             this.totalEMVBeforeLabel.Size = new System.Drawing.Size(14, 16);
@@ -1264,7 +1223,7 @@ namespace WindowsFormsApp1
             this.rUEMVBeforeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rUEMVBeforeLabel.AutoSize = true;
             this.rUEMVBeforeLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.rUEMVBeforeLabel.Location = new System.Drawing.Point(426, 50);
+            this.rUEMVBeforeLabel.Location = new System.Drawing.Point(426, 51);
             this.rUEMVBeforeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rUEMVBeforeLabel.Name = "rUEMVBeforeLabel";
             this.rUEMVBeforeLabel.Size = new System.Drawing.Size(14, 16);
@@ -1276,7 +1235,7 @@ namespace WindowsFormsApp1
             this.bUEMVBeforeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bUEMVBeforeLabel.AutoSize = true;
             this.bUEMVBeforeLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bUEMVBeforeLabel.Location = new System.Drawing.Point(335, 50);
+            this.bUEMVBeforeLabel.Location = new System.Drawing.Point(335, 51);
             this.bUEMVBeforeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bUEMVBeforeLabel.Name = "bUEMVBeforeLabel";
             this.bUEMVBeforeLabel.Size = new System.Drawing.Size(14, 16);
@@ -1288,7 +1247,7 @@ namespace WindowsFormsApp1
             this.totalMValLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalMValLabel.AutoSize = true;
             this.totalMValLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalMValLabel.Location = new System.Drawing.Point(519, 29);
+            this.totalMValLabel.Location = new System.Drawing.Point(519, 30);
             this.totalMValLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalMValLabel.Name = "totalMValLabel";
             this.totalMValLabel.Size = new System.Drawing.Size(14, 16);
@@ -1300,7 +1259,7 @@ namespace WindowsFormsApp1
             this.ruMValLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ruMValLabel.AutoSize = true;
             this.ruMValLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.ruMValLabel.Location = new System.Drawing.Point(426, 29);
+            this.ruMValLabel.Location = new System.Drawing.Point(426, 30);
             this.ruMValLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ruMValLabel.Name = "ruMValLabel";
             this.ruMValLabel.Size = new System.Drawing.Size(14, 16);
@@ -1323,7 +1282,7 @@ namespace WindowsFormsApp1
             // 
             this.eMVBeforeRCLabel.AutoSize = true;
             this.eMVBeforeRCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.5F, System.Drawing.FontStyle.Bold);
-            this.eMVBeforeRCLabel.Location = new System.Drawing.Point(2, 50);
+            this.eMVBeforeRCLabel.Location = new System.Drawing.Point(2, 51);
             this.eMVBeforeRCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.eMVBeforeRCLabel.Name = "eMVBeforeRCLabel";
             this.eMVBeforeRCLabel.Size = new System.Drawing.Size(266, 18);
@@ -1347,7 +1306,7 @@ namespace WindowsFormsApp1
             // 
             this.eMVAfterRCLabel.AutoSize = true;
             this.eMVAfterRCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.5F, System.Drawing.FontStyle.Bold);
-            this.eMVAfterRCLabel.Location = new System.Drawing.Point(2, 71);
+            this.eMVAfterRCLabel.Location = new System.Drawing.Point(2, 72);
             this.eMVAfterRCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.eMVAfterRCLabel.Name = "eMVAfterRCLabel";
             this.eMVAfterRCLabel.Size = new System.Drawing.Size(256, 18);
@@ -1370,7 +1329,7 @@ namespace WindowsFormsApp1
             // 
             this.responseExposureLabel.AutoSize = true;
             this.responseExposureLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
-            this.responseExposureLabel.Location = new System.Drawing.Point(2, 117);
+            this.responseExposureLabel.Location = new System.Drawing.Point(2, 137);
             this.responseExposureLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.responseExposureLabel.Name = "responseExposureLabel";
             this.responseExposureLabel.Size = new System.Drawing.Size(237, 18);
@@ -1388,22 +1347,11 @@ namespace WindowsFormsApp1
             this.monValueToRCLabel.TabIndex = 0;
             this.monValueToRCLabel.Text = "From Monetary Value to Risk Contingency";
             // 
-            // opportunityLabel
-            // 
-            this.opportunityLabel.AutoSize = true;
-            this.opportunityLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
-            this.opportunityLabel.Location = new System.Drawing.Point(2, 184);
-            this.opportunityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.opportunityLabel.Name = "opportunityLabel";
-            this.opportunityLabel.Size = new System.Drawing.Size(216, 18);
-            this.opportunityLabel.TabIndex = 6;
-            this.opportunityLabel.Text = "Opportunity - EMV after Response";
-            // 
             // riskContingencyLabel
             // 
             this.riskContingencyLabel.AutoSize = true;
             this.riskContingencyLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
-            this.riskContingencyLabel.Location = new System.Drawing.Point(2, 138);
+            this.riskContingencyLabel.Location = new System.Drawing.Point(2, 158);
             this.riskContingencyLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.riskContingencyLabel.Name = "riskContingencyLabel";
             this.riskContingencyLabel.Size = new System.Drawing.Size(225, 18);
@@ -1414,7 +1362,7 @@ namespace WindowsFormsApp1
             // 
             this.monValueLabel.AutoSize = true;
             this.monValueLabel.Font = new System.Drawing.Font("Trebuchet MS", 8.5F, System.Drawing.FontStyle.Bold);
-            this.monValueLabel.Location = new System.Drawing.Point(2, 29);
+            this.monValueLabel.Location = new System.Drawing.Point(2, 30);
             this.monValueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.monValueLabel.Name = "monValueLabel";
             this.monValueLabel.Size = new System.Drawing.Size(112, 18);
@@ -1427,7 +1375,7 @@ namespace WindowsFormsApp1
             this.bUMValLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bUMValLabel.AutoSize = true;
             this.bUMValLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bUMValLabel.Location = new System.Drawing.Point(335, 29);
+            this.bUMValLabel.Location = new System.Drawing.Point(335, 30);
             this.bUMValLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bUMValLabel.Name = "bUMValLabel";
             this.bUMValLabel.Size = new System.Drawing.Size(14, 16);
@@ -3065,7 +3013,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel10.Controls.Add(this.probabilityAfterResponseTextBox, 2, 6);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel10.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(445, 3);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(438, 3);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 7;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.350084F));
@@ -3075,7 +3023,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.19263F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6.532663F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.28141F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(401, 628);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(408, 628);
             this.tableLayoutPanel10.TabIndex = 2;
             // 
             // label54
@@ -3136,16 +3084,16 @@ namespace WindowsFormsApp1
             // rootCauseActionsTextBox
             // 
             this.rootCauseActionsTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rootCauseActionsTextBox.Location = new System.Drawing.Point(130, 86);
+            this.rootCauseActionsTextBox.Location = new System.Drawing.Point(133, 86);
             this.rootCauseActionsTextBox.Multiline = true;
             this.rootCauseActionsTextBox.Name = "rootCauseActionsTextBox";
-            this.rootCauseActionsTextBox.Size = new System.Drawing.Size(268, 113);
+            this.rootCauseActionsTextBox.Size = new System.Drawing.Size(272, 113);
             this.rootCauseActionsTextBox.TabIndex = 12;
             // 
             // responsePlanDateTimePicker
             // 
             this.responsePlanDateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.responsePlanDateTimePicker.Location = new System.Drawing.Point(130, 237);
+            this.responsePlanDateTimePicker.Location = new System.Drawing.Point(133, 237);
             this.responsePlanDateTimePicker.Name = "responsePlanDateTimePicker";
             this.responsePlanDateTimePicker.Size = new System.Drawing.Size(113, 21);
             this.responsePlanDateTimePicker.TabIndex = 13;
@@ -3157,9 +3105,9 @@ namespace WindowsFormsApp1
             this.responseStrategyComboBox.DisplayMember = "Response";
             this.responseStrategyComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.responseStrategyComboBox.FormattingEnabled = true;
-            this.responseStrategyComboBox.Location = new System.Drawing.Point(130, 23);
+            this.responseStrategyComboBox.Location = new System.Drawing.Point(133, 23);
             this.responseStrategyComboBox.Name = "responseStrategyComboBox";
-            this.responseStrategyComboBox.Size = new System.Drawing.Size(268, 24);
+            this.responseStrategyComboBox.Size = new System.Drawing.Size(272, 24);
             this.responseStrategyComboBox.TabIndex = 14;
             this.responseStrategyComboBox.ValueMember = "ID";
             // 
@@ -3188,9 +3136,9 @@ namespace WindowsFormsApp1
             this.riskActionOwnerComboBox.DisplayMember = "code";
             this.riskActionOwnerComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.riskActionOwnerComboBox.FormattingEnabled = true;
-            this.riskActionOwnerComboBox.Location = new System.Drawing.Point(130, 54);
+            this.riskActionOwnerComboBox.Location = new System.Drawing.Point(133, 54);
             this.riskActionOwnerComboBox.Name = "riskActionOwnerComboBox";
-            this.riskActionOwnerComboBox.Size = new System.Drawing.Size(268, 24);
+            this.riskActionOwnerComboBox.Size = new System.Drawing.Size(272, 24);
             this.riskActionOwnerComboBox.TabIndex = 15;
             this.riskActionOwnerComboBox.ValueMember = "ID";
             // 
@@ -3202,18 +3150,18 @@ namespace WindowsFormsApp1
             // rootCauseCostTextBox
             // 
             this.rootCauseCostTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rootCauseCostTextBox.Location = new System.Drawing.Point(130, 205);
+            this.rootCauseCostTextBox.Location = new System.Drawing.Point(133, 205);
             this.rootCauseCostTextBox.Name = "rootCauseCostTextBox";
-            this.rootCauseCostTextBox.Size = new System.Drawing.Size(268, 21);
+            this.rootCauseCostTextBox.Size = new System.Drawing.Size(272, 21);
             this.rootCauseCostTextBox.TabIndex = 16;
             this.rootCauseCostTextBox.Leave += new System.EventHandler(this.rootCauseCostTextBox_Leave);
             // 
             // probabilityAfterResponseTextBox
             // 
             this.probabilityAfterResponseTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.probabilityAfterResponseTextBox.Location = new System.Drawing.Point(130, 277);
+            this.probabilityAfterResponseTextBox.Location = new System.Drawing.Point(133, 277);
             this.probabilityAfterResponseTextBox.Name = "probabilityAfterResponseTextBox";
-            this.probabilityAfterResponseTextBox.Size = new System.Drawing.Size(268, 21);
+            this.probabilityAfterResponseTextBox.Size = new System.Drawing.Size(272, 21);
             this.probabilityAfterResponseTextBox.TabIndex = 17;
             this.probabilityAfterResponseTextBox.Leave += new System.EventHandler(this.probabilityAfterResponseTextBox_Leave);
             // 
@@ -3232,32 +3180,38 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel9.Controls.Add(this.otherRootCausesTextBox, 1, 2);
             this.tableLayoutPanel9.Controls.Add(this.categoryComboBox, 1, 3);
             this.tableLayoutPanel9.Controls.Add(this.probabilityBeforeResponseTextBox, 1, 4);
+            this.tableLayoutPanel9.Controls.Add(this.buScopeLbl, 0, 5);
+            this.tableLayoutPanel9.Controls.Add(this.ruScopeLbl, 0, 6);
+            this.tableLayoutPanel9.Controls.Add(this.BUScopeTxt, 1, 5);
+            this.tableLayoutPanel9.Controls.Add(this.RUScopeTxt, 1, 6);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Left;
             this.tableLayoutPanel9.Font = new System.Drawing.Font("Trebuchet MS", 8.5F);
             this.tableLayoutPanel9.Location = new System.Drawing.Point(3, 3);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
-            this.tableLayoutPanel9.RowCount = 5;
+            this.tableLayoutPanel9.RowCount = 7;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.232759F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.43966F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.57286F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.72027F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.44891F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(442, 628);
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 27F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(435, 628);
             this.tableLayoutPanel9.TabIndex = 1;
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(3, 270);
+            this.label49.Location = new System.Drawing.Point(3, 247);
             this.label49.Name = "label49";
-            this.label49.Size = new System.Drawing.Size(163, 18);
+            this.label49.Size = new System.Drawing.Size(111, 36);
             this.label49.TabIndex = 3;
             this.label49.Text = "Probability before Response";
             // 
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(3, 20);
+            this.label50.Location = new System.Drawing.Point(3, 18);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(100, 18);
             this.label50.TabIndex = 0;
@@ -3266,7 +3220,7 @@ namespace WindowsFormsApp1
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(3, 111);
+            this.label51.Location = new System.Drawing.Point(3, 101);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(112, 18);
             this.label51.TabIndex = 1;
@@ -3275,7 +3229,7 @@ namespace WindowsFormsApp1
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(3, 203);
+            this.label52.Location = new System.Drawing.Point(3, 185);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(57, 18);
             this.label52.TabIndex = 2;
@@ -3294,19 +3248,19 @@ namespace WindowsFormsApp1
             // rootCauseTextBox
             // 
             this.rootCauseTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rootCauseTextBox.Location = new System.Drawing.Point(172, 23);
+            this.rootCauseTextBox.Location = new System.Drawing.Point(169, 21);
             this.rootCauseTextBox.Multiline = true;
             this.rootCauseTextBox.Name = "rootCauseTextBox";
-            this.rootCauseTextBox.Size = new System.Drawing.Size(257, 85);
+            this.rootCauseTextBox.Size = new System.Drawing.Size(253, 77);
             this.rootCauseTextBox.TabIndex = 5;
             // 
             // otherRootCausesTextBox
             // 
             this.otherRootCausesTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.otherRootCausesTextBox.Location = new System.Drawing.Point(172, 114);
+            this.otherRootCausesTextBox.Location = new System.Drawing.Point(169, 104);
             this.otherRootCausesTextBox.Multiline = true;
             this.otherRootCausesTextBox.Name = "otherRootCausesTextBox";
-            this.otherRootCausesTextBox.Size = new System.Drawing.Size(257, 86);
+            this.otherRootCausesTextBox.Size = new System.Drawing.Size(253, 78);
             this.otherRootCausesTextBox.TabIndex = 6;
             // 
             // categoryComboBox
@@ -3316,9 +3270,9 @@ namespace WindowsFormsApp1
             this.categoryComboBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.categoryComboBox.Font = new System.Drawing.Font("Trebuchet MS", 8F);
             this.categoryComboBox.FormattingEnabled = true;
-            this.categoryComboBox.Location = new System.Drawing.Point(172, 206);
+            this.categoryComboBox.Location = new System.Drawing.Point(169, 188);
             this.categoryComboBox.Name = "categoryComboBox";
-            this.categoryComboBox.Size = new System.Drawing.Size(257, 24);
+            this.categoryComboBox.Size = new System.Drawing.Size(253, 24);
             this.categoryComboBox.TabIndex = 7;
             this.categoryComboBox.ValueMember = "ID";
             // 
@@ -3330,9 +3284,9 @@ namespace WindowsFormsApp1
             // probabilityBeforeResponseTextBox
             // 
             this.probabilityBeforeResponseTextBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.probabilityBeforeResponseTextBox.Location = new System.Drawing.Point(172, 273);
+            this.probabilityBeforeResponseTextBox.Location = new System.Drawing.Point(169, 250);
             this.probabilityBeforeResponseTextBox.Name = "probabilityBeforeResponseTextBox";
-            this.probabilityBeforeResponseTextBox.Size = new System.Drawing.Size(257, 21);
+            this.probabilityBeforeResponseTextBox.Size = new System.Drawing.Size(253, 21);
             this.probabilityBeforeResponseTextBox.TabIndex = 8;
             this.probabilityBeforeResponseTextBox.Leave += new System.EventHandler(this.probabilityBeforeResponseTextBox_Leave);
             // 
@@ -4571,15 +4525,15 @@ namespace WindowsFormsApp1
             this.userPermissionData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.userPermissionData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.userPermissionData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userPermissionData.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.userPermissionData.DefaultCellStyle = dataGridViewCellStyle5;
             this.userPermissionData.Location = new System.Drawing.Point(141, 6);
             this.userPermissionData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userPermissionData.Name = "userPermissionData";
@@ -5731,6 +5685,39 @@ namespace WindowsFormsApp1
             // 
             this.rk_CurrencyNameTableAdapter.ClearBeforeFill = true;
             // 
+            // buScopeLbl
+            // 
+            this.buScopeLbl.AutoSize = true;
+            this.buScopeLbl.Location = new System.Drawing.Point(3, 573);
+            this.buScopeLbl.Name = "buScopeLbl";
+            this.buScopeLbl.Size = new System.Drawing.Size(61, 18);
+            this.buScopeLbl.TabIndex = 9;
+            this.buScopeLbl.Text = "BU Scope";
+            // 
+            // ruScopeLbl
+            // 
+            this.ruScopeLbl.AutoSize = true;
+            this.ruScopeLbl.Location = new System.Drawing.Point(3, 600);
+            this.ruScopeLbl.Name = "ruScopeLbl";
+            this.ruScopeLbl.Size = new System.Drawing.Size(61, 18);
+            this.ruScopeLbl.TabIndex = 10;
+            this.ruScopeLbl.Text = "RU Scope";
+            // 
+            // BUScopeTxt
+            // 
+            this.BUScopeTxt.Location = new System.Drawing.Point(169, 576);
+            this.BUScopeTxt.Name = "BUScopeTxt";
+            this.BUScopeTxt.Size = new System.Drawing.Size(100, 21);
+            this.BUScopeTxt.TabIndex = 11;
+            this.BUScopeTxt.TextChanged += new System.EventHandler(this.BUScopeTxt_TextChanged);
+            // 
+            // RUScopeTxt
+            // 
+            this.RUScopeTxt.Location = new System.Drawing.Point(169, 603);
+            this.RUScopeTxt.Name = "RUScopeTxt";
+            this.RUScopeTxt.Size = new System.Drawing.Size(100, 21);
+            this.RUScopeTxt.TabIndex = 12;
+            // 
             // ExecRolog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -5902,9 +5889,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TabPage overviewTab;
         private System.Windows.Forms.Panel infoSumPanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label totalOpportunityLabel;
-        private System.Windows.Forms.Label rUOpportunityLabel;
-        private System.Windows.Forms.Label bUOpportunityLabel;
         private System.Windows.Forms.Label totalRCLabel;
         private System.Windows.Forms.Label rURCLabel;
         private System.Windows.Forms.Label bURCLabel;
@@ -5926,7 +5910,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label bUCostLabel;
         private System.Windows.Forms.Label responseExposureLabel;
         private System.Windows.Forms.Label monValueToRCLabel;
-        private System.Windows.Forms.Label opportunityLabel;
         private System.Windows.Forms.Label riskContingencyLabel;
         private System.Windows.Forms.Label monValueLabel;
         private System.Windows.Forms.Label bUMValLabel;
@@ -6328,5 +6311,9 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label newCostItemCommentLbl;
         private System.Windows.Forms.Label newCostItemCostLbl;
         private System.Windows.Forms.Label newCostItemNameLbl;
+        private System.Windows.Forms.Label buScopeLbl;
+        private System.Windows.Forms.Label ruScopeLbl;
+        private System.Windows.Forms.TextBox BUScopeTxt;
+        private System.Windows.Forms.TextBox RUScopeTxt;
     }
 }

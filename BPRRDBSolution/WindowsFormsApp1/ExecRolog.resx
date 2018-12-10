@@ -706,6 +706,9 @@
         HRuZfZSXhNK/6ZAY8wGGG2nl38rykgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <metadata name="rkstatusOfRiskBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1427, 65</value>
+  </metadata>
   <metadata name="rkrespRootBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>531, 17</value>
   </metadata>
@@ -765,12 +768,6 @@
   </metadata>
   <metadata name="originatingviewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>249, 65</value>
-  </metadata>
-  <metadata name="rkstatusOfRiskBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1427, 65</value>
-  </metadata>
-  <metadata name="rkstatusOfRiskBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1427, 65</value>
   </metadata>
   <metadata name="rkCurrencyNameBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>368, 221</value>

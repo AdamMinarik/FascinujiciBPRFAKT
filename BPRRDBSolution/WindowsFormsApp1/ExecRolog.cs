@@ -62,6 +62,7 @@ namespace WindowsFormsApp1
             //SET PROJECT NAME LABEL
             locationLabel.Text = execProject.name;
 
+            MessageBox.Show(permission);
 
         }
 
@@ -69,6 +70,7 @@ namespace WindowsFormsApp1
         {
             itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
             setROlogGridView(itemsList);
+
         }
 
         public void setLocationLabel(String value)
@@ -266,12 +268,14 @@ namespace WindowsFormsApp1
 
             rologGridView.DataSource = dt;
 
-            //ADD OPEN BUTTON TO ROLOG DATA GRID VIEW
-            riskDetailButton = new DataGridViewButtonColumn();
+           //ADD OPEN BUTTON TO ROLOG DATA GRID VIEW
+           riskDetailButton = new DataGridViewButtonColumn();
             riskDetailButton.Name = "Open";
             riskDetailButton.Text = "Open Risk..";
             riskDetailButton.UseColumnTextForButtonValue = true;
             if (rologGridView.Columns["Open"] == null) { rologGridView.Columns.Insert(0, riskDetailButton); }
+
+            setSummary();
 
         }
 
@@ -327,10 +331,13 @@ namespace WindowsFormsApp1
             responseCostEstimateTextBox.Text = riskItem.costImpact.ToString();
             if (riskItem.ResponseImpactDate.Year < 2000) { responsePlanImplementationDateTimePicker.CustomFormat = " "; responsePlanImplementationDateTimePicker.Format = DateTimePickerFormat.Custom; } else { responsePlanImplementationDateTimePicker.Text = riskItem.ResponseImpactDate.ToString(); }
             daysAfterTextBox.Text = riskItem.daysImpactAfter.ToString();
+            BUScopeTxt.Text = riskItem.buRate.ToString();
+            RUScopeTxt.Text = (100 - riskItem.buRate).ToString();
 
             if (riskItem.impactStartDate.Year < 2000) { impactStartDateDateTimePicker.CustomFormat = " "; impactStartDateDateTimePicker.Format = DateTimePickerFormat.Custom; } else { impactStartDateDateTimePicker.Text = riskItem.impactStartDate.ToString(); }
             if (riskItem.impactEndDate.Year < 2000) { impactEndDateDateTimePicker.CustomFormat = " "; impactEndDateDateTimePicker.Format = DateTimePickerFormat.Custom; } else { impactEndDateDateTimePicker.Text = riskItem.impactEndDate.ToString(); }
             monetaryValueAfterTextBox.Text = riskItem.monetaryValueAfter.ToString();
+
         }
 
         private void setRiskDetailEmpty()
@@ -491,6 +498,7 @@ namespace WindowsFormsApp1
             riskItemDetail.impactStartDate = impactStartDateDateTimePicker.Value;
             riskItemDetail.impactEndDate = impactEndDateDateTimePicker.Value;
             riskItemDetail.monetaryValueAfter = double.Parse(monetaryValueAfterTextBox.Text);
+            riskItemDetail.buRate = int.Parse(BUScopeTxt.Text);
 
 
             //CALL METHOD FROM MODEL MANAGER TO UPDATE DATABASE
@@ -582,6 +590,7 @@ namespace WindowsFormsApp1
             riskItemDetail.impactStartDate = impactStartDateDateTimePicker.Value;
             riskItemDetail.impactEndDate = impactEndDateDateTimePicker.Value;
             riskItemDetail.monetaryValueAfter = double.Parse(monetaryValueAfterTextBox.Text);
+            riskItemDetail.buRate = int.Parse(BUScopeTxt.Text);
 
             if (permission == "owner")
             {
@@ -1417,6 +1426,137 @@ namespace WindowsFormsApp1
         private void otherCostItemsData_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
                 MessageBox.Show("Cost value needs to be numeric");
+        }
+
+        private void BUScopeTxt_TextChanged(object sender, EventArgs e)
+        {
+            int BUValue = 0;
+
+            try
+            {
+                if (BUScopeTxt.Text == "")
+                {
+                    BUScopeTxt.Text = 0.ToString();
+                }
+
+                BUValue = int.Parse(BUScopeTxt.Text);
+
+                if(BUValue < 0 || BUValue > 100)
+                {
+                    MessageBox.Show("BU Scope needs to be a numeric value between 0 and 100");
+                }
+                else
+                {
+                    RUScopeTxt.Text = (100 - BUValue).ToString();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("BU Scope needs to be a numeric value between 0 and 100");
+            }
+  
+        }
+
+        public void setSummary()
+        {
+
+            using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+            {
+                double aa = 0;
+                double ab = 0;
+                double ba = 0;
+                double bb = 0;
+                double da = 0;
+                double db = 0;
+
+                double buContract = 0;
+                double ruContract = 0;
+
+                string queryString = "EXEC[createSummaryExec] @projectID = " + execProject.projectID + ", @dateValue = '" + selectedDate.ToString("yyyy-MM-dd") + "'";
+                SqlCommand command = new SqlCommand(queryString, connection);
+                connection.Open();
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                connection.Open();
+                queryString = "SELECT * FROM sl_SummaryRS ";
+                dataAdapter = new SqlDataAdapter(queryString, connection);
+                dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                connection.Close();
+
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    aa = int.Parse(row["MonetValueBU"].ToString());
+                    ab = int.Parse(row["MonetValueRU"].ToString());
+                    ba = int.Parse(row["ExpEMVBeforeRespBU"].ToString());
+                    bb = int.Parse(row["ExpEMVBeforeRespRU"].ToString());
+                    da = int.Parse(row["EMVAfterResp_RootImpactBU"].ToString());
+                    db = int.Parse(row["EMVAfterResp_RootImpactRU"].ToString());
+                }
+
+                connection.Open();
+                queryString = " SELECT BUcontract, RUcontract FROM rk_Project WHERE ID = " + execProject.projectID + ";";
+                dataAdapter = new SqlDataAdapter(queryString, connection);
+                dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+                connection.Close();
+
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    buContract = int.Parse(row["BUcontract"].ToString());
+                    ruContract = int.Parse(row["RUcontract"].ToString());
+                }
+
+
+
+                bUMValLabel.Text = aa.ToString();
+                ruMValLabel.Text = ab.ToString();
+                totalMValLabel.Text = (aa + ab).ToString();
+
+                bUEMVBeforeLabel.Text = ba.ToString();
+                rUEMVBeforeLabel.Text = bb.ToString();
+                totalEMVBeforeLabel.Text = (ba + bb).ToString();
+
+                bUEMVAfterLabel.Text = da.ToString();
+                rUEMVAfterLabel.Text = db.ToString();
+                totalEMVAfterLabel.Text = (da + db).ToString();
+
+                if(buContract == 0)
+                {
+                    bURELabel.Text = 0.ToString();
+                    bURCLabel.Text = 0.ToString();
+                }
+                else
+                {
+                    bURELabel.Text = Math.Round(((da - ba) / buContract), 3).ToString();
+                    bURCLabel.Text = Math.Round(((da) / buContract * -1), 3).ToString();
+                    
+                }
+                
+                if(ruContract == 0)
+                {
+                    rURELabel.Text = 0.ToString();
+                    rURCLabel.Text = 0.ToString();
+                }
+                else
+                {
+                    rURELabel.Text = Math.Round(((db - bb) / ruContract), 3).ToString();
+                    rURCLabel.Text = Math.Round(((db) / ruContract * -1), 3).ToString();
+                }
+
+                if(ruContract == 0 && buContract == 0)
+                {
+                    totalRELabel.Text = 0.ToString();
+                    totalRCLabel.Text = 0.ToString();
+                }
+                else
+                {
+                    totalRELabel.Text = Math.Round((((da + db) - (ba + bb)) / (buContract + ruContract)), 3).ToString();
+                    totalRCLabel.Text = Math.Round(((da + db) / (buContract + ruContract) * -1), 3).ToString();
+                }
+                
+            }   
         }
     }
 }
