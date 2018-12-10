@@ -28,12 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InitialForm));
             this.execUser = new System.Windows.Forms.Button();
             this.salesUser = new System.Windows.Forms.Button();
             this.quitButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.curVersionLabel = new System.Windows.Forms.Label();
+            this.upToDateVersionLbl = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +107,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
+            this.panel1.Controls.Add(this.curVersionLabel);
+            this.panel1.Controls.Add(this.upToDateVersionLbl);
             this.panel1.Controls.Add(this.quitButton);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.salesUser);
@@ -113,9 +120,27 @@
             this.panel1.Size = new System.Drawing.Size(978, 584);
             this.panel1.TabIndex = 4;
             // 
+            // curVersionLabel
+            // 
+            this.curVersionLabel.AutoSize = true;
+            this.curVersionLabel.Location = new System.Drawing.Point(700, 25);
+            this.curVersionLabel.Name = "curVersionLabel";
+            this.curVersionLabel.Size = new System.Drawing.Size(19, 13);
+            this.curVersionLabel.TabIndex = 5;
+            this.curVersionLabel.Text = "v1";
+            // 
+            // upToDateVersionLbl
+            // 
+            this.upToDateVersionLbl.AutoSize = true;
+            this.upToDateVersionLbl.Location = new System.Drawing.Point(823, 25);
+            this.upToDateVersionLbl.Name = "upToDateVersionLbl";
+            this.upToDateVersionLbl.Size = new System.Drawing.Size(104, 13);
+            this.upToDateVersionLbl.TabIndex = 4;
+            this.upToDateVersionLbl.Text = "upToDateVersionLbl";
+            // 
             // InitialForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 584);
             this.Controls.Add(this.panel1);
@@ -129,6 +154,7 @@
             this.Text = "Risk Database";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -140,6 +166,10 @@
         private System.Windows.Forms.Button quitButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label upToDateVersionLbl;
+        private System.Windows.Forms.Label curVersionLabel;
     }
 }
 
