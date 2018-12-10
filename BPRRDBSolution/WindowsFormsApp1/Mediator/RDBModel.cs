@@ -11,8 +11,8 @@ namespace WindowsFormsApp1.Mediator
     {
         //GETS
         ExecutionProject getExecutionProject(int projectID);
-        EProjectItemList getItems(int projectID, String month, String type);
-        EProjectItemList getFilterItems(int projectID, String month, String field, String fieldValue);
+        EProjectItemList getItems(int projectID, DateTime month, String type);
+        EProjectItemList getFilterItems(int projectID, DateTime month, int field, int fieldValue);
         EProjectItemList getRemovedItems(int projectID, String month, String type);
         EProjectItemList getWatchlistItems(int projectID, String month, String type);
         EProjectItemList getClosedItems(int projectID, String month, String type);
@@ -27,5 +27,7 @@ namespace WindowsFormsApp1.Mediator
         void updateChangedItem(EProjectItem item);
         void approveNewItem(int projectID, int newItemID);
         void declineNewItem(int projectID, int newItemID);
+        void approveChangedItem(int projectID, int changedItemID, int UpdatedColID, string newValueString, int newColumnID, string updatedColumntxt, int idOfChange);
+        void declineChangedItem(int projectID, int changedItemID, int UpdatedColID, string newValueString, int newColumnID, string updatedColumntxt, int idOfChange);
     }
 }

@@ -42,7 +42,6 @@ namespace WindowsFormsApp1
             this.permission = permission;
             this.user = user;
             this.selectedDate = DateTime.Today;
-            MessageBox.Show(permission);
 
             SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
             builder.DataSource = "riskdbsserver.database.windows.net";
@@ -51,21 +50,24 @@ namespace WindowsFormsApp1
             builder.InitialCatalog = "[EW_Risk_Test]";
             this.sqlConnectionString = builder.ConnectionString;
 
+            setDateComboBox();
+            setFilterObjectivesComboBox();
+
             //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
-            itemsList = modelManager.getItems(execProject.projectID, selectedDate.ToString(), "risk");
+            itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
             //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
             setROlogGridView(itemsList);
             //SET USER NAME LABEL
             userLabel.Text = user.firstName + ' ' + user.lastName;
             //SET PROJECT NAME LABEL
             locationLabel.Text = execProject.name;
-            
+
 
         }
 
         public void refreshROlogItems()
         {
-            itemsList = modelManager.getItems(execProject.projectID, DateTime.Today.ToString(), "risk");
+            itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
             setROlogGridView(itemsList);
         }
 
@@ -109,6 +111,10 @@ namespace WindowsFormsApp1
 
         private void overviewButton_Click(object sender, EventArgs e)
         {
+            //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
+            itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
+            //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
+            setROlogGridView(itemsList);
             execROlogTabControl.SelectedIndex = 0;
         }
 
@@ -168,6 +174,7 @@ namespace WindowsFormsApp1
         private void approvalFuncButton_Click(object sender, EventArgs e)
         {
             setNewItemsApprovalView();
+            setChangedItemsApprovalView();
 
             //SELECT APPROVAL FUNCTION TAB
             execROlogTabControl.SelectedIndex = 8;
@@ -495,7 +502,7 @@ namespace WindowsFormsApp1
             {
                 modelManager.updateItem(riskItemDetail, false, "risk");
             }
-            
+
             //REFRESH LIST OF ITEMS WITH UPDATED DATA
             refreshROlogItems();
             //RETURN TO OVERVIEW
@@ -576,8 +583,8 @@ namespace WindowsFormsApp1
             riskItemDetail.impactEndDate = impactEndDateDateTimePicker.Value;
             riskItemDetail.monetaryValueAfter = double.Parse(monetaryValueAfterTextBox.Text);
 
-            if(permission == "owner")
-            { 
+            if (permission == "owner")
+            {
                 modelManager.addItem(riskItemDetail, false, "risk", ProjectID, user.userName);
             }
             else
@@ -807,7 +814,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Monetary value after response needs to be negative");
                     monetaryValueFormulaTextBox.Focus();
                 }
-                
+
             }
             catch
             {
@@ -850,7 +857,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Probability needs to be number between 0 and 100");
                     probabilityAfterResponseTextBox.Focus();
                 }
-                else if(int.Parse(probabilityAfterResponseTextBox.Text) > int.Parse(probabilityBeforeResponseTextBox.Text))
+                else if (int.Parse(probabilityAfterResponseTextBox.Text) > int.Parse(probabilityBeforeResponseTextBox.Text))
                 {
                     MessageBox.Show("Probability after response needs to be lower then or equals to probability before response");
                     probabilityAfterResponseTextBox.Focus();
@@ -873,7 +880,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Root cause response cost needs to be a negative number");
                     rootCauseCostTextBox.Focus();
                 }
-            }   
+            }
             catch
             {
                 MessageBox.Show("Root cause response cost needs to be a negative number");
@@ -909,7 +916,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Monetary value after response needs to be a negative number");
                     monetaryValueAfterTextBox.Focus();
                 }
-                else if(Math.Abs(double.Parse(monetaryValueAfterTextBox.Text)) > Math.Abs(result))
+                else if (Math.Abs(double.Parse(monetaryValueAfterTextBox.Text)) > Math.Abs(result))
                 {
                     MessageBox.Show("Monetary value after response needs to be lower then or equals to monetary value before response");
                     monetaryValueAfterTextBox.Focus();
@@ -927,12 +934,12 @@ namespace WindowsFormsApp1
         {
             try
             {
-                if(decimal.Parse(timeImpactsInDaysBeforeTextBox.Text) < 0)
+                if (decimal.Parse(timeImpactsInDaysBeforeTextBox.Text) < 0)
                 {
                     MessageBox.Show("Time impact needs to be a positive number");
                     timeImpactsInDaysBeforeTextBox.Focus();
                 }
-                else if(decimal.Parse(timeImpactsInDaysBeforeTextBox.Text) < decimal.Parse(daysAfterTextBox.Text))
+                else if (decimal.Parse(timeImpactsInDaysBeforeTextBox.Text) < decimal.Parse(daysAfterTextBox.Text))
                 {
                     MessageBox.Show("Time after response needs to be lower then or equals to time before response");
                     timeImpactsInDaysBeforeTextBox.Focus();
@@ -1002,11 +1009,11 @@ namespace WindowsFormsApp1
                 //REFRESH NEW ITEMS APPROVAL DATA GRID VIEW
                 setNewItemsApprovalView();
                 //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
-                itemsList = modelManager.getItems(execProject.projectID, selectedDate.ToString(), "risk");
+                itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
                 //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
                 setROlogGridView(itemsList);
             }
-            else if(e.ColumnIndex == newItemsApprovalData.Columns["Decline"].Index && e.RowIndex >= 0)
+            else if (e.ColumnIndex == newItemsApprovalData.Columns["Decline"].Index && e.RowIndex >= 0)
             {
                 //DECLINE NEW ITEM
                 modelManager.declineNewItem(execProject.projectID, newRiskID);
@@ -1014,6 +1021,42 @@ namespace WindowsFormsApp1
                 setNewItemsApprovalView();
             }
         }
+
+        public void setChangedItemsApprovalView()
+        {
+            //SET NEW RISKS DATAGRIDVIEW
+            DataGridViewButtonColumn approveButtonColumn;
+            DataGridViewButtonColumn declineButtonColumn;
+
+            SqlConnection connection = new SqlConnection(sqlConnectionString);
+            connection.Open();
+            string SQL = "SELECT * FROM rk_ROlogChanges WHERE ProjectID =" + execProject.projectID.ToString();
+            dataAdapter = new SqlDataAdapter(SQL, connection);
+            dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            changesApprovalData.DataSource = dataTable;
+
+            approveButtonColumn = new DataGridViewButtonColumn();
+            approveButtonColumn.Name = "Approve";
+            approveButtonColumn.Text = "Approve";
+            approveButtonColumn.UseColumnTextForButtonValue = true;
+            approveButtonColumn.HeaderText = "";
+            if (changesApprovalData.Columns["Approve"] == null)
+            {
+                changesApprovalData.Columns.Insert(18, approveButtonColumn);
+            }
+
+            declineButtonColumn = new DataGridViewButtonColumn();
+            declineButtonColumn.Name = "Decline";
+            declineButtonColumn.Text = "Decline";
+            declineButtonColumn.UseColumnTextForButtonValue = true;
+            declineButtonColumn.HeaderText = "";
+            if (changesApprovalData.Columns["Decline"] == null)
+            {
+                changesApprovalData.Columns.Insert(19, declineButtonColumn);
+            }
+        }
+
 
         public void setNewItemsApprovalView()
         {
@@ -1048,6 +1091,332 @@ namespace WindowsFormsApp1
             {
                 newItemsApprovalData.Columns.Insert(8, declineButtonColumn);
             }
+        }
+
+        private void changesApprovalData_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int projectID = execProject.projectID;
+
+            int changedItemID = int.Parse(changesApprovalData.Rows[e.RowIndex].Cells[19].Value.ToString());
+            int UpdatedColID = int.Parse(changesApprovalData.Rows[e.RowIndex].Cells[13].Value.ToString());
+            string newValueString = changesApprovalData.Rows[e.RowIndex].Cells[6].Value.ToString();
+            int newColumnID = -1;
+            if (changesApprovalData.Rows[e.RowIndex].Cells[7].Value.ToString() != "")
+            {
+                newColumnID = int.Parse(changesApprovalData.Rows[e.RowIndex].Cells[7].Value.ToString());
+            }
+            string updatedColumntxt = changesApprovalData.Rows[e.RowIndex].Cells[12].Value.ToString();
+            int idOfChange = int.Parse(changesApprovalData.Rows[e.RowIndex].Cells[2].Value.ToString());
+
+            // Ignore clicks that are not in our 
+            if (e.ColumnIndex == changesApprovalData.Columns["Approve"].Index && e.RowIndex >= 0)
+            {
+                //APPROVE CHANGED ITEM
+                modelManager.approveChangedItem(projectID, changedItemID, UpdatedColID, newValueString, newColumnID, updatedColumntxt, idOfChange);
+                //REFRESH CHANGES APPROVAL DATA GRID VIEW
+                setChangedItemsApprovalView();
+
+                //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
+                itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
+                //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
+                setROlogGridView(itemsList);
+            }
+            else if (e.ColumnIndex == changesApprovalData.Columns["Decline"].Index && e.RowIndex >= 0)
+            {
+                //DECLINE CHANGED ITEM
+                modelManager.declineChangedItem(projectID, changedItemID, UpdatedColID, newValueString, newColumnID, updatedColumntxt, idOfChange);
+                //REFRESH CHANGES APPROVAL DATA GRID VIEW
+                setChangedItemsApprovalView();
+                //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
+                itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
+                //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
+                setROlogGridView(itemsList);
+            }
+        }
+
+        public void setDateComboBox()
+        {
+            using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+            {
+                string queryString = "EXEC ListOfDatesProcedure @IDProj =" + execProject.projectID.ToString();
+                SqlCommand command = new SqlCommand(queryString, connection);
+                connection.Open();
+                command.CommandTimeout = 120;
+                command.ExecuteNonQuery();
+                connection.Close();
+
+                connection.Open();
+                string SQL = "SELECT * FROM rk_DateSelectionTable ORDER BY ID desc";
+                dataAdapter = new SqlDataAdapter(SQL, connection);
+                dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+
+                reportingMonthComboBox.DataSource = dataTable;
+                reportingMonthComboBox.DisplayMember = "listDate";
+                reportingMonthComboBox.ValueMember = "ID";
+                DataRowView ComboRowView = reportingMonthComboBox.SelectedItem as DataRowView;
+
+                string listDate = string.Empty;
+
+                if (ComboRowView != null)
+                {
+                    listDate = ComboRowView.Row["listDate"] as string;
+                    //MessageBox.Show(listDate.Substring(0, 2).Replace("-", ""));
+                    selectedDate = DateTime.Parse("1-" + listDate);
+                }
+
+                connection.Close();
+            }
+        }
+
+        private void reportingMonthComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataRowView ComboRowView = reportingMonthComboBox.SelectedItem as DataRowView;
+            string listDate = string.Empty;
+
+            if (ComboRowView != null)
+            {
+                listDate = ComboRowView.Row["listDate"] as string;
+                //MessageBox.Show(listDate.Substring(0, 2).Replace("-", ""));
+                selectedDate = DateTime.Parse("1-" + listDate);
+                //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
+                itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
+                //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
+                setROlogGridView(itemsList);
+
+            }
+        }
+
+        public void setFilterObjectivesComboBox()
+        {
+            using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+            {
+                connection.Open();
+                string SQL = "SELECT * FROM rk_FilterObjectives";
+                dataAdapter = new SqlDataAdapter(SQL, connection);
+                dataTable = new DataTable();
+                dataAdapter.Fill(dataTable);
+
+                filterObjectivesComboBox.DataSource = dataTable;
+                filterObjectivesComboBox.DisplayMember = "code";
+                filterObjectivesComboBox.ValueMember = "ID";
+                connection.Close();
+            }
+            filterObjectivesComboBox.SelectedIndex = -1;
+        }
+
+        private void filterObjectivesComboBox_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            if (filterObjectivesComboBox.SelectedIndex != -1)
+            {
+                //PROJECT OWNER
+                if (filterObjectivesComboBox.SelectedIndex == 0)
+                {
+                    using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+                    {
+                        connection.Open();
+                        string SQL = "SELECT ID,Package FROM rk_risk_packgs";
+                        dataAdapter = new SqlDataAdapter(SQL, connection);
+                        dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+
+                        filterCriteriaComboBox.DataSource = dataTable;
+                        filterCriteriaComboBox.DisplayMember = "Package";
+                        filterCriteriaComboBox.ValueMember = "ID";
+                        connection.Close();
+                    }
+                }
+                //ACTION OWNER
+                else if (filterObjectivesComboBox.SelectedIndex == 1)
+                {
+                    using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+                    {
+                        connection.Open();
+                        string SQL = "SELECT ID,Name FROM listOfOwners";
+                        dataAdapter = new SqlDataAdapter(SQL, connection);
+                        dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+
+                        filterCriteriaComboBox.DataSource = dataTable;
+                        filterCriteriaComboBox.DisplayMember = "Name";
+                        filterCriteriaComboBox.ValueMember = "ID";
+                        connection.Close();
+                    }
+                }
+                //CATEGORY OWNER
+                else if (filterObjectivesComboBox.SelectedIndex == 2)
+                {
+                    using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+                    {
+                        connection.Open();
+                        string SQL = "SELECT ID,Cname FROM rk_risk_cat";
+                        dataAdapter = new SqlDataAdapter(SQL, connection);
+                        dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+
+                        filterCriteriaComboBox.DataSource = dataTable;
+                        filterCriteriaComboBox.DisplayMember = "Cname";
+                        filterCriteriaComboBox.ValueMember = "ID";
+                        connection.Close();
+                    }
+                }
+            }
+        }
+
+        private void filterBtn_Click(object sender, EventArgs e)
+        {
+            int filterObjectiveID = filterObjectivesComboBox.SelectedIndex;
+            int filterCriteriaID = int.Parse(filterCriteriaComboBox.SelectedValue.ToString());
+
+            //PROJECT OWNER
+            if (filterObjectivesComboBox.SelectedIndex == 0)
+            {
+                itemsList = modelManager.getFilterItems(execProject.projectID, selectedDate, filterObjectiveID, filterCriteriaID);
+            }
+            //ACTION OWNER
+            else if (filterObjectivesComboBox.SelectedIndex == 1)
+            {
+                itemsList = modelManager.getFilterItems(execProject.projectID, selectedDate, filterObjectiveID, filterCriteriaID);
+            }
+            //CATEGORY OWNER
+            else if (filterObjectivesComboBox.SelectedIndex == 2)
+            {
+                itemsList = modelManager.getFilterItems(execProject.projectID, selectedDate, filterObjectiveID, filterCriteriaID);
+            }
+
+            if (itemsList.itemList.Count == 0)
+            {
+                itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
+                MessageBox.Show("No items found.");
+            }
+
+            //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
+            setROlogGridView(itemsList);
+
+        }
+
+        private void clearFilterBtn_Click(object sender, EventArgs e)
+        {
+            itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
+            setROlogGridView(itemsList);
+            filterObjectivesComboBox.SelectedIndex = -1;
+            filterCriteriaComboBox.SelectedIndex = -1;
+        }
+
+        private void mainCostBtn_Click(object sender, EventArgs e)
+        {
+            setMainCostData();
+            execROlogTabControl.SelectedIndex = 10;
+        }
+
+        private void createNewCostItemBtn_Click(object sender, EventArgs e)
+        {
+            if (newCostItemNameTxt.Text == "")
+            {
+                MessageBox.Show("Please fill main cost item name");
+            }
+
+            if(newCostItemCostTxt.Text == "")
+            {
+                newCostItemCostTxt.Text = "0";
+            }
+
+            else
+            {
+                using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+                {
+                    string queryString = "INSERT INTO rk_MainCostItems (Name,Cost,Comment,IDproj,MainCost) VALUES ('" + newCostItemNameTxt.Text + "'," + newCostItemCostTxt.Text + ",' " + newCostItemCommentTxt.Text + "', " + execProject.projectID + ",0)";
+                    SqlCommand command = new SqlCommand(queryString, connection);
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+
+                newCostItemNameTxt.Text = "";
+                newCostItemCommentTxt.Text = "";
+                newCostItemCostTxt.Text = "";
+                setMainCostData();
+
+            }
+        }
+
+        private void setMainCostData()
+        {
+            SqlConnection connection = new SqlConnection(sqlConnectionString);
+            connection.Open();
+            string SQL = "SELECT * FROM rk_MainCostItems WHERE IDproj = " + execProject.projectID + " AND MainCost = 1 ";
+            dataAdapter = new SqlDataAdapter(SQL, connection);
+            dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            mainCostItemsData.DataSource = dataTable;
+            connection.Close();
+
+            connection.Open();
+            SQL = "SELECT * FROM rk_MainCostItems WHERE IDproj = " + execProject.projectID + " AND MainCost = 0 ";
+            dataAdapter = new SqlDataAdapter(SQL, connection);
+            dataTable = new DataTable();
+            dataAdapter.Fill(dataTable);
+            otherCostItemsData.DataSource = dataTable;
+            connection.Close();
+        }
+
+        private void mainCostItemsData_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int mainCostID = int.Parse(mainCostItemsData.Rows[e.RowIndex].Cells[0].Value.ToString());
+                string name = mainCostItemsData.Rows[e.RowIndex].Cells[1].Value.ToString();
+                int cost = int.Parse(mainCostItemsData.Rows[e.RowIndex].Cells[2].Value.ToString());
+                string comment = mainCostItemsData.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+                {
+                    string queryString = "UPDATE rk_MainCostItems set name ='" + name + "', cost =" + cost + ",comment ='" + comment + "' WHERE ID = " + mainCostID;
+                    SqlCommand command = new SqlCommand(queryString, connection);
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Main Cost has to be a numeric value");
+            }
+            
+        }
+
+        private void otherCostItemsData_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int mainCostID = int.Parse(otherCostItemsData.Rows[e.RowIndex].Cells[0].Value.ToString());
+                string name = otherCostItemsData.Rows[e.RowIndex].Cells[1].Value.ToString();
+                int cost = int.Parse(otherCostItemsData.Rows[e.RowIndex].Cells[2].Value.ToString());
+                string comment = otherCostItemsData.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                using (SqlConnection connection = new SqlConnection(sqlConnectionString))
+                {
+                    string queryString = "UPDATE rk_MainCostItems set name ='" + name + "', cost =" + cost + ",comment ='" + comment + "' WHERE ID = " + mainCostID;
+                    SqlCommand command = new SqlCommand(queryString, connection);
+                    connection.Open();
+                    command.ExecuteNonQuery();
+                    connection.Close();
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Main Cost has to be a numeric value");
+            }
+        }
+
+        private void mainCostItemsData_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+                MessageBox.Show("Cost value needs to be numeric");
+        }
+
+        private void otherCostItemsData_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+                MessageBox.Show("Cost value needs to be numeric");
         }
     }
 }

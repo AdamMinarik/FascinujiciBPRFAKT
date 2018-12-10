@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExecRolog));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.locationPanel = new System.Windows.Forms.Panel();
             this.readPictureBox = new System.Windows.Forms.PictureBox();
             this.approvalPictureBox = new System.Windows.Forms.PictureBox();
@@ -41,6 +41,7 @@ namespace WindowsFormsApp1
             this.userLabel = new System.Windows.Forms.Label();
             this.locationLabel = new System.Windows.Forms.Label();
             this.buttonPanel = new System.Windows.Forms.Panel();
+            this.mainCostBtn = new System.Windows.Forms.Button();
             this.approvalFuncButton = new System.Windows.Forms.Button();
             this.createOUButton = new System.Windows.Forms.Button();
             this.createERButton = new System.Windows.Forms.Button();
@@ -95,7 +96,14 @@ namespace WindowsFormsApp1
             this.erTab = new System.Windows.Forms.TabPage();
             this.oUncTab = new System.Windows.Forms.TabPage();
             this.chartSumPanel = new System.Windows.Forms.Panel();
-            this.pieChartLabel = new System.Windows.Forms.Label();
+            this.clearFilterBtn = new System.Windows.Forms.Button();
+            this.filterBtn = new System.Windows.Forms.Button();
+            this.filterCriteriaComboBox = new System.Windows.Forms.ComboBox();
+            this.filterObjectivesComboBox = new System.Windows.Forms.ComboBox();
+            this.label84 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.reportingMonthLabel = new System.Windows.Forms.Label();
+            this.reportingMonthComboBox = new System.Windows.Forms.ComboBox();
             this.createRiskTab = new System.Windows.Forms.TabPage();
             this.summaryPanel = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -439,6 +447,25 @@ namespace WindowsFormsApp1
             this.rkUsersListviewBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tocTextBox = new System.Windows.Forms.DateTimePicker();
             this.bUCurrencySwitch = new System.Windows.Forms.CheckBox();
+            this.mainCostTab = new System.Windows.Forms.TabPage();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.createNewCostItemBtn = new System.Windows.Forms.Button();
+            this.createNewCostItemLbl = new System.Windows.Forms.Label();
+            this.newCostItemCommentTxt = new System.Windows.Forms.TextBox();
+            this.newCostItemCostTxt = new System.Windows.Forms.TextBox();
+            this.newCostItemNameTxt = new System.Windows.Forms.TextBox();
+            this.newCostItemCommentLbl = new System.Windows.Forms.Label();
+            this.newCostItemCostLbl = new System.Windows.Forms.Label();
+            this.newCostItemNameLbl = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.otherCostItemsData = new System.Windows.Forms.DataGridView();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.otherCostItemsLbl = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.mainCostItemsData = new System.Windows.Forms.DataGridView();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.mainCostItemsLbl = new System.Windows.Forms.Label();
             this.rkstatusOfRiskBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rk_statusOfRiskTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_statusOfRiskTableAdapter();
             this.rk_resp_RootTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_resp_RootTableAdapter();
@@ -544,6 +571,15 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.rkscopeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wTGtypeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rkUsersListviewBindingSource)).BeginInit();
+            this.mainCostTab.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.otherCostItemsData)).BeginInit();
+            this.panel20.SuspendLayout();
+            this.panel19.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mainCostItemsData)).BeginInit();
+            this.panel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rkstatusOfRiskBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -646,6 +682,7 @@ namespace WindowsFormsApp1
             // buttonPanel
             // 
             this.buttonPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.buttonPanel.Controls.Add(this.mainCostBtn);
             this.buttonPanel.Controls.Add(this.approvalFuncButton);
             this.buttonPanel.Controls.Add(this.createOUButton);
             this.buttonPanel.Controls.Add(this.createERButton);
@@ -665,6 +702,28 @@ namespace WindowsFormsApp1
             this.buttonPanel.Size = new System.Drawing.Size(275, 956);
             this.buttonPanel.TabIndex = 2;
             // 
+            // mainCostBtn
+            // 
+            this.mainCostBtn.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.mainCostBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
+            this.mainCostBtn.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.mainCostBtn.FlatAppearance.BorderSize = 0;
+            this.mainCostBtn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(116)))), ((int)(((byte)(150)))));
+            this.mainCostBtn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            this.mainCostBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.mainCostBtn.Font = new System.Drawing.Font("Trebuchet MS", 12F);
+            this.mainCostBtn.Image = ((System.Drawing.Image)(resources.GetObject("mainCostBtn.Image")));
+            this.mainCostBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mainCostBtn.Location = new System.Drawing.Point(-1, 150);
+            this.mainCostBtn.Name = "mainCostBtn";
+            this.mainCostBtn.Size = new System.Drawing.Size(275, 38);
+            this.mainCostBtn.TabIndex = 13;
+            this.mainCostBtn.Text = "         MAIN COST ITEMS";
+            this.mainCostBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.mainCostBtn.UseVisualStyleBackColor = false;
+            this.mainCostBtn.Click += new System.EventHandler(this.mainCostBtn_Click);
+            // 
             // approvalFuncButton
             // 
             this.approvalFuncButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -678,7 +737,7 @@ namespace WindowsFormsApp1
             this.approvalFuncButton.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.approvalFuncButton.Image = ((System.Drawing.Image)(resources.GetObject("approvalFuncButton.Image")));
             this.approvalFuncButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.approvalFuncButton.Location = new System.Drawing.Point(0, 150);
+            this.approvalFuncButton.Location = new System.Drawing.Point(0, 191);
             this.approvalFuncButton.Name = "approvalFuncButton";
             this.approvalFuncButton.Size = new System.Drawing.Size(275, 38);
             this.approvalFuncButton.TabIndex = 12;
@@ -699,7 +758,7 @@ namespace WindowsFormsApp1
             this.createOUButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.createOUButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createOUButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.createOUButton.Location = new System.Drawing.Point(-2, 389);
+            this.createOUButton.Location = new System.Drawing.Point(-2, 430);
             this.createOUButton.Name = "createOUButton";
             this.createOUButton.Size = new System.Drawing.Size(275, 30);
             this.createOUButton.TabIndex = 11;
@@ -720,7 +779,7 @@ namespace WindowsFormsApp1
             this.createERButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.createERButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createERButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.createERButton.Location = new System.Drawing.Point(-2, 359);
+            this.createERButton.Location = new System.Drawing.Point(-2, 400);
             this.createERButton.Name = "createERButton";
             this.createERButton.Size = new System.Drawing.Size(275, 30);
             this.createERButton.TabIndex = 10;
@@ -741,7 +800,7 @@ namespace WindowsFormsApp1
             this.createOppButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.createOppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createOppButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.createOppButton.Location = new System.Drawing.Point(-2, 329);
+            this.createOppButton.Location = new System.Drawing.Point(-2, 370);
             this.createOppButton.Name = "createOppButton";
             this.createOppButton.Size = new System.Drawing.Size(275, 30);
             this.createOppButton.TabIndex = 9;
@@ -762,7 +821,7 @@ namespace WindowsFormsApp1
             this.createPIButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.createPIButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createPIButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.createPIButton.Location = new System.Drawing.Point(-2, 299);
+            this.createPIButton.Location = new System.Drawing.Point(-2, 340);
             this.createPIButton.Name = "createPIButton";
             this.createPIButton.Size = new System.Drawing.Size(275, 30);
             this.createPIButton.TabIndex = 8;
@@ -784,7 +843,7 @@ namespace WindowsFormsApp1
             this.createRiskButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(209)))), ((int)(((byte)(220)))));
             this.createRiskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createRiskButton.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            this.createRiskButton.Location = new System.Drawing.Point(-2, 269);
+            this.createRiskButton.Location = new System.Drawing.Point(-2, 310);
             this.createRiskButton.Name = "createRiskButton";
             this.createRiskButton.Size = new System.Drawing.Size(275, 30);
             this.createRiskButton.TabIndex = 7;
@@ -826,7 +885,7 @@ namespace WindowsFormsApp1
             this.guideButton.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.guideButton.Image = ((System.Drawing.Image)(resources.GetObject("guideButton.Image")));
             this.guideButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.guideButton.Location = new System.Drawing.Point(1, 191);
+            this.guideButton.Location = new System.Drawing.Point(1, 232);
             this.guideButton.Name = "guideButton";
             this.guideButton.Size = new System.Drawing.Size(275, 38);
             this.guideButton.TabIndex = 5;
@@ -871,7 +930,7 @@ namespace WindowsFormsApp1
             this.createItemButton.Font = new System.Drawing.Font("Trebuchet MS", 12F);
             this.createItemButton.Image = ((System.Drawing.Image)(resources.GetObject("createItemButton.Image")));
             this.createItemButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.createItemButton.Location = new System.Drawing.Point(1, 232);
+            this.createItemButton.Location = new System.Drawing.Point(1, 273);
             this.createItemButton.Name = "createItemButton";
             this.createItemButton.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.createItemButton.Size = new System.Drawing.Size(275, 37);
@@ -960,6 +1019,7 @@ namespace WindowsFormsApp1
             this.execROlogTabControl.Controls.Add(this.permissionTab);
             this.execROlogTabControl.Controls.Add(this.approvalTab);
             this.execROlogTabControl.Controls.Add(this.infoTab);
+            this.execROlogTabControl.Controls.Add(this.mainCostTab);
             this.execROlogTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.execROlogTabControl.Location = new System.Drawing.Point(275, 41);
             this.execROlogTabControl.Name = "execROlogTabControl";
@@ -985,9 +1045,9 @@ namespace WindowsFormsApp1
             // 
             this.infoSumPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.infoSumPanel.Controls.Add(this.tableLayoutPanel1);
-            this.infoSumPanel.Location = new System.Drawing.Point(0, 0);
+            this.infoSumPanel.Location = new System.Drawing.Point(277, 0);
             this.infoSumPanel.Name = "infoSumPanel";
-            this.infoSumPanel.Size = new System.Drawing.Size(537, 265);
+            this.infoSumPanel.Size = new System.Drawing.Size(581, 265);
             this.infoSumPanel.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -1040,7 +1100,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(529, 210);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(573, 210);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
             // totalOpportunityLabel
@@ -1048,7 +1108,7 @@ namespace WindowsFormsApp1
             this.totalOpportunityLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalOpportunityLabel.AutoSize = true;
             this.totalOpportunityLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalOpportunityLabel.Location = new System.Drawing.Point(479, 184);
+            this.totalOpportunityLabel.Location = new System.Drawing.Point(519, 184);
             this.totalOpportunityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalOpportunityLabel.Name = "totalOpportunityLabel";
             this.totalOpportunityLabel.Size = new System.Drawing.Size(14, 16);
@@ -1060,7 +1120,7 @@ namespace WindowsFormsApp1
             this.rUOpportunityLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rUOpportunityLabel.AutoSize = true;
             this.rUOpportunityLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.rUOpportunityLabel.Location = new System.Drawing.Point(394, 184);
+            this.rUOpportunityLabel.Location = new System.Drawing.Point(426, 184);
             this.rUOpportunityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rUOpportunityLabel.Name = "rUOpportunityLabel";
             this.rUOpportunityLabel.Size = new System.Drawing.Size(14, 16);
@@ -1072,7 +1132,7 @@ namespace WindowsFormsApp1
             this.bUOpportunityLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bUOpportunityLabel.AutoSize = true;
             this.bUOpportunityLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bUOpportunityLabel.Location = new System.Drawing.Point(310, 184);
+            this.bUOpportunityLabel.Location = new System.Drawing.Point(335, 184);
             this.bUOpportunityLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bUOpportunityLabel.Name = "bUOpportunityLabel";
             this.bUOpportunityLabel.Size = new System.Drawing.Size(14, 16);
@@ -1084,7 +1144,7 @@ namespace WindowsFormsApp1
             this.totalRCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalRCLabel.AutoSize = true;
             this.totalRCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalRCLabel.Location = new System.Drawing.Point(479, 138);
+            this.totalRCLabel.Location = new System.Drawing.Point(519, 138);
             this.totalRCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalRCLabel.Name = "totalRCLabel";
             this.totalRCLabel.Size = new System.Drawing.Size(14, 16);
@@ -1096,7 +1156,7 @@ namespace WindowsFormsApp1
             this.rURCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rURCLabel.AutoSize = true;
             this.rURCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.rURCLabel.Location = new System.Drawing.Point(394, 138);
+            this.rURCLabel.Location = new System.Drawing.Point(426, 138);
             this.rURCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rURCLabel.Name = "rURCLabel";
             this.rURCLabel.Size = new System.Drawing.Size(14, 16);
@@ -1108,7 +1168,7 @@ namespace WindowsFormsApp1
             this.bURCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bURCLabel.AutoSize = true;
             this.bURCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bURCLabel.Location = new System.Drawing.Point(310, 138);
+            this.bURCLabel.Location = new System.Drawing.Point(335, 138);
             this.bURCLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bURCLabel.Name = "bURCLabel";
             this.bURCLabel.Size = new System.Drawing.Size(14, 16);
@@ -1120,7 +1180,7 @@ namespace WindowsFormsApp1
             this.totalRELabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalRELabel.AutoSize = true;
             this.totalRELabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalRELabel.Location = new System.Drawing.Point(479, 117);
+            this.totalRELabel.Location = new System.Drawing.Point(519, 117);
             this.totalRELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalRELabel.Name = "totalRELabel";
             this.totalRELabel.Size = new System.Drawing.Size(14, 16);
@@ -1132,7 +1192,7 @@ namespace WindowsFormsApp1
             this.rURELabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rURELabel.AutoSize = true;
             this.rURELabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.rURELabel.Location = new System.Drawing.Point(394, 117);
+            this.rURELabel.Location = new System.Drawing.Point(426, 117);
             this.rURELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rURELabel.Name = "rURELabel";
             this.rURELabel.Size = new System.Drawing.Size(14, 16);
@@ -1144,7 +1204,7 @@ namespace WindowsFormsApp1
             this.bURELabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bURELabel.AutoSize = true;
             this.bURELabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bURELabel.Location = new System.Drawing.Point(310, 117);
+            this.bURELabel.Location = new System.Drawing.Point(335, 117);
             this.bURELabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bURELabel.Name = "bURELabel";
             this.bURELabel.Size = new System.Drawing.Size(14, 16);
@@ -1156,7 +1216,7 @@ namespace WindowsFormsApp1
             this.totalEMVAfterLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalEMVAfterLabel.AutoSize = true;
             this.totalEMVAfterLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalEMVAfterLabel.Location = new System.Drawing.Point(479, 71);
+            this.totalEMVAfterLabel.Location = new System.Drawing.Point(519, 71);
             this.totalEMVAfterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalEMVAfterLabel.Name = "totalEMVAfterLabel";
             this.totalEMVAfterLabel.Size = new System.Drawing.Size(14, 16);
@@ -1168,7 +1228,7 @@ namespace WindowsFormsApp1
             this.rUEMVAfterLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rUEMVAfterLabel.AutoSize = true;
             this.rUEMVAfterLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.rUEMVAfterLabel.Location = new System.Drawing.Point(394, 71);
+            this.rUEMVAfterLabel.Location = new System.Drawing.Point(426, 71);
             this.rUEMVAfterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rUEMVAfterLabel.Name = "rUEMVAfterLabel";
             this.rUEMVAfterLabel.Size = new System.Drawing.Size(14, 16);
@@ -1180,7 +1240,7 @@ namespace WindowsFormsApp1
             this.bUEMVAfterLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bUEMVAfterLabel.AutoSize = true;
             this.bUEMVAfterLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bUEMVAfterLabel.Location = new System.Drawing.Point(310, 71);
+            this.bUEMVAfterLabel.Location = new System.Drawing.Point(335, 71);
             this.bUEMVAfterLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bUEMVAfterLabel.Name = "bUEMVAfterLabel";
             this.bUEMVAfterLabel.Size = new System.Drawing.Size(14, 16);
@@ -1192,7 +1252,7 @@ namespace WindowsFormsApp1
             this.totalEMVBeforeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalEMVBeforeLabel.AutoSize = true;
             this.totalEMVBeforeLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalEMVBeforeLabel.Location = new System.Drawing.Point(479, 50);
+            this.totalEMVBeforeLabel.Location = new System.Drawing.Point(519, 50);
             this.totalEMVBeforeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalEMVBeforeLabel.Name = "totalEMVBeforeLabel";
             this.totalEMVBeforeLabel.Size = new System.Drawing.Size(14, 16);
@@ -1204,7 +1264,7 @@ namespace WindowsFormsApp1
             this.rUEMVBeforeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rUEMVBeforeLabel.AutoSize = true;
             this.rUEMVBeforeLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.rUEMVBeforeLabel.Location = new System.Drawing.Point(394, 50);
+            this.rUEMVBeforeLabel.Location = new System.Drawing.Point(426, 50);
             this.rUEMVBeforeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rUEMVBeforeLabel.Name = "rUEMVBeforeLabel";
             this.rUEMVBeforeLabel.Size = new System.Drawing.Size(14, 16);
@@ -1216,7 +1276,7 @@ namespace WindowsFormsApp1
             this.bUEMVBeforeLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bUEMVBeforeLabel.AutoSize = true;
             this.bUEMVBeforeLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bUEMVBeforeLabel.Location = new System.Drawing.Point(310, 50);
+            this.bUEMVBeforeLabel.Location = new System.Drawing.Point(335, 50);
             this.bUEMVBeforeLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bUEMVBeforeLabel.Name = "bUEMVBeforeLabel";
             this.bUEMVBeforeLabel.Size = new System.Drawing.Size(14, 16);
@@ -1228,7 +1288,7 @@ namespace WindowsFormsApp1
             this.totalMValLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalMValLabel.AutoSize = true;
             this.totalMValLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalMValLabel.Location = new System.Drawing.Point(479, 29);
+            this.totalMValLabel.Location = new System.Drawing.Point(519, 29);
             this.totalMValLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalMValLabel.Name = "totalMValLabel";
             this.totalMValLabel.Size = new System.Drawing.Size(14, 16);
@@ -1240,7 +1300,7 @@ namespace WindowsFormsApp1
             this.ruMValLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.ruMValLabel.AutoSize = true;
             this.ruMValLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.ruMValLabel.Location = new System.Drawing.Point(394, 29);
+            this.ruMValLabel.Location = new System.Drawing.Point(426, 29);
             this.ruMValLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ruMValLabel.Name = "ruMValLabel";
             this.ruMValLabel.Size = new System.Drawing.Size(14, 16);
@@ -1252,7 +1312,7 @@ namespace WindowsFormsApp1
             this.totalCostLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalCostLabel.AutoSize = true;
             this.totalCostLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.totalCostLabel.Location = new System.Drawing.Point(468, 0);
+            this.totalCostLabel.Location = new System.Drawing.Point(508, 0);
             this.totalCostLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.totalCostLabel.Name = "totalCostLabel";
             this.totalCostLabel.Size = new System.Drawing.Size(35, 18);
@@ -1276,7 +1336,7 @@ namespace WindowsFormsApp1
             this.rUCostLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rUCostLabel.AutoSize = true;
             this.rUCostLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.rUCostLabel.Location = new System.Drawing.Point(389, 0);
+            this.rUCostLabel.Location = new System.Drawing.Point(422, 0);
             this.rUCostLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.rUCostLabel.Name = "rUCostLabel";
             this.rUCostLabel.Size = new System.Drawing.Size(23, 18);
@@ -1299,7 +1359,7 @@ namespace WindowsFormsApp1
             this.bUCostLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bUCostLabel.AutoSize = true;
             this.bUCostLabel.Font = new System.Drawing.Font("Trebuchet MS", 9F, System.Drawing.FontStyle.Bold);
-            this.bUCostLabel.Location = new System.Drawing.Point(305, 0);
+            this.bUCostLabel.Location = new System.Drawing.Point(331, 0);
             this.bUCostLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bUCostLabel.Name = "bUCostLabel";
             this.bUCostLabel.Size = new System.Drawing.Size(23, 18);
@@ -1367,7 +1427,7 @@ namespace WindowsFormsApp1
             this.bUMValLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bUMValLabel.AutoSize = true;
             this.bUMValLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bUMValLabel.Location = new System.Drawing.Point(310, 29);
+            this.bUMValLabel.Location = new System.Drawing.Point(335, 29);
             this.bUMValLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.bUMValLabel.Name = "bUMValLabel";
             this.bUMValLabel.Size = new System.Drawing.Size(14, 16);
@@ -1464,23 +1524,94 @@ namespace WindowsFormsApp1
             // 
             this.chartSumPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chartSumPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
-            this.chartSumPanel.Controls.Add(this.pieChartLabel);
-            this.chartSumPanel.Location = new System.Drawing.Point(505, 0);
+            this.chartSumPanel.Controls.Add(this.clearFilterBtn);
+            this.chartSumPanel.Controls.Add(this.filterBtn);
+            this.chartSumPanel.Controls.Add(this.filterCriteriaComboBox);
+            this.chartSumPanel.Controls.Add(this.filterObjectivesComboBox);
+            this.chartSumPanel.Controls.Add(this.label84);
+            this.chartSumPanel.Controls.Add(this.label75);
+            this.chartSumPanel.Controls.Add(this.reportingMonthLabel);
+            this.chartSumPanel.Controls.Add(this.reportingMonthComboBox);
+            this.chartSumPanel.Location = new System.Drawing.Point(3, 0);
             this.chartSumPanel.Name = "chartSumPanel";
-            this.chartSumPanel.Size = new System.Drawing.Size(356, 265);
+            this.chartSumPanel.Size = new System.Drawing.Size(275, 265);
             this.chartSumPanel.TabIndex = 1;
             // 
-            // pieChartLabel
+            // clearFilterBtn
             // 
-            this.pieChartLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pieChartLabel.AutoSize = true;
-            this.pieChartLabel.Font = new System.Drawing.Font("Trebuchet MS", 12F, System.Drawing.FontStyle.Bold);
-            this.pieChartLabel.Location = new System.Drawing.Point(79, 15);
-            this.pieChartLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.pieChartLabel.Name = "pieChartLabel";
-            this.pieChartLabel.Size = new System.Drawing.Size(185, 22);
-            this.pieChartLabel.TabIndex = 0;
-            this.pieChartLabel.Text = "Risk Contingency Chart";
+            this.clearFilterBtn.Location = new System.Drawing.Point(132, 210);
+            this.clearFilterBtn.Name = "clearFilterBtn";
+            this.clearFilterBtn.Size = new System.Drawing.Size(75, 23);
+            this.clearFilterBtn.TabIndex = 7;
+            this.clearFilterBtn.Text = "Clear";
+            this.clearFilterBtn.UseVisualStyleBackColor = true;
+            this.clearFilterBtn.Click += new System.EventHandler(this.clearFilterBtn_Click);
+            // 
+            // filterBtn
+            // 
+            this.filterBtn.Location = new System.Drawing.Point(51, 210);
+            this.filterBtn.Name = "filterBtn";
+            this.filterBtn.Size = new System.Drawing.Size(75, 23);
+            this.filterBtn.TabIndex = 6;
+            this.filterBtn.Text = "Filter";
+            this.filterBtn.UseVisualStyleBackColor = true;
+            this.filterBtn.Click += new System.EventHandler(this.filterBtn_Click);
+            // 
+            // filterCriteriaComboBox
+            // 
+            this.filterCriteriaComboBox.FormattingEnabled = true;
+            this.filterCriteriaComboBox.Location = new System.Drawing.Point(24, 171);
+            this.filterCriteriaComboBox.Name = "filterCriteriaComboBox";
+            this.filterCriteriaComboBox.Size = new System.Drawing.Size(220, 21);
+            this.filterCriteriaComboBox.TabIndex = 5;
+            // 
+            // filterObjectivesComboBox
+            // 
+            this.filterObjectivesComboBox.FormattingEnabled = true;
+            this.filterObjectivesComboBox.Location = new System.Drawing.Point(24, 128);
+            this.filterObjectivesComboBox.Name = "filterObjectivesComboBox";
+            this.filterObjectivesComboBox.Size = new System.Drawing.Size(220, 21);
+            this.filterObjectivesComboBox.TabIndex = 4;
+            this.filterObjectivesComboBox.SelectionChangeCommitted += new System.EventHandler(this.filterObjectivesComboBox_SelectionChangeCommitted);
+            // 
+            // label84
+            // 
+            this.label84.AutoSize = true;
+            this.label84.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label84.Location = new System.Drawing.Point(21, 151);
+            this.label84.Name = "label84";
+            this.label84.Size = new System.Drawing.Size(105, 17);
+            this.label84.TabIndex = 3;
+            this.label84.Text = "Filtering criteria";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label75.Location = new System.Drawing.Point(21, 108);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(88, 17);
+            this.label75.TabIndex = 2;
+            this.label75.Text = "Filtering field";
+            // 
+            // reportingMonthLabel
+            // 
+            this.reportingMonthLabel.AutoSize = true;
+            this.reportingMonthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.reportingMonthLabel.Location = new System.Drawing.Point(21, 25);
+            this.reportingMonthLabel.Name = "reportingMonthLabel";
+            this.reportingMonthLabel.Size = new System.Drawing.Size(113, 17);
+            this.reportingMonthLabel.TabIndex = 1;
+            this.reportingMonthLabel.Text = "Reporting month";
+            // 
+            // reportingMonthComboBox
+            // 
+            this.reportingMonthComboBox.FormattingEnabled = true;
+            this.reportingMonthComboBox.Location = new System.Drawing.Point(24, 45);
+            this.reportingMonthComboBox.Name = "reportingMonthComboBox";
+            this.reportingMonthComboBox.Size = new System.Drawing.Size(220, 21);
+            this.reportingMonthComboBox.TabIndex = 0;
+            this.reportingMonthComboBox.SelectedIndexChanged += new System.EventHandler(this.reportingMonthComboBox_SelectedIndexChanged);
             // 
             // createRiskTab
             // 
@@ -4440,15 +4571,15 @@ namespace WindowsFormsApp1
             this.userPermissionData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.userPermissionData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.userPermissionData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userPermissionData.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.userPermissionData.DefaultCellStyle = dataGridViewCellStyle2;
             this.userPermissionData.Location = new System.Drawing.Point(141, 6);
             this.userPermissionData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userPermissionData.Name = "userPermissionData";
@@ -4537,12 +4668,15 @@ namespace WindowsFormsApp1
             // 
             // changesApprovalData
             // 
+            this.changesApprovalData.AllowUserToAddRows = false;
+            this.changesApprovalData.AllowUserToDeleteRows = false;
             this.changesApprovalData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.changesApprovalData.Dock = System.Windows.Forms.DockStyle.Fill;
             this.changesApprovalData.Location = new System.Drawing.Point(0, 0);
             this.changesApprovalData.Name = "changesApprovalData";
             this.changesApprovalData.Size = new System.Drawing.Size(861, 415);
             this.changesApprovalData.TabIndex = 0;
+            this.changesApprovalData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.changesApprovalData_CellContentClick);
             // 
             // changesApprovalTopPanel
             // 
@@ -5334,6 +5468,196 @@ namespace WindowsFormsApp1
             this.bUCurrencySwitch.Text = "BU Currency is Default";
             this.bUCurrencySwitch.UseVisualStyleBackColor = true;
             // 
+            // mainCostTab
+            // 
+            this.mainCostTab.Controls.Add(this.panel17);
+            this.mainCostTab.Controls.Add(this.panel16);
+            this.mainCostTab.Location = new System.Drawing.Point(4, 22);
+            this.mainCostTab.Name = "mainCostTab";
+            this.mainCostTab.Padding = new System.Windows.Forms.Padding(3);
+            this.mainCostTab.Size = new System.Drawing.Size(861, 930);
+            this.mainCostTab.TabIndex = 10;
+            this.mainCostTab.Text = "Main Cost";
+            this.mainCostTab.UseVisualStyleBackColor = true;
+            // 
+            // panel17
+            // 
+            this.panel17.Controls.Add(this.createNewCostItemBtn);
+            this.panel17.Controls.Add(this.createNewCostItemLbl);
+            this.panel17.Controls.Add(this.newCostItemCommentTxt);
+            this.panel17.Controls.Add(this.newCostItemCostTxt);
+            this.panel17.Controls.Add(this.newCostItemNameTxt);
+            this.panel17.Controls.Add(this.newCostItemCommentLbl);
+            this.panel17.Controls.Add(this.newCostItemCostLbl);
+            this.panel17.Controls.Add(this.newCostItemNameLbl);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.Location = new System.Drawing.Point(425, 3);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(433, 924);
+            this.panel17.TabIndex = 1;
+            // 
+            // createNewCostItemBtn
+            // 
+            this.createNewCostItemBtn.Location = new System.Drawing.Point(176, 245);
+            this.createNewCostItemBtn.Name = "createNewCostItemBtn";
+            this.createNewCostItemBtn.Size = new System.Drawing.Size(87, 23);
+            this.createNewCostItemBtn.TabIndex = 6;
+            this.createNewCostItemBtn.Text = "Create";
+            this.createNewCostItemBtn.UseVisualStyleBackColor = true;
+            this.createNewCostItemBtn.Click += new System.EventHandler(this.createNewCostItemBtn_Click);
+            // 
+            // createNewCostItemLbl
+            // 
+            this.createNewCostItemLbl.AutoSize = true;
+            this.createNewCostItemLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.createNewCostItemLbl.Location = new System.Drawing.Point(92, 15);
+            this.createNewCostItemLbl.Name = "createNewCostItemLbl";
+            this.createNewCostItemLbl.Size = new System.Drawing.Size(243, 25);
+            this.createNewCostItemLbl.TabIndex = 2;
+            this.createNewCostItemLbl.Text = "Create new other cost item";
+            // 
+            // newCostItemCommentTxt
+            // 
+            this.newCostItemCommentTxt.Location = new System.Drawing.Point(105, 200);
+            this.newCostItemCommentTxt.Name = "newCostItemCommentTxt";
+            this.newCostItemCommentTxt.Size = new System.Drawing.Size(230, 20);
+            this.newCostItemCommentTxt.TabIndex = 5;
+            // 
+            // newCostItemCostTxt
+            // 
+            this.newCostItemCostTxt.Location = new System.Drawing.Point(105, 155);
+            this.newCostItemCostTxt.Name = "newCostItemCostTxt";
+            this.newCostItemCostTxt.Size = new System.Drawing.Size(230, 20);
+            this.newCostItemCostTxt.TabIndex = 4;
+            // 
+            // newCostItemNameTxt
+            // 
+            this.newCostItemNameTxt.Location = new System.Drawing.Point(105, 111);
+            this.newCostItemNameTxt.Name = "newCostItemNameTxt";
+            this.newCostItemNameTxt.Size = new System.Drawing.Size(230, 20);
+            this.newCostItemNameTxt.TabIndex = 3;
+            // 
+            // newCostItemCommentLbl
+            // 
+            this.newCostItemCommentLbl.AutoSize = true;
+            this.newCostItemCommentLbl.Location = new System.Drawing.Point(102, 183);
+            this.newCostItemCommentLbl.Name = "newCostItemCommentLbl";
+            this.newCostItemCommentLbl.Size = new System.Drawing.Size(51, 13);
+            this.newCostItemCommentLbl.TabIndex = 2;
+            this.newCostItemCommentLbl.Text = "Comment";
+            // 
+            // newCostItemCostLbl
+            // 
+            this.newCostItemCostLbl.AutoSize = true;
+            this.newCostItemCostLbl.Location = new System.Drawing.Point(102, 138);
+            this.newCostItemCostLbl.Name = "newCostItemCostLbl";
+            this.newCostItemCostLbl.Size = new System.Drawing.Size(28, 13);
+            this.newCostItemCostLbl.TabIndex = 1;
+            this.newCostItemCostLbl.Text = "Cost";
+            // 
+            // newCostItemNameLbl
+            // 
+            this.newCostItemNameLbl.AutoSize = true;
+            this.newCostItemNameLbl.Location = new System.Drawing.Point(102, 95);
+            this.newCostItemNameLbl.Name = "newCostItemNameLbl";
+            this.newCostItemNameLbl.Size = new System.Drawing.Size(35, 13);
+            this.newCostItemNameLbl.TabIndex = 0;
+            this.newCostItemNameLbl.Text = "Name";
+            // 
+            // panel16
+            // 
+            this.panel16.Controls.Add(this.panel21);
+            this.panel16.Controls.Add(this.panel20);
+            this.panel16.Controls.Add(this.panel19);
+            this.panel16.Controls.Add(this.panel18);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel16.Location = new System.Drawing.Point(3, 3);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(422, 924);
+            this.panel16.TabIndex = 0;
+            // 
+            // panel21
+            // 
+            this.panel21.Controls.Add(this.otherCostItemsData);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel21.Location = new System.Drawing.Point(0, 472);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(422, 452);
+            this.panel21.TabIndex = 3;
+            // 
+            // otherCostItemsData
+            // 
+            this.otherCostItemsData.AllowUserToAddRows = false;
+            this.otherCostItemsData.AllowUserToDeleteRows = false;
+            this.otherCostItemsData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.otherCostItemsData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.otherCostItemsData.Location = new System.Drawing.Point(0, 0);
+            this.otherCostItemsData.Name = "otherCostItemsData";
+            this.otherCostItemsData.Size = new System.Drawing.Size(422, 452);
+            this.otherCostItemsData.TabIndex = 0;
+            this.otherCostItemsData.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.otherCostItemsData_CellValueChanged);
+            this.otherCostItemsData.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.otherCostItemsData_DataError);
+            // 
+            // panel20
+            // 
+            this.panel20.Controls.Add(this.otherCostItemsLbl);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel20.Location = new System.Drawing.Point(0, 417);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(422, 55);
+            this.panel20.TabIndex = 2;
+            // 
+            // otherCostItemsLbl
+            // 
+            this.otherCostItemsLbl.AutoSize = true;
+            this.otherCostItemsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.otherCostItemsLbl.Location = new System.Drawing.Point(3, 15);
+            this.otherCostItemsLbl.Name = "otherCostItemsLbl";
+            this.otherCostItemsLbl.Size = new System.Drawing.Size(159, 25);
+            this.otherCostItemsLbl.TabIndex = 2;
+            this.otherCostItemsLbl.Text = "Other Cost Items";
+            // 
+            // panel19
+            // 
+            this.panel19.Controls.Add(this.mainCostItemsData);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel19.Location = new System.Drawing.Point(0, 55);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(422, 362);
+            this.panel19.TabIndex = 1;
+            // 
+            // mainCostItemsData
+            // 
+            this.mainCostItemsData.AllowUserToAddRows = false;
+            this.mainCostItemsData.AllowUserToDeleteRows = false;
+            this.mainCostItemsData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.mainCostItemsData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainCostItemsData.Location = new System.Drawing.Point(0, 0);
+            this.mainCostItemsData.Name = "mainCostItemsData";
+            this.mainCostItemsData.Size = new System.Drawing.Size(422, 362);
+            this.mainCostItemsData.TabIndex = 0;
+            this.mainCostItemsData.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainCostItemsData_CellValueChanged);
+            this.mainCostItemsData.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.mainCostItemsData_DataError);
+            // 
+            // panel18
+            // 
+            this.panel18.Controls.Add(this.mainCostItemsLbl);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel18.Location = new System.Drawing.Point(0, 0);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(422, 55);
+            this.panel18.TabIndex = 0;
+            // 
+            // mainCostItemsLbl
+            // 
+            this.mainCostItemsLbl.AutoSize = true;
+            this.mainCostItemsLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
+            this.mainCostItemsLbl.Location = new System.Drawing.Point(3, 15);
+            this.mainCostItemsLbl.Name = "mainCostItemsLbl";
+            this.mainCostItemsLbl.Size = new System.Drawing.Size(153, 25);
+            this.mainCostItemsLbl.TabIndex = 1;
+            this.mainCostItemsLbl.Text = "Main Cost Items";
+            // 
             // rkstatusOfRiskBindingSource
             // 
             this.rkstatusOfRiskBindingSource.DataMember = "rk_statusOfRisk";
@@ -5533,6 +5857,18 @@ namespace WindowsFormsApp1
             ((System.ComponentModel.ISupportInitialize)(this.rkscopeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.wTGtypeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.rkUsersListviewBindingSource)).EndInit();
+            this.mainCostTab.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.panel16.ResumeLayout(false);
+            this.panel21.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.otherCostItemsData)).EndInit();
+            this.panel20.ResumeLayout(false);
+            this.panel20.PerformLayout();
+            this.panel19.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mainCostItemsData)).EndInit();
+            this.panel18.ResumeLayout(false);
+            this.panel18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rkstatusOfRiskBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -5602,7 +5938,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.TabPage erTab;
         private System.Windows.Forms.TabPage oUncTab;
         private System.Windows.Forms.Panel chartSumPanel;
-        private System.Windows.Forms.Label pieChartLabel;
         private System.Windows.Forms.TabPage createRiskTab;
         private System.Windows.Forms.TabPage createPITab;
         private System.Windows.Forms.TabPage createOpportunityTab;
@@ -5965,5 +6300,33 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label newItemsApprovalLabel;
         private System.Windows.Forms.DataGridView newItemsApprovalData;
         private System.Windows.Forms.DataGridView changesApprovalData;
+        private System.Windows.Forms.Button filterBtn;
+        private System.Windows.Forms.ComboBox filterCriteriaComboBox;
+        private System.Windows.Forms.ComboBox filterObjectivesComboBox;
+        private System.Windows.Forms.Label label84;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label reportingMonthLabel;
+        private System.Windows.Forms.ComboBox reportingMonthComboBox;
+        private System.Windows.Forms.Button clearFilterBtn;
+        private System.Windows.Forms.Button mainCostBtn;
+        private System.Windows.Forms.TabPage mainCostTab;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Label otherCostItemsLbl;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Label mainCostItemsLbl;
+        private System.Windows.Forms.DataGridView otherCostItemsData;
+        private System.Windows.Forms.DataGridView mainCostItemsData;
+        private System.Windows.Forms.Button createNewCostItemBtn;
+        private System.Windows.Forms.Label createNewCostItemLbl;
+        private System.Windows.Forms.TextBox newCostItemCommentTxt;
+        private System.Windows.Forms.TextBox newCostItemCostTxt;
+        private System.Windows.Forms.TextBox newCostItemNameTxt;
+        private System.Windows.Forms.Label newCostItemCommentLbl;
+        private System.Windows.Forms.Label newCostItemCostLbl;
+        private System.Windows.Forms.Label newCostItemNameLbl;
     }
 }

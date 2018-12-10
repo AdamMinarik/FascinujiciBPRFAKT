@@ -584,6 +584,26 @@
         fT6vlv4A+Rofs57tIXIAAAAASUVORK5CYII=
 </value>
   </data>
+  <data name="mainCostBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAACXBIWXMAAA3XAAAN1wFCKJt4AAAAB3RJ
+        TUUH4goSFwYD8cLUVQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAL0SURBVEhL
+        lZXZq09RFMd/hgyZEyLzkBDxYChEEhkeeFBSLmV4QbzIFMocyosHQ4pCMiSUlMweyFyGDFGmeDH9BT6f
+        vc8+nd/v3n733m997m+dc/Zea++91tq3VI+6wizYCpfhWYa27/zmmEarOWyGh7AD5kIv6JKh7Tu/Ocax
+        zmmQhsA9WAdpkituASsytH2nHONY5zi3qmrgPgyDjnALZsJ7eAOv4DF8yt75zTGOdY5z9VGnjO6AtjAf
+        +oOOjsF4KKoZjIHD8AUc6xzn6qPWTtymW3QVTcHtf4XRUJ8mwTdwThPQh77KcmKSPMcZMAVewgVYD/XJ
+        MefhKThXH/rSZ5BlZiW47cHwGVZnzyehWhC/OcaxVpVz9eGzPkMJW8uWW08YAY/AASoF2QnH4S34/RA4
+        JzlPskf0oS+/6zs0zByYBh6NzopqBf9gKejMHLn9v9AOiloL+tCXPvUdkmPjqH0wL5q5FsLBaJZpLyyI
+        Zq7poA+lz9ArbivJSX2imWsXGKRSS2BPNHN5NPpICr5tnKKGZr9Jdm7YaoWslJXRzGWiizJfpbtg/XYA
+        m+U7eH7tYTZYCa/Brk2yyWwwx1hJk2Eb/IbtkBZ5xz9Wwg0w0AEwmbvB5rGT28AosOxug8FsJJ148Vma
+        dq+LGwR2vUXgO/sjbNUAR30oqCV4hgbWkdXTGzqBu3XVz2ExOK41FGWONmj0Ay+sazABBoBHZrJM4ir4
+        CcXkdwZXblkqc+Hup0I6HhfdN5ql0ik4B94/V8Gj8apQXs0fopnLe6ZYfTbUC/A0LsEJKKswV/QOuoen
+        2I1Xohlk0OHRDLJX3HHSA+gRzZB4c+TCyjQW3EVq/evZr7IX7FDPWdzdWTDQfvgDyrlnYGR4qkPL4SIs
+        gl9wGlLggZBknn7AJvDc/Z+xBQy6DKpqInwEg40DA/pcKQujWzRDkCfg0TZIXmKWrWdrLW+E4q1pkq0u
+        S/gmeP9Y1o2WZbYGDOaKbX2vFu0j4Le8FGurVPoPmZ6jdKcztxcAAAAASUVORK5CYII=
+</value>
+  </data>
   <data name="approvalFuncButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
@@ -689,8 +709,17 @@
   <metadata name="rkrespRootBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>531, 17</value>
   </metadata>
+  <metadata name="rkrespRootBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>531, 17</value>
+  </metadata>
   <metadata name="dataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
+  </metadata>
+  <metadata name="dataSet1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="listOfOwnersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>916, 17</value>
   </metadata>
   <metadata name="listOfOwnersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>916, 17</value>
@@ -698,8 +727,17 @@
   <metadata name="rkriskcatBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 104</value>
   </metadata>
+  <metadata name="rkriskcatBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 104</value>
+  </metadata>
   <metadata name="rkriskpackgsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>860, 65</value>
+  </metadata>
+  <metadata name="rkriskpackgsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>860, 65</value>
+  </metadata>
+  <metadata name="rkresponseBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>729, 104</value>
   </metadata>
   <metadata name="rkresponseBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>729, 104</value>
@@ -707,8 +745,17 @@
   <metadata name="rkWBSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1109, 104</value>
   </metadata>
+  <metadata name="rkWBSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1109, 104</value>
+  </metadata>
   <metadata name="rkphasesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>373, 104</value>
+  </metadata>
+  <metadata name="rkphasesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>373, 104</value>
+  </metadata>
+  <metadata name="rkNCCBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1392, 17</value>
   </metadata>
   <metadata name="rkNCCBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1392, 17</value>
@@ -716,8 +763,17 @@
   <metadata name="originatingviewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>249, 65</value>
   </metadata>
+  <metadata name="originatingviewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>249, 65</value>
+  </metadata>
   <metadata name="rkstatusOfRiskBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1427, 65</value>
+  </metadata>
+  <metadata name="rkstatusOfRiskBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1427, 65</value>
+  </metadata>
+  <metadata name="rkCurrencyNameBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>368, 221</value>
   </metadata>
   <metadata name="rkCurrencyNameBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>368, 221</value>
@@ -725,8 +781,17 @@
   <metadata name="rkCurrencyNameBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>811, 221</value>
   </metadata>
+  <metadata name="rkCurrencyNameBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>811, 221</value>
+  </metadata>
   <metadata name="rkPreAssemblyHarbourBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>246, 182</value>
+  </metadata>
+  <metadata name="rkPreAssemblyHarbourBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>246, 182</value>
+  </metadata>
+  <metadata name="rkFoundationTypeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>958, 143</value>
   </metadata>
   <metadata name="rkFoundationTypeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>958, 143</value>
@@ -734,11 +799,23 @@
   <metadata name="rkSegmentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>756, 182</value>
   </metadata>
+  <metadata name="rkSegmentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>756, 182</value>
+  </metadata>
+  <metadata name="rkscopeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>613, 143</value>
+  </metadata>
   <metadata name="rkscopeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>613, 143</value>
   </metadata>
   <metadata name="wTGtypeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 221</value>
+  </metadata>
+  <metadata name="wTGtypeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 221</value>
+  </metadata>
+  <metadata name="rkUsersListviewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>182, 143</value>
   </metadata>
   <metadata name="rkUsersListviewBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>182, 143</value>

@@ -33,12 +33,12 @@ namespace WindowsFormsApp1.Mediator
               return storage.getExecutionUser(userName);
         }
 
-        public EProjectItemList getFilterItems(int projectID, string month, string field, string fieldValue)
+        public EProjectItemList getFilterItems(int projectID, DateTime month, int field, int fieldValue)
         {
-            throw new NotImplementedException();
+            return storage.getFilterItems(projectID, month, field, fieldValue);
         }
 
-        public EProjectItemList getItems(int projectID, string month, string type)
+        public EProjectItemList getItems(int projectID, DateTime month, string type)
         {
             return storage.getItems(projectID, month, type);
         }
@@ -86,6 +86,16 @@ namespace WindowsFormsApp1.Mediator
         public void declineNewItem(int projectID, int newItemID)
         {
             storage.declineNewItem(projectID, newItemID);
+        }
+
+        public void approveChangedItem(int projectID, int changedItemID, int UpdatedColID, string newValueString, int newColumnID, string updatedColumntxt, int idOfChange)
+        {
+            storage.approveChangedItem(projectID, changedItemID, UpdatedColID, newValueString, newColumnID, updatedColumntxt, idOfChange);
+        }
+
+        public void declineChangedItem(int projectID, int changedItemID, int UpdatedColID, string newValueString, int newColumnID, string updatedColumntxt, int idOfChange)
+        {
+            storage.declineChangedItem(projectID, changedItemID, UpdatedColID, newValueString, newColumnID, updatedColumntxt, idOfChange);
         }
     }
 }
