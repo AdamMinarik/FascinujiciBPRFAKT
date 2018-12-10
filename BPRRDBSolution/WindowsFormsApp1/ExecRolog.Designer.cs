@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExecRolog));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.locationPanel = new System.Windows.Forms.Panel();
             this.readPictureBox = new System.Windows.Forms.PictureBox();
             this.approvalPictureBox = new System.Windows.Forms.PictureBox();
@@ -257,6 +257,10 @@ namespace WindowsFormsApp1
             this.categoryComboBox = new System.Windows.Forms.ComboBox();
             this.rkriskcatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.probabilityBeforeResponseTextBox = new System.Windows.Forms.TextBox();
+            this.buScopeLbl = new System.Windows.Forms.Label();
+            this.ruScopeLbl = new System.Windows.Forms.Label();
+            this.BUScopeTxt = new System.Windows.Forms.TextBox();
+            this.RUScopeTxt = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label61 = new System.Windows.Forms.Label();
@@ -480,10 +484,6 @@ namespace WindowsFormsApp1
             this.rk_SegmentTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_SegmentTableAdapter();
             this.wTGtypeTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.WTGtypeTableAdapter();
             this.rk_CurrencyNameTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_CurrencyNameTableAdapter();
-            this.buScopeLbl = new System.Windows.Forms.Label();
-            this.ruScopeLbl = new System.Windows.Forms.Label();
-            this.BUScopeTxt = new System.Windows.Forms.TextBox();
-            this.RUScopeTxt = new System.Windows.Forms.TextBox();
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -3290,6 +3290,39 @@ namespace WindowsFormsApp1
             this.probabilityBeforeResponseTextBox.TabIndex = 8;
             this.probabilityBeforeResponseTextBox.Leave += new System.EventHandler(this.probabilityBeforeResponseTextBox_Leave);
             // 
+            // buScopeLbl
+            // 
+            this.buScopeLbl.AutoSize = true;
+            this.buScopeLbl.Location = new System.Drawing.Point(3, 573);
+            this.buScopeLbl.Name = "buScopeLbl";
+            this.buScopeLbl.Size = new System.Drawing.Size(61, 18);
+            this.buScopeLbl.TabIndex = 9;
+            this.buScopeLbl.Text = "BU Scope";
+            // 
+            // ruScopeLbl
+            // 
+            this.ruScopeLbl.AutoSize = true;
+            this.ruScopeLbl.Location = new System.Drawing.Point(3, 600);
+            this.ruScopeLbl.Name = "ruScopeLbl";
+            this.ruScopeLbl.Size = new System.Drawing.Size(61, 18);
+            this.ruScopeLbl.TabIndex = 10;
+            this.ruScopeLbl.Text = "RU Scope";
+            // 
+            // BUScopeTxt
+            // 
+            this.BUScopeTxt.Location = new System.Drawing.Point(169, 576);
+            this.BUScopeTxt.Name = "BUScopeTxt";
+            this.BUScopeTxt.Size = new System.Drawing.Size(100, 21);
+            this.BUScopeTxt.TabIndex = 11;
+            this.BUScopeTxt.TextChanged += new System.EventHandler(this.BUScopeTxt_TextChanged);
+            // 
+            // RUScopeTxt
+            // 
+            this.RUScopeTxt.Location = new System.Drawing.Point(169, 603);
+            this.RUScopeTxt.Name = "RUScopeTxt";
+            this.RUScopeTxt.Size = new System.Drawing.Size(100, 21);
+            this.RUScopeTxt.TabIndex = 12;
+            // 
             // tabPage2
             // 
             this.tabPage2.Controls.Add(this.tableLayoutPanel11);
@@ -4525,15 +4558,15 @@ namespace WindowsFormsApp1
             this.userPermissionData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.userPermissionData.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.userPermissionData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Trebuchet MS", 10F);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.userPermissionData.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Trebuchet MS", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(1, 3, 1, 3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(173)))), ((int)(((byte)(163)))), ((int)(((byte)(185)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.userPermissionData.DefaultCellStyle = dataGridViewCellStyle1;
             this.userPermissionData.Location = new System.Drawing.Point(141, 6);
             this.userPermissionData.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.userPermissionData.Name = "userPermissionData";
@@ -5684,39 +5717,6 @@ namespace WindowsFormsApp1
             // rk_CurrencyNameTableAdapter
             // 
             this.rk_CurrencyNameTableAdapter.ClearBeforeFill = true;
-            // 
-            // buScopeLbl
-            // 
-            this.buScopeLbl.AutoSize = true;
-            this.buScopeLbl.Location = new System.Drawing.Point(3, 573);
-            this.buScopeLbl.Name = "buScopeLbl";
-            this.buScopeLbl.Size = new System.Drawing.Size(61, 18);
-            this.buScopeLbl.TabIndex = 9;
-            this.buScopeLbl.Text = "BU Scope";
-            // 
-            // ruScopeLbl
-            // 
-            this.ruScopeLbl.AutoSize = true;
-            this.ruScopeLbl.Location = new System.Drawing.Point(3, 600);
-            this.ruScopeLbl.Name = "ruScopeLbl";
-            this.ruScopeLbl.Size = new System.Drawing.Size(61, 18);
-            this.ruScopeLbl.TabIndex = 10;
-            this.ruScopeLbl.Text = "RU Scope";
-            // 
-            // BUScopeTxt
-            // 
-            this.BUScopeTxt.Location = new System.Drawing.Point(169, 576);
-            this.BUScopeTxt.Name = "BUScopeTxt";
-            this.BUScopeTxt.Size = new System.Drawing.Size(100, 21);
-            this.BUScopeTxt.TabIndex = 11;
-            this.BUScopeTxt.TextChanged += new System.EventHandler(this.BUScopeTxt_TextChanged);
-            // 
-            // RUScopeTxt
-            // 
-            this.RUScopeTxt.Location = new System.Drawing.Point(169, 603);
-            this.RUScopeTxt.Name = "RUScopeTxt";
-            this.RUScopeTxt.Size = new System.Drawing.Size(100, 21);
-            this.RUScopeTxt.TabIndex = 12;
             // 
             // ExecRolog
             // 

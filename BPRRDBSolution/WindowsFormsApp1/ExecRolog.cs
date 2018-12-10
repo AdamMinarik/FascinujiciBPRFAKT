@@ -39,7 +39,7 @@ namespace WindowsFormsApp1
             this.ProjectID = execProject.projectID;
             this.modelManager = new ModelManager();
             this.executionForm = executionForm;
-            this.permission = permission;
+            this.permission = permission.ToLower();
             this.user = user;
             this.selectedDate = DateTime.Today;
 
@@ -62,7 +62,9 @@ namespace WindowsFormsApp1
             //SET PROJECT NAME LABEL
             locationLabel.Text = execProject.name;
 
-            MessageBox.Show(permission);
+            MessageBox.Show(this.permission);
+
+            lockFieldsPermission();
 
         }
 
@@ -1009,25 +1011,31 @@ namespace WindowsFormsApp1
         private void newItemsApprovalData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int newRiskID = int.Parse(newItemsApprovalData.Rows[e.RowIndex].Cells[2].Value.ToString());
-
-            // Ignore clicks that are not in our 
-            if (e.ColumnIndex == newItemsApprovalData.Columns["Approve"].Index && e.RowIndex >= 0)
+            if (permission == "owner" || permission == "admin")
             {
-                //APPROVE NEW ITEM
-                modelManager.approveNewItem(execProject.projectID, newRiskID);
-                //REFRESH NEW ITEMS APPROVAL DATA GRID VIEW
-                setNewItemsApprovalView();
-                //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
-                itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
-                //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
-                setROlogGridView(itemsList);
+                // Ignore clicks that are not in our 
+                if (e.ColumnIndex == newItemsApprovalData.Columns["Approve"].Index && e.RowIndex >= 0)
+                {
+                    //APPROVE NEW ITEM
+                    modelManager.approveNewItem(execProject.projectID, newRiskID);
+                    //REFRESH NEW ITEMS APPROVAL DATA GRID VIEW
+                    setNewItemsApprovalView();
+                    //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
+                    itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
+                    //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
+                    setROlogGridView(itemsList);
+                }
+                else if (e.ColumnIndex == newItemsApprovalData.Columns["Decline"].Index && e.RowIndex >= 0)
+                {
+                    //DECLINE NEW ITEM
+                    modelManager.declineNewItem(execProject.projectID, newRiskID);
+                    //REFRESH NEW ITEMS APPROVAL DATA GRID VIEW
+                    setNewItemsApprovalView();
+                }
             }
-            else if (e.ColumnIndex == newItemsApprovalData.Columns["Decline"].Index && e.RowIndex >= 0)
+            else
             {
-                //DECLINE NEW ITEM
-                modelManager.declineNewItem(execProject.projectID, newRiskID);
-                //REFRESH NEW ITEMS APPROVAL DATA GRID VIEW
-                setNewItemsApprovalView();
+                MessageBox.Show("You do not have permission");
             }
         }
 
@@ -1104,42 +1112,49 @@ namespace WindowsFormsApp1
 
         private void changesApprovalData_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int projectID = execProject.projectID;
-
-            int changedItemID = int.Parse(changesApprovalData.Rows[e.RowIndex].Cells[19].Value.ToString());
-            int UpdatedColID = int.Parse(changesApprovalData.Rows[e.RowIndex].Cells[13].Value.ToString());
-            string newValueString = changesApprovalData.Rows[e.RowIndex].Cells[6].Value.ToString();
-            int newColumnID = -1;
-            if (changesApprovalData.Rows[e.RowIndex].Cells[7].Value.ToString() != "")
+            if (permission == "owner" || permission == "admin")
             {
-                newColumnID = int.Parse(changesApprovalData.Rows[e.RowIndex].Cells[7].Value.ToString());
+
+                int projectID = execProject.projectID;
+                int changedItemID = int.Parse(changesApprovalData.Rows[e.RowIndex].Cells[19].Value.ToString());
+                int UpdatedColID = int.Parse(changesApprovalData.Rows[e.RowIndex].Cells[13].Value.ToString());
+                string newValueString = changesApprovalData.Rows[e.RowIndex].Cells[6].Value.ToString();
+                int newColumnID = -1;
+                if (changesApprovalData.Rows[e.RowIndex].Cells[7].Value.ToString() != "")
+                {
+                    newColumnID = int.Parse(changesApprovalData.Rows[e.RowIndex].Cells[7].Value.ToString());
+                }
+                string updatedColumntxt = changesApprovalData.Rows[e.RowIndex].Cells[12].Value.ToString();
+                int idOfChange = int.Parse(changesApprovalData.Rows[e.RowIndex].Cells[2].Value.ToString());
+
+                // Ignore clicks that are not in our 
+                if (e.ColumnIndex == changesApprovalData.Columns["Approve"].Index && e.RowIndex >= 0)
+                {
+                    //APPROVE CHANGED ITEM
+                    modelManager.approveChangedItem(projectID, changedItemID, UpdatedColID, newValueString, newColumnID, updatedColumntxt, idOfChange);
+                    //REFRESH CHANGES APPROVAL DATA GRID VIEW
+                    setChangedItemsApprovalView();
+
+                    //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
+                    itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
+                    //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
+                    setROlogGridView(itemsList);
+                }
+                else if (e.ColumnIndex == changesApprovalData.Columns["Decline"].Index && e.RowIndex >= 0)
+                {
+                    //DECLINE CHANGED ITEM
+                    modelManager.declineChangedItem(projectID, changedItemID, UpdatedColID, newValueString, newColumnID, updatedColumntxt, idOfChange);
+                    //REFRESH CHANGES APPROVAL DATA GRID VIEW
+                    setChangedItemsApprovalView();
+                    //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
+                    itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
+                    //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
+                    setROlogGridView(itemsList);
+                }
             }
-            string updatedColumntxt = changesApprovalData.Rows[e.RowIndex].Cells[12].Value.ToString();
-            int idOfChange = int.Parse(changesApprovalData.Rows[e.RowIndex].Cells[2].Value.ToString());
-
-            // Ignore clicks that are not in our 
-            if (e.ColumnIndex == changesApprovalData.Columns["Approve"].Index && e.RowIndex >= 0)
+            else
             {
-                //APPROVE CHANGED ITEM
-                modelManager.approveChangedItem(projectID, changedItemID, UpdatedColID, newValueString, newColumnID, updatedColumntxt, idOfChange);
-                //REFRESH CHANGES APPROVAL DATA GRID VIEW
-                setChangedItemsApprovalView();
-
-                //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
-                itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
-                //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
-                setROlogGridView(itemsList);
-            }
-            else if (e.ColumnIndex == changesApprovalData.Columns["Decline"].Index && e.RowIndex >= 0)
-            {
-                //DECLINE CHANGED ITEM
-                modelManager.declineChangedItem(projectID, changedItemID, UpdatedColID, newValueString, newColumnID, updatedColumntxt, idOfChange);
-                //REFRESH CHANGES APPROVAL DATA GRID VIEW
-                setChangedItemsApprovalView();
-                //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
-                itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");
-                //SHOW ROLOG ITEMS IN ROLOG DATA GRID VIEW
-                setROlogGridView(itemsList);
+                MessageBox.Show("You do not have permission");
             }
         }
 
@@ -1557,6 +1572,32 @@ namespace WindowsFormsApp1
                 }
                 
             }   
+        }
+
+        public void lockFieldsPermission()
+        {
+            if(permission == "read")
+            {
+                createItemButton.Enabled = false;
+                approvalFuncButton.Enabled = false;
+                mainCostBtn.Enabled = false;
+                permissionsButton.Enabled = false;
+                updateRiskBtn.Enabled = false;
+                insertRiskBtn.Enabled = false;
+                updateProjectButton.Enabled = false;
+            }
+            else if(permission == "write")
+            {
+                permissionsButton.Enabled = false;
+            }
+            else if(permission == "admin")
+            {
+
+            }
+            else if(permission == "owner")
+            {
+
+            }
         }
     }
 }

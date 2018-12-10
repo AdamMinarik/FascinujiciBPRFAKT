@@ -1199,7 +1199,7 @@ namespace WindowsFormsApp1
             }
             else if (user.roleID == 5)
             {
-                SQL = "SELECT pname as 'Project Name' ,sap as 'Unique ID',scope as 'Scope',wtg as 'Wind Turbine Type',owne as 'Project Owner',ID, CASE WHEN IDuser = " + user.userID + " then 'write' when b.prights = 'read' then 'Read'when b.prights = 'write' then 'Write'else 'No Access' end as 'Project Permission' FROM new_project_view as a left join (select case when WriteID = 2 then 'read' else 'write' end as prights,* from rk_pro_permission where userID = " + user.userID + ")as b on a.ID = b.projID WHERE segmentID = 2 order by projectrights desc, pname ASC;";
+                SQL =  "SELECT pname as 'Project Name' , sap as 'Unique ID', scope as 'Scope', wtg as 'Wind Turbine Type', owne as 'Project Owner', a.ID, CASE WHEN IDuser = " + user.userID + " then 'write' when b.prights = 'read' then 'read'when b.prights = 'write' then 'write'else 'Read' end as 'Project Permissions' FROM new_project_view as a left join (select case when WriteID = 2 then 'write' else 'read' end as prights,* from rk_pro_permission where userID =" + user.userID + ")as b on a.ID = b.projID WHERE segmentID = 2 order by 'Project Permissions' desc, pname ASC";
             }
             else if(user.roleID == 7)
             {
@@ -1209,9 +1209,6 @@ namespace WindowsFormsApp1
             {
                 SQL = "SELECT pname as 'Project Name' ,sap as 'Unique ID',scope as 'Scope',wtg as 'Wind Turbine Type',owne as 'Project Owner',ID,'No access' as 'Project Permission' FROM new_project_view ORDER BY pname ASC;";
             }
-
-            MessageBox.Show(SQL);
-
             SqlConnection connection = new SqlConnection(connectionString.ConnectionString);
             connection.Open();
             daDIcat = new SqlDataAdapter(SQL, connection);
