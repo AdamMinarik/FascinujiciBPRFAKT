@@ -76,9 +76,6 @@ namespace WindowsFormsApp1.Mediator
                         using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
                         {
                             connection.Open();
-
-                            MessageBox.Show("INSERT INTO [rk_NewRisk_Indiv]([Rname],[IDproj],[IDchap],[itemtype],[addItemType],[UpdatedBy],[ExcelID],[REF_ID]) Values('" + riskItem.itemName.ToString() + "', " + ProjectID.ToString() + ", 1, 1, 'Individual Risk', 1," + riskItem.excelID.ToString() + ",1)");
-
                             command = new SqlCommand("INSERT INTO [rk_NewRisk_Indiv] ([Rname],[IDproj],[IDchap],[itemtype],[addItemType],[UpdatedBy],[ExcelID],[REF_ID]) Values('" + riskItem.itemName.ToString() + "', " + ProjectID.ToString() + ", 1, 1, 'Individual Risk', 1," + riskItem.excelID.ToString() + ",1)", connection);
                             command.ExecuteNonQuery();
 
@@ -127,7 +124,6 @@ namespace WindowsFormsApp1.Mediator
                                               "', [costSatisfObjective]= '" + riskItem.customerSatisfObjective.ToString() +
                                               "', [UserChan]= '" + userName +
                                               "'   WHERE ID = (SELECT MAX(ID) FROM [rk_NewRisk_Indiv] WHERE IDproj =" + ProjectID.ToString() + ")";
-                            MessageBox.Show(queryString);
                             command = new SqlCommand(queryString, connection);
                             command.ExecuteNonQuery();
 
@@ -158,9 +154,6 @@ namespace WindowsFormsApp1.Mediator
                         using (SqlConnection connection = new SqlConnection(connectionString.ConnectionString))
                         {
                             connection.Open();
-
-                            MessageBox.Show("INSERT INTO[rk_ROlog]([Rname],[IDproj],[IDchap],[itemtype],[addItemType],[UpdatedBy],[ExcelID],[REF_ID]) Values('" + riskItem.itemName.ToString() + "', " + ProjectID.ToString() + ", 1, 1, 'Individual Risk', 1," + riskItem.excelID.ToString() + ",1)");
-
                             command = new SqlCommand("INSERT INTO[rk_ROlog]([Rname],[IDproj],[IDchap],[itemtype],[addItemType],[UpdatedBy],[ExcelID],[REF_ID]) Values('" + riskItem.itemName.ToString() + "', " + ProjectID.ToString() + ", 1, 1, 'Individual Risk', 1," + riskItem.excelID.ToString() + ",1)", connection);
                             command.ExecuteNonQuery();
 
@@ -208,7 +201,6 @@ namespace WindowsFormsApp1.Mediator
                                               "', [safetyfObjective]= '" + riskItem.safetyObjective.ToString() +
                                               "', [costSatisfObjective]= '" + riskItem.customerSatisfObjective.ToString() +
                                               "'   WHERE ID = (SELECT MAX(ID) FROM rk_ROlog WHERE IDproj =" + ProjectID.ToString() + ")";
-                            MessageBox.Show(queryString);
                             command = new SqlCommand(queryString, connection);
                             command.ExecuteNonQuery();
 
@@ -961,7 +953,7 @@ namespace WindowsFormsApp1.Mediator
 
             if (execProject == null)
             {
-                MessageBox.Show("Something went wong. Sry.");
+                MessageBox.Show("Something went wong");
                 return null;
             }
             else
@@ -1494,7 +1486,6 @@ namespace WindowsFormsApp1.Mediator
 
         public void updateItem(EProjectItem item, bool projectOwner, String type)
         {
-            MessageBox.Show("EHEHE");
             // IF USER IS PROJECT OWNER
             if (projectOwner == true)
             {
@@ -1558,7 +1549,6 @@ namespace WindowsFormsApp1.Mediator
                                               "', [safetyfObjective]= '" + riskItem.safetyObjective.ToString() +
                                               "', [costSatisfObjective]= '" + riskItem.customerSatisfObjective.ToString() +
                                               "'   WHERE ID =" + riskItem.itemID.ToString();
-                            MessageBox.Show(queryString);
                             command = new SqlCommand(queryString, connection);
                             command.ExecuteNonQuery();
 
@@ -1781,7 +1771,6 @@ namespace WindowsFormsApp1.Mediator
             }
             else
             {
-                MessageBox.Show("EH");
                 // RISKS NOT PROJECT OWNER UPDATE
                 if (type.ToLower() == "risk")
                 {
@@ -2085,7 +2074,6 @@ namespace WindowsFormsApp1.Mediator
                                                                " FoundationTypeID = " + project.foundationID.ToString() + "," +
                                                                " HarbourID = " + project.harbourID.ToString() +
                                         "WHERE ID = " + project.projectID;
-                    MessageBox.Show(queryString);
                     command = new SqlCommand(queryString, connection);
                     connection.Open();
                     command.ExecuteNonQuery();
@@ -2253,7 +2241,6 @@ namespace WindowsFormsApp1.Mediator
                                    + " UPDATE RK_ROlog SET updatedBy = 1 WHERE ExcelID = (SELECT ExcelID FROM rk_ROlog WHERE ID = " + changedItemID + " AND IDproj= " + projectID + " )  AND CreateDate = (SELECT Max(createdate) FROM rk_ROlog WHERE ExcelID =  (SELECT ExcelID FROM rk_ROlog WHERE ID = " + changedItemID + " AND IDproj= " + projectID + " )  AND IDproj= " + projectID + " ) AND IDproj= " + projectID + "  "
                                    + " ELSE "
                                    + " UPDATE RK_ROlog SET updatedBy = 1 WHERE ID = " + changedItemID;
-                MessageBox.Show(queryString);
                 command = new SqlCommand(queryString, connection);
                 connection.Open();
                 command.CommandTimeout = 120;

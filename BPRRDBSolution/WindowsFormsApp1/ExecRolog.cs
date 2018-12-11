@@ -61,9 +61,6 @@ namespace WindowsFormsApp1
             userLabel.Text = user.firstName + ' ' + user.lastName;
             //SET PROJECT NAME LABEL
             locationLabel.Text = execProject.name;
-
-            MessageBox.Show(this.permission);
-
             lockFieldsPermission();
 
         }
@@ -666,7 +663,6 @@ namespace WindowsFormsApp1
                                       riskItem.customerShareID.ToString(),  riskItem.nccID.ToString(), riskItem.orgUnitID.ToString(), riskItem.remarks
                                     }
                        };
-                        MessageBox.Show(i.ToString());
                         // Determine the header range (e.g. A1:D1)
                         headerRange = "A" + (i + 2) + ":" + Char.ConvertFromUtf32(headerRow[0].Length + 64) + "" + (i + 2);
                         // Popular header row data
@@ -1185,8 +1181,16 @@ namespace WindowsFormsApp1
                 if (ComboRowView != null)
                 {
                     listDate = ComboRowView.Row["listDate"] as string;
-                    //MessageBox.Show(listDate.Substring(0, 2).Replace("-", ""));
                     selectedDate = DateTime.Parse("1-" + listDate);
+                    if(selectedDate.Year != DateTime.Today.Year || selectedDate.Month != DateTime.Today.Month)
+                    {
+                        queryString = "EXEC addROLog " + execProject.projectID.ToString();
+                        command = new SqlCommand(queryString, connection);
+                        connection.Open();
+                        command.CommandTimeout = 120;
+                        command.ExecuteNonQuery();
+                        connection.Close();
+                    }
                 }
 
                 connection.Close();
@@ -1201,7 +1205,6 @@ namespace WindowsFormsApp1
             if (ComboRowView != null)
             {
                 listDate = ComboRowView.Row["listDate"] as string;
-                //MessageBox.Show(listDate.Substring(0, 2).Replace("-", ""));
                 selectedDate = DateTime.Parse("1-" + listDate);
                 //CREATE ITEM LIST BY CALLING GETITEMS METHOD FROM MODEL MANAGER
                 itemsList = modelManager.getItems(execProject.projectID, selectedDate, "risk");

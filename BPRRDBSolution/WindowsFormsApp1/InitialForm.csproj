@@ -120,7 +120,6 @@
     <Compile Include="Model\ERisk.cs" />
     <Compile Include="Model\ExecutionProject.cs" />
     <Compile Include="Model\ExecutionUser.cs" />
-    <Compile Include="Model\Project.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ExecRolog.resx">
