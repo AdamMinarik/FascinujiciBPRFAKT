@@ -121,7 +121,7 @@ namespace WindowsFormsApp1
 
         private void guideButton_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("https://screenmessage.com/mehehehe");
+            System.Diagnostics.Process.Start("https://drive.google.com/file/d/1IRc51348_b-gRLjdHeBZzWIMQE4d3qml/view?fbclid=IwAR3MZ3jmEpCV2Tc1qtC5fO7lkeppUsyQKeDiuiRve2U1FahR_zcx7iTtktY");
         }
 
         private void MonValueLabel_Click(object sender, EventArgs e)
