@@ -484,7 +484,6 @@ namespace WindowsFormsApp1
             this.rk_SegmentTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_SegmentTableAdapter();
             this.wTGtypeTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.WTGtypeTableAdapter();
             this.rk_CurrencyNameTableAdapter = new WindowsFormsApp1.DataSet1TableAdapters.rk_CurrencyNameTableAdapter();
-            this.hideTabPanel = new System.Windows.Forms.Panel();
             this.locationPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.readPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.approvalPictureBox)).BeginInit();
@@ -1074,7 +1073,7 @@ namespace WindowsFormsApp1
             this.infoSumPanel.Location = new System.Drawing.Point(416, 0);
             this.infoSumPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.infoSumPanel.Name = "infoSumPanel";
-            this.infoSumPanel.Size = new System.Drawing.Size(872, 358);
+            this.infoSumPanel.Size = new System.Drawing.Size(872, 356);
             this.infoSumPanel.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -1121,7 +1120,7 @@ namespace WindowsFormsApp1
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.41667F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.91667F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(860, 273);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(860, 271);
             this.tableLayoutPanel1.TabIndex = 10;
             // 
             // totalRCLabel
@@ -1129,7 +1128,7 @@ namespace WindowsFormsApp1
             this.totalRCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalRCLabel.AutoSize = true;
             this.totalRCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalRCLabel.Location = new System.Drawing.Point(781, 208);
+            this.totalRCLabel.Location = new System.Drawing.Point(781, 207);
             this.totalRCLabel.Name = "totalRCLabel";
             this.totalRCLabel.Size = new System.Drawing.Size(19, 22);
             this.totalRCLabel.TabIndex = 24;
@@ -1140,7 +1139,7 @@ namespace WindowsFormsApp1
             this.rURCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rURCLabel.AutoSize = true;
             this.rURCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.rURCLabel.Location = new System.Drawing.Point(643, 208);
+            this.rURCLabel.Location = new System.Drawing.Point(643, 207);
             this.rURCLabel.Name = "rURCLabel";
             this.rURCLabel.Size = new System.Drawing.Size(18, 22);
             this.rURCLabel.TabIndex = 23;
@@ -1151,7 +1150,7 @@ namespace WindowsFormsApp1
             this.bURCLabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bURCLabel.AutoSize = true;
             this.bURCLabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bURCLabel.Location = new System.Drawing.Point(506, 208);
+            this.bURCLabel.Location = new System.Drawing.Point(506, 207);
             this.bURCLabel.Name = "bURCLabel";
             this.bURCLabel.Size = new System.Drawing.Size(18, 22);
             this.bURCLabel.TabIndex = 22;
@@ -1162,7 +1161,7 @@ namespace WindowsFormsApp1
             this.totalRELabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.totalRELabel.AutoSize = true;
             this.totalRELabel.Font = new System.Drawing.Font("Trebuchet MS", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.totalRELabel.Location = new System.Drawing.Point(781, 180);
+            this.totalRELabel.Location = new System.Drawing.Point(781, 179);
             this.totalRELabel.Name = "totalRELabel";
             this.totalRELabel.Size = new System.Drawing.Size(19, 22);
             this.totalRELabel.TabIndex = 21;
@@ -1173,7 +1172,7 @@ namespace WindowsFormsApp1
             this.rURELabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.rURELabel.AutoSize = true;
             this.rURELabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.rURELabel.Location = new System.Drawing.Point(643, 180);
+            this.rURELabel.Location = new System.Drawing.Point(643, 179);
             this.rURELabel.Name = "rURELabel";
             this.rURELabel.Size = new System.Drawing.Size(18, 22);
             this.rURELabel.TabIndex = 20;
@@ -1184,7 +1183,7 @@ namespace WindowsFormsApp1
             this.bURELabel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bURELabel.AutoSize = true;
             this.bURELabel.Font = new System.Drawing.Font("Trebuchet MS", 8F);
-            this.bURELabel.Location = new System.Drawing.Point(506, 180);
+            this.bURELabel.Location = new System.Drawing.Point(506, 179);
             this.bURELabel.Name = "bURELabel";
             this.bURELabel.Size = new System.Drawing.Size(18, 22);
             this.bURELabel.TabIndex = 19;
@@ -1336,7 +1335,7 @@ namespace WindowsFormsApp1
             // 
             this.responseExposureLabel.AutoSize = true;
             this.responseExposureLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
-            this.responseExposureLabel.Location = new System.Drawing.Point(3, 180);
+            this.responseExposureLabel.Location = new System.Drawing.Point(3, 179);
             this.responseExposureLabel.Name = "responseExposureLabel";
             this.responseExposureLabel.Size = new System.Drawing.Size(342, 24);
             this.responseExposureLabel.TabIndex = 4;
@@ -1356,7 +1355,7 @@ namespace WindowsFormsApp1
             // 
             this.riskContingencyLabel.AutoSize = true;
             this.riskContingencyLabel.Font = new System.Drawing.Font("Trebuchet MS", 9.5F, System.Drawing.FontStyle.Bold);
-            this.riskContingencyLabel.Location = new System.Drawing.Point(3, 208);
+            this.riskContingencyLabel.Location = new System.Drawing.Point(3, 207);
             this.riskContingencyLabel.Name = "riskContingencyLabel";
             this.riskContingencyLabel.Size = new System.Drawing.Size(324, 24);
             this.riskContingencyLabel.TabIndex = 5;
@@ -1413,11 +1412,11 @@ namespace WindowsFormsApp1
             // risksTab
             // 
             this.risksTab.Controls.Add(this.rologGridView);
-            this.risksTab.Location = new System.Drawing.Point(4, 29);
+            this.risksTab.Location = new System.Drawing.Point(4, 36);
             this.risksTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.risksTab.Name = "risksTab";
             this.risksTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.risksTab.Size = new System.Drawing.Size(1280, 982);
+            this.risksTab.Size = new System.Drawing.Size(1280, 975);
             this.risksTab.TabIndex = 0;
             this.risksTab.Text = "Individual Risks";
             this.risksTab.UseVisualStyleBackColor = true;
@@ -1432,39 +1431,39 @@ namespace WindowsFormsApp1
             this.rologGridView.Location = new System.Drawing.Point(4, 5);
             this.rologGridView.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.rologGridView.Name = "rologGridView";
-            this.rologGridView.Size = new System.Drawing.Size(1272, 972);
+            this.rologGridView.Size = new System.Drawing.Size(1272, 965);
             this.rologGridView.TabIndex = 0;
             this.rologGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.rologGridView_CellClick);
             // 
             // projImpactsTab
             // 
             this.projImpactsTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
-            this.projImpactsTab.Location = new System.Drawing.Point(4, 29);
+            this.projImpactsTab.Location = new System.Drawing.Point(4, 36);
             this.projImpactsTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.projImpactsTab.Name = "projImpactsTab";
             this.projImpactsTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.projImpactsTab.Size = new System.Drawing.Size(1280, 982);
+            this.projImpactsTab.Size = new System.Drawing.Size(1280, 975);
             this.projImpactsTab.TabIndex = 1;
             this.projImpactsTab.Text = "Project Impacts";
             // 
             // oppTab
             // 
             this.oppTab.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
-            this.oppTab.Location = new System.Drawing.Point(4, 29);
+            this.oppTab.Location = new System.Drawing.Point(4, 36);
             this.oppTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.oppTab.Name = "oppTab";
             this.oppTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.oppTab.Size = new System.Drawing.Size(1280, 982);
+            this.oppTab.Size = new System.Drawing.Size(1280, 975);
             this.oppTab.TabIndex = 2;
             this.oppTab.Text = "Individual Opportunities";
             // 
             // erTab
             // 
-            this.erTab.Location = new System.Drawing.Point(4, 32);
+            this.erTab.Location = new System.Drawing.Point(4, 36);
             this.erTab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.erTab.Name = "erTab";
             this.erTab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.erTab.Size = new System.Drawing.Size(1280, 979);
+            this.erTab.Size = new System.Drawing.Size(1280, 975);
             this.erTab.TabIndex = 3;
             this.erTab.Text = "Enterprise Risks";
             this.erTab.UseVisualStyleBackColor = true;
@@ -1482,7 +1481,6 @@ namespace WindowsFormsApp1
             // 
             // chartSumPanel
             // 
-            this.chartSumPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chartSumPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
             this.chartSumPanel.Controls.Add(this.clearFilterBtn);
             this.chartSumPanel.Controls.Add(this.filterBtn);
@@ -1495,7 +1493,7 @@ namespace WindowsFormsApp1
             this.chartSumPanel.Location = new System.Drawing.Point(4, 0);
             this.chartSumPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chartSumPanel.Name = "chartSumPanel";
-            this.chartSumPanel.Size = new System.Drawing.Size(412, 383);
+            this.chartSumPanel.Size = new System.Drawing.Size(412, 356);
             this.chartSumPanel.TabIndex = 1;
             // 
             // clearFilterBtn
@@ -3117,7 +3115,7 @@ namespace WindowsFormsApp1
             this.createPITab.Controls.Add(this.panel8);
             this.createPITab.Location = new System.Drawing.Point(4, 32);
             this.createPITab.Name = "createPITab";
-            this.createPITab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.createPITab.Padding = new System.Windows.Forms.Padding(3);
             this.createPITab.Size = new System.Drawing.Size(1296, 1376);
             this.createPITab.TabIndex = 2;
             this.createPITab.Text = "Create Project Impact";
@@ -5046,7 +5044,7 @@ namespace WindowsFormsApp1
             this.infoTab.Controls.Add(this.newProjectTableLayout);
             this.infoTab.Location = new System.Drawing.Point(4, 32);
             this.infoTab.Name = "infoTab";
-            this.infoTab.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.infoTab.Padding = new System.Windows.Forms.Padding(3);
             this.infoTab.Size = new System.Drawing.Size(1296, 1376);
             this.infoTab.TabIndex = 9;
             this.infoTab.Text = "Project Info";
@@ -6040,21 +6038,11 @@ namespace WindowsFormsApp1
             // 
             this.rk_CurrencyNameTableAdapter.ClearBeforeFill = true;
             // 
-            // hideTabPanel
-            // 
-            this.hideTabPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(232)))), ((int)(((byte)(238)))));
-            this.hideTabPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.hideTabPanel.Location = new System.Drawing.Point(412, 63);
-            this.hideTabPanel.Name = "hideTabPanel";
-            this.hideTabPanel.Size = new System.Drawing.Size(1304, 32);
-            this.hideTabPanel.TabIndex = 5;
-            // 
             // ExecRolog
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1716, 1475);
-            this.Controls.Add(this.hideTabPanel);
             this.Controls.Add(this.execROlogTabControl);
             this.Controls.Add(this.buttonPanel);
             this.Controls.Add(this.locationPanel);
@@ -6648,6 +6636,5 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label ruScopeLbl;
         private System.Windows.Forms.TextBox BUScopeTxt;
         private System.Windows.Forms.TextBox RUScopeTxt;
-        private System.Windows.Forms.Panel hideTabPanel;
     }
 }
