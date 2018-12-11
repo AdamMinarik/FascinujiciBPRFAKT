@@ -14,16 +14,16 @@
       </applicationRequestMinimum>
       <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
         <!--
-          Možnosti manifestu pro nástroj Řízení uživatelských účtů
-          Pokud chcete změnit úroveň nástroje Řízení uživatelských účtů, nahraďte 
-          uzel requestedExecutionLevel jednou z následujících hodnot.
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
 
         <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
         <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
         <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
 
-         Pokud chcete využívat virtualizaci souborů a registru pro zpětnou 
-         kompatibilitu, pak uzel requestedExecutionLevel odstraňte.
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
     -->
         <requestedExecutionLevel level="asInvoker" uiAccess="false" />
       </requestedPrivileges>
@@ -54,24 +54,24 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsFormsApp1.exe" size="15281624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="WindowsFormsApp1.exe" size="15310296">
       <assemblyIdentity name="WindowsFormsApp1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>x4CUz3PehUwoYqJbGE7WIpgcgtD1emEWpOG+Ea0TMYg=</dsig:DigestValue>
+        <dsig:DigestValue>bUNSkldN2/Lto+DI8BrCulrydfVxF0h/AMPa4olfsQM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="WindowsFormsApp1.exe.config" size="604">
+  <file name="WindowsFormsApp1.exe.config" size="592">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+AQ3SKnNdMPHuWx9mcmbBoReLz+pCPMlfkvLqtiQnVw=</dsig:DigestValue>
+      <dsig:DigestValue>jTLBS+FMSaykyQnv6C2/ZJM1cWrxL5jfXW7x0Y9nunM=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>
